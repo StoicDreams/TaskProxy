@@ -1,0 +1,22 @@
+{
+  "name": "Task Proxy",
+  "short_name": "Task Proxy",
+  "start_url": "./",
+  "display": "standalone",
+  "description": "Simple and easy personal task management and productivity tracker.",
+  "background_color": "#000000",
+  "theme_color": "#db570b",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "apple-icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "ms-icon-310x310.png",
+      "type": "image/png",
+      "sizes": "310x310"
+    }
+  ]
+}
