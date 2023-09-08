@@ -1,5 +1,7 @@
 # Task Proxy
 
+[WebUI Version: 0.6.45](https://github.com/StoicDreams/RustWebUI)
+
 Companion website for Task Proxy desktop application.
 
 ## Ideas
