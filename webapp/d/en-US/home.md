@@ -1,7 +1,7 @@
 # Organize your development scripts, APIs, documentation, and more
 
 ```quote "info"
-The Task Proxy desktop application is getting rebuilt in Rust. This move to Rust will allow for a much ligher and faster application with better support across a variety of devices and operating systems.
+The Task Proxy desktop application is getting rebuilt in Rust. This move to Rust will allow for a much lighter and faster application with better support across a variety of devices and operating systems.
 ```
 
 ```section
