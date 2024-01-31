@@ -10,7 +10,17 @@ Task Proxy is a new developer tool for managing development documentation and sc
 The primary concept for Task Proxy is to provide users with a tool where they can easily create and manage project documentation, scripts, and configurations.
 ```
 
-## Current Features
+## Current State of Development
+
+````section
+
+- Integrated [Tauri](https://tauri.app) framework for simplified development and deployments to multiple platform targets (Windows, Mac, Linux).
+- Integrated [WebUI](https://webui.stoicdreams.com) framework for layout, components, and default styling.
+- New Task Proxy desktop application is setup with CICD pipeline to build and publish app as changes are committed.
+
+````
+
+## Current Features being ported from Legacy App
 
 ````section
 
@@ -25,11 +35,10 @@ The primary concept for Task Proxy is to provide users with a tool where they ca
 
 ````
 
-## Planned Features
+## Additional Planned Features for new App
 
 ````section
 
-- Convert project to Rust.
 - Terminal module that will allow running scripts that need to run continuously and not be restricted to only running when the hosting page is open.
 - Schedule times and events to trigger running specfic scripts or command flows.
 
