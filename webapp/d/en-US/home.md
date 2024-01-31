@@ -38,3 +38,30 @@ The primary concept for Task Proxy is to provide users with a tool where they ca
 ```quote "primary"
 More information coming soon!
 ```
+
+## Early Development Desktop Builds
+
+```section
+
+Use these links to install our early access development builds. These builds are very early in development and may have many bugs, as well as many missing features.
+
+
+```
+
+```quote "primary"
+Notes:
+- that updated builds are overriding the old files - we are not applying versioning during this initial stage of development.
+- When the app gets closer to being developer ready we will integrate versioning into our builds as well as update this website as new versions are available.
+- For now if you are interested in keeping up with build updates for the desktop app then follow the [TaskProxyApp GitHub repo](https://github.com/StoicDreams/TaskProxyApp).
+- We are trying to find time to work on this and push out updates at least once per week, but our full-time work, family, and sometimes other side projects take higher priority.
+```
+
+```section
+
+- [Windows x64 MSI Installer](https://stoicdreamscdn.blob.core.windows.net/taskproxy/task-proxy_0.1.0_x64_en-US.msi)
+- [Windows x64 EXE Installer](https://stoicdreamscdn.blob.core.windows.net/taskproxy/task-proxy_0.1.0_x64-setup.exe)
+- [Mac DMG](https://stoicdreamscdn.blob.core.windows.net/taskproxy/task-proxy_0.1.0_x64.dmg)
+- [Linux amd64 DEB](https://stoicdreamscdn.blob.core.windows.net/taskproxy/task-proxy_0.1.0_amd64.deb)
+- [Linux amd64 AppImage](https://stoicdreamscdn.blob.core.windows.net/taskproxy/task-proxy_0.1.0_amd64.AppImage)
+
+```
