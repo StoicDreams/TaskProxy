@@ -3,7 +3,7 @@ use crate::prelude::*;
 pub fn nav_menu_info() -> DrawerToggleInfo {
     DrawerToggleInfo::builder(
         |_| String::from("Navigation Menu"),
-        |_| html! {<i class="fa-solid fa-bars"></i>},
+        |_| html! {FaIcon::solid("bars").to_html()},
         DynContextsHtml::new(nav_menu_render),
     )
     .set_button_class("btn toggle theme-inherit")
@@ -15,15 +15,21 @@ pub fn nav_menu_info() -> DrawerToggleInfo {
 
 pub(crate) fn get_nav_routing(_contexts: &Contexts) -> Vec<NavRoute> {
     let nav_routes = vec![
-        NavLinkInfo::link("Home", "/", "fa-duotone fa-house", roles::PUBLIC, page_home),
+        NavLinkInfo::link(
+            "Home",
+            "/",
+            &FaIcon::duotone("house"),
+            roles::PUBLIC,
+            page_home,
+        ),
         NavGroupInfo::link(
             "App",
-            "fa-duotone fa-cube",
+            &FaIcon::duotone("cube"),
             roles::USER,
             vec![NavLinkInfo::link(
                 "Downloads",
                 "/downloads",
-                "fa-duotone fa-download",
+                &FaIcon::duotone("download"),
                 roles::USER,
                 page_downloads,
             )],
@@ -31,21 +37,21 @@ pub(crate) fn get_nav_routing(_contexts: &Contexts) -> Vec<NavRoute> {
         NavLinkInfo::link(
             "About",
             "/about",
-            "fa-duotone fa-circle-info",
+            &FaIcon::duotone("circle-info"),
             roles::PUBLIC,
             page_about_stoic_dreams,
         ),
         NavLinkInfo::link(
             "Terms",
             "/terms",
-            "fa-duotone fa-handshake",
+            &FaIcon::duotone("handshake"),
             roles::PUBLIC,
             starter_page_terms,
         ),
         NavLinkInfo::link(
             "Privacy",
             "/privacy",
-            "fa-duotone fa-shield-exclamation",
+            &FaIcon::duotone("shield-exclamation"),
             roles::PUBLIC,
             starter_page_privacy,
         ),

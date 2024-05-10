@@ -26,7 +26,7 @@ In the meantime, if you would like to help support us, you are welcome to send u
 
 ``````cards
 
-`````card "Windows" "500" "tertiary" "fa-brands fa-microsoft-windows" "https://webui.stoicdreams.com" "Web UI Documentation"
+`````card "Windows" "500" "tertiary" "microsoft-windows brands" "https://webui.stoicdreams.com" "Web UI Documentation"
 Click the link below appropriate for the Windows computer you are installing on. We are currently using a ClickOnce installation tool to help simplify installation. This tool will automatically check for updates each time you start the Task Proxy application.
 ````sidebyside
 ```paper "ma-2 pa-2"
