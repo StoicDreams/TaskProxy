@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://www.taskproxy.com/</loc>
-		<lastmod>2024-06-11</lastmod>
+		<loc>https://www.taskproxy.com"/"</loc>
+		<lastmod>2024-06-19</lastmod>
 	</url>
 	<url>
-		<loc>https://www.taskproxy.com/about</loc>
-		<lastmod>2024-06-11</lastmod>
+		<loc>https://www.taskproxy.com"/about"</loc>
+		<lastmod>2024-06-19</lastmod>
 	</url>
 	<url>
-		<loc>https://www.taskproxy.com/terms</loc>
-		<lastmod>2024-06-11</lastmod>
+		<loc>https://www.taskproxy.com"/privacy"</loc>
+		<lastmod>2024-06-19</lastmod>
 	</url>
 	<url>
-		<loc>https://www.taskproxy.com/privacy</loc>
-		<lastmod>2024-06-11</lastmod>
+		<loc>https://www.taskproxy.com"/terms"</loc>
+		<lastmod>2024-06-19</lastmod>
 	</url>
 </urlset>
