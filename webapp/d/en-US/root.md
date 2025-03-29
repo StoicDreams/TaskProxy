@@ -54,6 +54,8 @@ More information coming soon!
 
 </webui-quote>
 
+<!--
+
 ## Early Development Desktop Builds
 
 <webui-page-segment>
@@ -77,12 +79,14 @@ Notes:
 
 <webui-page-segment>
 
-- [Windows x64 MSI Installer](https://stoicdreamscdn.blob.core.windows.net/taskproxy/task-proxy_0.1.0_x64_en-US.msi)
-- [Windows x64 EXE Installer](https://stoicdreamscdn.blob.core.windows.net/taskproxy/task-proxy_0.1.0_x64-setup.exe)
-- [Mac DMG](https://stoicdreamscdn.blob.core.windows.net/taskproxy/task-proxy_0.1.0_x64.dmg)
-- [Linux amd64 DEB](https://stoicdreamscdn.blob.core.windows.net/taskproxy/task-proxy_0.1.0_amd64.deb)
-- [Linux amd64 AppImage](https://stoicdreamscdn.blob.core.windows.net/taskproxy/task-proxy_0.1.0_amd64.AppImage)
+- [Windows x64 MSI Installer](https://cdn.myfi.ws/downloads/task-proxy/task-proxy_0.1.0_x64_en-US.msi)
+- [Windows x64 EXE Installer](https://cdn.myfi.ws/downloads/task-proxy/task-proxy_0.1.0_x64-setup.exe)
+- [Mac DMG](https://cdn.myfi.ws/downloads/task-proxy/task-proxy_0.1.0_x64.dmg)
+- [Linux amd64 DEB](https://cdn.myfi.ws/downloads/task-proxy/task-proxy_0.1.0_amd64.deb)
+- [Linux amd64 AppImage](https://cdn.myfi.ws/downloads/task-proxy/task-proxy_0.1.0_amd64.AppImage)
 
 </webui-page-segment>
 
 </webui-side-by-side>
+
+-->

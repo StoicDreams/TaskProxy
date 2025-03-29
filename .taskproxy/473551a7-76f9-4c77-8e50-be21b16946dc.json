@@ -1,0 +1,109 @@
+{
+  "id": "473551a7-76f9-4c77-8e50-be21b16946dc",
+  "sections": [
+    {
+      "Id": "91820f7d-477c-471e-a414-35cecd681dea",
+      "ContentType": 1,
+      "Content": "{\"Markdown\":\"Use the scripts below during development to perform desired tasks.\"}",
+      "OutputVariable": {
+        "Name": ""
+      },
+      "ActiveId": 1,
+      "ConditionValue": "",
+      "ConditionRequired": ""
+    },
+    {
+      "Id": "5b7f4cd1-f3f5-464b-8fb2-c9a9b771e64d",
+      "ContentType": 9,
+      "Content": "",
+      "OutputVariable": {
+        "Name": ""
+      },
+      "ActiveId": 1,
+      "ConditionValue": "",
+      "ConditionRequired": ""
+    },
+    {
+      "Id": "457b2df6-b968-47cf-81c5-39e741e1a4fa",
+      "ContentType": 3,
+      "Name": "Format",
+      "Content": "{\"PowerShell\":\"cargo fmt\"}",
+      "OutputVariable": {
+        "Name": "output"
+      },
+      "ActiveId": 1,
+      "ConditionValue": "",
+      "ConditionRequired": ""
+    },
+    {
+      "Id": "2cdcb74e-8dd5-481a-9529-8a1a53447e1b",
+      "ContentType": 3,
+      "Name": "Lint",
+      "Content": "{\"PowerShell\":\"cargo clippy\"}",
+      "OutputVariable": {
+        "Name": "output"
+      },
+      "ActiveId": 1,
+      "ConditionValue": "",
+      "ConditionRequired": ""
+    },
+    {
+      "Id": "b7aadc9d-f009-4f1f-b38c-8b24b03379c1",
+      "ContentType": 3,
+      "Name": "Run WebUI",
+      "Content": "{\"PowerShell\":\"cd webapp\\nwebui\"}",
+      "OutputVariable": {
+        "Name": "output"
+      },
+      "ActiveId": 1,
+      "ConditionValue": "",
+      "ConditionRequired": ""
+    },
+    {
+      "Id": "f8ded645-b719-48ec-8c39-d4b5564b1e84",
+      "ContentType": 3,
+      "Name": "Run Web App",
+      "Content": "{\"PowerShell\":\"start pwsh \\u0027-NoExit -command \\u0022$Host.UI.RawUI.WindowTitle = \\u0027\\u0027Rust App Demo\\u0027\\u0027\\u0022\\u0027\\n$wshell = New-Object -ComObject wscript.shell\\n$wshell.AppActivate(\\u0027Rust App Demo\\u0027)\\nSleep 1\\n$wshell.SendKeys(\\u0027cd webapp~\\u0027)\\n$wshell.SendKeys(\\u0027trunk serve --open~\\u0027)\\n\\n\"}",
+      "OutputVariable": {
+        "Name": "output"
+      },
+      "ActiveId": 1,
+      "ConditionValue": "",
+      "ConditionRequired": ""
+    },
+    {
+      "Id": "65ab247d-e128-4977-a015-a22cc1416d5a",
+      "ContentType": 3,
+      "Name": "IIS Dev",
+      "Content": "{\"PowerShell\":\"$demopath = \\u0027%demoiis%StoicDreams\\\\wwwroot\\u0027\\nWrite-Host $demopath\\nRemove-Item \\u0022$demopath\\\\*\\u0022 -Recurse -Force\\ncd webapp\\ntrunk build --release\\nCopy-Item .\\\\dist\\\\* $demopath -Recurse\"}",
+      "OutputVariable": {
+        "Name": "output"
+      },
+      "ActiveId": 1,
+      "ConditionValue": "",
+      "ConditionRequired": ""
+    },
+    {
+      "Id": "8cb1c9dd-a539-4a84-9db1-eeb788458372",
+      "ContentType": 10,
+      "Content": "",
+      "OutputVariable": {
+        "Name": ""
+      },
+      "ActiveId": 1,
+      "ConditionValue": "",
+      "ConditionRequired": ""
+    },
+    {
+      "Id": "c6e30a0c-7c93-418d-b8a4-cb4989efdb70",
+      "ContentType": 6,
+      "Content": "{\"Variable\":{\"Name\":\"output\"}}",
+      "OutputVariable": {
+        "Name": ""
+      },
+      "ActiveId": 1,
+      "ConditionValue": "",
+      "ConditionRequired": ""
+    }
+  ]
+}
