@@ -3,5 +3,10 @@
         "name": "Home",
         "icon": "home",
         "url": "/"
+    },
+    {
+        "name": "Versions",
+        "icon": "history",
+        "url": "/versions"
     }
 ]

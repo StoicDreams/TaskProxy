@@ -1,0 +1,99 @@
+/* Display the latest app versions. */
+"use strict"
+{
+    const template = `
+    <webui-button slot="tabs">Windows</webui-button>
+    <webui-flex gap="20" class="pa-3" slot="content" theme="inherit" id="latest-windows">Loading Windows release data...</webui-flex>
+    <webui-button slot="tabs">Mac</webui-button>
+    <webui-flex gap="20" class="pa-3" slot="content" theme="inherit" id="latest-mac">Loading Mac release data...</webui-flex>
+    <webui-button slot="tabs">Linux / Ubuntu</webui-button>
+    <webui-flex gap="20" class="pa-3" slot="content" theme="inherit" id="latest-ubuntu">Loading Linux release data...</webui-flex>`;
+    function getLatest(items){
+        let results = [];
+        // sort items by version
+        items.sort((a,b)=>{
+            let aVersion = a.version.split('.');
+            let bVersion = b.version.split('.');
+            if (aVersion[0] > bVersion[0]){
+                return -1;
+            }
+            if (aVersion[0] < bVersion[0]){
+                return 1;
+            }
+            if (aVersion[1] > bVersion[1]){
+                return -1;
+            }
+            if (aVersion[1] < bVersion[1]){
+                return 1;
+            }
+            if (aVersion[2] > bVersion[2]){
+                return -1;
+            }
+            if (aVersion[2] < bVersion[2]){
+                return 1;
+            }
+            return 0;
+        });
+        let useVersion = items[0].version;
+        items.forEach(item=>{
+            if (item.version === useVersion){
+                results.push(item);
+            }
+        });
+        return results;
+    }
+    webui.define("app-latest", {
+        constructor: (t) => {
+            t._title = webui.create('h2',{html:'Latest Release'});
+            t._tabs = webui.create('webui-tabs', {html: template, theme:'secondary',index:'1','transition-timing':'200','data-subscribe':'session-platform-tab-index:setTab'});
+         },
+         connected: function (t) {
+            t.parentNode.insertBefore(t._title, t);
+            t.parentNode.insertBefore(t._tabs, t);
+            t.remove();
+            let tabWin = t._tabs.querySelector('#latest-windows');
+            let tabMac = t._tabs.querySelector('#latest-mac');
+            let tabUbuntu = t._tabs.querySelector('#latest-ubuntu');
+            webui.fetchWithCache('https://cdn.myfi.ws/apps/apps.json', true).then(json=>{
+                if (json.win && json.win.length > 0) {
+                    let latest = getLatest(json.win);
+                    t._title.innerHTML = `Latest Release (Version ${latest[0].version})`;
+                    tabWin.innerHTML = ``;
+                    latest.forEach(item=>{
+                        let name = item.name.endsWith('.msi') ? "Windows x64 MSI Installer" : item.name.endsWith('.exe') ? "Windows x64 EXE Installer" : item.name;
+                        tabWin.appendChild(webui.create('a',{'html':name, 'href':item.file}));
+                    });
+                } else {
+                    tabWin.innerHTML = `There are currently no releases available for Windows.`;
+                }
+                if (json.mac && json.mac.length > 0) {
+                    let latest = getLatest(json.mac);
+                    tabMac.innerHTML = ``;
+                    latest.forEach(item=>{
+                        let name = item.name.endsWith('.dmg') ? "Mac DMG" : item.name;
+                        tabMac.appendChild(webui.create('a',{'html':name, 'href':item.file}));
+                    });
+
+                } else {
+                    tabMac.innerHTML = `There are currently no releases available for Mac.`;
+                }
+                if (json.ubu && json.ubu.length > 0) {
+                    let latest = getLatest(json.ubu);
+                    tabUbuntu.innerHTML = ``;
+                    latest.forEach(item=>{
+                        let name = item.name.endsWith('.deb') ? "Linux amd64 DEB" : item.name.endsWith('.AppImage') ? "Linux amd64 AppImage" : item.name;
+                        tabUbuntu.appendChild(webui.create('a',{'html':name, 'href':item.file}));
+                    });
+                } else {
+                    tabUbuntu.innerHTML = `There are currently no releases available for Linux/Ubuntu.`;
+                }
+            }).catch(_=>{
+                tabWin.innerHTML = `Failed to load Windows release data.`;
+                tabMac.innerHTML = `Failed to load Mac release data.`;
+                tabUbuntu.innerHTML = `Failed to load Linux release data.`;
+            })
+         },
+        disconnected: function (t) { }
+    });
+
+}

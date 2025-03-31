@@ -54,39 +54,4 @@ More information coming soon!
 
 </webui-quote>
 
-<!--
-
-## Early Development Desktop Builds
-
-<webui-page-segment>
-
-Use these links to install our early access development builds. These builds are very early in development and may have many bugs, as well as many missing features.
-
-</webui-page-segment>
-
-<webui-side-by-side>
-
-<webui-quote theme="warning">
-
-Notes:
-
-- that updated builds are overriding the old files - we are not applying versioning during this initial stage of development.
-- When the app gets closer to being developer ready we will integrate versioning into our builds as well as update this website as new versions are available.
-- For now if you are interested in keeping up with build updates for the desktop app then follow the [TaskProxyApp GitHub repo](https://github.com/StoicDreams/TaskProxyApp).
-- We are trying to find time to work on this and push out updates at least once per week, but our full-time work, family, and sometimes other side projects take higher priority.
-
-</webui-quote>
-
-<webui-page-segment>
-
-- [Windows x64 MSI Installer](https://cdn.myfi.ws/downloads/task-proxy/task-proxy_0.1.0_x64_en-US.msi)
-- [Windows x64 EXE Installer](https://cdn.myfi.ws/downloads/task-proxy/task-proxy_0.1.0_x64-setup.exe)
-- [Mac DMG](https://cdn.myfi.ws/downloads/task-proxy/task-proxy_0.1.0_x64.dmg)
-- [Linux amd64 DEB](https://cdn.myfi.ws/downloads/task-proxy/task-proxy_0.1.0_amd64.deb)
-- [Linux amd64 AppImage](https://cdn.myfi.ws/downloads/task-proxy/task-proxy_0.1.0_amd64.AppImage)
-
-</webui-page-segment>
-
-</webui-side-by-side>
-
--->
+<app-latest></app-latest>
