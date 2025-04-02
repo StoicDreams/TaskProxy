@@ -50,19 +50,25 @@
          connected: function (t) {
             t.parentNode.insertBefore(t._title, t);
             t.parentNode.insertBefore(t._tabs, t);
+            let rnp = document.createTextNode("");
+            t.parentNode.insertBefore(rnp, t);
             t.remove();
             let tabWin = t._tabs.querySelector('#latest-windows');
             let tabMac = t._tabs.querySelector('#latest-mac');
             let tabUbuntu = t._tabs.querySelector('#latest-ubuntu');
-            webui.fetchWithCache('https://cdn.myfi.ws/apps/apps.json', true).then(json=>{
+            webui.fetchWithCache('https://cdn.myfi.ws/apps/task-proxy/apps.json', true).then(json=>{
                 if (json.win && json.win.length > 0) {
                     let latest = getLatest(json.win);
-                    t._title.innerHTML = `Latest Release (Version ${latest[0].version})`;
+                    let version = `${latest[0].version}`;
+                    t._title.innerHTML = `Latest Release (Version ${version})`;
                     tabWin.innerHTML = ``;
                     latest.forEach(item=>{
                         let name = item.name.endsWith('.msi') ? "Windows x64 MSI Installer" : item.name.endsWith('.exe') ? "Windows x64 EXE Installer" : item.name;
                         tabWin.appendChild(webui.create('a',{'html':name, 'href':item.file}));
                     });
+                    if (json.versions[version]) {
+                        rnp.parentNode.insertBefore(webui.create('webui-content',{cache:true, src:`https://cdn.myfi.ws/apps/task-proxy/${json.versions[version]}`}), rnp);
+                    }
                 } else {
                     tabWin.innerHTML = `There are currently no releases available for Windows.`;
                 }

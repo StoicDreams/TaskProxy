@@ -53,33 +53,41 @@
             let tabWin = t._tabs.querySelector('#latest-windows');
             let tabMac = t._tabs.querySelector('#latest-mac');
             let tabUbuntu = t._tabs.querySelector('#latest-ubuntu');
-            function addTabContent(container, items){
+            function addTabContent(container, items, versions){
                 sortVersions(items);
                 let html = '';
                 let version = '0.0.0';
                 items.forEach(item=>{
                     if (version != item.version) {
                         if (version != '0.0.0') {
-                            html = `${html}</webui-flex>`
+                            html = `${html}</webui-flex>`;
+                            if (versions[version]) {
+                                html = `${html}<webui-content class="d-flex gap-1 flex-column" nest cache src="https://cdn.myfi.ws/apps/task-proxy/${versions[version]}"></webui-content>`;
+                            }
+                            html = `${html}</webui-grid>`
                         }
                         version = item.version;
-                        html = `${html}<webui-button slot="tabs">${version}</webui-button><webui-flex gap="20" class="pa-3" slot="content" theme="inherit" id="latest-windows">`
+                        html = `${html}<webui-button slot="tabs">${version}</webui-button><webui-grid columns="${(versions[version] ? "max-content " : "")}1fr" gap="20" class="pa-3" slot="content" theme="inherit" id="latest-windows"><webui-flex column gap="20">`
                     }
                     let name = item.name.endsWith('.msi') ? "Windows x64 MSI Installer" : item.name.endsWith('.exe') ? "Windows x64 EXE Installer" : item.name.endsWith('.dmg') ? "Mac DMG" : item.name.endsWith('.deb') ? "Linux amd64 DEB" : item.name.endsWith('.AppImage') ? "Linux amd64 AppImage" : item.name;
                     html = `${html}<a href="${item.file}">${name}</a>`;
                 });
+
                 if (version != '0.0.0') {
-                    html = `${html}</webui-flex>`
+                    html = `${html}</webui-flex>`;
+                    if (versions[version]) {
+                        html = `${html}<webui-content nest cache src="https://cdn.myfi.ws/apps/task-proxy/${versions[version]}"></webui-content>`;
+                    }
+                    html = `${html}</webui-grid>`;
                 }
-                console.log('html', html);
                 let tabs = webui.create('webui-tabs', {html:html, theme:'tertiary', vertical: true});
                 container.innerHTML = '';
                 container.appendChild(tabs);
             }
-            webui.fetchWithCache('https://cdn.myfi.ws/apps/apps.json', true).then(json=>{
-                addTabContent(tabWin, json.win);
-                addTabContent(tabMac, json.mac);
-                addTabContent(tabUbuntu, json.ubu);
+            webui.fetchWithCache('https://cdn.myfi.ws/apps/task-proxy/apps.json', true).then(json=>{
+                addTabContent(tabWin, json.win, json.versions);
+                addTabContent(tabMac, json.mac, json.versions);
+                addTabContent(tabUbuntu, json.ubu, json.versions);
             });
          },
         disconnected: function (t) { }
