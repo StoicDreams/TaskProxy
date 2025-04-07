@@ -14,22 +14,22 @@
         items.sort((a,b)=>{
             let aVersion = a.version.split('.');
             let bVersion = b.version.split('.');
-            if (aVersion[0] > bVersion[0]){
+            if (parseInt(aVersion[0]) > parseInt(bVersion[0])){
                 return -1;
             }
-            if (aVersion[0] < bVersion[0]){
+            if (parseInt(aVersion[0]) < parseInt(bVersion[0])){
                 return 1;
             }
-            if (aVersion[1] > bVersion[1]){
+            if (parseInt(aVersion[1]) > parseInt(bVersion[1])){
                 return -1;
             }
-            if (aVersion[1] < bVersion[1]){
+            if (parseInt(aVersion[1]) < parseInt(bVersion[1])){
                 return 1;
             }
-            if (aVersion[2] > bVersion[2]){
+            if (parseInt(aVersion[2]) > parseInt(bVersion[2])){
                 return -1;
             }
-            if (aVersion[2] < bVersion[2]){
+            if (parseInt(aVersion[2]) < parseInt(bVersion[2])){
                 return 1;
             }
             return 0;
