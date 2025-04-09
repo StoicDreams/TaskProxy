@@ -20,7 +20,8 @@ The primary concept for Task Proxy is to provide users with a tool where they ca
 
 - Integrated [Tauri](https://tauri.app) framework for simplified development and deployments to multiple platform targets (Windows, Mac, Linux).
 - Integrated [WebUI](https://webui.stoicdreams.com) framework for layout, components, and default styling.
-- New Task Proxy desktop application is setup with CICD pipeline to build and publish app as changes are committed.
+- New Task Proxy desktop application is setup with CICD pipeline to build, code sign, and publish app as changes are committed.
+  - Code signing for Windows is working - Mac and Linux code signing coming soon.
 
 </webui-page-segment>
 
@@ -48,10 +49,6 @@ The primary concept for Task Proxy is to provide users with a tool where they ca
 
 </webui-page-segment>
 
-<webui-quote theme="info">
-
-More information coming soon!
-
-</webui-quote>
-
 <app-latest></app-latest>
+
+<webui-content src="/d/en-US/installation-notes.md" cache></webui-content>
