@@ -62,7 +62,7 @@
                         if (version != '0.0.0') {
                             html = `${html}</webui-flex>`;
                             if (versions[version]) {
-                                html = `${html}<webui-content class="d-flex gap-1 flex-column" nest cache src="https://cdn.myfi.ws/apps/task-proxy/${versions[version]}"></webui-content>`;
+                                html = `${html}<webui-content class="d-flex gap-0 flex-column" nest cache src="https://cdn.myfi.ws/apps/task-proxy/${versions[version]}"></webui-content>`;
                             }
                             html = `${html}</webui-grid>`
                         }
