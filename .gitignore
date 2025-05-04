@@ -1,27 +1,10 @@
-
-# Ignore VS Folders
-.vs/
-
-# Ignore NCrunch
-*ncrunch*
+# Ignore IDE Files
+.idea/
 
 # Ignore Build Folders
-Debug/
-Release/
-bin/
-obj/
-temp/
-
-# Ignore Build Files
-*.exe
-*.dll
 target
 dist
-*.profraw
+pkg
 
-# Ignore User Files
-*.user
-*.pubxml
-
-# Ignore Nuget cache files
-*.nuget.*
+# Ignore Legacy Files
+.legacy
