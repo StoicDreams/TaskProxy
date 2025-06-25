@@ -2,7 +2,7 @@
 
 ## Powered by [WebUI {WEBUI_VERSION}](https://webui.stoicdreams.com)
 
-<webui-page-segment>
+<webui-page-segment elevation="10">
 
 [![WebUI GitHub Actions][wui-gh-image]][wui-gh-checks]  [![Timestamp on crates.io][wui-cratesio-image]][wui-cratesio]  [![Timestamp on docs.rs][wui-docsrs-image]][wui-docsrs]
 

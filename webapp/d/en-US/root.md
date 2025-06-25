@@ -6,7 +6,7 @@ The Task Proxy desktop application is getting rebuilt in Rust. This move to Rust
 
 </webui-quote>
 
-<webui-page-segment>
+<webui-page-segment elevation="10">
 
 Task Proxy is a new developer tool for managing development documentation and scripts alongside productivity features to help organize, simplify, and automate developer workflows.
 
@@ -16,7 +16,7 @@ The primary concept for Task Proxy is to provide users with a tool where they ca
 
 ## Current State of Development
 
-<webui-page-segment>
+<webui-page-segment elevation="10">
 
 - Integrated [Tauri](https://tauri.app) framework for simplified development and deployments to multiple platform targets (Windows, Mac, Linux).
 - Integrated [WebUI](https://webui.stoicdreams.com) framework for layout, components, and default styling.
@@ -27,7 +27,7 @@ The primary concept for Task Proxy is to provide users with a tool where they ca
 
 ## Current Features being ported from Legacy App
 
-<webui-page-segment>
+<webui-page-segment elevation="10">
 
 - Create unique Task Proxy Projects for each project you need.
 - Quickly and easily switch between projects within Task Proxy.
@@ -42,7 +42,7 @@ The primary concept for Task Proxy is to provide users with a tool where they ca
 
 ## Additional Planned Features for new App
 
-<webui-page-segment>
+<webui-page-segment elevation="10">
 
 - Terminal module that will allow running scripts that need to run continuously and not be restricted to only running when the hosting page is open.
 - Schedule times and events to trigger running specfic scripts or command flows.
