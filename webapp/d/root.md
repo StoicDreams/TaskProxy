@@ -51,4 +51,4 @@ The primary concept for Task Proxy is to provide users with a tool where they ca
 
 <app-latest></app-latest>
 
-<webui-content cache src="/d/en-US/installation-notes.md" cache></webui-content>
+<webui-content cache src="/d/installation-notes.md" cache></webui-content>
