@@ -1,8 +1,8 @@
 # Task Proxy
 
-[Version: 0.1.5](https://github.com/StoicDreams/TaskProxy)
+[Version: 0.1.6](https://github.com/StoicDreams/TaskProxy)
 
-[WebUI Version: 0.11.3](https://github.com/StoicDreams/WebUI)
+[WebUI](https://github.com/StoicDreams/WebUI)
 
 Companion website for Task Proxy desktop application.
 
