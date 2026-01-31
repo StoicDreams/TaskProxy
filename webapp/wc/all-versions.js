@@ -8,56 +8,59 @@
     <webui-flex gap="20" slot="content" theme="inherit" id="latest-mac">Loading Mac release data...</webui-flex>
     <webui-button slot="tabs">Linux / Ubuntu</webui-button>
     <webui-flex gap="20" slot="content" theme="inherit" id="latest-ubuntu">Loading Linux release data...</webui-flex>`;
-    function sortVersions(items){
+    function sortVersions(items) {
         // sort items by version
-        items.sort((a,b)=>{
+        items.sort((a, b) => {
             let aVersion = a.version.split('.');
             let bVersion = b.version.split('.');
-            if (parseInt(aVersion[0]) > parseInt(bVersion[0])){
+            if (parseInt(aVersion[0]) > parseInt(bVersion[0])) {
                 return -1;
             }
-            if (parseInt(aVersion[0]) < parseInt(bVersion[0])){
+            if (parseInt(aVersion[0]) < parseInt(bVersion[0])) {
                 return 1;
             }
-            if (parseInt(aVersion[1]) > parseInt(bVersion[1])){
+            if (parseInt(aVersion[1]) > parseInt(bVersion[1])) {
                 return -1;
             }
-            if (parseInt(aVersion[1]) < parseInt(bVersion[1])){
+            if (parseInt(aVersion[1]) < parseInt(bVersion[1])) {
                 return 1;
             }
-            if (parseInt(aVersion[2]) > parseInt(bVersion[2])){
+            if (parseInt(aVersion[2]) > parseInt(bVersion[2])) {
                 return -1;
             }
-            if (parseInt(aVersion[2]) < parseInt(bVersion[2])){
+            if (parseInt(aVersion[2]) < parseInt(bVersion[2])) {
                 return 1;
             }
             return 0;
         });
     }
     webui.define("app-all-versions", {
-        constructor: (t) => {
-            t._title = webui.create('h2',{html:'Task Proxy Desktop Releases'});
-            t._tabs = webui.create('webui-tabs', {html: template, theme:'secondary',index:'1','transition-timing':'200','data-subscribe':'session-platform-tab-index:setTab'});
-         },
+        constructor() {
+            const t = this;
+            t._title = webui.create('h2', { html: 'Task Proxy Desktop Releases' });
+            t._tabs = webui.create('webui-tabs', { html: template, theme: 'secondary', index: '1', 'transition-timing': '200', 'data-subscribe': 'session-platform-tab-index:setTab' });
+        },
         attr: ['example'],
-        attrChanged: (t, property, value) => {
+        attrChanged(property, value) {
+            const t = this;
             switch (property) {
                 case 'example':
                     break;
             }
         },
-        connected: function (t) {
+        connected() {
+            const t = this;
             t.parentNode.insertBefore(t._title, t);
             t.parentNode.insertBefore(t._tabs, t);
             t.remove();
             let tabWin = t._tabs.querySelector('#latest-windows');
             let tabMac = t._tabs.querySelector('#latest-mac');
             let tabUbuntu = t._tabs.querySelector('#latest-ubuntu');
-            function addTabContent(container, items, versions){
+            function addTabContent(container, items, versions) {
                 sortVersions(items);
                 let html = '';
                 let version = '0.0.0';
-                items.forEach(item=>{
+                items.forEach(item => {
                     if (version != item.version) {
                         if (version != '0.0.0') {
                             html = `${html}</webui-flex>`;
@@ -80,17 +83,16 @@
                     }
                     html = `${html}</webui-grid>`;
                 }
-                let tabs = webui.create('webui-tabs', {html:html, theme:'tertiary', vertical: true});
+                let tabs = webui.create('webui-tabs', { html: html, theme: 'tertiary', vertical: true });
                 container.innerHTML = '';
                 container.appendChild(tabs);
             }
-            webui.fetchWithCache('https://cdn.myfi.ws/apps/task-proxy/apps.json', true).then(json=>{
+            webui.fetchWithCache('https://cdn.myfi.ws/apps/task-proxy/apps.json', true).then(json => {
                 addTabContent(tabWin, json.win, json.versions);
                 addTabContent(tabMac, json.mac, json.versions);
                 addTabContent(tabUbuntu, json.ubu, json.versions);
             });
-         },
-        disconnected: function (t) { }
+        }
     });
 
 }
