@@ -1,12 +1,12 @@
 [
     {
         "name": "Home",
-        "icon": "home",
+        "icon": "emoji-house|theme:title|shape:circle|backing",
         "url": "/"
     },
     {
         "name": "Versions",
-        "icon": "history",
+        "icon": "emoji-counterclockwise_arrows_button",
         "url": "/versions"
     }
 ]
