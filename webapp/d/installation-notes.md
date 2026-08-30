@@ -12,7 +12,9 @@
     <webui-flex gap="20" class="pa-3" slot="content" theme="inherit" style="gap: 20px; --theme-color: var(--color-inherit); --theme-color-offset: var(--color-inherit-offset);">
         <webui-paper>
             We have not yet setup certificate signing for Task Proxy on Mac. When installed, Apple will lock the program from being used. Before you can use the app, you will need to remove this lock with a special script.
-            <webui-code langauge="terminal">xattr -d com.apple.quarantine '/Applications/Task Proxy.app'</webui-code>
+            <webui-code language="terminal">
+                xattr -d com.apple.quarantine '/Applications/Task Proxy.app'
+            </webui-code>
         </webui-paper>
     </webui-flex>
     <webui-button slot="tabs" theme="active" style="--theme-color: var(--color-active); --theme-color-offset: var(--color-active-offset);">Linux / Ubuntu</webui-button>
