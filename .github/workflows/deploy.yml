@@ -25,7 +25,9 @@ jobs:
     - name: Run Tests
       run: cargo test
     - name: Install Trunk
-      run: cargo install trunk --locked
+      uses: taiki-e/install-action@v2
+      with:
+        tool: trunk
     - name: Install Post Build
       run: cargo install webapp_post_build --git https://github.com/StoicDreams/WebUI
     - name: Build Web App
