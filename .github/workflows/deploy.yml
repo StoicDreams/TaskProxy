@@ -17,9 +17,8 @@ jobs:
       run: |
         rustup update
         rustup target add wasm32-unknown-unknown
-    - name: Install Crates
-      run: |
-        cargo install wasm-pack
+    - name: Cache Rust Dependencies
+      uses: Swatinem/rust-cache@v2
     - name: Build
       run: cargo build
     - name: Run Tests
@@ -27,7 +26,7 @@ jobs:
     - name: Install Trunk
       uses: taiki-e/install-action@v2
       with:
-        tool: trunk
+        tool: trunk, wasm-pack
     - name: Install Post Build
       run: cargo install webapp_post_build --git https://github.com/StoicDreams/WebUI
     - name: Build Web App
