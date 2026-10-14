@@ -1,0 +1,19 @@
+{
+  "version": "0.1.48",
+  "notes": "Test.",
+  "pub_date": "2026-10-13T14:35:00Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "CONTENT_OF_WINDOWS_SIG_FILE",
+      "url": "https://cdn.myfi.ws/apps/task-proxy/win/0.1.48/Task Proxy_0.1.48_x64-setup.nsis.zip"
+    },
+    "darwin-aarch64": {
+      "signature": "CONTENT_OF_MAC_SIG_FILE",
+      "url": "https://cdn.myfi.ws/apps/task-proxy/mac/0.1.48/Task Proxy_0.1.48_aarch64.app.tar.gz"
+    },
+    "linux-x86_64": {
+      "signature": "CONTENT_OF_LINUX_SIG_FILE",
+      "url": "https://cdn.myfi.ws/apps/task-proxy/ubu/0.1.48/Task Proxy_0.1.48_amd64.AppImage.tar.gz"
+    }
+  }
+}
