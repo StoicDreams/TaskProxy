@@ -85,8 +85,8 @@ if ($null -ne $version) {
     $rootpath = $rootpath.ToString().ToLower()
     Write-Host Path: "Root Path Start: $rootpath"
 
-    ApplyVersionUpdates .\ Cargo.toml 'version = "([0-9\.]+)"' "version = ""$version"""
-    ApplyVersionUpdates .\Docs README.md '\[Version: ([0-9\.]+)\]' "[Version: $version]"
+    ApplyVersionUpdates ./ Cargo.toml 'version = "([0-9\.]+)"' "version = ""$version"""
+    ApplyVersionUpdates ./Docs README.md '\[Version: ([0-9\.]+)\]' "[Version: $version]"
 }
 else {
     Write-Host Current version was not found -ForegroundColor Red

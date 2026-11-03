@@ -6,6 +6,12 @@
 Task Proxy is a developer tool for managing documentation and scripts alongside productivity features to help organize, simplify, and automate your workflows. 
 
 Built in Rust for lightweight, cross-platform speed, Task Proxy integrates seamlessly into your daily routine to eliminate friction across Windows, Mac, and Linux.
+
+<webui-flex gap="var(--padding)" style="margin-top: 1rem;">
+    <webui-link href="https://github.com/StoicDreams/TaskProxyApp" icon="emoji-link" theme="primary">View on GitHub</webui-link>
+    <webui-link href="/getting-started" icon="emoji-rocket" theme="secondary">Getting Started</webui-link>
+</webui-flex>
+
 </webui-page-segment>
 
 ## Why Choose Task Proxy?

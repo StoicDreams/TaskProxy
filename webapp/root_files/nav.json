@@ -3,6 +3,10 @@
         "name": "Home",
         "icon": "emoji-house|theme:title|shape:circle|backing|inverted",
         "url": "/"
+    },{
+        "name": "Home",
+        "icon": "emoji-rocket|theme:primary|shape:circle|backing|inverted",
+        "url": "/getting-started"
     },
     {
         "name": "Versions",
