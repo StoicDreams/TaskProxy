@@ -2,23 +2,36 @@
 
 ## Powered by [WebUI {WEBUI_VERSION}](https://webui.stoicdreams.com)
 
+## Supercharge Your Developer Workflow
+
 <webui-page-segment elevation="10">
+Task Proxy is a developer tool for managing documentation and scripts alongside productivity features to help organize, simplify, and automate your workflows. 
 
-[![WebUI GitHub Actions][wui-gh-image]][wui-gh-checks]  [![Timestamp on crates.io][wui-cratesio-image]][wui-cratesio]  [![Timestamp on docs.rs][wui-docsrs-image]][wui-docsrs]
+Built in Rust using the [Tauri](https://tauri.app) framework for lightweight, cross-platform speed, Task Proxy integrates seamlessly into your daily routine to eliminate friction across Windows, Mac, and Linux.
+</webui-page-segment>
 
-[wui-gh-image]: https://github.com/stoicdreams/WebUI/actions/workflows/deploy.yml/badge.svg
-[wui-gh-checks]: https://github.com/stoicdreams/WebUI/actions?query=branch%3Amain
-[wui-cratesio-image]: https://img.shields.io/crates/v/webui.svg
-[wui-cratesio]: https://crates.io/crates/webui
-[wui-docsrs-image]: https://docs.rs/webui/badge.svg
-[wui-docsrs]: https://docs.rs/webui
+## Why Choose Task Proxy?
 
-Task Proxy is a new developer tool for managing development documentation and scripts alongside productivity features to help organize, simplify, and automate developer workflows.
+<webui-page-segment elevation="10">
+- **Zero-Friction Collaboration:** Configurations and custom pages are stored within a `.taskproxy` folder in your project root, so everything stays perfectly synced and easily shared via your version control system.
+- **Bulletproof Security:** Manage and store secrets for scripts and API connections securely by encrypting them via your OS's native credential manager, keeping them safely outside your repository.
+- **Precision Context:** Scope variables to Global, Project, or Page levels, ensuring your data and secrets are only accessible exactly where they are needed.
+</webui-page-segment>
 
-The primary concept for Task Proxy is to provide users with a tool where they can easily create and manage project documentation, scripts, and configurations.
+## Example Workflows
 
-This application is made possible by [Tauri](https://tauri.app), and other open source software.
+<webui-page-segment elevation="10">
+- **Centralized Team Hubs:** Create modular Task Proxy Pages within your project to provide onboarding documentation, run health-check scripts, and show dynamic reports.
+- **Automated Pipelines:** Utilize the integrated Script and Terminal Managers to queue and execute command flows in a specified sequence.
+- **Live Documentation Editing:** Manage project `readme.md` files and custom documentation with side-by-side live rendering.
+</webui-page-segment>
 
+## Core Capabilities
+
+<webui-page-segment elevation="10">
+- **Project Management:** Create, add, and switch between multiple isolated workspaces instantly.
+- **Git Controller:** Authenticate to commit, sync, push, pull, branch, and stash directly from the UI, featuring a built-in diff viewer.
+- **Terminal & Script Manager:** Write parameterized PowerShell scripts with auto-generated UI inputs, and execute them in live background terminals or separate OS windows.
 </webui-page-segment>
 
 <webui-content cache src="https://cdn.myfi.ws/d/about-stoic-dreams.md"></webui-content>
