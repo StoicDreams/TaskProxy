@@ -32,6 +32,18 @@
             **Adding to your Applications Menu:**
             To easily integrate the AppImage into your system's application launcher, we highly recommend installing [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher). Once AppImageLauncher is installed, simply opening the Task Proxy `.AppImage` will automatically prompt you to integrate it into your applications menu for easy access.
 
+            #### Yay
+            
+            ```terminal
+            yay -S appimagelauncher
+            ```
+
+            #### Paru
+
+            ```terminal
+            paru -S appimagelauncher
+            ```
+
             ### Using the DEB Package (Debian / Ubuntu)
             If you are using a Debian-based distribution like Ubuntu or Linux Mint, you can install the DEB package directly.
             1. Download the `.deb` file.
