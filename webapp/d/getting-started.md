@@ -29,3 +29,16 @@ With your project loaded, explore the primary management tools located in the le
 - **Git Controller:** Use the built-in Git interface to commit your work, switch branches, sync with remote repositories, and view line-by-line diffs.
 - **Variable Manager:** Click the **$** icon in the top header to define Page, Project, and Global variables for easy injection into your scripts and documentation.
 </webui-page-segment>
+
+## 4. Learn by Doing
+<webui-page-segment elevation="10">
+Each [tutorial](/tutorials) covers one task from start to finish, with screenshots and short videos:
+
+- [Set up Task Proxy and your first project](/tutorials/first-project)
+- [Review, commit, and sync your changes](/tutorials/commit-and-sync)
+- [Run scripts and answer their prompts](/tutorials/run-scripts)
+- [Build a page for your team](/tutorials/team-pages)
+- [Use variables, secrets, and environments](/tutorials/variables-and-environments)
+
+To see what Task Proxy shares through git and what stays on your computer, read [How It Works](/how-it-works).
+</webui-page-segment>

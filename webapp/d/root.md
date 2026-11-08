@@ -14,6 +14,36 @@ Built in Rust for lightweight, cross-platform speed, Task Proxy integrates seaml
 
 </webui-page-segment>
 
+## See It in Action
+
+<webui-page-segment elevation="10">
+
+Review your changes, commit, and sync with your team, all from one window:
+
+<webui-flex align="center" justify="center">
+<video controls playsinline preload="none" poster="/video/git-commit-sync.webp">
+    <source src="/video/git-commit-sync.mp4" type="video/mp4">
+</video>
+</webui-flex>
+
+Want to learn more? The [tutorials](/tutorials) walk through each task step by step, with screenshots and short videos, and [How It Works](/how-it-works) explains what Task Proxy shares through git and what stays on your computer.
+
+</webui-page-segment>
+
+## Who It's For
+
+<webui-cards card-width="280">
+    <webui-card name="Teams" avatar="emoji-busts_in_silhouette" link="/for-teams">
+        Keep onboarding guides and runbooks in the repository, with steps anyone can run in a click.
+    </webui-card>
+    <webui-card name="Developers" avatar="emoji-laptop" link="/for-developers">
+        Run scripts without remembering their flags, review and commit quickly, and keep tokens out of your scripts.
+    </webui-card>
+    <webui-card name="Everyone Who Uses Git" avatar="emoji-globe_with_meridians" link="/for-git-users">
+        Writers, designers, and students: see what changed, save a version, and share it, without the command line.
+    </webui-card>
+</webui-cards>
+
 ## Why Choose Task Proxy?
 
 <webui-page-segment elevation="10">

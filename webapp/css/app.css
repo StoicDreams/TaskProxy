@@ -24,3 +24,12 @@
 	--color-button: var(--color-info);
 	--color-button-offset: var(--color-info-offset);
 }
+
+video {
+    width: 100%;
+    height: auto;
+    max-width: 1920px;
+    max-height: 70vh;
+    margin: auto;
+    border-radius: 6px;
+}

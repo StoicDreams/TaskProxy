@@ -3,10 +3,83 @@
         "name": "Home",
         "icon": "circle_emoji-house|theme:title|backing|inverted",
         "url": "/"
-    },{
+    },
+    {
         "name": "Getting Started",
         "icon": "circle_emoji-rocket|theme:primary|backing|inverted",
         "url": "/getting-started"
+    },
+    {
+        "name": "How It Works",
+        "icon": "emoji-gear",
+        "url": "/how-it-works"
+    },
+    {
+        "name": "Who It's For",
+        "icon": "emoji-busts_in_silhouette",
+        "children": [
+            {
+                "name": "Teams",
+                "icon": "emoji-busts_in_silhouette",
+                "url": "/for-teams"
+            },
+            {
+                "name": "Developers",
+                "icon": "emoji-laptop",
+                "url": "/for-developers"
+            },
+            {
+                "name": "Everyone Who Uses Git",
+                "icon": "emoji-globe_with_meridians",
+                "url": "/for-git-users"
+            }
+        ]
+    },
+    {
+        "name": "Tutorials",
+        "icon": "circle_emoji-books|theme:success|backing|inverted",
+        "children": [
+            {
+                "name": "All Tutorials",
+                "icon": "emoji-books",
+                "url": "/tutorials"
+            },
+            {
+                "name": "Set Up Task Proxy",
+                "icon": "emoji-rocket",
+                "url": "/tutorials/first-project"
+            },
+            {
+                "name": "Commit and Sync",
+                "icon": "emoji-octopus",
+                "url": "/tutorials/commit-and-sync"
+            },
+            {
+                "name": "Branches",
+                "icon": "emoji-deciduous_tree",
+                "url": "/tutorials/branches"
+            },
+            {
+                "name": "Run Scripts",
+                "icon": "emoji-scroll",
+                "url": "/tutorials/run-scripts"
+            },
+            {
+                "name": "Team Pages",
+                "icon": "emoji-page_facing_up",
+                "url": "/tutorials/team-pages"
+            },
+            {
+                "name": "Variables and Environments",
+                "icon": "emoji-key",
+                "url": "/tutorials/variables-and-environments"
+            },
+            {
+                "name": "Project Docs",
+                "icon": "emoji-memo",
+                "url": "/tutorials/docs"
+            }
+        ]
     },
     {
         "name": "Versions",
