@@ -52,11 +52,11 @@ Open the new page from the left navigation.
 
 1. Click the header at the top to give the page a title and subtitle.
 2. Click **Add** to add a segment. Each segment is a heading, a block of text, or a line.
-3. Click a segment's edit button to open its editor. Choose its type, type its content in markdown, and click the edit button again to close it.
-4. Drag a segment by its edit button to move it.
+3. Click a segment's edit button to open its editor. Pick its type from the row at the top: **segment** for text, **h1** to **h6** for headings, or **line break**. Type its content in markdown, and click the edit button again to close it.
+4. Click **Delete** in the editor to remove a segment, and drag a segment by its edit button to move it.
 5. Click **Save**.
 
-![A segment open for editing, with its markdown on the left and a preview on the right](/img/tutorials/page-edit-segment.webp)
+![A segment open for editing, with its type picked from a row of options, a Delete button, its markdown on the left, and a preview on the right](/img/tutorials/page-edit-segment.webp)
 
 </webui-page-segment>
 
