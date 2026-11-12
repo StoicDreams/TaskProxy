@@ -82,6 +82,28 @@
         ]
     },
     {
+        "name": "Plugins",
+        "icon": "circle_emoji-jigsaw|theme:info|backing|inverted",
+        "children": [
+            {
+                "name": "All Plugins",
+                "icon": "emoji-jigsaw",
+                "url": "/plugins"
+            },
+            {
+                "name": "Issue Tracking",
+                "icon": "emoji-card_index_dividers",
+                "children": [
+                    {
+                        "name": "Jira",
+                        "icon": "emoji-ticket",
+                        "url": "/plugins/issue-tracking/jira"
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "name": "Versions",
         "icon": "emoji-counterclockwise_arrows_button",
         "url": "/versions"
