@@ -4,7 +4,7 @@
 
 <webui-page-segment elevation="10">
 
-The Jira plugin brings the parts of Jira you use every day into Task Proxy: your issue list, each issue together with the story and epic above it, new issues, and a branch for each issue. It talks to Jira Cloud (`your-team.atlassian.net`) directly, so pages open quickly and show only what you asked for.
+The Jira plugin brings the parts of Jira you use every day into Task Proxy: your issues and your team's, which you can change right in the list, each issue together with the story and epic above it, new issues, and a branch for each issue. It talks to Jira Cloud (`your-team.atlassian.net`) directly, so pages open quickly and show only what you asked for.
 
 <webui-loop-video src="/video/loops/jira/my-issues.mp4" poster="/video/loops/jira/my-issues.webp" alt="My Issues, listing issues with their status, priority, sprint, and story points"></webui-loop-video>
 
@@ -16,17 +16,63 @@ The Jira plugin brings the parts of Jira you use every day into Task Proxy: your
 
 1. Click the puzzle piece button at the top of Task Proxy, beside **Icons & Emojis**, and install **Jira**.
 2. Create an API token on [Atlassian's API tokens page](https://id.atlassian.com/manage-profile/security/api-tokens).
-3. In the same panel, open Jira's **Settings** and enter your Jira site, such as `https://your-team.atlassian.net`, the email you sign in with, and the token.
+3. With your project open, open Jira's **Settings for this project** in the same panel, and enter your Jira site, such as `https://your-team.atlassian.net`, the email you sign in with, and the token.
 
-The token is saved encrypted on your computer, and only the Jira plugin can read it. To use a different Jira site in one project, set a `jira_site` variable on that project.
+Jira is set up one project at a time, so each project only reaches the Jira account it was set up with, and Jira's pages only show in projects that have one. When you open another project, Jira offers to use the settings you already entered, or new ones for that project, such as a client's Jira. The token is saved encrypted on your computer, and only the Jira plugin can read it.
 
 </webui-page-segment>
 
-## My Issues
+## My Issues and All Issues
 
 <webui-page-segment elevation="10">
 
-**My Issues** starts with your open issues, newest change first. Type any JQL to search, as in Jira's advanced search, and save searches you use often, such as your sprint's bugs. Click a row to open the issue.
+**My Issues** starts with your open issues, newest change first, and **All Issues** with everyone's, so you can see your team's work and filter it by who it is assigned to.
+
+- **Filters:** open **Filters** beside **Search** to narrow the list by project, type, status, priority, or sprint. All Issues also filters by one or more people, or by issues nobody has yet.
+- **JQL:** the **JQL** button shows the query behind the list, which you can change as in Jira's advanced search. The filters are added to it.
+- **Sorting:** click a column title to sort by it, and click it again to reverse the order.
+- **Columns:** choose the columns from the issue, its parent, and its grandparent, such as the story a task belongs to.
+- **Saved searches:** save the searches you use often, such as your sprint's bugs, filters and sort included.
+
+Click an issue's key to open it.
+
+</webui-page-segment>
+
+## Change issues without opening them
+
+<webui-page-segment elevation="10">
+
+Status, priority, assignee, sprint, story points, and other fields picked from a list change right in the table. Click the value, then choose a new one. Long text is cut short in the table: point at it to read more, or click it to read all of it, and edit it there when Jira lets you.
+
+<webui-loop-video src="/video/loops/jira/change-in-place.mp4" poster="/video/loops/jira/change-in-place.webp" alt="Changing an issue's status from the My Issues table"></webui-loop-video>
+
+</webui-page-segment>
+
+## Comments and mentions
+
+<webui-page-segment elevation="10">
+
+The Comment column shows each issue's latest comment. Click it to read every comment and add your own. Type **@** and a few letters to mention someone, as in Jira, and pick them from the people who can see the issue. Mentions work on the issue page too.
+
+<webui-loop-video src="/video/loops/jira/comments.mp4" poster="/video/loops/jira/comments.webp" alt="Reading an issue's comments and mentioning a teammate in a new one"></webui-loop-video>
+
+</webui-page-segment>
+
+## Your team's issues
+
+<webui-page-segment elevation="10">
+
+<webui-loop-video src="/video/loops/jira/all-issues.mp4" poster="/video/loops/jira/all-issues.webp" alt="All Issues with its filters open, including who issues are assigned to"></webui-loop-video>
+
+</webui-page-segment>
+
+## Notifications
+
+<webui-page-segment elevation="10">
+
+Your Jira notifications show in Task Proxy's alerts, behind the bell at the top. Click an issue in one to open it, and close one to mark it read. Jira's **Notifications** page lists them too.
+
+When Jira's notification bell does not answer the plugin, the notifications are what others did on issues you are assigned, reported, or watch in the last week: mentions, comments, assignments, and status changes. Those are marked read in Task Proxy only.
 
 </webui-page-segment>
 
