@@ -36,7 +36,7 @@ The **Git Controller** lists every change with a side-by-side diff. Step through
 
 Your commit message is kept per project and repository until the commit succeeds, so switching tasks never loses it.
 
-![The Git Controller, showing changed files, a commit message, and a side-by-side diff](/img/tutorials/git-commit-ready.webp)
+<webui-loop-video src="/video/loops/git-commit-ready.mp4" poster="/video/loops/git-commit-ready.webp" alt="The Git Controller, showing changed files, a commit message, and a side-by-side diff"></webui-loop-video>
 
 <webui-flex gap="var(--padding)" wrap>
     <webui-link href="/tutorials/commit-and-sync" icon="emoji-octopus" theme="primary">Tutorial: Review, commit, and sync</webui-link>

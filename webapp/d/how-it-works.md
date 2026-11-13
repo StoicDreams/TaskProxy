@@ -15,7 +15,7 @@ Task Proxy is a desktop app for Windows, Mac, and Linux. You point it at a proje
 
 You can add as many projects as you like and switch between them from the **Project** dropdown at the top of the navigation.
 
-![The Git Controller in Task Proxy, with a list of changed files and the changes in one of them](/img/tutorials/git-changes.webp)
+<webui-loop-video src="/video/loops/git-changes.mp4" poster="/video/loops/git-changes.webp" alt="The Git Controller in Task Proxy, with a list of changed files and the changes in one of them"></webui-loop-video>
 
 </webui-page-segment>
 

@@ -8,7 +8,7 @@ Plugins connect Task Proxy to the other tools in your day, such as your issue tr
 
 Each plugin adds its own pages to Task Proxy's menu, and can add details to tools you already use, such as showing the issue for your current branch in the **Git Controller**.
 
-![The Plugins page, with Jira installed and its settings open](/img/plugins/plugins-page.webp)
+<webui-loop-video src="/video/loops/plugins-drawer.mp4" poster="/video/loops/plugins-drawer.webp" alt="The Plugins panel, with Jira installed and its settings open"></webui-loop-video>
 
 </webui-page-segment>
 
@@ -16,10 +16,10 @@ Each plugin adds its own pages to Task Proxy's menu, and can add details to tool
 
 <webui-page-segment elevation="10">
 
-1. Open **Settings** and click **Manage plugins**, or click **Plugins** at the bottom of the menu.
+1. Click the puzzle piece button at the top of Task Proxy, beside **Icons & Emojis**. The **Plugins** panel opens on the right.
 2. Under **Available**, click **Install** on the plugin you want.
 3. Read what the plugin will be able to do, and click **Install**.
-4. Open the plugin's **Settings** on the same page and enter what it asks for, such as your Jira site and API token.
+4. Open the plugin's **Settings** in the same panel and enter what it asks for, such as your Jira site and API token.
 
 Its pages appear in the menu straight away. **Turn off** hides a plugin without removing it, and **Remove** deletes it along with its settings.
 
@@ -58,6 +58,6 @@ Plugins from Task Proxy's catalog are signed by Stoic Dreams, and Task Proxy che
 
 <webui-page-segment elevation="10">
 
-Plugins are WebAssembly, written in Rust with the [Task Proxy plugin kit](https://github.com/StoicDreams/TaskProxyPlugins), or any language with an [Extism](https://extism.org) plugin kit. Build one, then choose **Install from folder** on the Plugins page to try it.
+Plugins are WebAssembly, written in Rust with the [Task Proxy plugin kit](https://github.com/StoicDreams/TaskProxyPlugins), or any language with an [Extism](https://extism.org) plugin kit. Build one, then click the puzzle piece button in Task Proxy and choose **Install from folder** to try it.
 
 </webui-page-segment>

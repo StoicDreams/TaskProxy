@@ -34,7 +34,7 @@ Every changed file is listed on the left, marked **Add**, **Modify**, or **Delet
 
 Lots of files? Type part of a path in **Filter files** to narrow the list.
 
-![The Git Controller showing four changed files, and the changes to cart.js side by side](/img/tutorials/git-changes.webp)
+<webui-loop-video src="/video/loops/git-changes.mp4" poster="/video/loops/git-changes.webp" alt="The Git Controller showing four changed files, and the changes to cart.js side by side"></webui-loop-video>
 
 </webui-page-segment>
 
@@ -61,7 +61,7 @@ Type a **Commit Message** and click **Commit**.
 
 Task Proxy remembers the message for each project and repository until the commit succeeds. You can switch projects, or close the app, without losing what you wrote.
 
-![A commit message typed in, with nav.json excluded, so Files to Commit shows 3 of 4](/img/tutorials/git-commit-ready.webp)
+<webui-loop-video src="/video/loops/git-commit-ready.mp4" poster="/video/loops/git-commit-ready.webp" alt="A commit message typed in, with nav.json excluded, so Files to Commit shows 3 of 4"></webui-loop-video>
 
 </webui-page-segment>
 
@@ -93,7 +93,7 @@ Pull and push need a personal access token. Task Proxy asks for one the first ti
 
 The token is encrypted and stays on your computer. It's never shown to pages or page scripts.
 
-![The Auth tab of the Git Controller, for entering a personal access token at project or global level](/img/tutorials/git-auth.webp)
+<webui-loop-video src="/video/loops/git-auth.mp4" poster="/video/loops/git-auth.webp" alt="The Auth tab of the Git Controller, for entering a personal access token at project or global level"></webui-loop-video>
 
 </webui-page-segment>
 

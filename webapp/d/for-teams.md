@@ -18,7 +18,7 @@ Write an onboarding page once: what to install, how to configure it, how to star
 
 A new teammate clones the repository, adds it to Task Proxy, and follows the page from top to bottom, running each step with a click. They don't need to know PowerShell, or to copy commands out of a document.
 
-![An onboarding page in Task Proxy, with steps and a run button on each script](/img/tutorials/page-onboarding.webp)
+<webui-loop-video src="/video/loops/page-onboarding.mp4" poster="/video/loops/page-onboarding.webp" alt="An onboarding page in Task Proxy, with steps and a run button on each script"></webui-loop-video>
 
 <webui-flex gap="var(--padding)" wrap>
     <webui-link href="/tutorials/team-pages" icon="emoji-page_facing_up" theme="primary">Tutorial: Build a page for your team</webui-link>

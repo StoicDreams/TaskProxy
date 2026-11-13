@@ -10,7 +10,7 @@ The **Docs Manager** edits the markdown files already in your project, such as `
 2. Edit the markdown on the right. The rendered result on the left updates as you type.
 3. Click **Save** to write the file, or **Reset** to throw away your changes and reload it.
 
-![The Docs Manager with README.md open, the rendered page on the left and its markdown on the right](/img/tutorials/docs-manager.webp)
+<webui-loop-video src="/video/loops/docs-manager.mp4" poster="/video/loops/docs-manager.webp" alt="The Docs Manager with README.md open, the rendered page on the left and its markdown on the right"></webui-loop-video>
 
 </webui-page-segment>
 

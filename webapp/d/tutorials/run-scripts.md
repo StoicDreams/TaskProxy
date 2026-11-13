@@ -48,7 +48,7 @@ param(
 
 The blue bar shows the exact command that will run, with your values in it. Turn on **Full Path** to see the script's full path rather than its path in the project. **Clear Params** empties every input.
 
-![The Script Manager with the test script loaded, Suite set to e2e and Filter set to checkout](/img/tutorials/script-manager.webp)
+<webui-loop-video src="/video/loops/script-manager.mp4" poster="/video/loops/script-manager.webp" alt="The Script Manager with the test script loaded, Suite set to e2e and Filter set to checkout"></webui-loop-video>
 
 </webui-page-segment>
 
@@ -60,7 +60,7 @@ Click **Run**, then open the **Terminal Manager** from the pager icon at the top
 
 Choose the script in the **Script** dropdown to see its output. Scripts run in a real terminal, so colors, progress bars, and lines that redraw look the way they do in your own terminal window. Output is kept after a script finishes, so you can come back to it later.
 
-![The Terminal Manager showing a test run with green check marks for each passing test](/img/tutorials/terminal-output.webp)
+<webui-loop-video src="/video/loops/terminal-output.mp4" poster="/video/loops/terminal-output.webp" alt="The Terminal Manager showing a test run with green check marks for each passing test"></webui-loop-video>
 
 </webui-page-segment>
 

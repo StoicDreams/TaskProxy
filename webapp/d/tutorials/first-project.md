@@ -24,7 +24,7 @@ The first time Task Proxy opens, it asks for a **Security Key**. It encrypts eve
 
 Task Proxy keeps the key in your operating system's credential store, so you won't be asked for it again on this computer.
 
-![The welcome page, asking for a security key, with Generate Key and Save buttons](/img/tutorials/first-run-security-key.webp)
+<webui-loop-video src="/video/loops/first-run-security-key.mp4" poster="/video/loops/first-run-security-key.webp" alt="The welcome page, asking for a security key, with Generate Key and Save buttons"></webui-loop-video>
 
 </webui-page-segment>
 
@@ -41,7 +41,7 @@ Task Proxy creates a `.taskproxy` folder inside it for the pages and settings yo
 
 Have several projects? Click **Add Multiple Projects** to add them all at once.
 
-![The Add Your First Project page, with Select Project Folder and Add Multiple Projects buttons](/img/tutorials/add-first-project.webp)
+<webui-loop-video src="/video/loops/add-first-project.mp4" poster="/video/loops/add-first-project.webp" alt="The Add Your First Project page, with Select Project Folder and Add Multiple Projects buttons"></webui-loop-video>
 
 </webui-page-segment>
 
@@ -56,7 +56,7 @@ Have several projects? Click **Add Multiple Projects** to add them all at once.
 
 Removing a project only takes it out of Task Proxy. Your files and the `.taskproxy` folder stay where they are.
 
-![The settings page, with options to add projects, rename or remove the current one, change the security key, and check for updates](/img/tutorials/settings.webp)
+<webui-loop-video src="/video/loops/settings.mp4" poster="/video/loops/settings.webp" alt="The settings page, with options to add projects, rename or remove the current one, change the security key, and check for updates"></webui-loop-video>
 
 </webui-page-segment>
 

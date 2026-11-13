@@ -26,7 +26,7 @@ Good first pages:
 - **Release checklist:** run the tests, bump the version, and publish.
 - **Runbooks:** health checks, restarts, and other jobs you don't do often enough to remember.
 
-![An onboarding page with headings, steps, and PowerShell blocks that each have a run button](/img/tutorials/page-onboarding.webp)
+<webui-loop-video src="/video/loops/page-onboarding.mp4" poster="/video/loops/page-onboarding.webp" alt="An onboarding page with headings, steps, and PowerShell blocks that each have a run button"></webui-loop-video>
 
 </webui-page-segment>
 
@@ -40,7 +40,7 @@ Good first pages:
 4. Drag items to reorder them, or to move a page into a folder.
 5. Click **Save**. **Cancel** throws away your changes.
 
-![The Navigation Manager, with the project's pages and folders on the left and Icon Search on the right](/img/tutorials/nav-manager.webp)
+<webui-loop-video src="/video/loops/nav-manager.mp4" poster="/video/loops/nav-manager.webp" alt="The Navigation Manager, with the project&#x27;s pages and folders on the left and Icon Search on the right"></webui-loop-video>
 
 </webui-page-segment>
 
@@ -56,7 +56,7 @@ Open the new page from the left navigation.
 4. Click **Delete** in the editor to remove a segment, and drag a segment by its edit button to move it.
 5. Click **Save**.
 
-![A segment open for editing, with its type picked from a row of options, a Delete button, its markdown on the left, and a preview on the right](/img/tutorials/page-edit-segment.webp)
+<webui-loop-video src="/video/loops/page-edit-segment.mp4" poster="/video/loops/page-edit-segment.webp" alt="A segment open for editing, with its type picked from a row of options, a Delete button, its markdown on the left, and a preview on the right"></webui-loop-video>
 
 </webui-page-segment>
 
@@ -89,7 +89,7 @@ Click the run button on a script. The first time you run a script from a project
 
 The script runs in the Terminal Manager, which opens to show its output.
 
-![The Run Script From This Project prompt, showing the script with its value masked, and a Trust Project and Run button](/img/tutorials/page-script-confirm.webp)
+<webui-loop-video src="/video/loops/page-script-confirm.mp4" poster="/video/loops/page-script-confirm.webp" alt="The Run Script From This Project prompt, showing the script with its value masked, and a Trust Project and Run button"></webui-loop-video>
 
 </webui-page-segment>
 

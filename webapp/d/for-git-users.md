@@ -16,7 +16,7 @@ Task Proxy's **Git Controller** does those in plain buttons, and stops you befor
 
 Every file you changed is listed, marked **Add**, **Modify**, or **Delete**. Click one to see the old and new versions side by side, with changed lines highlighted.
 
-![The Git Controller listing four changed files, with the old and new versions of cart.js side by side](/img/tutorials/git-changes.webp)
+<webui-loop-video src="/video/loops/git-changes.mp4" poster="/video/loops/git-changes.webp" alt="The Git Controller listing four changed files, with the old and new versions of cart.js side by side"></webui-loop-video>
 
 </webui-page-segment>
 

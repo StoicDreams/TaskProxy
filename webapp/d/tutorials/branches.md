@@ -8,7 +8,7 @@ A branch lets you work on one change without disturbing anyone else. A common pa
 
 In the **Git Controller**, open the **Branches** tab. It lists your local branches and the remote ones, such as `origin/main`, with when each was last updated. A star marks the branch you're on.
 
-![The Branches tab, listing local and remote branches with Switch, New, Merge, and Delete buttons](/img/tutorials/git-branches.webp)
+<webui-loop-video src="/video/loops/git-branches.mp4" poster="/video/loops/git-branches.webp" alt="The Branches tab, listing local and remote branches with Switch, New, Merge, and Delete buttons"></webui-loop-video>
 
 </webui-page-segment>
 
