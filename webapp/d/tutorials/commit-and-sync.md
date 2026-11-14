@@ -61,6 +61,10 @@ Type a **Commit Message** and click **Commit**.
 
 Task Proxy remembers the message for each project and repository until the commit succeeds. You can switch projects, or close the app, without losing what you wrote.
 
+While a commit runs, its buttons show what it is doing: **Processing Commit**, or **Running** and the script's name, with **Cancel**, while a script you chose under **Run Before Commit** runs first. Cancelling the script, or stopping it in the Terminals panel, commits nothing.
+
+Turn on **Queue** to line commits up instead of starting them at once. Each queued commit keeps its message, files, and settings, and they run one at a time, in the order you queued them, which also keeps your computer from building several projects at once. You can queue commits in several projects: each one's script runs in its own project when its turn comes, whichever project is open then. A repository with a commit waiting shows **Currently Queued**, and **Cancel Queue** takes it back out. The **Queue** tab lists everything queued or running in every project, and how the latest commits went.
+
 <webui-loop-video src="/video/loops/git-commit-ready.mp4" poster="/video/loops/git-commit-ready.webp" alt="A commit message typed in, with nav.json excluded, so Files to Commit shows 3 of 4"></webui-loop-video>
 
 </webui-page-segment>
