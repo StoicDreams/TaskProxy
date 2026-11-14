@@ -18,7 +18,7 @@ The Jira plugin brings the parts of Jira you use every day into Task Proxy: your
 2. Create an API token on [Atlassian's API tokens page](https://id.atlassian.com/manage-profile/security/api-tokens).
 3. With your project open, open Jira's **Settings for this project** in the same panel, and enter your Jira site, such as `https://your-team.atlassian.net`, the email you sign in with, and the token.
 
-Jira is set up one project at a time, so each project only reaches the Jira account it was set up with, and Jira's pages only show in projects that have one. When you open another project, Jira offers to use the settings you already entered, or new ones for that project, such as a client's Jira. The token is saved encrypted on your computer, and only the Jira plugin can read it.
+Jira is set up one project at a time, so each project only reaches the Jira account it was set up with, and Jira's pages only show in projects that have one. A project you have not set up shows no Jira menu at all. To add Jira to another project, open it, then open Jira's **Settings for this project** in the plugins panel, and use the settings you already entered or new ones for that project, such as a client's Jira. The token is saved encrypted on your computer, and only the Jira plugin can read it.
 
 </webui-page-segment>
 
