@@ -37,7 +37,7 @@ Turn on **Sync after commit** and step 3 happens on its own.
 </webui-flex>
 
 <webui-flex gap="var(--padding)" wrap>
-    <webui-link href="/tutorials/commit-and-sync" icon="emoji-octopus" theme="primary">Tutorial: Review, commit, and sync</webui-link>
+    <webui-link href="/tutorials/commit-and-sync" icon="code-commit" theme="primary">Tutorial: Review, commit, and sync</webui-link>
 </webui-flex>
 
 </webui-page-segment>
@@ -59,7 +59,7 @@ Turn on **Sync after commit** and step 3 happens on its own.
 A branch is a separate copy of your work to try something out. Create one from the **Branches** tab, switch between them with one click, and merge the one you keep.
 
 <webui-flex gap="var(--padding)" wrap>
-    <webui-link href="/tutorials/branches" icon="emoji-deciduous_tree" theme="primary">Tutorial: Work with branches</webui-link>
+    <webui-link href="/tutorials/branches" icon="code-branch" theme="primary">Tutorial: Work with branches</webui-link>
 </webui-flex>
 
 </webui-page-segment>
@@ -71,7 +71,7 @@ A branch is a separate copy of your work to try something out. Create one from t
 Documentation and notes in markdown? The **Docs Manager** shows the formatted result beside the text as you type.
 
 <webui-flex gap="var(--padding)" wrap>
-    <webui-link href="/tutorials/docs" icon="emoji-books" theme="primary">Tutorial: Edit your project's docs</webui-link>
+    <webui-link href="/tutorials/docs" icon="book-open" theme="primary">Tutorial: Edit your project's docs</webui-link>
 </webui-flex>
 
 </webui-page-segment>
@@ -83,7 +83,7 @@ Documentation and notes in markdown? The **Docs Manager** shows the formatted re
 To sync with a service such as GitHub, Task Proxy needs a personal access token, a kind of password made for apps. Your git host's settings let you create one. Task Proxy asks for it the first time it's needed, encrypts it, and keeps it on your computer.
 
 <webui-flex gap="var(--padding)" wrap>
-    <webui-link href="/tutorials/first-project" icon="emoji-rocket" theme="primary">Tutorial: Set up Task Proxy</webui-link>
+    <webui-link href="/tutorials/first-project" icon="folder-plus" theme="primary">Tutorial: Set up Task Proxy</webui-link>
 </webui-flex>
 
 </webui-page-segment>

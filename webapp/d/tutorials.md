@@ -11,25 +11,25 @@ New to Task Proxy? Start with **Set up Task Proxy and your first project**, then
 </webui-page-segment>
 
 <webui-cards card-width="300">
-    <webui-card name="Set up Task Proxy and your first project" avatar="emoji-rocket" link="/tutorials/first-project">
+    <webui-card name="Set up Task Proxy and your first project" avatar="folder-plus" link="/tutorials/first-project">
         Create your security key, add a project folder, and find your way around.
     </webui-card>
-    <webui-card name="Review, commit, and sync your changes" avatar="emoji-octopus" link="/tutorials/commit-and-sync">
+    <webui-card name="Review, commit, and sync your changes" avatar="code-commit" link="/tutorials/commit-and-sync">
         See what changed, choose what goes in each commit, and pull and push in one click.
     </webui-card>
-    <webui-card name="Work with branches" avatar="emoji-deciduous_tree" link="/tutorials/branches">
+    <webui-card name="Work with branches" avatar="code-branch" link="/tutorials/branches">
         Create, switch, merge, and clean up branches, and stash work in progress.
     </webui-card>
-    <webui-card name="Run scripts and answer their prompts" avatar="emoji-scroll" link="/tutorials/run-scripts">
+    <webui-card name="Run scripts and answer their prompts" avatar="terminal" link="/tutorials/run-scripts">
         Fill in a script's parameters, run it, and watch or reply to it in the terminal.
     </webui-card>
-    <webui-card name="Build a page for your team" avatar="emoji-page_facing_up" link="/tutorials/team-pages">
+    <webui-card name="Build a page for your team" avatar="file" link="/tutorials/team-pages">
         Write a runbook or onboarding guide with steps your team can run in a click.
     </webui-card>
-    <webui-card name="Use variables, secrets, and environments" avatar="emoji-key" link="/tutorials/variables-and-environments">
+    <webui-card name="Use variables, secrets, and environments" avatar="brackets-curly" link="/tutorials/variables-and-environments">
         Keep tokens out of your repository, and switch a whole set of values at once.
     </webui-card>
-    <webui-card name="Edit your project's docs" avatar="emoji-books" link="/tutorials/docs">
+    <webui-card name="Edit your project's docs" avatar="book-open" link="/tutorials/docs">
         Edit README files and other markdown with a live preview beside it.
     </webui-card>
 </webui-cards>

@@ -21,7 +21,7 @@ A new teammate clones the repository, adds it to Task Proxy, and follows the pag
 <webui-loop-video src="/video/loops/page-onboarding.mp4" poster="/video/loops/page-onboarding.webp" alt="An onboarding page in Task Proxy, with steps and a run button on each script"></webui-loop-video>
 
 <webui-flex gap="var(--padding)" wrap>
-    <webui-link href="/tutorials/team-pages" icon="emoji-page_facing_up" theme="primary">Tutorial: Build a page for your team</webui-link>
+    <webui-link href="/tutorials/team-pages" icon="file" theme="primary">Tutorial: Build a page for your team</webui-link>
 </webui-flex>
 
 </webui-page-segment>
@@ -53,7 +53,7 @@ Scripts often need tokens and addresses. Sharing those in a repository is a risk
 With Task Proxy, the script names the variables it needs. Each person enters their own values, which are encrypted and stay on their computer. Environments such as dev, staging, and prod switch every value at once, so the same page deploys anywhere.
 
 <webui-flex gap="var(--padding)" wrap>
-    <webui-link href="/tutorials/variables-and-environments" icon="emoji-key" theme="primary">Tutorial: Use variables, secrets, and environments</webui-link>
+    <webui-link href="/tutorials/variables-and-environments" icon="brackets-curly" theme="primary">Tutorial: Use variables, secrets, and environments</webui-link>
 </webui-flex>
 
 </webui-page-segment>
@@ -77,8 +77,8 @@ With Task Proxy, the script names the variables it needs. Each person enters the
 3. Ask your team to install Task Proxy and add the repository. Your page is waiting for them.
 
 <webui-flex gap="var(--padding)" wrap>
-    <webui-link href="/getting-started" icon="emoji-rocket" theme="primary">Getting Started</webui-link>
-    <webui-link href="/how-it-works" icon="emoji-gear" theme="secondary">How Task Proxy works</webui-link>
+    <webui-link href="/getting-started" icon="rocket" theme="primary">Getting Started</webui-link>
+    <webui-link href="/how-it-works" icon="lightbulb" theme="secondary">How Task Proxy works</webui-link>
 </webui-flex>
 
 </webui-page-segment>

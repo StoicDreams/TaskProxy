@@ -91,6 +91,6 @@ Task Proxy works with git directly, so there's nothing else to install. It signs
 </webui-page-segment>
 
 <webui-flex gap="var(--padding)" wrap>
-    <webui-link href="/tutorials" icon="circle_emoji-books|theme:primary|backing|inverted" theme="primary">Browse the tutorials</webui-link>
-    <webui-link href="/getting-started" icon="emoji-rocket" theme="secondary">Getting Started</webui-link>
+    <webui-link href="/tutorials" icon="circle_graduation-cap|theme:primary|backing|inverted" theme="primary">Browse the tutorials</webui-link>
+    <webui-link href="/getting-started" icon="rocket" theme="secondary">Getting Started</webui-link>
 </webui-flex>

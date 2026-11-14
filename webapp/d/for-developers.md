@@ -23,7 +23,7 @@ Scripts run in a real terminal, so test runners, build tools, and progress bars 
 </webui-flex>
 
 <webui-flex gap="var(--padding)" wrap>
-    <webui-link href="/tutorials/run-scripts" icon="emoji-scroll" theme="primary">Tutorial: Run scripts and answer their prompts</webui-link>
+    <webui-link href="/tutorials/run-scripts" icon="terminal" theme="primary">Tutorial: Run scripts and answer their prompts</webui-link>
 </webui-flex>
 
 </webui-page-segment>
@@ -39,8 +39,8 @@ Your commit message is kept per project and repository until the commit succeeds
 <webui-loop-video src="/video/loops/git-commit-ready.mp4" poster="/video/loops/git-commit-ready.webp" alt="The Git Controller, showing changed files, a commit message, and a side-by-side diff"></webui-loop-video>
 
 <webui-flex gap="var(--padding)" wrap>
-    <webui-link href="/tutorials/commit-and-sync" icon="emoji-octopus" theme="primary">Tutorial: Review, commit, and sync</webui-link>
-    <webui-link href="/tutorials/branches" icon="emoji-deciduous_tree" theme="secondary">Tutorial: Work with branches</webui-link>
+    <webui-link href="/tutorials/commit-and-sync" icon="code-commit" theme="primary">Tutorial: Review, commit, and sync</webui-link>
+    <webui-link href="/tutorials/branches" icon="code-branch" theme="secondary">Tutorial: Work with branches</webui-link>
 </webui-flex>
 
 </webui-page-segment>
@@ -52,7 +52,7 @@ Your commit message is kept per project and repository until the commit succeeds
 Stop pasting tokens into terminals and `.env` files. Set them once as global variables, encrypted on your computer, and Task Proxy fills them into page scripts when they run. Environments switch a project between dev, staging, and prod in one click.
 
 <webui-flex gap="var(--padding)" wrap>
-    <webui-link href="/tutorials/variables-and-environments" icon="emoji-key" theme="primary">Tutorial: Use variables, secrets, and environments</webui-link>
+    <webui-link href="/tutorials/variables-and-environments" icon="brackets-curly" theme="primary">Tutorial: Use variables, secrets, and environments</webui-link>
 </webui-flex>
 
 </webui-page-segment>
@@ -64,7 +64,7 @@ Stop pasting tokens into terminals and `.env` files. Set them once as global var
 That notes file of commands works better as a page: headings, a sentence on when to use each command, and a run button beside it. Keep it to yourself, or commit it and the whole team has it.
 
 <webui-flex gap="var(--padding)" wrap>
-    <webui-link href="/tutorials/team-pages" icon="emoji-page_facing_up" theme="primary">Tutorial: Build a page</webui-link>
+    <webui-link href="/tutorials/team-pages" icon="file" theme="primary">Tutorial: Build a page</webui-link>
 </webui-flex>
 
 </webui-page-segment>

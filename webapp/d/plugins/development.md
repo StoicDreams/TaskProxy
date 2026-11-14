@@ -95,7 +95,8 @@ The plugin spec is versioned on its own, apart from Task Proxy and from each plu
 
 | Task Proxy | Spec versions |
 |---|---|
-| 0.1.122 and later | 0.1.2 |
+| 0.1.123 and later | 0.1.3 |
+| 0.1.122 | 0.1.2 |
 | 0.1.118 to 0.1.121 | 0.1.0, as `apiVersion: 1`. `spec` is not read. |
 | 0.1.115 to 0.1.117 | An early form of 0.1.0, as `apiVersion: 1` |
 
@@ -103,7 +104,7 @@ The plugin spec is versioned on its own, apart from Task Proxy and from each plu
 
 | Plugin | Versions | Spec versions |
 |---|---|---|
-| Jira | 0.1.3 and later | 0.1.0, with drag and drop in its column editor where Task Proxy supports 0.1.2 |
+| Jira | 0.1.3 and later | 0.1.0, with drag and drop in its column editor where Task Proxy supports 0.1.2, and description images, editable View fields, and editable branch names where it supports 0.1.3 |
 | Jira | 0.1.0 to 0.1.2 | 0.1.0, as `apiVersion: 1` |
 
 </webui-page-segment>
@@ -170,12 +171,12 @@ Each tab is one version of the spec, complete, newest first. Rules marked **MUST
 </webui-page-segment>
 
 <webui-tabs vertical theme="info" transition-timing="200" pad="0">
-<webui-button slot="tabs" hash="spec-0-1-3">0.1.3 (Draft)</webui-button>
+<webui-button slot="tabs" hash="spec-0-1-4">0.1.4 (Draft)</webui-button>
 <webui-page-segment slot="content" style="--theme-color: var(--color-background); --theme-color-offset: var(--color-background-offset);">
 
-### Spec 0.1.3 (Draft)
+### Spec 0.1.4 (Draft)
 
-A draft for the Task Manager plugin, which lists running processes, including stuck background ones, and closes them. No Task Proxy release supports it yet, and it may change before it is released. It is everything in 0.1.2, plus the following.
+A draft for the Task Manager plugin, which lists running processes, including stuck background ones, and closes them. No Task Proxy release supports it yet, and it may change before it is released. It is everything in 0.1.3, plus the following.
 
 ### The `processes` permission
 
@@ -225,6 +226,149 @@ It always asks the user to confirm, naming the process, its pid, and its command
 ### Still to decide
 
 Processes belong to the whole machine, but a plugin shows only in projects set up for it. This draft either keeps that rule, with the Task Manager turned on for each project and filtered to that project by default, or adds a kind of plugin that shows in every project once turned on.
+
+</webui-page-segment>
+<webui-button slot="tabs" hash="spec-0-1-3">0.1.3</webui-button>
+<webui-page-segment slot="content" style="--theme-color: var(--color-background); --theme-color-offset: var(--color-background-offset);">
+
+### Spec 0.1.3
+
+Supported by Task Proxy 0.1.123 and later.
+
+**New in 0.1.3:**
+
+- images in markdown, from data URIs, and HTTP answers as base64 to download them
+- markdown's `toggle`, a switch between rendered and raw
+- properties' `edit`, an editor shown when the label is clicked
+- forms that fill a host action's fields, such as a branch's name
+
+Everything else is as in 0.1.2.
+
+### Package
+
+- **`plugin.json`:** the manifest.
+- **`plugin.wasm`:** a WebAssembly module for `wasm32-unknown-unknown`, at most 20 MB, run with Extism with no WASI.
+- **Its only import** is `taskproxy_host` in the `extism:host/user` module.
+
+### Manifest
+
+| Field | Type | Rules |
+|---|---|---|
+| `id` | string | Required. Lowercase letters, digits, and dashes, starting with a letter, at most 64 characters. Never changes. |
+| `name` | string | Required. Not blank. |
+| `version` | string | Required. The plugin's own version, three numbers. |
+| `spec` | string[] | Required. The spec versions it supports, one per line, each the lowest patch it needs, such as `["0.1.0"]`. |
+| `apiVersion` | number | `1` while it supports line 0.1, for Task Proxy 0.1.121 and earlier. Without `spec`, it means spec 0.1.0. |
+| `description` | string | A sentence or two, shown before installing. |
+| `category` | string | A slug, such as `issue-tracking`. |
+| `icon` | string | An icon name from [the icon list](https://cdn.myfi.ws/icons/all.json). |
+| `permissions` | object | `hosts`, `variables`, and `git`, below. |
+| `pages` | object[] | Each `{"id", "name", "icon", "hidden"}`, at `/plugin/<id>/<page>`. A `hidden` page is left out of the menu. |
+| `contributes` | string[] | `gitBranchInfo` for a Git Controller card, and `notifications` for the Alerts panel. Unknown values are ignored. |
+
+### Permissions
+
+| Permission | Rules |
+|---|---|
+| `hosts` | Domains for HTTPS requests: `api.example.com` exactly, or `*.example.com` for its subdomains only. A pattern needs at least two labels, so `*` and `*.com` are refused. |
+| `variables` | Each `{"key", "label", "secret", "help"}`. Keys are letters, digits, `_`, and `-`, and **MUST NOT** start with `app-` or `session-`. Users enter them per project, and `secret` ones are masked and never shown again. |
+| `git` | `currentBranch` to read the current branch, and `createBranch` for the branch host action. |
+
+### Exports
+
+Each takes one JSON value and returns `{"ok": ...}` or `{"error": "..."}`. Errors are shown to the user.
+
+| Export | Input | Result |
+|---|---|---|
+| `render` | `{"page", "params"}` | A node: the page's content. `params` is the address's query. |
+| `action` | `{"page", "pageParams", "action", "params", "form"}` | An action result. |
+| `branch_info` | `{"branch"}` | A node, or `null`. With `gitBranchInfo`. |
+| `notifications` | `{}` | A list of `{"id", "title", "text", "theme", "time", "links"}`. With `notifications`. Polled every two minutes. |
+| `notification_read` | `{"id"}` | Ignored. Called when the user closes a notification. |
+
+### Host calls
+
+A request names its `op`. A request Task Proxy does not understand is answered with an error.
+
+| `op` | Request | Answer |
+|---|---|---|
+| `var` | `{"key"}` | A declared variable from the project's own variables, then its settings, or `null`. |
+| `storeGet` | `{"key"}` | The plugin's saved value, or `null`. |
+| `storeSet` | `{"key", "value"}` | Saves it, encrypted. `null` removes it. |
+| `projectFileRead` | `{"path"}` | Text under `.taskproxy/plugins/<id>/` in the open project, or `null`. |
+| `projectFileWrite` | `{"path", "text"}` | Writes there, at most 1 MB. Paths can't leave that folder. |
+| `currentBranch` | `{}` | The branch's name, or `null`. Needs `git: currentBranch`. |
+| `now` | `{}` | Milliseconds since the Unix epoch. |
+| `http` | `{"request": {"method", "url", "headers", "body", "encoding"}}` | `{"status", "body"}`. HTTPS to declared hosts only, no redirects, at most 10 MB back, and no credentials in the URL. With `encoding: "base64"`, the body is the bytes as base64, for images and other files. New in 0.1.3. |
+| `hostInfo` | `{}` | `{"app", "spec", "platform"}`: Task Proxy's version, the spec version it runs the plugin with, and `linux`, `macos`, or `windows`. |
+
+### Action results
+
+Every field is optional, and `{}` changes nothing.
+
+| Field | Effect |
+|---|---|
+| `message` | `{"text", "theme"}`: a short alert. |
+| `closeDialog` | Closes the dialog the action came from. |
+| `navigate` | `{"page", "params"}`: opens one of the plugin's pages. |
+| `dialog` | `{"title", "ui"}`: opens a dialog. |
+| `ui` | Replaces the page's content, or the dialog's. |
+| `refresh` | Draws the page again. |
+| `options` | `[{"value", "label"}]`: choices for a `select` node or a field's `suggest`. |
+
+### Nodes
+
+Every node has a `type`. An unknown type is drawn as a placeholder. Themes are `primary`, `secondary`, `tertiary`, `info`, `success`, `warning`, and `danger`.
+
+| `type` | Fields |
+|---|---|
+| `stack`, `row`, `toolbar` | `children` |
+| `heading` | `text`, `level` (1 to 4, default 2) |
+| `text` | `text`, `muted`, `strong` |
+| `markdown` | `text`, sanitized, `images` (names used as `![alt](name)`, each a `data:image/...;base64,` URI, and the only images shown), and `toggle` (a switch to the raw text). The last two are new in 0.1.3. |
+| `badge` | `text`, `theme` |
+| `link` | `text`, `action` |
+| `button` | `action`, `theme` |
+| `properties` | `items`, each `{"label", "value", "edit"}` with nodes as the value and editor. Clicking the label switches to `edit`, new in 0.1.3. |
+| `table` | `columns`, titles or `{"label", "action", "sort"}`, and `rows`, each `{"cells", "action"}` |
+| `select` | `text`, `theme`, `options` (an action that returns the choices when clicked), `action` (run with the choice as `form.value`) |
+| `clip` | `text`, `max` (30), `tip` (100), `action`, `always`, `muted` |
+| `section` | `key`, `title`, `subtitle`, `open`, `children`. Remembered open or closed by `key`. |
+| `panel` | `key`, `open`, `children`. Shown and hidden by the `toggle` host action. |
+| `form` | `fields`, `submit`, `cancel`, `buttons`, `children`, `inline` (new in 0.1.2: fields and buttons in one row) |
+| `inputs` | `fields`, more of a form's fields among its `children` |
+| `notice` | `text`, `theme` |
+| `empty` | `text` |
+| `reorder` | `items`, each `{"id", "children"}`, and `action`. New in 0.1.2. |
+
+An **action** is `{"id", "label", "params", "confirm", "icon", "host"}`. With `confirm`, the user is asked first. As a form's `submit`, a host action takes its fields of the same name from the form, new in 0.1.3.
+
+A **reorder** list shows each item with a drag handle. The user drags items, or moves them with Alt+Up and Alt+Down, and Task Proxy then runs `action` with `form.order`, the ids in their new order. Older hosts show a placeholder, so check `hostInfo` and draw something else for them.
+
+A **field** is `{"name", "label", "kind", "value", "options", "required", "placeholder", "help", "suggest"}`:
+
+- **Kinds:** `text`, `password`, `textarea`, `number`, `select`, `multiselect`, `checkbox`, and `hidden`.
+- **Values sent:** checkboxes send booleans, multiselects send lists, and every other kind sends a string.
+- **`suggest`:** runs when the user types `@` and a few letters, with them as `query`. The form also sends `<name>.mentions`.
+
+### Host actions
+
+Run by Task Proxy only when the user clicks the button that names them.
+
+| `type` | Fields | Does |
+|---|---|---|
+| `git.createBranch` | `name` | Creates a branch and switches to it. Needs `git: createBranch`. |
+| `openUrl` | `url` | Opens an HTTPS address in the browser. |
+| `copy` | `text` | Copies to the clipboard. |
+| `openSettings` | | Opens the plugin's settings. |
+| `toggle` | `key` | Shows or hides a `panel`. |
+
+### Catalog
+
+- **Each entry** holds the manifest's fields, including `spec`, and the URLs and signatures of both files.
+- **`versions`** lists older versions for spec lines the newest one dropped, and Task Proxy installs the newest version it can run.
+- **Signatures:** both files are signed with the Task Proxy update key.
+- **Refused installs:** Task Proxy refuses a download whose signature, permissions, id, or version doesn't match its entry.
 
 </webui-page-segment>
 <webui-button slot="tabs" hash="spec-0-1-2">0.1.2</webui-button>

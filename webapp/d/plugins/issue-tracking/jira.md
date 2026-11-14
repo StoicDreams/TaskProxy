@@ -42,7 +42,7 @@ Click an issue's key to open it.
 
 <webui-page-segment elevation="10">
 
-Status, priority, assignee, sprint, story points, and other fields picked from a list change right in the table. Click the value, then choose a new one. Long text is cut short in the table: point at it to read more, or click it to read all of it, and edit it there when Jira lets you.
+Status, priority, assignee, sprint, story points, and other fields picked from a list change right in the table. Click the value, then choose a new one. Long text is cut short in the table: point at it to read more, or click it to read all of it, and edit it there when Jira lets you. A description opens formatted, with its screenshots and other images, and **Show raw** shows the markdown as written.
 
 <webui-loop-video src="/video/loops/jira/change-in-place.mp4" poster="/video/loops/jira/change-in-place.webp" alt="Changing an issue's status from the My Issues table"></webui-loop-video>
 
@@ -86,12 +86,21 @@ Jira shows one issue at a time, so the story or epic a task belongs to is anothe
 
 From the issue you can:
 
+- **Change its fields** where they are. Click a value picked from a list, such as the status or assignee, to choose another, or click a field's name, such as **Description**, to edit it.
 - **Move it** to another status.
 - **Comment**, with markdown for bold, italics, code, lists, and links.
-- **Create branch**, named after the issue, such as `ATL-142-show-ci-status-on-the-dashboard`.
+- **Create branch**, named after the issue, such as `ATL-142-show-ci-status-on-the-dashboard`. Change the name in the box first if you need to.
 - **Open in Jira**, for anything else.
 
 <webui-loop-video src="/video/loops/jira/issue-parents.mp4" poster="/video/loops/jira/issue-parents.webp" alt="The parent story with its acceptance criteria, and the epic above it"></webui-loop-video>
+
+</webui-page-segment>
+
+## Branch names your team uses
+
+<webui-page-segment elevation="10">
+
+Many teams have rules for branch names, such as `feature/PROJ-123_short-name`. **Branch Names** in the Jira menu sets the format Task Proxy suggests, for each Jira sign-in, so a client's Jira can follow the client's rules. A format is the parts of an issue in braces with filters after them, such as `{type|map:Bug=bugfix,*=feature}/{key}-{summary|slug|max:40}`. The page shows how your format names a real issue before you save it, and has a guide to every part and filter.
 
 </webui-page-segment>
 

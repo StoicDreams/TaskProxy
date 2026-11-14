@@ -1,107 +1,107 @@
 [
     {
         "name": "Home",
-        "icon": "circle_emoji-house|theme:title|backing|inverted",
+        "icon": "circle_house|theme:title|backing|inverted",
         "url": "/"
     },
     {
         "name": "Getting Started",
-        "icon": "circle_emoji-rocket|theme:primary|backing|inverted",
+        "icon": "circle_rocket|theme:primary|backing|inverted",
         "url": "/getting-started"
     },
     {
         "name": "How It Works",
-        "icon": "emoji-gear",
+        "icon": "lightbulb",
         "url": "/how-it-works"
     },
     {
         "name": "Who It's For",
-        "icon": "emoji-busts_in_silhouette",
+        "icon": "users",
         "children": [
             {
                 "name": "Teams",
-                "icon": "emoji-busts_in_silhouette",
+                "icon": "users",
                 "url": "/for-teams"
             },
             {
                 "name": "Developers",
-                "icon": "emoji-laptop",
+                "icon": "code",
                 "url": "/for-developers"
             },
             {
                 "name": "Everyone Who Uses Git",
-                "icon": "emoji-globe_with_meridians",
+                "icon": "git",
                 "url": "/for-git-users"
             }
         ]
     },
     {
         "name": "Tutorials",
-        "icon": "circle_emoji-books|theme:success|backing|inverted",
+        "icon": "circle_graduation-cap|theme:success|backing|inverted",
         "children": [
             {
                 "name": "All Tutorials",
-                "icon": "emoji-books",
+                "icon": "graduation-cap",
                 "url": "/tutorials"
             },
             {
                 "name": "Set Up Task Proxy",
-                "icon": "emoji-rocket",
+                "icon": "folder-plus",
                 "url": "/tutorials/first-project"
             },
             {
                 "name": "Commit and Sync",
-                "icon": "emoji-octopus",
+                "icon": "code-commit",
                 "url": "/tutorials/commit-and-sync"
             },
             {
                 "name": "Branches",
-                "icon": "emoji-deciduous_tree",
+                "icon": "code-branch",
                 "url": "/tutorials/branches"
             },
             {
                 "name": "Run Scripts",
-                "icon": "emoji-scroll",
+                "icon": "terminal",
                 "url": "/tutorials/run-scripts"
             },
             {
                 "name": "Team Pages",
-                "icon": "emoji-page_facing_up",
+                "icon": "file",
                 "url": "/tutorials/team-pages"
             },
             {
                 "name": "Variables and Environments",
-                "icon": "emoji-key",
+                "icon": "brackets-curly",
                 "url": "/tutorials/variables-and-environments"
             },
             {
                 "name": "Project Docs",
-                "icon": "emoji-memo",
+                "icon": "book-open",
                 "url": "/tutorials/docs"
             }
         ]
     },
     {
         "name": "Plugins",
-        "icon": "circle_emoji-jigsaw|theme:info|backing|inverted",
+        "icon": "circle_puzzle-piece|theme:info|backing|inverted",
         "children": [
             {
                 "name": "All Plugins",
-                "icon": "emoji-jigsaw",
+                "icon": "puzzle-piece",
                 "url": "/plugins"
             },
             {
                 "name": "Development",
-                "icon": "emoji-hammer_and_wrench",
+                "icon": "wrench",
                 "url": "/plugins/development"
             },
             {
                 "name": "Issue Tracking",
-                "icon": "emoji-card_index_dividers",
+                "icon": "list-check",
                 "children": [
                     {
                         "name": "Jira",
-                        "icon": "emoji-ticket",
+                        "icon": "ticket",
                         "url": "/plugins/issue-tracking/jira"
                     }
                 ]
@@ -110,7 +110,7 @@
     },
     {
         "name": "Versions",
-        "icon": "emoji-counterclockwise_arrows_button",
+        "icon": "history",
         "url": "/versions"
     }
 ]

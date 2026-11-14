@@ -49,7 +49,7 @@ Plugins from Task Proxy's catalog are signed by Stoic Dreams, and Task Proxy che
 </webui-page-segment>
 
 <webui-cards card-width="300">
-    <webui-card name="Jira" avatar="emoji-ticket" link="/plugins/issue-tracking/jira">
+    <webui-card name="Jira" avatar="ticket" link="/plugins/issue-tracking/jira">
         Your Jira Cloud issues, each one with its parents through Views you design, new issues, and a branch for each issue.
     </webui-card>
 </webui-cards>

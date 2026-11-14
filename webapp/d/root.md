@@ -8,8 +8,8 @@ Task Proxy is a developer tool for managing documentation and scripts alongside 
 Built in Rust for lightweight, cross-platform speed, Task Proxy integrates seamlessly into your daily routine to eliminate friction across Windows, Mac, and Linux.
 
 <webui-flex gap="var(--padding)" style="margin-top: 1rem;">
-    <webui-link href="https://github.com/StoicDreams/TaskProxyApp" icon="emoji-link" theme="primary">View on GitHub</webui-link>
-    <webui-link href="/getting-started" icon="emoji-rocket" theme="secondary">Getting Started</webui-link>
+    <webui-link href="https://github.com/StoicDreams/TaskProxyApp" icon="github" theme="primary">View on GitHub</webui-link>
+    <webui-link href="/getting-started" icon="rocket" theme="secondary">Getting Started</webui-link>
 </webui-flex>
 
 </webui-page-segment>
@@ -33,13 +33,13 @@ Want to learn more? The [tutorials](/tutorials) walk through each task step by s
 ## Who It's For
 
 <webui-cards card-width="280">
-    <webui-card name="Teams" avatar="emoji-busts_in_silhouette" link="/for-teams">
+    <webui-card name="Teams" avatar="users" link="/for-teams">
         Keep onboarding guides and runbooks in the repository, with steps anyone can run in a click.
     </webui-card>
-    <webui-card name="Developers" avatar="emoji-laptop" link="/for-developers">
+    <webui-card name="Developers" avatar="code" link="/for-developers">
         Run scripts without remembering their flags, review and commit quickly, and keep tokens out of your scripts.
     </webui-card>
-    <webui-card name="Everyone Who Uses Git" avatar="emoji-globe_with_meridians" link="/for-git-users">
+    <webui-card name="Everyone Who Uses Git" avatar="git" link="/for-git-users">
         Writers, designers, and students: see what changed, save a version, and share it, without the command line.
     </webui-card>
 </webui-cards>
