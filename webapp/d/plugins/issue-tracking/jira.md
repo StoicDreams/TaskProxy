@@ -28,6 +28,8 @@ Jira is set up one project at a time, so each project only reaches the Jira acco
 
 **My Issues** starts with your open issues, newest change first, and **All Issues** with everyone's, so you can see your team's work and filter it by who it is assigned to.
 
+A subtask you have finished stays in My Issues until its parent is finished too, so after you mark your development subtask Done, the story stays in view while it moves on through code review, deployment, and testing.
+
 - **Filters:** open **Filters** beside **Search** to narrow the list by project, type, status, priority, or sprint. All Issues also filters by one or more people, or by issues nobody has yet.
 - **JQL:** the **JQL** button shows the query behind the list, which you can change as in Jira's advanced search. The filters are added to it.
 - **Sorting:** click a column title to sort by it, and click it again to reverse the order.
@@ -108,7 +110,7 @@ Many teams have rules for branch names, such as `feature/PROJ-123_short-name`. *
 
 <webui-page-segment elevation="10">
 
-A **View** sets which fields show for the issue, and separately for its parent, its grandparent, and so on. For example, a team view might show a task's status, people, story points, sprint, description, and comments; its story's description, acceptance criteria, and comments; and only the epic's description.
+A **View** sets which fields show for the issue, and separately for its parent, its grandparent, and so on. Each level also lists its subtasks, with how many are done, and their status, assignee, and other values change right in the list. For example, a team view might show a task's status, people, story points, sprint, description, and comments; its story's description, acceptance criteria, and comments; and only the epic's description.
 
 <webui-loop-video src="/video/loops/jira/views.mp4" poster="/video/loops/jira/views.webp" alt="The Views page, listing the built-in View and a project View"></webui-loop-video>
 
@@ -117,6 +119,7 @@ Open **Views** in the menu to make one:
 1. Click **New View**, or **Copy** on the built-in one.
 2. In each layer, add the fields you want, including your site's custom fields, and move them up or down.
 3. Add a layer for each level of parent you want to see.
+4. Under each layer, **Subtasks** sets what its subtasks show. They start with the fields Jira shows (priority, story points, assignee, and status), which you can change, or you can hide them.
 4. Save it for yourself, or for the project. A project View is saved in the project's `.taskproxy` folder, so everyone on the project gets it through git.
 
 <webui-loop-video src="/video/loops/jira/view-editor.mp4" poster="/video/loops/jira/view-editor.webp" alt="Editing a View, with fields for the issue, its parent, and its grandparent"></webui-loop-video>
