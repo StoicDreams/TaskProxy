@@ -60,4 +60,6 @@ Plugins from Task Proxy's catalog are signed by Stoic Dreams, and Task Proxy che
 
 Plugins are WebAssembly, written in Rust with the [Task Proxy plugin kit](https://github.com/StoicDreams/TaskProxyPlugins), or any language with an [Extism](https://extism.org) plugin kit. Build one, then click the puzzle piece button in Task Proxy and choose **Install from folder** to try it.
 
+[Plugin Development](/plugins/development) walks through building one, and has the plugin spec for every version.
+
 </webui-page-segment>

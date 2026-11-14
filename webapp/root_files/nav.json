@@ -91,6 +91,11 @@
                 "url": "/plugins"
             },
             {
+                "name": "Development",
+                "icon": "emoji-hammer_and_wrench",
+                "url": "/plugins/development"
+            },
+            {
                 "name": "Issue Tracking",
                 "icon": "emoji-card_index_dividers",
                 "children": [
