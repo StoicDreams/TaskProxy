@@ -77,6 +77,24 @@ When a script asks a question, for example with `Read-Host` or a "Continue? [Y/N
 
 </webui-page-segment>
 
+## 5. Find anything still running
+
+<webui-page-segment elevation="10">
+
+The **Task Manager** button, beside the Terminal Manager's, lists every process you run, wherever it started: a dev server in your editor's terminal, a build, or a server left running after its terminal closed. It is the place to look when a port is taken, or something keeps your computer busy.
+
+- **Presets** show what started from a terminal, what was left running after what started it ended (**Orphaned**), what listens on a port, what runs in your projects' folders, what Task Proxy started, and what uses the most CPU or memory, or started recently.
+- **Search** finds a process by its name, command, folder, PID, or port, such as `5173`.
+- **Filter rules** build your own filter from fields such as command, folder, port, CPU, memory, and how long it has run. Copy a preset to start from it, and save your filter by name.
+- **Tree** shows each process under the one that started it.
+- Click a process for its command, folder, ports, and what started it. **Stop** asks it to stop, as Ctrl+C would. **Force close** ends it at once, and either can include everything it started. Task Proxy asks first, and never stops itself.
+
+It reads processes only while it is open, so it costs nothing the rest of the time. It works the same on Linux, macOS, and Windows, and only lists your own processes.
+
+<webui-loop-video src="/video/loops/task-manager.mp4" poster="/video/loops/task-manager.webp" alt="The Task Manager's Orphaned preset finding a Storybook server left running, with its details and Stop buttons"></webui-loop-video>
+
+</webui-page-segment>
+
 ## Next steps
 
 <webui-page-segment elevation="10">

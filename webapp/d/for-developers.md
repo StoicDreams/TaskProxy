@@ -28,6 +28,20 @@ Scripts run in a real terminal, so test runners, build tools, and progress bars 
 
 </webui-page-segment>
 
+## Find what is still running
+
+<webui-page-segment elevation="10">
+
+A dev server that outlived its terminal can hold a port and keep every later run from starting. The **Task Manager** lists every process you run, wherever it started, with presets for terminal processes, orphaned ones, servers on a port, and what runs in your projects, plus filters of your own. Stop one, or force close it with everything it started, from the same place.
+
+<webui-loop-video src="/video/loops/task-manager.mp4" poster="/video/loops/task-manager.webp" alt="The Task Manager's Orphaned preset finding a Storybook server left running"></webui-loop-video>
+
+<webui-flex gap="var(--padding)" wrap>
+    <webui-link href="/tutorials/run-scripts" icon="gauge" theme="primary">Tutorial: Find anything still running</webui-link>
+</webui-flex>
+
+</webui-page-segment>
+
 ## Review and commit quickly
 
 <webui-page-segment elevation="10">
