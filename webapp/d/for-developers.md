@@ -37,7 +37,7 @@ A dev server that outlived its terminal can hold a port and keep every later run
 <webui-loop-video src="/video/loops/task-manager.mp4" poster="/video/loops/task-manager.webp" alt="The Task Manager's Orphaned preset finding a Storybook server left running"></webui-loop-video>
 
 <webui-flex gap="var(--padding)" wrap>
-    <webui-link href="/tutorials/run-scripts" icon="gauge" theme="primary">Tutorial: Find anything still running</webui-link>
+    <webui-link href="/tutorials/task-manager" icon="gauge" theme="primary">Tutorial: Find and stop what is still running</webui-link>
 </webui-flex>
 
 </webui-page-segment>

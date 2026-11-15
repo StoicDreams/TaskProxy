@@ -50,7 +50,7 @@ Have several projects? Click **Add Multiple Projects** to add them all at once.
 <webui-page-segment elevation="10">
 
 - **Left navigation:** the **Project** dropdown at the top switches projects. Below it are the project's own pages, and at the bottom are four tools: **Navigation Manager**, **Docs Manager**, **Script Manager**, and **Git Controller**.
-- **Top right:** the icon and emoji drawer, **Manage Variables** (the **$**), the **Terminal Manager**, your notifications, and **Save**.
+- **Top right:** **Plugins** (the puzzle piece), **Icons & Emojis**, **Manage Variables** (the **$**), the **Terminal Manager**, the **Task Manager** (the gauge), your notifications, and **Save**. Each opens a panel on the right, beside whatever you are doing.
 - **Help:** every tool has a **Help** bubble in the corner. It opens a small window you can move and resize, and keep open while you work.
 - **Dashboard:** the Task Proxy logo at the top left takes you to settings, where you can add, rename, or remove projects, change your key, and check for updates.
 
@@ -60,12 +60,6 @@ Removing a project only takes it out of Task Proxy. Your files and the `.taskpro
 
 </webui-page-segment>
 
-## Next steps
-
-<webui-page-segment elevation="10">
-
-- [Review, commit, and sync your changes](/tutorials/commit-and-sync)
-- [Build a page for your team](/tutorials/team-pages)
-- [Use variables, secrets, and environments](/tutorials/variables-and-environments)
-
-</webui-page-segment>
+<webui-flex justify="flex-end">
+    <webui-button href="/tutorials/commit-and-sync" theme="primary" end-icon="chevrons-right">Continue to Review, commit, and sync your changes</webui-button>
+</webui-flex>

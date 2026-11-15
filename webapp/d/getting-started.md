@@ -28,6 +28,8 @@ With your project loaded, explore the primary management tools located in the le
 - **Script & Terminal Manager:** Write `.ps1` scripts, automatically generate input parameters, and execute them in live terminal views directly from the app.
 - **Git Controller:** Use the built-in Git interface to commit your work, switch branches, sync with remote repositories, and view line-by-line diffs.
 - **Variable Manager:** Click the **$** icon in the top header to define Page, Project, and Global variables for easy injection into your scripts and documentation.
+- **Task Manager:** Click the gauge in the top header to find every process you run, such as a dev server left running after its terminal closed, and stop it.
+- **Plugins:** Click the puzzle piece in the top header to add integrations such as Jira.
 </webui-page-segment>
 
 ## 4. Learn by Doing
@@ -36,9 +38,13 @@ Each [tutorial](/tutorials) covers one task from start to finish, with screensho
 
 - [Set up Task Proxy and your first project](/tutorials/first-project)
 - [Review, commit, and sync your changes](/tutorials/commit-and-sync)
+- [Work with branches](/tutorials/branches)
 - [Run scripts and answer their prompts](/tutorials/run-scripts)
+- [Find and stop what is still running](/tutorials/task-manager)
 - [Build a page for your team](/tutorials/team-pages)
 - [Use variables, secrets, and environments](/tutorials/variables-and-environments)
+- [Edit your project's docs](/tutorials/docs)
+- [Add a plugin](/tutorials/plugins)
 
 To see what Task Proxy shares through git and what stays on your computer, read [How It Works](/how-it-works).
 </webui-page-segment>

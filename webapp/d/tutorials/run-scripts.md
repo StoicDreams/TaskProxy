@@ -77,29 +77,29 @@ When a script asks a question, for example with `Read-Host` or a "Continue? [Y/N
 
 </webui-page-segment>
 
-## 5. Find anything still running
+## 5. Find a run again
 
 <webui-page-segment elevation="10">
 
-The **Task Manager** button, beside the Terminal Manager's, lists every process you run, wherever it started: a dev server in your editor's terminal, a build, or a server left running after its terminal closed. It is the place to look when a port is taken, or something keeps your computer busy.
+The switch at the top of the Terminal Manager chooses which scripts its **Script** dropdown lists:
 
-- **Presets** show what started from a terminal, what was left running after what started it ended (**Orphaned**), what listens on a port, what runs in your projects' folders, what Task Proxy started, and what uses the most CPU or memory, or started recently.
-- **Search** finds a process by its name, command, folder, PID, or port, such as `5173`.
-- **Filter rules** build your own filter from fields such as command, folder, port, CPU, memory, and how long it has run. Copy a preset to start from it, and save your filter by name.
-- **Tree** shows each process under the one that started it.
-- Click a process for its command, folder, ports, and what started it. **Stop** asks it to stop, as Ctrl+C would. **Force close** ends it at once, and either can include everything it started. Task Proxy asks first, and never stops itself.
+| View | Lists |
+|---|---|
+| **Live** | A terminal of your own. Type PowerShell in **Script Content** and click **Run** |
+| **Saved** | Every script saved in this project, ready to run from here |
+| **Page** | The scripts you ran from this project's pages |
+| **Running** | What is running in this project |
+| **All Running** | What is running in every project |
+| **Finished** | Every run that has ended, in every project, the latest first, saying which failed |
 
-It reads processes only while it is open, so it costs nothing the rest of the time. It works the same on Linux, macOS, and Windows, and only lists your own processes.
+Run a script while another is running, and it waits its turn, then runs. **Remove** takes a finished page script off the list, and **Remove Finished Page Scripts** clears them all. **Select All** copies the whole output.
 
-<webui-loop-video src="/video/loops/task-manager.mp4" poster="/video/loops/task-manager.webp" alt="The Task Manager's Orphaned preset finding a Storybook server left running, with its details and Stop buttons"></webui-loop-video>
+<webui-loop-video src="/video/loops/terminal-finished.mp4" poster="/video/loops/terminal-finished.webp" alt="The Terminal Manager's Finished view, showing a finished test run and its output"></webui-loop-video>
 
-</webui-page-segment>
-
-## Next steps
-
-<webui-page-segment elevation="10">
-
-- [Build a page for your team](/tutorials/team-pages), to put scripts beside the steps they belong to.
-- [Use variables, secrets, and environments](/tutorials/variables-and-environments), to keep tokens out of your scripts.
+A script can start something that outlives it, such as a dev server. To find and stop those, see the next tutorial, [Find and stop what is still running](/tutorials/task-manager).
 
 </webui-page-segment>
+
+<webui-flex justify="flex-end">
+    <webui-button href="/tutorials/task-manager" theme="primary" end-icon="chevrons-right">Continue to Find and stop what is still running</webui-button>
+</webui-flex>

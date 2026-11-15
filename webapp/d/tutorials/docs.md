@@ -23,3 +23,7 @@ Your edits are ordinary file changes, so they show up in the **Git Controller**,
 Docs or pages? Use docs for things people read anywhere, such as on GitHub. Use [Task Proxy pages](/tutorials/team-pages) for steps people carry out in Task Proxy, with scripts they can run.
 
 </webui-page-segment>
+
+<webui-flex justify="flex-end">
+    <webui-button href="/tutorials/plugins" theme="primary" end-icon="chevrons-right">Continue to Add a plugin</webui-button>
+</webui-flex>

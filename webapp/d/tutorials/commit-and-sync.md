@@ -34,7 +34,11 @@ Every changed file is listed on the left, marked **Add**, **Modify**, or **Delet
 
 Lots of files? Type part of a path in **Filter files** to narrow the list.
 
+For markdown, HTML, and SVG files, **Raw** and **Preview** above the changes switch between the changes as written and the file drawn as it will look. The preview runs nothing from the file.
+
 <webui-loop-video src="/video/loops/git-changes.mp4" poster="/video/loops/git-changes.webp" alt="The Git Controller showing four changed files, and the changes to cart.js side by side"></webui-loop-video>
+
+<webui-loop-video src="/video/loops/git-file-preview.mp4" poster="/video/loops/git-file-preview.webp" alt="README.md chosen in the Git Controller, then shown drawn with Preview"></webui-loop-video>
 
 </webui-page-segment>
 
@@ -58,6 +62,8 @@ To throw away your changes to one file, click its trash can. **Revert All** at t
 <webui-page-segment elevation="10">
 
 Type a **Commit Message** and click **Commit**.
+
+To check your work first, choose a script under **Run Before Commit**, such as your tests. It runs in the Terminal Manager each time you commit, and the commit goes ahead only if the script succeeds.
 
 Task Proxy remembers the message for each project and repository until the commit succeeds. You can switch projects, or close the app, without losing what you wrote.
 
@@ -101,11 +107,14 @@ The token is encrypted and stays on your computer. It's never shown to pages or 
 
 </webui-page-segment>
 
-## Next steps
+## See also
 
 <webui-page-segment elevation="10">
 
-- [Work with branches](/tutorials/branches)
-- [Task Proxy for everyone who uses git](/for-git-users)
+[Task Proxy for everyone who uses git](/for-git-users)
 
 </webui-page-segment>
+
+<webui-flex justify="flex-end">
+    <webui-button href="/tutorials/branches" theme="primary" end-icon="chevrons-right">Continue to Work with branches</webui-button>
+</webui-flex>

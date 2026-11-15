@@ -104,11 +104,14 @@ Variables can also have a default value, which is saved in `Variables.json` and 
 
 </webui-quote>
 
-## Next steps
+## See also
 
 <webui-page-segment elevation="10">
 
-- [Build a page for your team](/tutorials/team-pages)
-- [How Task Proxy works](/how-it-works)
+[How Task Proxy works](/how-it-works)
 
 </webui-page-segment>
+
+<webui-flex justify="flex-end">
+    <webui-button href="/tutorials/docs" theme="primary" end-icon="chevrons-right">Continue to Edit your project's docs</webui-button>
+</webui-flex>

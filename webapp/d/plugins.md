@@ -21,7 +21,7 @@ Each plugin adds its own pages to Task Proxy's menu, and can add details to tool
 3. Read what the plugin will be able to do, and click **Install**.
 4. Open the plugin's **Settings** in the same panel and enter what it asks for, such as your Jira site and API token.
 
-Its pages appear in the menu straight away. **Turn off** hides a plugin without removing it, and **Remove** deletes it along with its settings.
+Its pages appear in the menu straight away. The [Add a plugin](/tutorials/plugins) tutorial walks through it, including using a plugin in more than one project. **Turn off** hides a plugin without removing it, and **Remove** deletes it along with its settings.
 
 </webui-page-segment>
 

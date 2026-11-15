@@ -63,11 +63,14 @@ Click **Delete** to remove a branch you no longer need. This removes your local 
 
 </webui-page-segment>
 
-## Next steps
+## See also
 
 <webui-page-segment elevation="10">
 
-- [Review, commit, and sync your changes](/tutorials/commit-and-sync)
-- [Task Proxy for teams](/for-teams)
+[Task Proxy for teams](/for-teams)
 
 </webui-page-segment>
+
+<webui-flex justify="flex-end">
+    <webui-button href="/tutorials/run-scripts" theme="primary" end-icon="chevrons-right">Continue to Run scripts and answer their prompts</webui-button>
+</webui-flex>

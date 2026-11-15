@@ -65,6 +65,11 @@
                 "url": "/tutorials/run-scripts"
             },
             {
+                "name": "Task Manager",
+                "icon": "gauge",
+                "url": "/tutorials/task-manager"
+            },
+            {
                 "name": "Team Pages",
                 "icon": "file",
                 "url": "/tutorials/team-pages"
@@ -78,6 +83,11 @@
                 "name": "Project Docs",
                 "icon": "book-open",
                 "url": "/tutorials/docs"
+            },
+            {
+                "name": "Add a Plugin",
+                "icon": "puzzle-piece",
+                "url": "/tutorials/plugins"
             }
         ]
     },

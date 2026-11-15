@@ -6,7 +6,7 @@
 
 Each tutorial covers one job from start to finish. The screenshots and videos use a sample project called **Acme Storefront**, so the names you see are only examples.
 
-New to Task Proxy? Start with **Set up Task Proxy and your first project**, then pick whatever matches your work.
+New to Task Proxy? Start with **Set up Task Proxy and your first project**. Each tutorial ends with a button to the next, so you can go through them in order, or pick whatever matches your work.
 
 </webui-page-segment>
 
@@ -23,6 +23,9 @@ New to Task Proxy? Start with **Set up Task Proxy and your first project**, then
     <webui-card name="Run scripts and answer their prompts" avatar="terminal" link="/tutorials/run-scripts">
         Fill in a script's parameters, run it, and watch or reply to it in the terminal.
     </webui-card>
+    <webui-card name="Find and stop what is still running" avatar="gauge" link="/tutorials/task-manager">
+        Find a dev server holding a port or a build left running, and stop it with everything it started.
+    </webui-card>
     <webui-card name="Build a page for your team" avatar="file" link="/tutorials/team-pages">
         Write a runbook or onboarding guide with steps your team can run in a click.
     </webui-card>
@@ -31,6 +34,9 @@ New to Task Proxy? Start with **Set up Task Proxy and your first project**, then
     </webui-card>
     <webui-card name="Edit your project's docs" avatar="book-open" link="/tutorials/docs">
         Edit README files and other markdown with a live preview beside it.
+    </webui-card>
+    <webui-card name="Add a plugin" avatar="puzzle-piece" link="/tutorials/plugins">
+        Install a plugin such as Jira, set it up for a project, and find its pages.
     </webui-card>
 </webui-cards>
 

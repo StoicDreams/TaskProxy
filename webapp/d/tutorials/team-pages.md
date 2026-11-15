@@ -101,11 +101,14 @@ Commit the new files in `.taskproxy`, the page and `Navigation.json`, and push. 
 
 </webui-page-segment>
 
-## Next steps
+## See also
 
 <webui-page-segment elevation="10">
 
-- [Use variables, secrets, and environments](/tutorials/variables-and-environments)
-- [Task Proxy for teams](/for-teams)
+[Task Proxy for teams](/for-teams)
 
 </webui-page-segment>
+
+<webui-flex justify="flex-end">
+    <webui-button href="/tutorials/variables-and-environments" theme="primary" end-icon="chevrons-right">Continue to Use variables, secrets, and environments</webui-button>
+</webui-flex>
