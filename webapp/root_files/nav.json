@@ -65,6 +65,11 @@
                 "url": "/tutorials/run-scripts"
             },
             {
+                "name": "Scripts That Open Terminals",
+                "icon": "layers",
+                "url": "/tutorials/script-terminals"
+            },
+            {
                 "name": "Task Manager",
                 "icon": "gauge",
                 "url": "/tutorials/task-manager"

@@ -16,6 +16,12 @@ Open any `.ps1` file in your project in the **Script Manager**. Task Proxy reads
 
 Scripts run in a real terminal, so test runners, build tools, and progress bars look the same as in your own. When a script asks a question, click the terminal and type the answer. Ctrl+C stops it.
 
+A script that starts your dev servers can open each one as a terminal in Task Proxy, rather than a window of its own, with one line of PowerShell:
+
+```pwsh
+Start-TaskProxyTerminal -Name 'api' -Command "& './scripts/run-api.ps1'" -Replace
+```
+
 <webui-flex align="center" justify="center">
 <video controls playsinline preload="none" poster="/video/script-prompt.webp">
     <source src="/video/script-prompt.mp4" type="video/mp4">
@@ -24,6 +30,7 @@ Scripts run in a real terminal, so test runners, build tools, and progress bars 
 
 <webui-flex gap="var(--padding)" wrap>
     <webui-link href="/tutorials/run-scripts" icon="terminal" theme="primary">Tutorial: Run scripts and answer their prompts</webui-link>
+    <webui-link href="/tutorials/script-terminals" icon="layers" theme="primary">Tutorial: Open terminals from your scripts</webui-link>
 </webui-flex>
 
 </webui-page-segment>

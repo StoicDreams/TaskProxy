@@ -23,6 +23,9 @@ New to Task Proxy? Start with **Set up Task Proxy and your first project**. Each
     <webui-card name="Run scripts and answer their prompts" avatar="terminal" link="/tutorials/run-scripts">
         Fill in a script's parameters, run it, and watch or reply to it in the terminal.
     </webui-card>
+    <webui-card name="Open terminals from your scripts" avatar="layers" link="/tutorials/script-terminals">
+        Have a script open each dev server as a terminal in Task Proxy, rather than a window of its own, and restart them all in one run.
+    </webui-card>
     <webui-card name="Find and stop what is still running" avatar="gauge" link="/tutorials/task-manager">
         Find a dev server holding a port or a build left running, and stop it with everything it started.
     </webui-card>

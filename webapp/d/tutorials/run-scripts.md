@@ -96,10 +96,10 @@ Run a script while another is running, and it waits its turn, then runs. **Remov
 
 <webui-loop-video src="/video/loops/terminal-finished.mp4" poster="/video/loops/terminal-finished.webp" alt="The Terminal Manager's Finished view, showing a finished test run and its output"></webui-loop-video>
 
-A script can start something that outlives it, such as a dev server. To find and stop those, see the next tutorial, [Find and stop what is still running](/tutorials/task-manager).
+A script can start something that outlives it, such as a dev server. To open those as terminals here, rather than windows of their own, see the next tutorial, [Open terminals from your scripts](/tutorials/script-terminals). To find and stop processes still running, see [Find and stop what is still running](/tutorials/task-manager).
 
 </webui-page-segment>
 
 <webui-flex justify="flex-end">
-    <webui-button href="/tutorials/task-manager" theme="primary" end-icon="chevrons-right">Continue to Find and stop what is still running</webui-button>
+    <webui-button href="/tutorials/script-terminals" theme="primary" end-icon="chevrons-right">Continue to Open terminals from your scripts</webui-button>
 </webui-flex>
