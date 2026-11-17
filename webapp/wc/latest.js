@@ -52,6 +52,7 @@
             const t = this;
             t.parentNode.insertBefore(t._title, t);
             t.parentNode.insertBefore(t._tabs, t);
+            // Names, versions, and links in apps.json are data, so they are set as text and attributes, never as HTML.
             let rnp = document.createTextNode("");
             t.parentNode.insertBefore(rnp, t);
             t.remove();
@@ -62,11 +63,11 @@
                 if (json.win && json.win.length > 0) {
                     let latest = getLatest(json.win);
                     let version = `${latest[0].version}`;
-                    t._title.innerHTML = `Latest Release (Version ${version})`;
+                    t._title.innerText = `Latest Release (Version ${version})`;
                     tabWin.innerHTML = ``;
                     latest.forEach(item => {
                         let name = item.name.endsWith('.msi') ? "Windows x64 MSI Installer" : item.name.endsWith('.exe') ? "Windows x64 EXE Installer" : item.name;
-                        tabWin.appendChild(webui.create('a', { 'html': name, 'href': item.file }));
+                        tabWin.appendChild(webui.create('a', { 'text': name, 'href': item.file }));
                     });
                     if (json.versions[version]) {
                         rnp.parentNode.insertBefore(webui.create('webui-content', { cache: true, src: `https://cdn.myfi.ws/apps/task-proxy/${json.versions[version]}` }), rnp);
@@ -79,7 +80,7 @@
                     tabMac.innerHTML = ``;
                     latest.forEach(item => {
                         let name = item.name.endsWith('.dmg') ? "Mac DMG" : item.name;
-                        tabMac.appendChild(webui.create('a', { 'html': name, 'href': item.file }));
+                        tabMac.appendChild(webui.create('a', { 'text': name, 'href': item.file }));
                     });
 
                 } else {
@@ -90,7 +91,7 @@
                     tabUbuntu.innerHTML = ``;
                     latest.forEach(item => {
                         let name = item.name.endsWith('.deb') ? "Linux amd64 DEB" : item.name.endsWith('.AppImage') ? "Linux amd64 AppImage" : item.name;
-                        tabUbuntu.appendChild(webui.create('a', { 'html': name, 'href': item.file }));
+                        tabUbuntu.appendChild(webui.create('a', { 'text': name, 'href': item.file }));
                     });
                 } else {
                     tabUbuntu.innerHTML = `There are currently no releases available for Linux/Ubuntu.`;

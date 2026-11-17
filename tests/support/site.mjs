@@ -1,4 +1,4 @@
-import { test as base, expect } from '@playwright/test';
+import { test as base, expect, request as apiRequest } from '@playwright/test';
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { extname, join, normalize, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -200,6 +200,48 @@ export function relativeToSite(file) {
     return relative(SITE_ROOT, file).split(sep).join('/');
 }
 
+// The live-cdn project gets each framework file from cdn.myfi.ws once per test worker and keeps it, instead of once per
+// test. Thousands of requests per run meant a dropped connection (such as net::ERR_NETWORK_CHANGED) now and then,
+// which failed whichever test it hit. A failed download is retried, and if it never succeeds the browser asks itself.
+const liveCdn = new Map();
+const LIVE_CDN_ORIGIN = 'https://cdn.myfi.ws';
+// Sites load the framework from the local MyFiCDN server when they run on localhost, as the tests do, so its
+// requests are answered the same as cdn.myfi.ws: from the live CDN, or from the local-cdn project's checkout.
+const CDN_ORIGINS = new Set([LIVE_CDN_ORIGIN, 'http://localhost:3180']);
+let liveCdnClient;
+// A file takes well under a second, so a download that stalls is given up on soon enough to retry within one test.
+const LIVE_CDN_ATTEMPTS = 4;
+const LIVE_CDN_TIMEOUT = 5000;
+
+async function downloadLiveCdn(url) {
+    liveCdnClient ??= await apiRequest.newContext();
+    for (let attempt = 1; ; attempt++) {
+        try {
+            const response = await liveCdnClient.get(url, { timeout: LIVE_CDN_TIMEOUT });
+            if (response.status() < 500 || attempt === LIVE_CDN_ATTEMPTS) {
+                return { status: response.status(), contentType: response.headers()['content-type'], body: await response.body() };
+            }
+        } catch (error) {
+            if (attempt === LIVE_CDN_ATTEMPTS) return null;
+        }
+        await new Promise(resolve => setTimeout(resolve, 250 * attempt));
+    }
+}
+
+async function serveLiveCdn(route, headers) {
+    const request = route.request();
+    if (request.method() !== 'GET') return route.continue();
+    const url = `${LIVE_CDN_ORIGIN}${new URL(request.url()).pathname}`;
+    if (!liveCdn.has(url)) liveCdn.set(url, downloadLiveCdn(url));
+    const file = await liveCdn.get(url);
+    if (!file) {
+        liveCdn.delete(url);
+        // The browser can ask cdn.myfi.ws itself, but never the local server, so the tests do not depend on it running.
+        return new URL(request.url()).origin === LIVE_CDN_ORIGIN ? route.continue() : route.abort();
+    }
+    return route.fulfill({ headers, status: file.status, contentType: file.contentType, body: file.body });
+}
+
 function serve(route, origin, cdnDir) {
     const request = route.request();
     const url = new URL(request.url());
@@ -211,11 +253,12 @@ function serve(route, origin, cdnDir) {
     if (url.hostname === 'api.myfi.ws') {
         return route.fulfill({ headers, contentType: 'text/plain', body: '0' });
     }
-    if (url.hostname === 'cdn.myfi.ws') {
-        if (!cdnDir) return route.continue();
+    if (CDN_ORIGINS.has(url.origin)) {
+        if (!cdnDir) return serveLiveCdn(route, headers);
         const file = inside(cdnDir, url.pathname);
         if (file) return route.fulfill({ headers, contentType: MIME[extname(file)] || 'application/octet-stream', body: readFileSync(file) });
-        return route.continue();
+        if (url.origin === LIVE_CDN_ORIGIN) return route.continue();
+        return route.fulfill({ headers, status: 404, contentType: 'text/plain', body: 'Not Found' });
     }
     if (url.origin !== origin) {
         // Analytics, embeds, and other outside requests are blocked, so tests never count as real visits.
@@ -274,18 +317,65 @@ export const test = base.extend({
 export { expect };
 
 /**
- * Open a page of the site and wait until its content has loaded.
- * Pages fade in, so this waits for the transition to finish as well.
+ * Open a page of the site and wait until it is ready: the loader has put the page's content in place and finished
+ * its fade, every component on the page is defined, and the content in view has loaded.
  */
 export async function openPage(page, route) {
     await page.goto(route);
-    await page.waitForFunction(() => typeof webui === 'object' && webui.loaded && webui.appConfig?.appName);
+    await pageReady(page);
+}
+
+/**
+ * Waits for a page the loader is loading, or has loaded, to be ready. openPage calls it, and a test that goes to
+ * another page by a link or webui.navigateTo calls it after waiting for the new address.
+ */
+export async function pageReady(page) {
+    // The loader sets the page title in the same step that puts the content in place (or shows the not-found page),
+    // and takes the transition class off once the fade is over. Before that the app shell has neither.
     await page.waitForFunction(() => {
+        if (typeof webui !== 'object' || !webui.loaded || !webui.appConfig?.appName) return false;
         const app = document.querySelector('webui-app');
-        return webui.getData('page-path') && app?.main && !app.main.classList.contains('transition');
+        if (!app?.main || app.main.classList.contains('transition')) return false;
+        return !!webui.getData('page-title') || !!document.querySelector('webui-page-not-found');
     });
-    // Pages can pull in more content, such as webui-content, and components load their scripts on demand.
-    await page.waitForLoadState('networkidle');
+    // Components load their scripts on demand, and loaded content can bring more components, so this checks again
+    // until nothing is left. Pages such as a component list load dozens of scripts, which takes a while on a slow or busy machine.
+    await expect.poll(() => unfinishedLoading(page), { message: 'The page never finished loading these', timeout: 15000 }).toEqual([]);
+}
+
+/**
+ * What a page is still loading: components without a definition, and webui-content in view that has not shown its
+ * source yet. Content out of view is left out, because it only loads once it is scrolled to.
+ */
+export async function unfinishedLoading(page) {
+    return page.evaluate(async () => {
+        const all = (root, found = []) => {
+            for (const el of root.querySelectorAll('*')) {
+                found.push(el);
+                if (el.shadowRoot) all(el.shadowRoot, found);
+            }
+            return found;
+        };
+        const elements = all(document);
+        const tags = new Set(elements.map(el => el.localName).filter(name => /^(webui|app)-/.test(name)));
+        const waiting = [...tags].filter(tag => !customElements.get(tag)).sort();
+        if (waiting.length) return waiting;
+        const contents = elements.filter(el => el.localName === 'webui-content');
+        if (!contents.length) return [];
+        // The loader marks content as visible from its own IntersectionObserver. Observers report in the order they
+        // were made, so once this one has reported, the loader's has already marked everything now in view.
+        await new Promise(resolve => {
+            const observer = new IntersectionObserver(() => {
+                observer.disconnect();
+                resolve();
+            });
+            contents.forEach(el => observer.observe(el));
+        });
+        return contents
+            .filter(el => el.isConnected && el.hasAttribute('visible') && !el.classList.contains('loaded'))
+            .filter(el => el.getAttribute('src') && el.getAttribute('src') !== 'html')
+            .map(el => `webui-content src="${el.getAttribute('src')}"`);
+    });
 }
 
 /** Custom element tags on the page that never loaded a definition. */
