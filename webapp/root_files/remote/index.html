@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Task Proxy Remote</title>
+    <meta name="description" content="Use Task Proxy on your desktop from this phone or laptop.">
+    <meta name="theme-color" content="#FF2E46">
+    <meta name="robots" content="noindex">
+    <link href="/Logo.svg" rel="icon" type="image/svg+xml" sizes="any">
+    <link href="/remote/app.webmanifest" rel="manifest">
+    <link href="https://cdn.myfi.ws/css/webui.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="/remote/remote.css" rel="stylesheet">
+    <!-- The noble libraries are copied unchanged into vendor/noble, and import each other by package name. -->
+    <script type="importmap">
+        {
+            "imports": {
+                "@noble/curves/": "/remote/vendor/noble/curves/",
+                "@noble/ciphers/": "/remote/vendor/noble/ciphers/",
+                "@noble/hashes/": "/remote/vendor/noble/hashes/"
+            }
+        }
+    </script>
+    <script type="module" src="/remote/remote.js"></script>
+</head>
+<body>
+    <main id="remote" aria-live="polite">
+        <header>
+            <img src="/Logo.svg" alt="" width="40" height="40">
+            <h1>Task Proxy Remote</h1>
+        </header>
+        <section id="status">
+            <p id="message">Loading</p>
+            <p id="detail"></p>
+            <div class="actions" id="actions"></div>
+        </section>
+        <section id="desktops-section" hidden>
+            <h2>Your desktops</h2>
+            <ul id="desktops"></ul>
+            <p class="note">To add a desktop, open Settings in Task Proxy on it, turn on Remote Access, and scan its QR code with this device.</p>
+        </section>
+        <noscript>Task Proxy Remote needs JavaScript.</noscript>
+    </main>
+    <div id="connected-bar" hidden>
+        <span id="connected-to"></span>
+        <button type="button" id="disconnect">Disconnect</button>
+    </div>
+    <iframe id="app" title="Task Proxy" hidden></iframe>
+</body>
+</html>
