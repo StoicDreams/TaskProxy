@@ -4,7 +4,7 @@ import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { extname, join, normalize, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { ROOT_FILES, resolveSiteFile } from './site.mjs';
+import { ROOT_FILES, resolveSiteFile, serveLiveCdn } from './site.mjs';
 
 // Task Proxy Remote needs real service workers and real WebRTC, so these tests serve the site from a local server
 // rather than answering requests in the page as the other site tests do. A second page plays Task Proxy on a
@@ -160,8 +160,8 @@ export const test = base.extend({
     api: async ({ context }, use) => {
         const api = mockApi();
         await context.route('https://api.myfi.ws/**', api.handle);
-        // The page's own look comes from the CDN, which these tests don't need.
-        await context.route('https://cdn.myfi.ws/**', route => route.fulfill({ status: 200, contentType: 'text/css', body: '' }));
+        // Web UI's real stylesheet, as the live page loads it, since its rules for the app shell reach this page too.
+        await context.route('https://cdn.myfi.ws/**', route => serveLiveCdn(route));
         await use(api);
     },
     /** The test desktop, signed in to `api.account` and registered, reading its mailbox. */

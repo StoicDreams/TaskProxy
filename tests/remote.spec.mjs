@@ -45,6 +45,18 @@ test('signed out, the page keeps the pairing code through signing in, then pairs
     await expect.poll(() => desktop.evaluate(() => window.desktop.devices.map(device => [device.name, device.level]))).toEqual([['Phone', 'work']]);
 });
 
+test('on a phone, the signed-out page shows its message and Sign In, with nothing hidden over them', async ({ page, site, api }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(`${site.origin}/remote/`);
+    await expect(message(page)).toHaveText('Sign in to use Task Proxy from this device.');
+    await expect(page.getByRole('heading', { name: 'Task Proxy Remote' })).toBeInViewport({ ratio: 1 });
+    // The app's frame and the desktop list stay hidden until they are used, whatever Web UI's stylesheet says.
+    await expect(page.locator('#app')).toBeHidden();
+    await expect(page.locator('#desktops-section')).toBeHidden();
+    // A trial click checks that Sign In is the element a tap there reaches, without leaving the page.
+    await page.getByRole('link', { name: 'Sign In' }).click({ trial: true });
+});
+
 test('the app runs in the frame from the desktop, and never from the website', async ({ page, site, api, desktop }) => {
     await pairAndOpen(page, desktop, site, api, { level: 'view' });
     const app = appFrame(page);
