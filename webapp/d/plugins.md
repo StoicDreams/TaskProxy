@@ -1,4 +1,4 @@
-<webui-data data-page-title="Task Proxy Plugins" data-page-subtitle="Add the integrations you use, and nothing you don't"></webui-data>
+<webui-data data-page-title="Task Proxy Plugins" data-page-subtitle="Add the integrations you use, and nothing you don't" data-page-description="What Task Proxy plugins are, how to install one, what a plugin can reach, and the integrations available, such as issue tracking."></webui-data>
 
 ## What plugins are
 

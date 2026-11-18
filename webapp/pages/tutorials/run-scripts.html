@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV0Z2J11TB"></script>
+	<script>
+		if (location.hostname !== 'localhost') {
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'G-SV0Z2J11TB');
+		}
+	</script>
+	<title>Run Scripts and Answer Their Prompts: Tutorial: about 5 minutes</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index, follow">
+	<base href="/" />
+	<script type="text/javascript">
+		navigator.serviceWorker.register('service-worker.min.js');
+	</script>
+
+	<link rel="dns-prefetch" href="https://cdn.myfi.ws" />
+	<link rel="dns-prefetch" href="https://api.myfi.ws" />
+	<link rel="preconnect" href="https://cdn.myfi.ws">
+	<link rel="preconnect" href="https://api.myfi.ws">
+
+	<link href="Logo.svg?v=9984449a5d" rel="icon" type="image/svg+xml" sizes="any" />
+	<link rel="manifest" href="app.webmanifest?v=48f470bda8">
+
+	<script>
+		// Web UI loads from the local MyFiCDN server (MyFiCDN/PowerShell/RunLocal.ps1) when the site runs on localhost,
+		// so framework changes show before they are published, and from cdn.myfi.ws everywhere else.
+		window.webuiCdn = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) ? 'http://localhost:3180/' : 'https://cdn.myfi.ws/';
+		document.write('<link href="' + webuiCdn + 'css/webui.min.css" rel="stylesheet" />');
+	</script>
+	<link href="css/app.min.css?v=7715725473" rel="stylesheet" />
+	<script>document.write('<script src="' + webuiCdn + 'webui/loader.min.js"></' + 'script>');</script>
+
+	<!-- Prerendered pages from webapp_post_build prerender. Release builds copy them to the site root. -->
+
+	<!--Web Worker-->
+	<script type="module" src="main.js?v=cea15cbf4f"></script>
+	<!--End Web Worker-->
+
+	<meta name="theme-color" content="#FF2E46" />
+
+	<meta name="author" content="Erik Gassler">
+	<meta name="description" content="Pick a script, fill in its parameters, watch the output, answer its prompts, and find an earlier run again in Task Proxy.">
+
+	<meta property="og:image" content="https://www.taskproxy.com/Logo.png">
+	<meta property="og:title" content="Run Scripts and Answer Their Prompts: Tutorial: about 5 minutes">
+	<meta property="og:url" content="https://www.taskproxy.com/tutorials/run-scripts">
+	<meta property="og:description" content="Pick a script, fill in its parameters, watch the output, answer its prompts, and find an earlier run again in Task Proxy.">
+
+	<meta name="twitter:title" content="Run Scripts and Answer Their Prompts: Tutorial: about 5 minutes">
+	<meta name="twitter:url" content="https://www.taskproxy.com/tutorials/run-scripts">
+	<meta name="twitter:site" content="@stoicdreamsllc">
+	<meta name="twitter:description" content="Pick a script, fill in its parameters, watch the output, answer its prompts, and find an earlier run again in Task Proxy.">
+	<meta name="twitter:image" content="https://www.taskproxy.com/Logo.png">
+	<link rel="canonical" href="https://www.taskproxy.com/tutorials/run-scripts" />
+	<link rel="modulepreload" href="https://cdn.myfi.ws/js/mdparse.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/alerts.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app-config.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/button.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/data.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/drawer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/feedback.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/flex.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/icon.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/link.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/loop-video.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/myfi-info.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/nav.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/next-page.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/none.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-footer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-segment.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-dreams-logo.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-social-links.min.js" crossorigin="anonymous" />
+	<meta name="webui-prerender" content="1a7cc61351">
+</head>
+
+<body>
+	<webui-app-config src="appConfig.json"></webui-app-config>
+	<webui-app data-removeclass=".nav|open;.shared|open">
+		<div data-prerendered>
+<h2>Watch it first</h2>
+
+
+<video controls playsinline preload="none" poster="/video/script-prompt.webp">
+<source src="/video/script-prompt.mp4" type="video/mp4">
+Your browser can't play this video. The steps below cover the same thing.
+</video>
+
+
+<h2>Before you start</h2>
+
+<p>Task Proxy runs PowerShell scripts (<code>.ps1</code> files), from your project's root folder. PowerShell 7 runs on Windows, Mac, and Linux. If Task Proxy can't find it, the Terminal Manager explains how to install it, and can install it for you on some systems.</p>
+<p>Open the <strong>Script Manager</strong> from the scroll icon at the bottom of the left navigation.</p>
+
+<h2>1. Pick a script</h2>
+
+<p>The <strong>Script</strong> dropdown lists every <code>.ps1</code> file in your project. Choose one to load it into the editor below. You can change it there, then <strong>Save</strong> it, <strong>Save As</strong> a new file, or <strong>Reset</strong> it to what's on disk. <strong>New Script</strong> starts an empty one.</p>
+
+<h2>2. Fill in its parameters</h2>
+
+<p>If the script starts with a <code>param()</code> block, Task Proxy gives each parameter its own input: a text box for values, and a switch for <code>[switch]</code> parameters.</p>
+<pre><code class="language-pwsh">param(
+    [ValidateSet('unit', 'e2e', 'all')]
+    [string]$Suite = 'unit',
+    [string]$Filter = '',
+    [switch]$Watch
+)
+</code></pre>
+<p>The blue bar shows the exact command that will run, with your values in it. Turn on <strong>Full Path</strong> to see the script's full path rather than its path in the project. <strong>Clear Params</strong> empties every input.</p>
+<h2>3. Run it and watch the output</h2>
+
+<p>Click <strong>Run</strong>, then open the <strong>Terminal Manager</strong> from the pager icon at the top right.</p>
+<p>Choose the script in the <strong>Script</strong> dropdown to see its output. Scripts run in a real terminal, so colors, progress bars, and lines that redraw look the way they do in your own terminal window. Output is kept after a script finishes, so you can come back to it later.</p>
+<h2>4. Answer a prompt</h2>
+
+<p>When a script asks a question, for example with <code>Read-Host</code> or a "Continue? [Y/N]" prompt, click in the terminal and type your answer, then press Enter.</p>
+<ul>
+<li><strong>Ctrl+C</strong> with text selected copies it. With nothing selected, it stops the script, as in any terminal.</li>
+<li><strong>Stop</strong> asks the script to stop the same way. If it's still running a few seconds later, Task Proxy ends it.</li>
+<li><strong>Kill All</strong> ends every running script straight away.</li>
+<li><strong>Clear Output</strong> empties the terminal.</li>
+</ul>
+
+<h2>5. Find a run again</h2>
+
+<p>The switch at the top of the Terminal Manager chooses which scripts its <strong>Script</strong> dropdown lists:</p>
+<table><thead><tr><th>View</th><th>Lists</th></tr></thead><tbody>
+<tr><td><strong>Live</strong></td><td>A terminal of your own. Type PowerShell in <strong>Script Content</strong> and click <strong>Run</strong></td></tr>
+<tr><td><strong>Saved</strong></td><td>Every script saved in this project, ready to run from here</td></tr>
+<tr><td><strong>Page</strong></td><td>The scripts you ran from this project's pages</td></tr>
+<tr><td><strong>Running</strong></td><td>What is running in this project</td></tr>
+<tr><td><strong>All Running</strong></td><td>What is running in every project</td></tr>
+<tr><td><strong>Finished</strong></td><td>Every run that has ended, in every project, the latest first, saying which failed</td></tr>
+</tbody></table>
+<p>Run a script while another is running, and it waits its turn, then runs. <strong>Remove</strong> takes a finished page script off the list, and <strong>Remove Finished Page Scripts</strong> clears them all. <strong>Select All</strong> copies the whole output.</p>
+<p>A script can start something that outlives it, such as a dev server. To open those as terminals here, rather than windows of their own, see the next tutorial, <a href="/tutorials/script-terminals">Open terminals from your scripts</a>. To find and stop processes still running, see <a href="/tutorials/task-manager">Find and stop what is still running</a>.</p>
+
+
+<p>Continue to Open terminals from your scripts</p>
+		</div>
+		<webui-drawer slot="left" class="nav elevation-20" docked="true" data-state="slot|docked" data-moveable data-dockable>
+			<webui-flex justify="center" slot="header">
+				<webui-stoic-dreams-logo title="Task Proxy Logo" text="Task" text2="Proxy"></webui-stoic-dreams-logo>
+			</webui-flex>
+			<webui-nav routes="/nav.json" data-subscribe="app-nav-routes:setNavRoutes"></webui-nav>
+		</webui-drawer>
+		<webui-drawer slot="right" class="shared elevation-20" data-stopclick data-moveable data-state="slot">
+		</webui-drawer>
+		<header slot="header">
+			<button aria-label="open navigation menu" data-toggleclass=".nav|open" class="elevation-10 pa-1 mx-1">
+				<webui-icon icon="hamburger"></webui-icon>
+			</button>
+			<h1 data-subscribe="page-title:innerHTML">Run Scripts and Answer Their Prompts</h1>
+			<h2 data-subscribe="page-subtitle:innerHTML">Tutorial: about 5 minutes</h2>
+			<webui-flex grow></webui-flex>
+			<webui-feedback title="Provide us your feedback" data-post="https://api.myfi.ws/feedback/new" data-json-name="message">
+				<p>You can also come <a href="https://discord.gg/5X4YSDFdHD">chat with us on the Stoic Dreams discord server.</a></p>
+			</webui-feedback>
+			<webui-alerts title="View your notifications" data-title="My Alerts" data-toggleclass=".shared|open"></webui-alerts>
+			<webui-myfi-info sign-in-label="Sign In">
+				<template slot="panel-content">
+					<webui-alert show variant="info">Example Account Panel</webui-alert>
+				</template>
+			</webui-myfi-info>
+		</header>
+		<noscript>Javascript is required to view this site</noscript>
+		<webui-page-footer copyright="2016" company="Stoic Dreams">
+			<webui-next-page theme="tertiary" data-subscribe="page-next-page"></webui-next-page>
+			<webui-flex class="my-3" justify="center" wrap>
+				<webui-link href="/about" icon="circle_exclamation|backing|bordered">About Task Proxy</webui-link>
+				<webui-link href="/contact" icon="messages|fill|shade:tri">Contact Stoic Dreams</webui-link>
+				<webui-link href="/privacy" icon="shield_exclamation|backing|bordered">Privacy</webui-link>
+				<webui-link href="/terms" icon="handshake|fill|shade:tri">Terms & Conditions</webui-link>
+			</webui-flex>
+			<webui-stoic-social-links class="mb-2"></webui-stoic-social-links>
+		</webui-page-footer>
+	</webui-app>
+</body>
+
+</html>

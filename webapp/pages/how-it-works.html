@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV0Z2J11TB"></script>
+	<script>
+		if (location.hostname !== 'localhost') {
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'G-SV0Z2J11TB');
+		}
+	</script>
+	<title>How Task Proxy Works: What lives in your repository, and what stays on your computer</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index, follow">
+	<base href="/" />
+	<script type="text/javascript">
+		navigator.serviceWorker.register('service-worker.min.js');
+	</script>
+
+	<link rel="dns-prefetch" href="https://cdn.myfi.ws" />
+	<link rel="dns-prefetch" href="https://api.myfi.ws" />
+	<link rel="preconnect" href="https://cdn.myfi.ws">
+	<link rel="preconnect" href="https://api.myfi.ws">
+
+	<link href="Logo.svg?v=9984449a5d" rel="icon" type="image/svg+xml" sizes="any" />
+	<link rel="manifest" href="app.webmanifest?v=48f470bda8">
+
+	<script>
+		// Web UI loads from the local MyFiCDN server (MyFiCDN/PowerShell/RunLocal.ps1) when the site runs on localhost,
+		// so framework changes show before they are published, and from cdn.myfi.ws everywhere else.
+		window.webuiCdn = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) ? 'http://localhost:3180/' : 'https://cdn.myfi.ws/';
+		document.write('<link href="' + webuiCdn + 'css/webui.min.css" rel="stylesheet" />');
+	</script>
+	<link href="css/app.min.css?v=7715725473" rel="stylesheet" />
+	<script>document.write('<script src="' + webuiCdn + 'webui/loader.min.js"></' + 'script>');</script>
+
+	<!-- Prerendered pages from webapp_post_build prerender. Release builds copy them to the site root. -->
+
+	<!--Web Worker-->
+	<script type="module" src="main.js?v=cea15cbf4f"></script>
+	<!--End Web Worker-->
+
+	<meta name="theme-color" content="#FF2E46" />
+
+	<meta name="author" content="Erik Gassler">
+	<meta name="description" content="What Task Proxy stores in your repository and what stays on your computer, how secrets are protected, and how variables reach scripts.">
+
+	<meta property="og:image" content="https://www.taskproxy.com/Logo.png">
+	<meta property="og:title" content="How Task Proxy Works: What lives in your repository, and what stays on your computer">
+	<meta property="og:url" content="https://www.taskproxy.com/how-it-works">
+	<meta property="og:description" content="What Task Proxy stores in your repository and what stays on your computer, how secrets are protected, and how variables reach scripts.">
+
+	<meta name="twitter:title" content="How Task Proxy Works: What lives in your repository, and what stays on your computer">
+	<meta name="twitter:url" content="https://www.taskproxy.com/how-it-works">
+	<meta name="twitter:site" content="@stoicdreamsllc">
+	<meta name="twitter:description" content="What Task Proxy stores in your repository and what stays on your computer, how secrets are protected, and how variables reach scripts.">
+	<meta name="twitter:image" content="https://www.taskproxy.com/Logo.png">
+	<link rel="canonical" href="https://www.taskproxy.com/how-it-works" />
+	<link rel="modulepreload" href="https://cdn.myfi.ws/js/mdparse.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/alerts.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app-config.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/data.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/drawer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/feedback.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/flex.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/icon.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/link.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/loop-video.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/myfi-info.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/nav.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/next-page.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-footer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-segment.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/quote.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-dreams-logo.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-social-links.min.js" crossorigin="anonymous" />
+	<meta name="webui-prerender" content="a7ef50a44d">
+</head>
+
+<body>
+	<webui-app-config src="appConfig.json"></webui-app-config>
+	<webui-app data-removeclass=".nav|open;.shared|open">
+		<div data-prerendered>
+<h2>One app for the work around your code</h2>
+
+<p>Task Proxy is a desktop app for Windows, Mac, and Linux. You point it at a project folder, usually the root of a git repository, and it gives that project:</p>
+<ul>
+<li><strong>Pages</strong> that hold your team's steps, notes, and the scripts that carry them out.</li>
+<li><strong>A Script Manager</strong> for running PowerShell scripts, with an input for each parameter.</li>
+<li><strong>A Terminal Manager</strong> that shows each script's output in a real terminal.</li>
+<li><strong>Variables and secrets</strong>, with environments such as dev, staging, and prod.</li>
+<li><strong>A Git Controller</strong> for reviewing changes, committing, syncing, and working with branches.</li>
+<li><strong>A Docs Manager</strong> for editing the project's markdown files with a live preview.</li>
+</ul>
+<p>You can add as many projects as you like and switch between them from the <strong>Project</strong> dropdown at the top of the navigation.</p>
+<h2>What is shared, and what is not</h2>
+
+<p>When you add a project, Task Proxy creates a <code>.taskproxy</code> folder in it. Everything your team should share goes in that folder, as plain JSON and markdown, so you share it the same way you share code: commit it and push.</p>
+<p>Everything personal stays on your computer, encrypted.</p>
+<table><thead><tr><th>In the repository, in <code>.taskproxy</code></th><th>On your computer, encrypted</th></tr></thead><tbody>
+<tr><td>Pages, in <code>pages/</code></td><td>Values you enter for project variables</td></tr>
+<tr><td>The project's navigation, in <code>Navigation.json</code></td><td>Each environment's values</td></tr>
+<tr><td>Variable names, types, and default values, in <code>Variables.json</code></td><td>Global variables and secrets, such as tokens</td></tr>
+<tr><td></td><td>Your list of projects and app settings</td></tr>
+</tbody></table>
+<p>Scripts are ordinary <code>.ps1</code> files, so they live wherever you keep them in the project, and are shared like any other file.</p>
+
+<p>Default values in <code>Variables.json</code> are committed, so never use a password or token as a default. Enter secrets as values instead, which never leave your computer.</p>
+
+
+<h2>How your secrets are protected</h2>
+
+<ul>
+<li>The first time you open Task Proxy, it asks for a <strong>Security Key</strong> of at least 20 characters, or makes one for you.</li>
+<li>The key is kept in your operating system's credential store, such as Windows Credential Manager or the macOS Keychain, so you are not asked for it again.</li>
+<li>Your data files are encrypted with AES-256-GCM using that key.</li>
+<li>If a file can't be read with the current key, Task Proxy sets it aside rather than overwriting it, and restores it if you enter the right key later.</li>
+</ul>
+<p>Keep a copy of your key in a password manager. You need the same key to read your data on a new computer.</p>
+
+<h2>How a variable reaches a script</h2>
+
+<p>A variable can be set in three places. When a page or script asks for one, Task Proxy looks in this order and uses the first value it finds:</p>
+<ol>
+<li><strong>Page</strong>: values for the page you are on.</li>
+<li><strong>Project</strong>: values for this project, from the active environment.</li>
+<li><strong>Global</strong>: values for every project, such as your personal access token.</li>
+</ol>
+<p>In a page script, Task Proxy fills in any variable that has the same name as one in the script. Here, <code>$apiBaseUrl</code> is set to the value of the <strong>apiBaseUrl</strong> variable before the script runs:</p>
+<pre><code class="language-pwsh">$apiBaseUrl = 'https://dev.api.acme.test'
+Invoke-RestMethod "$apiBaseUrl/health"
+</code></pre>
+<p>Before a project's script runs for the first time, Task Proxy shows you the script, with long values masked, and asks whether you trust the project.</p>
+
+<h2>How git fits in</h2>
+
+<p>Task Proxy works with git directly, so there's nothing else to install. It signs in to your remote over HTTPS with a personal access token, saved as the <code>github_pat</code> or <code>git_pat</code> variable.</p>
+<ul>
+<li><strong>Pull, merge, and switching branches never overwrite uncommitted work.</strong> If a change would be lost, Task Proxy stops and tells you.</li>
+<li><strong>Changes from git are picked up.</strong> When a pull changes <code>Navigation.json</code> or <code>Variables.json</code>, Task Proxy reloads them. If you also changed them in the app, it reports the conflict instead of overwriting the file.</li>
+<li><strong>A project can hold several repositories.</strong> Task Proxy finds each <code>.git</code> folder in the project, and you pick one from the <strong>Repo</strong> dropdown.</li>
+</ul>
+
+
+<p>Browse the tutorials
+Getting Started</p>
+		</div>
+		<webui-drawer slot="left" class="nav elevation-20" docked="true" data-state="slot|docked" data-moveable data-dockable>
+			<webui-flex justify="center" slot="header">
+				<webui-stoic-dreams-logo title="Task Proxy Logo" text="Task" text2="Proxy"></webui-stoic-dreams-logo>
+			</webui-flex>
+			<webui-nav routes="/nav.json" data-subscribe="app-nav-routes:setNavRoutes"></webui-nav>
+		</webui-drawer>
+		<webui-drawer slot="right" class="shared elevation-20" data-stopclick data-moveable data-state="slot">
+		</webui-drawer>
+		<header slot="header">
+			<button aria-label="open navigation menu" data-toggleclass=".nav|open" class="elevation-10 pa-1 mx-1">
+				<webui-icon icon="hamburger"></webui-icon>
+			</button>
+			<h1 data-subscribe="page-title:innerHTML">How Task Proxy Works</h1>
+			<h2 data-subscribe="page-subtitle:innerHTML">What lives in your repository, and what stays on your computer</h2>
+			<webui-flex grow></webui-flex>
+			<webui-feedback title="Provide us your feedback" data-post="https://api.myfi.ws/feedback/new" data-json-name="message">
+				<p>You can also come <a href="https://discord.gg/5X4YSDFdHD">chat with us on the Stoic Dreams discord server.</a></p>
+			</webui-feedback>
+			<webui-alerts title="View your notifications" data-title="My Alerts" data-toggleclass=".shared|open"></webui-alerts>
+			<webui-myfi-info sign-in-label="Sign In">
+				<template slot="panel-content">
+					<webui-alert show variant="info">Example Account Panel</webui-alert>
+				</template>
+			</webui-myfi-info>
+		</header>
+		<noscript>Javascript is required to view this site</noscript>
+		<webui-page-footer copyright="2016" company="Stoic Dreams">
+			<webui-next-page theme="tertiary" data-subscribe="page-next-page"></webui-next-page>
+			<webui-flex class="my-3" justify="center" wrap>
+				<webui-link href="/about" icon="circle_exclamation|backing|bordered">About Task Proxy</webui-link>
+				<webui-link href="/contact" icon="messages|fill|shade:tri">Contact Stoic Dreams</webui-link>
+				<webui-link href="/privacy" icon="shield_exclamation|backing|bordered">Privacy</webui-link>
+				<webui-link href="/terms" icon="handshake|fill|shade:tri">Terms & Conditions</webui-link>
+			</webui-flex>
+			<webui-stoic-social-links class="mb-2"></webui-stoic-social-links>
+		</webui-page-footer>
+	</webui-app>
+</body>
+
+</html>

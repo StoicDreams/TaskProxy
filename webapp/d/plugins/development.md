@@ -1,4 +1,4 @@
-<webui-data data-page-title="Plugin Development" data-page-subtitle="Build plugins for Task Proxy, and the spec they follow"></webui-data>
+<webui-data data-page-title="Plugin Development" data-page-subtitle="Build plugins for Task Proxy, and the spec they follow" data-page-description="Build a Task Proxy plugin: how one runs, what you write, how to set up and try it, and how the spec is versioned and matched."></webui-data>
 
 ## Build a plugin
 

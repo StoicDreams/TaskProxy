@@ -1,4 +1,4 @@
-<webui-data data-page-title="Build a Page for Your Team" data-page-subtitle="Tutorial: about 10 minutes"></webui-data>
+<webui-data data-page-title="Build a Page for Your Team" data-page-subtitle="Tutorial: about 10 minutes" data-page-description="Add a page to the navigation, write it in markdown, attach runnable scripts, and share it with your team through the repository."></webui-data>
 
 ## Watch it first
 

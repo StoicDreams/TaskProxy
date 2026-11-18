@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV0Z2J11TB"></script>
+	<script>
+		if (location.hostname !== 'localhost') {
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'G-SV0Z2J11TB');
+		}
+	</script>
+	<title>Task Proxy for Everyone Who Uses Git: Writers, designers, students, and anyone else keeping files in git</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index, follow">
+	<base href="/" />
+	<script type="text/javascript">
+		navigator.serviceWorker.register('service-worker.min.js');
+	</script>
+
+	<link rel="dns-prefetch" href="https://cdn.myfi.ws" />
+	<link rel="dns-prefetch" href="https://api.myfi.ws" />
+	<link rel="preconnect" href="https://cdn.myfi.ws">
+	<link rel="preconnect" href="https://api.myfi.ws">
+
+	<link href="Logo.svg?v=9984449a5d" rel="icon" type="image/svg+xml" sizes="any" />
+	<link rel="manifest" href="app.webmanifest?v=48f470bda8">
+
+	<script>
+		// Web UI loads from the local MyFiCDN server (MyFiCDN/PowerShell/RunLocal.ps1) when the site runs on localhost,
+		// so framework changes show before they are published, and from cdn.myfi.ws everywhere else.
+		window.webuiCdn = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) ? 'http://localhost:3180/' : 'https://cdn.myfi.ws/';
+		document.write('<link href="' + webuiCdn + 'css/webui.min.css" rel="stylesheet" />');
+	</script>
+	<link href="css/app.min.css?v=7715725473" rel="stylesheet" />
+	<script>document.write('<script src="' + webuiCdn + 'webui/loader.min.js"></' + 'script>');</script>
+
+	<!-- Prerendered pages from webapp_post_build prerender. Release builds copy them to the site root. -->
+
+	<!--Web Worker-->
+	<script type="module" src="main.js?v=cea15cbf4f"></script>
+	<!--End Web Worker-->
+
+	<meta name="theme-color" content="#FF2E46" />
+
+	<meta name="author" content="Erik Gassler">
+	<meta name="description" content="Save, share, and undo changes in git without the command line, with plain diffs, branches, and a markdown editor with preview.">
+
+	<meta property="og:image" content="https://www.taskproxy.com/Logo.png">
+	<meta property="og:title" content="Task Proxy for Everyone Who Uses Git: Writers, designers, students, and anyone else keeping files in git">
+	<meta property="og:url" content="https://www.taskproxy.com/for-git-users">
+	<meta property="og:description" content="Save, share, and undo changes in git without the command line, with plain diffs, branches, and a markdown editor with preview.">
+
+	<meta name="twitter:title" content="Task Proxy for Everyone Who Uses Git: Writers, designers, students, and anyone else keeping files in git">
+	<meta name="twitter:url" content="https://www.taskproxy.com/for-git-users">
+	<meta name="twitter:site" content="@stoicdreamsllc">
+	<meta name="twitter:description" content="Save, share, and undo changes in git without the command line, with plain diffs, branches, and a markdown editor with preview.">
+	<meta name="twitter:image" content="https://www.taskproxy.com/Logo.png">
+	<link rel="canonical" href="https://www.taskproxy.com/for-git-users" />
+	<link rel="modulepreload" href="https://cdn.myfi.ws/js/mdparse.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/alerts.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app-config.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/data.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/drawer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/feedback.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/flex.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/icon.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/link.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/loop-video.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/myfi-info.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/nav.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/next-page.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/none.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-footer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-segment.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-dreams-logo.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-social-links.min.js" crossorigin="anonymous" />
+	<meta name="webui-prerender" content="e8f0e9e4bf">
+</head>
+
+<body>
+	<webui-app-config src="appConfig.json"></webui-app-config>
+	<webui-app data-removeclass=".nav|open;.shared|open">
+		<div data-prerendered>
+<h2>Git without the command line</h2>
+
+<p>Git isn't only for code. Writers keep books and documentation in it, designers keep assets, researchers keep data and papers, and students hand in coursework through it. Most of the time you only need a few things: see what changed, save a version, and share it.</p>
+<p>Task Proxy's <strong>Git Controller</strong> does those in plain buttons, and stops you before anything would lose your work.</p>
+
+<h2>See exactly what changed</h2>
+
+<p>Every file you changed is listed, marked <strong>Add</strong>, <strong>Modify</strong>, or <strong>Delete</strong>. Click one to see the old and new versions side by side, with changed lines highlighted.</p>
+<h2>Save a version, then share it</h2>
+
+<ol>
+<li>Write a short note about what you changed.</li>
+<li>Click <strong>Commit</strong> to save a version.</li>
+<li>Click <strong>Sync</strong> to get everyone else's changes and send yours.</li>
+</ol>
+<p>Turn on <strong>Sync after commit</strong> and step 3 happens on its own.</p>
+
+<video controls playsinline preload="none" poster="/video/git-commit-sync.webp">
+<source src="/video/git-commit-sync.mp4" type="video/mp4">
+</video>
+
+
+<p>Tutorial: Review, commit, and sync</p>
+
+
+<h2>Mistakes are easy to undo</h2>
+
+<ul>
+<li><strong>Undo a file:</strong> click the trash can beside it to put it back the way it was at your last commit.</li>
+<li><strong>Set work aside:</strong> <strong>Stash</strong> saves your changes and clears them away, and <strong>Pop Stash</strong> brings them back.</li>
+<li><strong>Safe updates:</strong> <strong>Pull</strong> and switching branches stop rather than overwrite changes you haven't saved yet.</li>
+</ul>
+
+<h2>Try ideas on a branch</h2>
+
+<p>A branch is a separate copy of your work to try something out. Create one from the <strong>Branches</strong> tab, switch between them with one click, and merge the one you keep.</p>
+
+<p>Tutorial: Work with branches</p>
+
+
+<h2>Edit markdown with a preview</h2>
+
+<p>Documentation and notes in markdown? The <strong>Docs Manager</strong> shows the formatted result beside the text as you type.</p>
+
+<p>Tutorial: Edit your project's docs</p>
+
+
+<h2>Getting connected</h2>
+
+<p>To sync with a service such as GitHub, Task Proxy needs a personal access token, a kind of password made for apps. Your git host's settings let you create one. Task Proxy asks for it the first time it's needed, encrypts it, and keeps it on your computer.</p>
+
+<p>Tutorial: Set up Task Proxy</p>
+		</div>
+		<webui-drawer slot="left" class="nav elevation-20" docked="true" data-state="slot|docked" data-moveable data-dockable>
+			<webui-flex justify="center" slot="header">
+				<webui-stoic-dreams-logo title="Task Proxy Logo" text="Task" text2="Proxy"></webui-stoic-dreams-logo>
+			</webui-flex>
+			<webui-nav routes="/nav.json" data-subscribe="app-nav-routes:setNavRoutes"></webui-nav>
+		</webui-drawer>
+		<webui-drawer slot="right" class="shared elevation-20" data-stopclick data-moveable data-state="slot">
+		</webui-drawer>
+		<header slot="header">
+			<button aria-label="open navigation menu" data-toggleclass=".nav|open" class="elevation-10 pa-1 mx-1">
+				<webui-icon icon="hamburger"></webui-icon>
+			</button>
+			<h1 data-subscribe="page-title:innerHTML">Task Proxy for Everyone Who Uses Git</h1>
+			<h2 data-subscribe="page-subtitle:innerHTML">Writers, designers, students, and anyone else keeping files in git</h2>
+			<webui-flex grow></webui-flex>
+			<webui-feedback title="Provide us your feedback" data-post="https://api.myfi.ws/feedback/new" data-json-name="message">
+				<p>You can also come <a href="https://discord.gg/5X4YSDFdHD">chat with us on the Stoic Dreams discord server.</a></p>
+			</webui-feedback>
+			<webui-alerts title="View your notifications" data-title="My Alerts" data-toggleclass=".shared|open"></webui-alerts>
+			<webui-myfi-info sign-in-label="Sign In">
+				<template slot="panel-content">
+					<webui-alert show variant="info">Example Account Panel</webui-alert>
+				</template>
+			</webui-myfi-info>
+		</header>
+		<noscript>Javascript is required to view this site</noscript>
+		<webui-page-footer copyright="2016" company="Stoic Dreams">
+			<webui-next-page theme="tertiary" data-subscribe="page-next-page"></webui-next-page>
+			<webui-flex class="my-3" justify="center" wrap>
+				<webui-link href="/about" icon="circle_exclamation|backing|bordered">About Task Proxy</webui-link>
+				<webui-link href="/contact" icon="messages|fill|shade:tri">Contact Stoic Dreams</webui-link>
+				<webui-link href="/privacy" icon="shield_exclamation|backing|bordered">Privacy</webui-link>
+				<webui-link href="/terms" icon="handshake|fill|shade:tri">Terms & Conditions</webui-link>
+			</webui-flex>
+			<webui-stoic-social-links class="mb-2"></webui-stoic-social-links>
+		</webui-page-footer>
+	</webui-app>
+</body>
+
+</html>

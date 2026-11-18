@@ -1,4 +1,4 @@
-<webui-data data-page-title="Add a Plugin" data-page-subtitle="Tutorial: about 5 minutes"></webui-data>
+<webui-data data-page-title="Add a Plugin" data-page-subtitle="Tutorial: about 5 minutes" data-page-description="Install a Task Proxy plugin, set it up for a project, use it, reuse it in another project, and turn it off or remove it."></webui-data>
 
 ## What you'll do
 

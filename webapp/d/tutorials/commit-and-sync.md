@@ -1,4 +1,4 @@
-<webui-data data-page-title="Review, Commit, and Sync Your Changes" data-page-subtitle="Tutorial: about 5 minutes"></webui-data>
+<webui-data data-page-title="Review, Commit, and Sync Your Changes" data-page-subtitle="Tutorial: about 5 minutes" data-page-description="See what changed, choose what goes into a commit, write the message, and sync with your team, including adding an access token."></webui-data>
 
 ## Watch it first
 

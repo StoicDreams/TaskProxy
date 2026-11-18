@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV0Z2J11TB"></script>
+	<script>
+		if (location.hostname !== 'localhost') {
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'G-SV0Z2J11TB');
+		}
+	</script>
+	<title>Jira Plugin: Jira Cloud, without the wait</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index, follow">
+	<base href="/" />
+	<script type="text/javascript">
+		navigator.serviceWorker.register('service-worker.min.js');
+	</script>
+
+	<link rel="dns-prefetch" href="https://cdn.myfi.ws" />
+	<link rel="dns-prefetch" href="https://api.myfi.ws" />
+	<link rel="preconnect" href="https://cdn.myfi.ws">
+	<link rel="preconnect" href="https://api.myfi.ws">
+
+	<link href="Logo.svg?v=9984449a5d" rel="icon" type="image/svg+xml" sizes="any" />
+	<link rel="manifest" href="app.webmanifest?v=48f470bda8">
+
+	<script>
+		// Web UI loads from the local MyFiCDN server (MyFiCDN/PowerShell/RunLocal.ps1) when the site runs on localhost,
+		// so framework changes show before they are published, and from cdn.myfi.ws everywhere else.
+		window.webuiCdn = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) ? 'http://localhost:3180/' : 'https://cdn.myfi.ws/';
+		document.write('<link href="' + webuiCdn + 'css/webui.min.css" rel="stylesheet" />');
+	</script>
+	<link href="css/app.min.css?v=7715725473" rel="stylesheet" />
+	<script>document.write('<script src="' + webuiCdn + 'webui/loader.min.js"></' + 'script>');</script>
+
+	<!-- Prerendered pages from webapp_post_build prerender. Release builds copy them to the site root. -->
+
+	<!--Web Worker-->
+	<script type="module" src="main.js?v=cea15cbf4f"></script>
+	<!--End Web Worker-->
+
+	<meta name="theme-color" content="#FF2E46" />
+
+	<meta name="author" content="Erik Gassler">
+	<meta name="description" content="Set up the Jira Cloud plugin to see your issues, change them without opening them, handle comments and mentions, and get notified.">
+
+	<meta property="og:image" content="https://www.taskproxy.com/Logo.png">
+	<meta property="og:title" content="Jira Plugin: Jira Cloud, without the wait">
+	<meta property="og:url" content="https://www.taskproxy.com/plugins/issue-tracking/jira">
+	<meta property="og:description" content="Set up the Jira Cloud plugin to see your issues, change them without opening them, handle comments and mentions, and get notified.">
+
+	<meta name="twitter:title" content="Jira Plugin: Jira Cloud, without the wait">
+	<meta name="twitter:url" content="https://www.taskproxy.com/plugins/issue-tracking/jira">
+	<meta name="twitter:site" content="@stoicdreamsllc">
+	<meta name="twitter:description" content="Set up the Jira Cloud plugin to see your issues, change them without opening them, handle comments and mentions, and get notified.">
+	<meta name="twitter:image" content="https://www.taskproxy.com/Logo.png">
+	<link rel="canonical" href="https://www.taskproxy.com/plugins/issue-tracking/jira" />
+	<link rel="modulepreload" href="https://cdn.myfi.ws/js/mdparse.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/alerts.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app-config.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/data.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/drawer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/feedback.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/flex.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/icon.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/link.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/loop-video.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/myfi-info.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/nav.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/next-page.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-footer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-segment.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-dreams-logo.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-social-links.min.js" crossorigin="anonymous" />
+	<meta name="webui-prerender" content="8ad1a70ff7">
+</head>
+
+<body>
+	<webui-app-config src="appConfig.json"></webui-app-config>
+	<webui-app data-removeclass=".nav|open;.shared|open">
+		<div data-prerendered>
+<h2>Jira inside Task Proxy</h2>
+
+<p>The Jira plugin brings the parts of Jira you use every day into Task Proxy: your issues and your team's, which you can change right in the list, each issue together with the story and epic above it, new issues, and a branch for each issue. It talks to Jira Cloud (<code>your-team.atlassian.net</code>) directly, so pages open quickly and show only what you asked for.</p>
+<h2>Set it up</h2>
+
+<ol>
+<li>Click the puzzle piece button at the top of Task Proxy, beside <strong>Icons &amp; Emojis</strong>, and install <strong>Jira</strong>.</li>
+<li>Create an API token on <a href="https://id.atlassian.com/manage-profile/security/api-tokens">Atlassian's API tokens page</a>.</li>
+<li>With your project open, open Jira's <strong>Settings for this project</strong> in the same panel, and enter your Jira site, such as <code>https://your-team.atlassian.net</code>, the email you sign in with, and the token.</li>
+</ol>
+<p>Jira is set up one project at a time, so each project only reaches the Jira account it was set up with, and Jira's pages only show in projects that have one. A project you have not set up shows no Jira menu at all. To add Jira to another project, open it, then open Jira's <strong>Settings for this project</strong> in the plugins panel, and use the settings you already entered or new ones for that project, such as a client's Jira. The token is saved encrypted on your computer, and only the Jira plugin can read it.</p>
+
+<h2>My Issues and All Issues</h2>
+
+<p><strong>My Issues</strong> starts with your open issues, newest change first, and <strong>All Issues</strong> with everyone's, so you can see your team's work and filter it by who it is assigned to.</p>
+<p>A subtask you have finished stays in My Issues until its parent is finished too, so after you mark your development subtask Done, the story stays in view while it moves on through code review, deployment, and testing.</p>
+<ul>
+<li><strong>Filters:</strong> open <strong>Filters</strong> beside <strong>Search</strong> to narrow the list by project, type, status, priority, or sprint. All Issues also filters by one or more people, or by issues nobody has yet.</li>
+<li><strong>JQL:</strong> the <strong>JQL</strong> button shows the query behind the list, which you can change as in Jira's advanced search. The filters are added to it.</li>
+<li><strong>Sorting:</strong> click a column title to sort by it, and click it again to reverse the order.</li>
+<li><strong>Columns:</strong> choose the columns from the issue, its parent, and its grandparent, such as the story a task belongs to.</li>
+<li><strong>Saved searches:</strong> save the searches you use often, such as your sprint's bugs, filters and sort included.</li>
+</ul>
+<p>Click an issue's key to open it.</p>
+
+<h2>Change issues without opening them</h2>
+
+<p>Status, priority, assignee, sprint, story points, and other fields picked from a list change right in the table. Click the value, then choose a new one. Long text is cut short in the table: point at it to read more, or click it to read all of it, and edit it there when Jira lets you. A description opens formatted, with its screenshots and other images shown small. Point at an image to see it larger, or click it to open it full size. <strong>Show raw</strong> shows the markdown as written.</p>
+<h2>Comments and mentions</h2>
+
+<p>The Comment column shows each issue's latest comment. Click it to read every comment and add your own. Type <strong>@</strong> and a few letters to mention someone, as in Jira, and pick them from the people who can see the issue. Mentions work on the issue page too.</p>
+<h2>Your team's issues</h2>
+
+<h2>Notifications</h2>
+
+<p>Your Jira notifications show in Task Proxy's alerts, behind the bell at the top. Click an issue in one to open it, and close one to mark it read. Jira's <strong>Notifications</strong> page lists them too.</p>
+<p>When Jira's notification bell does not answer the plugin, the notifications are what others did on issues you are assigned, reported, or watch in the last week: mentions, comments, assignments, and status changes. Those are marked read in Task Proxy only.</p>
+
+<h2>Each issue with its parents</h2>
+
+<p>Jira shows one issue at a time, so the story or epic a task belongs to is another click away. Task Proxy shows them together. The issue comes first, then its parent, then the parent's parent, each in its own section you can open or close. Task Proxy remembers which you closed.</p>
+<p>From the issue you can:</p>
+<ul>
+<li><strong>Change its fields</strong> where they are. Click a value picked from a list, such as the status or assignee, to choose another, or click a field's name, such as <strong>Description</strong>, to edit it.</li>
+<li><strong>Move it</strong> to another status.</li>
+<li><strong>Comment</strong>, with markdown for bold, italics, code, lists, and links.</li>
+<li><strong>Create branch</strong>, named after the issue, such as <code>ATL-142-show-ci-status-on-the-dashboard</code>. Change the name in the box first if you need to.</li>
+<li><strong>Open in Jira</strong>, for anything else.</li>
+</ul>
+<h2>Branch names your team uses</h2>
+
+<p>Many teams have rules for branch names, such as <code>feature/PROJ-123_short-name</code>. <strong>Branch Names</strong> in the Jira menu sets the format Task Proxy suggests, for each Jira sign-in, so a client's Jira can follow the client's rules. A format is the parts of an issue in braces with filters after them, such as <code>{type|map:Bug=bugfix,*=feature}/{key}-{summary|slug|max:40}</code>. The page shows how your format names a real issue before you save it, and has a guide to every part and filter.</p>
+
+<h2>Views: choose what each level shows</h2>
+
+<p>A <strong>View</strong> sets which fields show for the issue, and separately for its parent, its grandparent, and so on. Each level also lists its subtasks, with how many are done, and its linked work items, grouped by how they are linked, such as "is blocked by". Their status, assignee, and other values change right in the list. For example, a team view might show a task's status, people, story points, sprint, description, and comments; its story's description, acceptance criteria, and comments; and only the epic's description.</p>
+<p>Open <strong>Views</strong> in the menu to make one:</p>
+<ol>
+<li>Click <strong>New View</strong>, or <strong>Copy</strong> on the built-in one.</li>
+<li>In each layer, add the fields you want, including your site's custom fields, and move them up or down.</li>
+<li>Add a layer for each level of parent you want to see.</li>
+<li>Under each layer, <strong>Subtasks</strong> sets what its subtasks show. They start with the fields Jira shows (priority, story points, assignee, and status), which you can change, or you can hide them. <strong>Linked work items</strong> works the same way, starting with status, assignee, and priority.</li>
+<li>Save it for yourself, or for the project. A project View is saved in the project's <code>.taskproxy</code> folder, so everyone on the project gets it through git.</li>
+</ol>
+<p>Choose a View at the top of any issue. Task Proxy remembers the last one you picked.</p>
+
+<h2>Create issues</h2>
+
+<p><strong>Create Issue</strong> asks for the project, type, summary, and description, and optionally a parent. It assigns the issue to you unless you clear the box, then opens it.</p>
+<h2>Your branch's issue in the Git Controller</h2>
+
+<p>When your branch name has an issue key in it, such as <code>ATL-142-…</code> or <code>feature/atl-142-…</code>, the <strong>Git Controller</strong> shows that issue's status, summary, and who has it, under the branch. Click the key to open the issue.</p>
+<h2>What it can reach</h2>
+
+<ul>
+<li><strong>Websites:</strong> only <code>*.atlassian.net</code>, over HTTPS.</li>
+<li><strong>Settings:</strong> your Jira site, email, and API token.</li>
+<li><strong>Git:</strong> reading the current branch, and creating a branch when you click <strong>Create branch</strong>.</li>
+<li><strong>Your projects:</strong> only <code>.taskproxy/plugins/jira</code>, where project Views are saved.</li>
+</ul>
+<p>The screenshots use a made-up project called <strong>Atlas</strong>.</p>
+		</div>
+		<webui-drawer slot="left" class="nav elevation-20" docked="true" data-state="slot|docked" data-moveable data-dockable>
+			<webui-flex justify="center" slot="header">
+				<webui-stoic-dreams-logo title="Task Proxy Logo" text="Task" text2="Proxy"></webui-stoic-dreams-logo>
+			</webui-flex>
+			<webui-nav routes="/nav.json" data-subscribe="app-nav-routes:setNavRoutes"></webui-nav>
+		</webui-drawer>
+		<webui-drawer slot="right" class="shared elevation-20" data-stopclick data-moveable data-state="slot">
+		</webui-drawer>
+		<header slot="header">
+			<button aria-label="open navigation menu" data-toggleclass=".nav|open" class="elevation-10 pa-1 mx-1">
+				<webui-icon icon="hamburger"></webui-icon>
+			</button>
+			<h1 data-subscribe="page-title:innerHTML">Jira Plugin</h1>
+			<h2 data-subscribe="page-subtitle:innerHTML">Jira Cloud, without the wait</h2>
+			<webui-flex grow></webui-flex>
+			<webui-feedback title="Provide us your feedback" data-post="https://api.myfi.ws/feedback/new" data-json-name="message">
+				<p>You can also come <a href="https://discord.gg/5X4YSDFdHD">chat with us on the Stoic Dreams discord server.</a></p>
+			</webui-feedback>
+			<webui-alerts title="View your notifications" data-title="My Alerts" data-toggleclass=".shared|open"></webui-alerts>
+			<webui-myfi-info sign-in-label="Sign In">
+				<template slot="panel-content">
+					<webui-alert show variant="info">Example Account Panel</webui-alert>
+				</template>
+			</webui-myfi-info>
+		</header>
+		<noscript>Javascript is required to view this site</noscript>
+		<webui-page-footer copyright="2016" company="Stoic Dreams">
+			<webui-next-page theme="tertiary" data-subscribe="page-next-page"></webui-next-page>
+			<webui-flex class="my-3" justify="center" wrap>
+				<webui-link href="/about" icon="circle_exclamation|backing|bordered">About Task Proxy</webui-link>
+				<webui-link href="/contact" icon="messages|fill|shade:tri">Contact Stoic Dreams</webui-link>
+				<webui-link href="/privacy" icon="shield_exclamation|backing|bordered">Privacy</webui-link>
+				<webui-link href="/terms" icon="handshake|fill|shade:tri">Terms & Conditions</webui-link>
+			</webui-flex>
+			<webui-stoic-social-links class="mb-2"></webui-stoic-social-links>
+		</webui-page-footer>
+	</webui-app>
+</body>
+
+</html>

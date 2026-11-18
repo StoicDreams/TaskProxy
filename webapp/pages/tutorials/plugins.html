@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV0Z2J11TB"></script>
+	<script>
+		if (location.hostname !== 'localhost') {
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'G-SV0Z2J11TB');
+		}
+	</script>
+	<title>Add a Plugin: Tutorial: about 5 minutes</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index, follow">
+	<base href="/" />
+	<script type="text/javascript">
+		navigator.serviceWorker.register('service-worker.min.js');
+	</script>
+
+	<link rel="dns-prefetch" href="https://cdn.myfi.ws" />
+	<link rel="dns-prefetch" href="https://api.myfi.ws" />
+	<link rel="preconnect" href="https://cdn.myfi.ws">
+	<link rel="preconnect" href="https://api.myfi.ws">
+
+	<link href="Logo.svg?v=9984449a5d" rel="icon" type="image/svg+xml" sizes="any" />
+	<link rel="manifest" href="app.webmanifest?v=48f470bda8">
+
+	<script>
+		// Web UI loads from the local MyFiCDN server (MyFiCDN/PowerShell/RunLocal.ps1) when the site runs on localhost,
+		// so framework changes show before they are published, and from cdn.myfi.ws everywhere else.
+		window.webuiCdn = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) ? 'http://localhost:3180/' : 'https://cdn.myfi.ws/';
+		document.write('<link href="' + webuiCdn + 'css/webui.min.css" rel="stylesheet" />');
+	</script>
+	<link href="css/app.min.css?v=7715725473" rel="stylesheet" />
+	<script>document.write('<script src="' + webuiCdn + 'webui/loader.min.js"></' + 'script>');</script>
+
+	<!-- Prerendered pages from webapp_post_build prerender. Release builds copy them to the site root. -->
+
+	<!--Web Worker-->
+	<script type="module" src="main.js?v=cea15cbf4f"></script>
+	<!--End Web Worker-->
+
+	<meta name="theme-color" content="#FF2E46" />
+
+	<meta name="author" content="Erik Gassler">
+	<meta name="description" content="Install a Task Proxy plugin, set it up for a project, use it, reuse it in another project, and turn it off or remove it.">
+
+	<meta property="og:image" content="https://www.taskproxy.com/Logo.png">
+	<meta property="og:title" content="Add a Plugin: Tutorial: about 5 minutes">
+	<meta property="og:url" content="https://www.taskproxy.com/tutorials/plugins">
+	<meta property="og:description" content="Install a Task Proxy plugin, set it up for a project, use it, reuse it in another project, and turn it off or remove it.">
+
+	<meta name="twitter:title" content="Add a Plugin: Tutorial: about 5 minutes">
+	<meta name="twitter:url" content="https://www.taskproxy.com/tutorials/plugins">
+	<meta name="twitter:site" content="@stoicdreamsllc">
+	<meta name="twitter:description" content="Install a Task Proxy plugin, set it up for a project, use it, reuse it in another project, and turn it off or remove it.">
+	<meta name="twitter:image" content="https://www.taskproxy.com/Logo.png">
+	<link rel="canonical" href="https://www.taskproxy.com/tutorials/plugins" />
+	<link rel="modulepreload" href="https://cdn.myfi.ws/js/mdparse.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/alerts.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app-config.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/button.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/data.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/drawer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/feedback.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/flex.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/icon.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/link.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/loop-video.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/myfi-info.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/nav.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/next-page.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-footer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-segment.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-dreams-logo.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-social-links.min.js" crossorigin="anonymous" />
+	<meta name="webui-prerender" content="eba4d8191d">
+</head>
+
+<body>
+	<webui-app-config src="appConfig.json"></webui-app-config>
+	<webui-app data-removeclass=".nav|open;.shared|open">
+		<div data-prerendered>
+<h2>What you'll do</h2>
+
+<p>Plugins connect Task Proxy to the other tools you use, such as Jira. This tutorial installs one, sets it up for a project, and shows where its pages appear. Jira is the example, but every plugin works the same way.</p>
+<p>Want to know what a plugin can reach before you start? See <a href="/plugins">what a plugin can reach</a>.</p>
+
+<h2>1. Install it</h2>
+
+<ol>
+<li>Click the puzzle piece button at the top right, beside <strong>Icons &amp; Emojis</strong>. The <strong>Plugins</strong> panel opens.</li>
+<li>Under <strong>Available</strong>, click <strong>Install</strong> on the plugin you want.</li>
+<li>Task Proxy lists what the plugin will be able to reach, such as the websites it talks to and the settings it reads. Read it, and click <strong>Install</strong>.</li>
+</ol>
+<p>Plugins from the catalog are signed, and Task Proxy checks the signature before it installs one. When a newer version comes out, its button changes to <strong>Update</strong>.</p>
+
+<h2>2. Set it up for this project</h2>
+
+<p>A plugin only shows in projects you set it up for, so each project reaches only the accounts you chose for it.</p>
+<ol>
+<li>Open the project you want to use it in.</li>
+<li>In the <strong>Plugins</strong> panel, open the plugin's <strong>Settings for this project</strong>.</li>
+<li>Enter what it asks for, such as your Jira site, email, and API token, and click <strong>Save for this project</strong>.</li>
+</ol>
+<p>A plugin that needs no settings has <strong>Use in this project</strong> in their place.</p>
+<p>Settings are saved encrypted on your computer, and only that plugin can read them. Other plugins, your pages, and your scripts can't.</p>
+<h2>3. Use it</h2>
+
+<p>The plugin's pages appear in the left menu straight away, under its own name. Jira, for example, adds <strong>My Issues</strong>, <strong>All Issues</strong>, <strong>Create Issue</strong>, <strong>Views</strong>, <strong>Branch Names</strong>, and <strong>Notifications</strong>.</p>
+<p>A plugin can also add to tools you already use. Jira shows the issue for your current branch in the <strong>Git Controller</strong>, under the branch.</p>
+<p>See the <a href="/plugins/issue-tracking/jira">Jira plugin</a> for everything it does.</p>
+
+<h2>4. Use it in another project</h2>
+
+<p>Open the other project, then the plugin's <strong>Settings for this project</strong>:</p>
+<ul>
+<li><strong>Use settings from another project</strong> reuses what you already entered, so you type your token once.</li>
+<li><strong>Or enter new settings for this project</strong> suits a different account, such as a client's Jira.</li>
+</ul>
+<p><strong>Stop using them in this project</strong> takes the plugin out of the open project only. The other projects keep it.</p>
+
+<h2>5. Turn it off or remove it</h2>
+
+<ul>
+<li><strong>Turn off</strong> hides the plugin in every project, and keeps its settings for when you <strong>Turn on</strong> again.</li>
+<li><strong>Remove</strong> uninstalls it and deletes its settings.</li>
+</ul>
+
+
+<p>Back to All Tutorials</p>
+		</div>
+		<webui-drawer slot="left" class="nav elevation-20" docked="true" data-state="slot|docked" data-moveable data-dockable>
+			<webui-flex justify="center" slot="header">
+				<webui-stoic-dreams-logo title="Task Proxy Logo" text="Task" text2="Proxy"></webui-stoic-dreams-logo>
+			</webui-flex>
+			<webui-nav routes="/nav.json" data-subscribe="app-nav-routes:setNavRoutes"></webui-nav>
+		</webui-drawer>
+		<webui-drawer slot="right" class="shared elevation-20" data-stopclick data-moveable data-state="slot">
+		</webui-drawer>
+		<header slot="header">
+			<button aria-label="open navigation menu" data-toggleclass=".nav|open" class="elevation-10 pa-1 mx-1">
+				<webui-icon icon="hamburger"></webui-icon>
+			</button>
+			<h1 data-subscribe="page-title:innerHTML">Add a Plugin</h1>
+			<h2 data-subscribe="page-subtitle:innerHTML">Tutorial: about 5 minutes</h2>
+			<webui-flex grow></webui-flex>
+			<webui-feedback title="Provide us your feedback" data-post="https://api.myfi.ws/feedback/new" data-json-name="message">
+				<p>You can also come <a href="https://discord.gg/5X4YSDFdHD">chat with us on the Stoic Dreams discord server.</a></p>
+			</webui-feedback>
+			<webui-alerts title="View your notifications" data-title="My Alerts" data-toggleclass=".shared|open"></webui-alerts>
+			<webui-myfi-info sign-in-label="Sign In">
+				<template slot="panel-content">
+					<webui-alert show variant="info">Example Account Panel</webui-alert>
+				</template>
+			</webui-myfi-info>
+		</header>
+		<noscript>Javascript is required to view this site</noscript>
+		<webui-page-footer copyright="2016" company="Stoic Dreams">
+			<webui-next-page theme="tertiary" data-subscribe="page-next-page"></webui-next-page>
+			<webui-flex class="my-3" justify="center" wrap>
+				<webui-link href="/about" icon="circle_exclamation|backing|bordered">About Task Proxy</webui-link>
+				<webui-link href="/contact" icon="messages|fill|shade:tri">Contact Stoic Dreams</webui-link>
+				<webui-link href="/privacy" icon="shield_exclamation|backing|bordered">Privacy</webui-link>
+				<webui-link href="/terms" icon="handshake|fill|shade:tri">Terms & Conditions</webui-link>
+			</webui-flex>
+			<webui-stoic-social-links class="mb-2"></webui-stoic-social-links>
+		</webui-page-footer>
+	</webui-app>
+</body>
+
+</html>

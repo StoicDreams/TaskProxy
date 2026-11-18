@@ -1,4 +1,4 @@
-<webui-data data-page-title="Jira Plugin" data-page-subtitle="Jira Cloud, without the wait"></webui-data>
+<webui-data data-page-title="Jira Plugin" data-page-subtitle="Jira Cloud, without the wait" data-page-description="Set up the Jira Cloud plugin to see your issues, change them without opening them, handle comments and mentions, and get notified."></webui-data>
 
 ## Jira inside Task Proxy
 

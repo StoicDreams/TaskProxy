@@ -1,4 +1,4 @@
-<webui-data data-page-title="Task Proxy for Everyone Who Uses Git" data-page-subtitle="Writers, designers, students, and anyone else keeping files in git"></webui-data>
+<webui-data data-page-title="Task Proxy for Everyone Who Uses Git" data-page-subtitle="Writers, designers, students, and anyone else keeping files in git" data-page-description="Save, share, and undo changes in git without the command line, with plain diffs, branches, and a markdown editor with preview."></webui-data>
 
 ## Git without the command line
 

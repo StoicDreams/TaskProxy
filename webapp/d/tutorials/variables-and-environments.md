@@ -1,4 +1,4 @@
-<webui-data data-page-title="Use Variables, Secrets, and Environments" data-page-subtitle="Tutorial: about 10 minutes"></webui-data>
+<webui-data data-page-title="Use Variables, Secrets, and Environments" data-page-subtitle="Tutorial: about 10 minutes" data-page-description="Define project variables, add environments, keep personal secrets global, use them in scripts, and learn which value wins."></webui-data>
 
 ## Watch it first
 

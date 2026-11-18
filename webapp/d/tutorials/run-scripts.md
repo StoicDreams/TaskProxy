@@ -1,4 +1,4 @@
-<webui-data data-page-title="Run Scripts and Answer Their Prompts" data-page-subtitle="Tutorial: about 5 minutes"></webui-data>
+<webui-data data-page-title="Run Scripts and Answer Their Prompts" data-page-subtitle="Tutorial: about 5 minutes" data-page-description="Pick a script, fill in its parameters, watch the output, answer its prompts, and find an earlier run again in Task Proxy."></webui-data>
 
 ## Watch it first
 

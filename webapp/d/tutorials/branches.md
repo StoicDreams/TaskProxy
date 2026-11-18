@@ -1,4 +1,4 @@
-<webui-data data-page-title="Work with Branches" data-page-subtitle="Tutorial: about 5 minutes"></webui-data>
+<webui-data data-page-title="Work with Branches" data-page-subtitle="Tutorial: about 5 minutes" data-page-description="Start, switch, stash, merge, and clean up git branches in Task Proxy, so you can try ideas without risking your main work."></webui-data>
 
 ## Why branches
 

@@ -1,4 +1,4 @@
-<webui-data data-page-title="Task Proxy for Developers" data-page-subtitle="Less context switching between your editor, terminal, and notes"></webui-data>
+<webui-data data-page-title="Task Proxy for Developers" data-page-subtitle="Less context switching between your editor, terminal, and notes" data-page-description="Run scripts, find stray processes, review commits, and keep tokens out of your code, all from one window beside your editor."></webui-data>
 
 ## Everything around the code, in one window
 

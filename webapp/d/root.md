@@ -1,4 +1,4 @@
-<webui-data data-page-title="Organize your development scripts, APIs, documentation, and more" data-page-subtitle=""></webui-data>
+<webui-data data-page-title="Organize your development scripts, APIs, documentation, and more" data-page-subtitle="" data-page-description="One desktop app for your scripts, API calls, docs, and git, with team pages and secrets that stay out of your repository."></webui-data>
 
 <webui-page-segment elevation="10">
 ## Supercharge Your Developer Workflow
@@ -70,4 +70,4 @@ Want to learn more? The [tutorials](/tutorials) walk through each task step by s
 
 <app-latest></app-latest>
 
-<webui-content cache src="/d/installation-notes.md" cache></webui-content>
+<webui-content cache src="/d/content/installation-notes.md" cache></webui-content>

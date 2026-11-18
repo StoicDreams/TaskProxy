@@ -1,4 +1,4 @@
-<webui-data data-page-title="About {APP_NAME}" data-page-subtitle=""></webui-data>
+<webui-data data-page-title="About {APP_NAME}" data-page-subtitle="" data-page-description="What Task Proxy is, why it keeps scripts, docs, and secrets with your project, and how teams use it across Windows, Mac, and Linux."></webui-data>
 
 ## Powered by [WebUI {WEBUI_VERSION}](https://webui.stoicdreams.com)
 

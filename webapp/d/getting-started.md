@@ -1,4 +1,4 @@
-<webui-data data-page-title="Getting Started with Task Proxy" data-page-subtitle="Quickly set up your first project"></webui-data>
+<webui-data data-page-title="Getting Started with Task Proxy" data-page-subtitle="Quickly set up your first project" data-page-description="Set your security key, link a project folder, and tour the modules, so your first Task Proxy project is running in minutes."></webui-data>
 
 ## 1. Set Your Security Key
 <webui-page-segment elevation="10">

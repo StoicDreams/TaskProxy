@@ -1,4 +1,4 @@
-<webui-data data-page-title="Task Proxy for Teams" data-page-subtitle="Share how your project works, in the project itself"></webui-data>
+<webui-data data-page-title="Task Proxy for Teams" data-page-subtitle="Share how your project works, in the project itself" data-page-description="Put onboarding guides, runbooks, and runnable scripts inside the project so everyone shares the same steps and no shared secrets."></webui-data>
 
 ## Your team's knowledge, next to your code
 

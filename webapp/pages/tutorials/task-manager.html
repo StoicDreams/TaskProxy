@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV0Z2J11TB"></script>
+	<script>
+		if (location.hostname !== 'localhost') {
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'G-SV0Z2J11TB');
+		}
+	</script>
+	<title>Find and Stop What Is Still Running: Tutorial: about 5 minutes</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index, follow">
+	<base href="/" />
+	<script type="text/javascript">
+		navigator.serviceWorker.register('service-worker.min.js');
+	</script>
+
+	<link rel="dns-prefetch" href="https://cdn.myfi.ws" />
+	<link rel="dns-prefetch" href="https://api.myfi.ws" />
+	<link rel="preconnect" href="https://cdn.myfi.ws">
+	<link rel="preconnect" href="https://api.myfi.ws">
+
+	<link href="Logo.svg?v=9984449a5d" rel="icon" type="image/svg+xml" sizes="any" />
+	<link rel="manifest" href="app.webmanifest?v=48f470bda8">
+
+	<script>
+		// Web UI loads from the local MyFiCDN server (MyFiCDN/PowerShell/RunLocal.ps1) when the site runs on localhost,
+		// so framework changes show before they are published, and from cdn.myfi.ws everywhere else.
+		window.webuiCdn = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) ? 'http://localhost:3180/' : 'https://cdn.myfi.ws/';
+		document.write('<link href="' + webuiCdn + 'css/webui.min.css" rel="stylesheet" />');
+	</script>
+	<link href="css/app.min.css?v=7715725473" rel="stylesheet" />
+	<script>document.write('<script src="' + webuiCdn + 'webui/loader.min.js"></' + 'script>');</script>
+
+	<!-- Prerendered pages from webapp_post_build prerender. Release builds copy them to the site root. -->
+
+	<!--Web Worker-->
+	<script type="module" src="main.js?v=cea15cbf4f"></script>
+	<!--End Web Worker-->
+
+	<meta name="theme-color" content="#FF2E46" />
+
+	<meta name="author" content="Erik Gassler">
+	<meta name="description" content="Find a process that is still running, see what started it, make your own filter, and stop it with the Task Manager.">
+
+	<meta property="og:image" content="https://www.taskproxy.com/Logo.png">
+	<meta property="og:title" content="Find and Stop What Is Still Running: Tutorial: about 5 minutes">
+	<meta property="og:url" content="https://www.taskproxy.com/tutorials/task-manager">
+	<meta property="og:description" content="Find a process that is still running, see what started it, make your own filter, and stop it with the Task Manager.">
+
+	<meta name="twitter:title" content="Find and Stop What Is Still Running: Tutorial: about 5 minutes">
+	<meta name="twitter:url" content="https://www.taskproxy.com/tutorials/task-manager">
+	<meta name="twitter:site" content="@stoicdreamsllc">
+	<meta name="twitter:description" content="Find a process that is still running, see what started it, make your own filter, and stop it with the Task Manager.">
+	<meta name="twitter:image" content="https://www.taskproxy.com/Logo.png">
+	<link rel="canonical" href="https://www.taskproxy.com/tutorials/task-manager" />
+	<link rel="modulepreload" href="https://cdn.myfi.ws/js/mdparse.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/alerts.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app-config.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/button.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/data.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/drawer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/feedback.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/flex.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/icon.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/link.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/loop-video.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/myfi-info.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/nav.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/next-page.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-footer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-segment.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-dreams-logo.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-social-links.min.js" crossorigin="anonymous" />
+	<meta name="webui-prerender" content="6c0e657b6d">
+</head>
+
+<body>
+	<webui-app-config src="appConfig.json"></webui-app-config>
+	<webui-app data-removeclass=".nav|open;.shared|open">
+		<div data-prerendered>
+<h2>What the Task Manager is for</h2>
+
+<p>A dev server that outlived its terminal can hold a port and keep the next one from starting. A build left running can keep your computer busy. The <strong>Task Manager</strong> lists every process you run, wherever it started, so you can find these and stop them.</p>
+<p>Open it from the gauge button at the top right, beside the <strong>Terminal Manager</strong>'s. It opens on the right, beside whatever you were doing.</p>
+<ul>
+<li>It lists only your own processes, and works the same on Linux, macOS, and Windows.</li>
+<li>It reads processes only while it is open, so it costs nothing the rest of the time.</li>
+<li><strong>Refresh</strong> reads them now, and the dropdown beside it sets how often they refresh, or pauses them.</li>
+</ul>
+<h2>1. Find a process</h2>
+
+<p>The first dropdown picks a preset:</p>
+<table><thead><tr><th>Preset</th><th>Shows</th></tr></thead><tbody>
+<tr><td><strong>Terminal</strong></td><td>What you started from a terminal, or from your editor's terminal</td></tr>
+<tr><td><strong>Orphaned</strong></td><td>What kept running after the terminal or editor that started it closed</td></tr>
+<tr><td><strong>Listening on a port</strong></td><td>Servers, and anything else waiting for connections</td></tr>
+<tr><td><strong>In my projects</strong></td><td>What runs in one of your projects' folders</td></tr>
+<tr><td><strong>Started by Task Proxy</strong></td><td>Task Proxy, and the scripts it runs</td></tr>
+<tr><td><strong>Busy</strong> and <strong>Large</strong></td><td>What uses more than 5% of the CPU, or more than 500 MB of memory</td></tr>
+<tr><td><strong>Started recently</strong></td><td>What started in the last hour</td></tr>
+<tr><td><strong>All my processes</strong></td><td>Everything you run</td></tr>
+</tbody></table>
+<p>To find one process, type in <strong>Search</strong>. It matches a name, a command, a folder, a PID, or a port, so typing <code>5173</code> finds whatever holds port 5173.</p>
+<p>Click a column heading to sort by it, and click it again to reverse the order. Labels beside a name, such as <strong>Terminal</strong> and <strong>Orphaned</strong>, say which presets it belongs to.</p>
+<h2>2. See what started what</h2>
+
+<p>Click <strong>Tree</strong> to show each process under the one that started it, such as your editor, then its terminal, then the dev server and the build tool it started. Click <strong>Tree</strong> again for a flat list.</p>
+<p>Click a process for its details: its full command, its folder and project, when it started, the ports it listens on, what started it, and what it started. Click a name under <strong>Started by</strong> or <strong>It started</strong> to jump to that process.</p>
+<h2>3. Make a filter of your own</h2>
+
+<p>Open <strong>Filter rules</strong> to see what the current filter checks. Presets can't change, so click <strong>Copy to Custom</strong> to start from one.</p>
+<ol>
+<li>Click <strong>Add a rule</strong>, choose a field, such as <strong>Command</strong>, <strong>Folder</strong>, <strong>Port</strong>, <strong>CPU %</strong>, <strong>Memory (MB)</strong>, or <strong>Running for (minutes)</strong>, and enter what to look for.</li>
+<li>Choose whether a process must match <strong>every rule</strong> or <strong>any rule</strong>.</li>
+<li>Type a name and click <strong>Save</strong>. Your filter joins the presets in the first dropdown.</li>
+</ol>
+<p>To change a saved filter, choose it, edit its rules, and <strong>Save</strong> it again. <strong>Delete</strong> removes it.</p>
+<h2>4. Stop it</h2>
+
+<p>The buttons under a process's details stop it in four ways. Rest the pointer on one to see what it does and what it leaves running.</p>
+<table><thead><tr><th>Button</th><th>What it does</th></tr></thead><tbody>
+<tr><td><strong>Stop</strong></td><td>Asks only this process to stop, as Ctrl+C would, so it can save and clean up. What it started may keep running</td></tr>
+<tr><td><strong>Stop with children</strong></td><td>Asks this process and everything it started to stop, the deepest first</td></tr>
+<tr><td><strong>Force close</strong></td><td>Ends only this process at once, with no clean up. What it started keeps running</td></tr>
+<tr><td><strong>Force close with children</strong></td><td>Ends this process and everything it started at once, the deepest first</td></tr>
+</tbody></table>
+<p>The number on the <strong>with children</strong> buttons counts every process under it, and those buttons show only when it started others.</p>
+<p>Try <strong>Stop</strong> first, and force close only what doesn't stop. A process stopped on its own can leave what it started running, and that shows as <strong>Orphaned</strong>.</p>
+<p>Task Proxy always asks before stopping anything, and it never stops itself. <strong>How stopping works</strong>, at the bottom of the panel, explains the buttons whenever you need a reminder.</p>
+<p>Continue to Build a page for your team</p>
+		</div>
+		<webui-drawer slot="left" class="nav elevation-20" docked="true" data-state="slot|docked" data-moveable data-dockable>
+			<webui-flex justify="center" slot="header">
+				<webui-stoic-dreams-logo title="Task Proxy Logo" text="Task" text2="Proxy"></webui-stoic-dreams-logo>
+			</webui-flex>
+			<webui-nav routes="/nav.json" data-subscribe="app-nav-routes:setNavRoutes"></webui-nav>
+		</webui-drawer>
+		<webui-drawer slot="right" class="shared elevation-20" data-stopclick data-moveable data-state="slot">
+		</webui-drawer>
+		<header slot="header">
+			<button aria-label="open navigation menu" data-toggleclass=".nav|open" class="elevation-10 pa-1 mx-1">
+				<webui-icon icon="hamburger"></webui-icon>
+			</button>
+			<h1 data-subscribe="page-title:innerHTML">Find and Stop What Is Still Running</h1>
+			<h2 data-subscribe="page-subtitle:innerHTML">Tutorial: about 5 minutes</h2>
+			<webui-flex grow></webui-flex>
+			<webui-feedback title="Provide us your feedback" data-post="https://api.myfi.ws/feedback/new" data-json-name="message">
+				<p>You can also come <a href="https://discord.gg/5X4YSDFdHD">chat with us on the Stoic Dreams discord server.</a></p>
+			</webui-feedback>
+			<webui-alerts title="View your notifications" data-title="My Alerts" data-toggleclass=".shared|open"></webui-alerts>
+			<webui-myfi-info sign-in-label="Sign In">
+				<template slot="panel-content">
+					<webui-alert show variant="info">Example Account Panel</webui-alert>
+				</template>
+			</webui-myfi-info>
+		</header>
+		<noscript>Javascript is required to view this site</noscript>
+		<webui-page-footer copyright="2016" company="Stoic Dreams">
+			<webui-next-page theme="tertiary" data-subscribe="page-next-page"></webui-next-page>
+			<webui-flex class="my-3" justify="center" wrap>
+				<webui-link href="/about" icon="circle_exclamation|backing|bordered">About Task Proxy</webui-link>
+				<webui-link href="/contact" icon="messages|fill|shade:tri">Contact Stoic Dreams</webui-link>
+				<webui-link href="/privacy" icon="shield_exclamation|backing|bordered">Privacy</webui-link>
+				<webui-link href="/terms" icon="handshake|fill|shade:tri">Terms & Conditions</webui-link>
+			</webui-flex>
+			<webui-stoic-social-links class="mb-2"></webui-stoic-social-links>
+		</webui-page-footer>
+	</webui-app>
+</body>
+
+</html>

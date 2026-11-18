@@ -1,4 +1,4 @@
-<webui-data data-page-title="Task Proxy Tutorials" data-page-subtitle="Step by step, with screenshots and short videos"></webui-data>
+<webui-data data-page-title="Task Proxy Tutorials" data-page-subtitle="Step by step, with screenshots and short videos" data-page-description="Step-by-step Task Proxy tutorials with screenshots and short videos, from setting up a project to running scripts and building team pages."></webui-data>
 
 ## Learn Task Proxy one task at a time
 

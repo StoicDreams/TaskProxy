@@ -1,4 +1,4 @@
-<webui-data data-page-title="Edit Your Project's Docs" data-page-subtitle="Tutorial: about 3 minutes"></webui-data>
+<webui-data data-page-title="Edit Your Project's Docs" data-page-subtitle="Tutorial: about 3 minutes" data-page-description="Edit your project's markdown docs with a live preview, then commit the change, in about three minutes."></webui-data>
 
 ## Edit markdown with a live preview
 

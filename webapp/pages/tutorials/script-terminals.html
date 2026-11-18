@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV0Z2J11TB"></script>
+	<script>
+		if (location.hostname !== 'localhost') {
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'G-SV0Z2J11TB');
+		}
+	</script>
+	<title>Open Terminals From Your Scripts: Tutorial: about 5 minutes</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index, follow">
+	<base href="/" />
+	<script type="text/javascript">
+		navigator.serviceWorker.register('service-worker.min.js');
+	</script>
+
+	<link rel="dns-prefetch" href="https://cdn.myfi.ws" />
+	<link rel="dns-prefetch" href="https://api.myfi.ws" />
+	<link rel="preconnect" href="https://cdn.myfi.ws">
+	<link rel="preconnect" href="https://api.myfi.ws">
+
+	<link href="Logo.svg?v=9984449a5d" rel="icon" type="image/svg+xml" sizes="any" />
+	<link rel="manifest" href="app.webmanifest?v=48f470bda8">
+
+	<script>
+		// Web UI loads from the local MyFiCDN server (MyFiCDN/PowerShell/RunLocal.ps1) when the site runs on localhost,
+		// so framework changes show before they are published, and from cdn.myfi.ws everywhere else.
+		window.webuiCdn = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) ? 'http://localhost:3180/' : 'https://cdn.myfi.ws/';
+		document.write('<link href="' + webuiCdn + 'css/webui.min.css" rel="stylesheet" />');
+	</script>
+	<link href="css/app.min.css?v=7715725473" rel="stylesheet" />
+	<script>document.write('<script src="' + webuiCdn + 'webui/loader.min.js"></' + 'script>');</script>
+
+	<!-- Prerendered pages from webapp_post_build prerender. Release builds copy them to the site root. -->
+
+	<!--Web Worker-->
+	<script type="module" src="main.js?v=cea15cbf4f"></script>
+	<!--End Web Worker-->
+
+	<meta name="theme-color" content="#FF2E46" />
+
+	<meta name="author" content="Erik Gassler">
+	<meta name="description" content="Open a terminal from a script, keep it running outside Task Proxy, restart several servers at once, and handle one that can't open.">
+
+	<meta property="og:image" content="https://www.taskproxy.com/Logo.png">
+	<meta property="og:title" content="Open Terminals From Your Scripts: Tutorial: about 5 minutes">
+	<meta property="og:url" content="https://www.taskproxy.com/tutorials/script-terminals">
+	<meta property="og:description" content="Open a terminal from a script, keep it running outside Task Proxy, restart several servers at once, and handle one that can't open.">
+
+	<meta name="twitter:title" content="Open Terminals From Your Scripts: Tutorial: about 5 minutes">
+	<meta name="twitter:url" content="https://www.taskproxy.com/tutorials/script-terminals">
+	<meta name="twitter:site" content="@stoicdreamsllc">
+	<meta name="twitter:description" content="Open a terminal from a script, keep it running outside Task Proxy, restart several servers at once, and handle one that can't open.">
+	<meta name="twitter:image" content="https://www.taskproxy.com/Logo.png">
+	<link rel="canonical" href="https://www.taskproxy.com/tutorials/script-terminals" />
+	<link rel="modulepreload" href="https://cdn.myfi.ws/js/mdparse.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/alerts.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app-config.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/button.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/data.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/drawer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/feedback.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/flex.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/icon.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/link.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/myfi-info.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/nav.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/next-page.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-footer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-segment.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-dreams-logo.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-social-links.min.js" crossorigin="anonymous" />
+	<meta name="webui-prerender" content="241c6891a9">
+</head>
+
+<body>
+	<webui-app-config src="appConfig.json"></webui-app-config>
+	<webui-app data-removeclass=".nav|open;.shared|open">
+		<div data-prerendered>
+<h2>What it does</h2>
+
+<p>Some scripts start other scripts: one that launches a dev server for each of your sites, or a build watcher beside an API. Run from a terminal, they usually open a window for each one.</p>
+<p>Run from Task Proxy, the same script can open each one as a terminal in the <strong>Terminal Manager</strong> instead. Each has its own name, output, and <strong>Stop</strong> button, and you can answer its prompts there. Run the script again, and it can stop the old ones before it starts new ones.</p>
+<p>Every script Task Proxy runs gets a <code>TaskProxy</code> PowerShell module with two commands:</p>
+<table><thead><tr><th>Command</th><th>What it does</th></tr></thead><tbody>
+<tr><td><code>Start-TaskProxyTerminal</code></td><td>Opens a terminal in the Terminal Manager that runs a command. It returns once the command has started, and the terminal keeps running after your script ends.</td></tr>
+<tr><td><code>Test-TaskProxy</code></td><td>Says whether the script was started by Task Proxy.</td></tr>
+</tbody></table>
+
+<h2>1. Open a terminal</h2>
+
+<p>Give the terminal a name and the PowerShell to run:</p>
+<pre><code class="language-pwsh">Start-TaskProxyTerminal -Name 'api' -Command "&amp; './scripts/run-api.ps1'"
+</code></pre>
+<p>Run the script from the <strong>Script Manager</strong> or a page, then open the <strong>Terminal Manager</strong> and choose <strong>api</strong> in the <strong>Script</strong> dropdown. The terminal opens in the same project as the script.</p>
+<table><thead><tr><th>Parameter</th><th>What it does</th></tr></thead><tbody>
+<tr><td><code>-Name</code></td><td>The terminal's name in the Terminal Manager. Required.</td></tr>
+<tr><td><code>-Command</code></td><td>The PowerShell to run, as you would pass to <code>pwsh -Command</code>. Required.</td></tr>
+<tr><td><code>-WorkingDirectory</code></td><td>The folder the command starts in. Defaults to the script's current folder.</td></tr>
+<tr><td><code>-Replace</code></td><td>Stops what is still running in a terminal of that name, and waits for it to end, before starting the command. Without it, the call fails while that terminal runs.</td></tr>
+</tbody></table>
+
+<h2>2. Keep it working outside Task Proxy</h2>
+
+<p>Scripts started anywhere else, such as by a teammate who doesn't use Task Proxy, don't have the module. Check for it, and open a window as before when it's missing:</p>
+<pre><code class="language-pwsh">$command = "&amp; './scripts/run-api.ps1'"
+if (Get-Command Start-TaskProxyTerminal -ErrorAction SilentlyContinue) {
+    Start-TaskProxyTerminal -Name 'api' -Command $command -Replace
+}
+else {
+    Start-Process pwsh -ArgumentList '-NoExit', '-Command', $command
+}
+</code></pre>
+<p>If you would rather not change a script your team shares, copy it into a script of your own, open its terminals with <code>Start-TaskProxyTerminal</code> there, and run yours from Task Proxy.</p>
+
+<h2>3. Restart several servers at once</h2>
+
+<p>With <code>-Replace</code>, running the script again stops each server still running from the last time and waits for it to end, so the new one starts on a free port:</p>
+<pre><code class="language-pwsh">param(
+    [string[]]$Sites = @('web', 'admin', 'api'),
+    [switch]$Watch
+)
+
+foreach ($site in $Sites) {
+    $command = "&amp; './run-$site.ps1'"
+    if ($Watch) { $command += ' -Watch' }
+    Start-TaskProxyTerminal -Name $site -Command $command -WorkingDirectory "$PSScriptRoot/sites/$site" -Replace | Out-Null
+}
+Write-Host "Started $($Sites -join ', ') in the Terminal Manager." -ForegroundColor Green
+</code></pre>
+<p>Because the script has a <code>param()</code> block, the Script Manager gives you an input for <strong>Sites</strong> and a switch for <strong>Watch</strong>.</p>
+
+<h2>4. Handle a terminal that can't open</h2>
+
+<p><code>Start-TaskProxyTerminal</code> throws an error that says why it couldn't open a terminal, such as one of that name still running without <code>-Replace</code>. Catch it to carry on with the rest:</p>
+<pre><code class="language-pwsh">try {
+    Start-TaskProxyTerminal -Name 'worker' -Command 'dotnet run --project ./Worker' | Out-Null
+}
+catch {
+    Write-Host "Could not open the worker: $($_.Exception.Message)" -ForegroundColor Red
+}
+</code></pre>
+<p>To do something only when Task Proxy runs the script, check with <code>Test-TaskProxy</code>:</p>
+<pre><code class="language-pwsh">$inTaskProxy = [bool](Get-Command Test-TaskProxy -ErrorAction SilentlyContinue) -and (Test-TaskProxy)
+if ($inTaskProxy) {
+    Write-Host 'Opening each site in the Terminal Manager.'
+}
+</code></pre>
+
+
+<p>Continue to Find and stop what is still running</p>
+		</div>
+		<webui-drawer slot="left" class="nav elevation-20" docked="true" data-state="slot|docked" data-moveable data-dockable>
+			<webui-flex justify="center" slot="header">
+				<webui-stoic-dreams-logo title="Task Proxy Logo" text="Task" text2="Proxy"></webui-stoic-dreams-logo>
+			</webui-flex>
+			<webui-nav routes="/nav.json" data-subscribe="app-nav-routes:setNavRoutes"></webui-nav>
+		</webui-drawer>
+		<webui-drawer slot="right" class="shared elevation-20" data-stopclick data-moveable data-state="slot">
+		</webui-drawer>
+		<header slot="header">
+			<button aria-label="open navigation menu" data-toggleclass=".nav|open" class="elevation-10 pa-1 mx-1">
+				<webui-icon icon="hamburger"></webui-icon>
+			</button>
+			<h1 data-subscribe="page-title:innerHTML">Open Terminals From Your Scripts</h1>
+			<h2 data-subscribe="page-subtitle:innerHTML">Tutorial: about 5 minutes</h2>
+			<webui-flex grow></webui-flex>
+			<webui-feedback title="Provide us your feedback" data-post="https://api.myfi.ws/feedback/new" data-json-name="message">
+				<p>You can also come <a href="https://discord.gg/5X4YSDFdHD">chat with us on the Stoic Dreams discord server.</a></p>
+			</webui-feedback>
+			<webui-alerts title="View your notifications" data-title="My Alerts" data-toggleclass=".shared|open"></webui-alerts>
+			<webui-myfi-info sign-in-label="Sign In">
+				<template slot="panel-content">
+					<webui-alert show variant="info">Example Account Panel</webui-alert>
+				</template>
+			</webui-myfi-info>
+		</header>
+		<noscript>Javascript is required to view this site</noscript>
+		<webui-page-footer copyright="2016" company="Stoic Dreams">
+			<webui-next-page theme="tertiary" data-subscribe="page-next-page"></webui-next-page>
+			<webui-flex class="my-3" justify="center" wrap>
+				<webui-link href="/about" icon="circle_exclamation|backing|bordered">About Task Proxy</webui-link>
+				<webui-link href="/contact" icon="messages|fill|shade:tri">Contact Stoic Dreams</webui-link>
+				<webui-link href="/privacy" icon="shield_exclamation|backing|bordered">Privacy</webui-link>
+				<webui-link href="/terms" icon="handshake|fill|shade:tri">Terms & Conditions</webui-link>
+			</webui-flex>
+			<webui-stoic-social-links class="mb-2"></webui-stoic-social-links>
+		</webui-page-footer>
+	</webui-app>
+</body>
+
+</html>

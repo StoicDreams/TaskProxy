@@ -1,4 +1,4 @@
-<webui-data data-page-title="Find and Stop What Is Still Running" data-page-subtitle="Tutorial: about 5 minutes"></webui-data>
+<webui-data data-page-title="Find and Stop What Is Still Running" data-page-subtitle="Tutorial: about 5 minutes" data-page-description="Find a process that is still running, see what started it, make your own filter, and stop it with the Task Manager."></webui-data>
 
 ## What the Task Manager is for
 

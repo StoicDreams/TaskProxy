@@ -1,4 +1,4 @@
-<webui-data data-page-title="Set Up Task Proxy and Your First Project" data-page-subtitle="Tutorial: about 5 minutes"></webui-data>
+<webui-data data-page-title="Set Up Task Proxy and Your First Project" data-page-subtitle="Tutorial: about 5 minutes" data-page-description="Create your security key, add a project folder, and find your way around Task Proxy in about five minutes."></webui-data>
 
 ## What you'll do
 

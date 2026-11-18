@@ -1,4 +1,4 @@
-<webui-data data-page-title="Open Terminals From Your Scripts" data-page-subtitle="Tutorial: about 5 minutes"></webui-data>
+<webui-data data-page-title="Open Terminals From Your Scripts" data-page-subtitle="Tutorial: about 5 minutes" data-page-description="Open a terminal from a script, keep it running outside Task Proxy, restart several servers at once, and handle one that can't open."></webui-data>
 
 ## What it does
 

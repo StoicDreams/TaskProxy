@@ -1,4 +1,4 @@
-<webui-data data-page-title="How Task Proxy Works" data-page-subtitle="What lives in your repository, and what stays on your computer"></webui-data>
+<webui-data data-page-title="How Task Proxy Works" data-page-subtitle="What lives in your repository, and what stays on your computer" data-page-description="What Task Proxy stores in your repository and what stays on your computer, how secrets are protected, and how variables reach scripts."></webui-data>
 
 ## One app for the work around your code
 
