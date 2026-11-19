@@ -17,6 +17,5 @@ npm test
 - `service-worker.spec.mjs` and `scripts.spec.mjs` are the same in every site, the CDN, and Task Proxy. They test the service worker and the `PowerShell` scripts, and the script tests need PowerShell 7 (`pwsh`).
 - `site.config.mjs` holds this site's settings.
 - Add checks for this site's own pages and components in new `*.spec.mjs` files, using `test`, `expect`, and `openPage` from `support/site.mjs`.
-- `remote.spec.mjs` and `remote-noise.spec.mjs` test Task Proxy Remote (`webapp/root_files/remote/`). They need real service workers and WebRTC, so `support/remote.mjs` serves the site from a local server, mocks api.myfi.ws's mailbox, and opens a second page that plays Task Proxy on a desktop (`fixtures/remote/desktop.js`), serving the small app in `fixtures/remote/app`. They run in Playwright's own headless Chromium, the newest installed (`npx playwright install chromium`), since some distributions' Chromium, such as Arch's, makes no WebRTC connections when Playwright drives it. `PW_WEBRTC_CHROMIUM` names another.
 
 Rust code in `webapp/src` is tested with `cargo test`. Components that call `webui.worker` need `webapp/pkg`, which `PowerShell/RunLocal.ps1` or `wasm-pack build --target web --out-dir pkg` (run in `webapp`) creates.
