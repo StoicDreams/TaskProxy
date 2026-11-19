@@ -1,0 +1,159 @@
+/* The page outside the app. The app in the frame brings its own styles from the desktop. Web UI's stylesheet holds
+   the page still for its app shell, so this page scrolls itself, until the app fills the window. */
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--color-background, #1e1e1e);
+    color: var(--color-background-offset, #eee);
+    font-family: var(--font-family, system-ui, sans-serif);
+}
+#remote {
+    max-width: 40em;
+    margin: 0 auto;
+    padding: 1em max(1em, env(safe-area-inset-left));
+}
+#remote .remote-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+}
+#remote .remote-logo {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+}
+#remote h1 {
+    font-size: 1.4em;
+    margin: 0;
+}
+#detail:empty {
+    display: none;
+}
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+#remote button, #remote a.button, #connected-bar button, #browsers button {
+    padding: 0.6em 1.2em;
+    border: none;
+    border-radius: var(--corners, 6px);
+    background-color: var(--color-primary, #446);
+    color: var(--color-primary-offset, #fff);
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+#remote button.secondary, #browsers button.secondary {
+    background-color: var(--color-background-offset, #ccc);
+    color: var(--color-background, #222);
+}
+#remote button:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+#desktops, #browsers ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+}
+#desktops li, #browsers li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5em 1em;
+    padding: 0.75em 1em;
+    border-radius: var(--corners, 6px);
+    border: 1px solid currentColor;
+}
+#desktops .name, #browsers .name {
+    font-weight: bold;
+    flex-grow: 1;
+}
+#desktops .state, #browsers .state {
+    opacity: 0.8;
+}
+.note {
+    opacity: 0.8;
+}
+/* A browser's code, which people read aloud or compare across two screens. */
+.code {
+    font-family: var(--font-family-mono, monospace);
+    font-size: 1.3em;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+/* Connected: the app fills the window, under a slim bar that says where it is connected. */
+#connected-bar {
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 0 0.75em;
+    font-size: 0.85em;
+    background-color: var(--color-title, #222);
+    color: var(--color-title-offset, #fff);
+}
+/* Web UI's stylesheet shows every iframe and section as a block, which would show these while hidden: the app's
+   frame, fixed over the page, would cover it. */
+#connected-bar[hidden],
+#app[hidden],
+#browsers[hidden],
+#browsers [hidden],
+#remote [hidden] {
+    display: none;
+}
+#connected-bar button {
+    padding: 0.2em 0.8em;
+}
+/* On a phone the computer's name gives way to the buttons, rather than the bar's text wrapping out of it. */
+#connected-bar {
+    white-space: nowrap;
+}
+#connected-to {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#connected-bar .actions {
+    flex: 0 0 auto;
+    flex-wrap: nowrap;
+}
+/* The approved and waiting browsers, over the app while it is open. */
+#browsers {
+    position: fixed;
+    inset: 2em 0 0 0;
+    z-index: 1;
+    overflow: auto;
+    padding: 0 max(1em, env(safe-area-inset-left)) 1em;
+    background-color: var(--color-background, #1e1e1e);
+    color: var(--color-background-offset, #eee);
+}
+#browsers h2 {
+    font-size: 1.1em;
+}
+#browsers button {
+    padding: 0.4em 1em;
+}
+#browsers-error {
+    font-weight: bold;
+}
+#app {
+    position: fixed;
+    inset: 2em 0 0 0;
+    width: 100%;
+    height: calc(100% - 2em);
+    border: 0;
+}
+body.connected {
+    overflow: hidden;
+}
+body.connected #remote {
+    display: none;
+}

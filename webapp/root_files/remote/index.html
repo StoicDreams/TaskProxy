@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Task Proxy Remote Connections</title>
+    <meta name="description" content="Use Task Proxy on your computer from this phone or laptop.">
+    <meta name="theme-color" content="#FF2E46">
+    <meta name="robots" content="noindex">
+    <link href="/Logo.svg" rel="icon" type="image/svg+xml" sizes="any">
+    <link href="/remote/app.webmanifest" rel="manifest">
+    <link href="https://cdn.myfi.ws/css/webui.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="/remote/remote.css" rel="stylesheet">
+    <script type="module" src="/remote/remote.js"></script>
+</head>
+<body>
+    <!-- Plain containers, not main and header, which Web UI's stylesheet sizes for its own app shell. -->
+    <div id="remote" role="main">
+        <div class="remote-header">
+            <img class="remote-logo" src="/Logo.svg" alt="" width="40" height="40">
+            <h1>Remote Connections</h1>
+        </div>
+        <section id="status" aria-live="polite">
+            <p id="message">Loading</p>
+            <p id="detail"></p>
+            <p id="code-line" hidden>This browser's code is <strong id="browser-code" class="code"></strong></p>
+            <div class="actions" id="actions"></div>
+        </section>
+        <section id="desktops-section" hidden>
+            <h2>Your computers</h2>
+            <ul id="desktops"></ul>
+            <p class="note">To add a computer, open Settings in Task Proxy on it and turn on Remote Connections, signed in to this account.</p>
+            <p class="note" id="own"></p>
+        </section>
+        <noscript>Remote Connections needs JavaScript.</noscript>
+    </div>
+    <div id="connected-bar" hidden>
+        <span id="connected-to"></span>
+        <span class="actions">
+            <button type="button" id="browsers-button" aria-expanded="false" aria-controls="browsers">Browsers</button>
+            <button type="button" id="disconnect">Disconnect</button>
+        </span>
+    </div>
+    <div id="browsers" role="region" aria-label="Browsers" hidden>
+        <p class="note">A browser asks to connect with a code. Approve it only when its code here matches the one on that browser's screen.</p>
+        <p id="browsers-error" role="alert" hidden></p>
+        <h2>Waiting for approval</h2>
+        <ul id="browsers-waiting"></ul>
+        <p class="note" id="browsers-none">No browsers are waiting.</p>
+        <h2>Approved</h2>
+        <ul id="browsers-approved"></ul>
+    </div>
+    <iframe id="app" title="Task Proxy" hidden></iframe>
+</body>
+</html>
