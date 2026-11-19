@@ -110,6 +110,8 @@ export function mockApi() {
         const desktop = id => state.desktops.find(item => item.desktopId === id);
         switch (path) {
             case 'user/signin/code':
+                // As when a browser blocks api.myfi.ws's cookie: the code is accepted, and no session is kept.
+                if (body.code === 'cookie-blocked-code') return reply(200, '');
                 if (body.code !== 'good-code') return reply(400, 'That sign-in code was refused.');
                 state.signedIn = true;
                 return reply(200, '');

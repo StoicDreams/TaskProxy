@@ -34,6 +34,14 @@ function show(message, detail = '', actions = []) {
     $('actions').replaceChildren(...actions);
 }
 
+function signInLink(label) {
+    const link = document.createElement('a');
+    link.className = 'button';
+    link.href = signInUrl();
+    link.textContent = label;
+    return link;
+}
+
 function reasonOf(error) {
     return `${error?.message || error || 'Something went wrong.'}`;
 }
@@ -52,17 +60,20 @@ async function start() {
     if (payload) sessionStorage.setItem(PAIR_KEY, payload);
     if (code) {
         show('Signing in');
-        await api.signIn(code).catch(error => show('Sign-in failed. Sign in again.', reasonOf(error)));
+        // A refused code stays on the page with the API's reason, rather than being replaced by the sign-in prompt.
+        const failed = await api.signIn(code).then(() => null, error => error);
+        if (failed) {
+            show('Sign-in failed.', reasonOf(failed), [signInLink('Sign In Again')]);
+            return;
+        }
     }
     if (!await api.isSignedIn()) {
-        const signIn = document.createElement('a');
-        signIn.className = 'button';
-        signIn.href = signInUrl();
-        signIn.textContent = 'Sign In';
         show(
-            'Sign in to use Task Proxy from this device.',
-            'Use the same Stoic Dreams account Task Proxy is signed in to on your desktop.',
-            [signIn],
+            code ? 'Sign-in finished, but this browser is still signed out.' : 'Sign in to use Task Proxy from this device.',
+            code
+                ? 'This browser may be blocking the sign-in cookie for api.myfi.ws. Allow cookies for this site, then sign in again.'
+                : 'Use the same Stoic Dreams account Task Proxy is signed in to on your desktop.',
+            [signInLink(code ? 'Sign In Again' : 'Sign In')],
         );
         return;
     }

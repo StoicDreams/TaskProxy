@@ -45,6 +45,21 @@ test('signed out, the page keeps the pairing code through signing in, then pairs
     await expect.poll(() => desktop.evaluate(() => window.desktop.devices.map(device => [device.name, device.level]))).toEqual([['Phone', 'work']]);
 });
 
+test('a refused sign-in code stays on the page with the reason, and offers signing in again', async ({ page, site, api }) => {
+    await page.goto(`${site.origin}/remote/#myfi-signin=bad-code`);
+    await expect(message(page)).toHaveText('Sign-in failed.');
+    await expect(page.locator('#detail')).toHaveText('That sign-in code was refused.');
+    await expect(page.getByRole('link', { name: 'Sign In Again' })).toHaveAttribute('href', /^https:\/\/www\.stoicdreams\.com\/signin\?/);
+    await expect.poll(() => api.calls.map(call => call.path)).toEqual(['user/signin/code']);
+});
+
+test('a sign-in the browser keeps no session for says so, rather than asking to sign in as if nothing happened', async ({ page, site, api }) => {
+    await page.goto(`${site.origin}/remote/#myfi-signin=cookie-blocked-code`);
+    await expect(message(page)).toHaveText('Sign-in finished, but this browser is still signed out.');
+    await expect(page.locator('#detail')).toContainText('blocking the sign-in cookie');
+    await expect(page.getByRole('link', { name: 'Sign In Again' })).toBeVisible();
+});
+
 test('on a phone, the signed-out page shows its message and Sign In, with nothing hidden over them', async ({ page, site, api }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${site.origin}/remote/`);
