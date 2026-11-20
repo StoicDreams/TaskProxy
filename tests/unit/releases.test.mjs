@@ -50,9 +50,13 @@ test.describe('app-latest', () => {
     });
 
     test('shows the release notes for the newest version', async ({ page }) => {
+        const requested = [];
+        page.on('request', request => requested.push(request.url()));
         await serveReleases(page);
         await openPage(page, '/');
-        await expect(page.locator(`webui-content[src="${cdn}/release-1.2.10.md"]`)).toHaveCount(1);
+        // The notes load once they show, and take the place of the element that loads them.
+        await expect(page.getByRole('heading', { name: 'Notes for this release' })).toHaveCount(1);
+        expect(requested.filter(url => url.startsWith(`${cdn}/release-`))).toEqual([`${cdn}/release-1.2.10.md`]);
     });
 
     test('a platform with no releases says so', async ({ page }) => {

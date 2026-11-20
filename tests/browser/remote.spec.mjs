@@ -1,4 +1,4 @@
-import { test, expect, appFrame, webrtcChromium, FIXED_PUBLIC_KEY, FIXED_CODE } from './support/remote.mjs';
+import { test, expect, appFrame, webrtcChromium, FIXED_PUBLIC_KEY, FIXED_CODE } from '../support/remote.mjs';
 
 // Remote Connections (webapp/root_files/remote/): signing in, listing the account's computers, connecting to one with
 // a signed offer and answer, being approved, and running the computer's app in a frame through the service worker.
