@@ -1,6 +1,6 @@
 # Task Proxy
 
-[Version: 0.1.52](https://github.com/StoicDreams/TaskProxy)
+[Version: 0.1.53](https://github.com/StoicDreams/TaskProxy)
 
 [WebUI](https://github.com/StoicDreams/WebUI)
 
