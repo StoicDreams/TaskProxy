@@ -63,8 +63,8 @@ function startServer() {
             const file = fixtureFile(name);
             return file ? send(200, MIME[extname(file)] || 'application/octet-stream', readFileSync(file)) : send(404, 'text/plain', 'Not Found');
         }
-        // web.config rewrites /remote/ to the Remote Connections page.
-        const file = resolveSiteFile(/^\/remote\/?$/.test(pathname) ? '/remote/index.html' : pathname);
+        // web.config rewrites /remote/ to the Remote Connections page, which resolveSiteFile does for any folder.
+        const file = resolveSiteFile(pathname);
         if (file) return send(200, MIME[extname(file)] || 'application/octet-stream', readFileSync(file));
         if (extname(pathname)) return send(404, 'text/plain', 'Not Found');
         // Every other page route is the site itself, which the app in the frame must never reach.
@@ -115,10 +115,11 @@ export function mockApi() {
         switch (`${method} ${path}`) {
             case 'POST user/signin/code':
                 // As when a browser blocks api.myfi.ws's cookie: the code is accepted, and no session is kept.
-                if (body.code === 'cookie-blocked-code') return reply(200, '');
+                // The API answers a sign-in in plain text, not JSON.
+                if (body.code === 'cookie-blocked-code') return reply(200, 'Signin Successful');
                 if (body.code !== 'good-code') return reply(400, 'That sign-in code was refused.');
                 state.signedIn = true;
-                return reply(200, '');
+                return reply(200, 'Signin Successful');
             case 'GET user/roles':
                 return reply(200, state.signedIn ? '1' : '0');
             case 'GET remote/desktops':

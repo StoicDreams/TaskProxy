@@ -105,7 +105,8 @@ async function start() {
         show('Signing in');
         // A refused code stays on the page with the API's reason, rather than being replaced by the sign-in prompt.
         const failed = await api.signIn(code).then(() => null, error => error);
-        if (failed) {
+        // A code used twice, such as on a reload, is refused, but a browser already signed in goes on to its computers.
+        if (failed && !await api.isSignedIn()) {
             show('Sign-in failed.', reasonOf(failed), [signInLink('Sign In Again')]);
             return;
         }

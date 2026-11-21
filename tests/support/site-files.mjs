@@ -20,6 +20,7 @@ export const MIME = {
     '.html': 'text/html', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
     '.webp': 'image/webp', '.avif': 'image/avif', '.ico': 'image/x-icon', '.gif': 'image/gif', '.wasm': 'application/wasm',
     '.md': 'text/plain', '.txt': 'text/plain', '.xml': 'application/xml', '.webmanifest': 'application/manifest+json',
+    '.woff2': 'font/woff2',
 };
 
 export function readText(file) {
@@ -37,11 +38,18 @@ export function inside(root, pathname) {
 }
 
 // Trunk copies root_files/ and pkg/ to the site root, and worker.js from src-js/.
-export function resolveSiteFile(pathname) {
+function siteFile(pathname) {
     return inside(ROOT_FILES, pathname)
         || inside(WEBAPP, pathname)
         || inside(join(WEBAPP, 'pkg'), pathname)
         || inside(join(WEBAPP, 'src-js'), pathname);
+}
+
+/** The site's file for an address. A folder of its own, such as /remote/, is served its index.html, as IIS does. */
+export function resolveSiteFile(pathname) {
+    const folder = pathname.replace(/\/+$/, '');
+    if (folder === '') return siteFile(pathname);
+    return siteFile(pathname) || siteFile(`${folder}/index.html`);
 }
 
 // Trunk rewrites its data-trunk links at build time. Do the parts the browser needs, so site CSS still applies.
@@ -229,7 +237,8 @@ export function themeVariables(css) {
 export function normalizeThemeValue(value) {
     const color = colorToRgb(value.trim());
     if (color) return `rgba(${color.rgb.join(',')},${+color.alpha.toFixed(3)})`;
-    return value.replace(/\s+/g, '').toLowerCase();
+    // Minifiers shorten numbers (0.01em becomes .01em, 1.50 becomes 1.5), so numbers compare by value.
+    return value.replace(/(?<![\w#.])(\d*\.\d+|\d+)/g, n => String(+n)).replace(/\s+/g, '').toLowerCase();
 }
 
 function colorToRgb(value) {

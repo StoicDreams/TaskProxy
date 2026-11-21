@@ -32,7 +32,17 @@ async function call(path, body, method = 'POST') {
     const response = await send(path, body, method);
     const text = await response.text();
     if (!response.ok) throw failure(response.status, text);
-    return text ? JSON.parse(text) : null;
+    return parsed(text);
+}
+
+/** An answer's JSON, or its text when it isn't JSON, as the sign-in's "Signin Successful". */
+function parsed(text) {
+    if (!text) return null;
+    try {
+        return JSON.parse(text);
+    } catch {
+        return text;
+    }
 }
 
 export const api = {

@@ -156,7 +156,18 @@ test.describe('signing in', () => {
         await expect(message(page)).toHaveText('Sign-in failed.');
         await expect(detail(page)).toHaveText('That sign-in code was refused.');
         await expect(page.getByRole('link', { name: 'Sign In Again' })).toHaveAttribute('href', /^https:\/\/www\.stoicdreams\.com\/signin\?/);
-        await expect.poll(() => api.calls.map(call => call.path)).toEqual(['user/signin/code']);
+        // Refused, it checks whether this browser is signed in anyway before saying so.
+        await expect.poll(() => api.calls.map(call => call.path)).toEqual(['user/signin/code', 'user/roles']);
+    });
+
+    test('a browser already signed in goes on to its computers, with no Sign In, even when a sign-in code is refused', async ({ page, site, api }) => {
+        api.signedIn = true;
+        api.desktops.push({ desktopId: 'd1', name: 'Test Desktop', publicKey: 'key', active: true, lastSeen: Date.now() });
+        // A code already used, as when the page is reloaded with it still in the address.
+        await page.goto(`${site.origin}/remote/#myfi-signin=bad-code`);
+        await expect(computer(page)).toBeVisible();
+        await expect(message(page)).toHaveText('Choose a computer to connect to.');
+        await expect(page.getByRole('link', { name: /Sign In/ })).toHaveCount(0);
     });
 
     test('a sign-in the browser keeps no session for says so, rather than asking to sign in as if nothing happened', async ({ page, site, api }) => {
