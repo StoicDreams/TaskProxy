@@ -6,7 +6,7 @@
 
 A dev server that outlived its terminal can hold a port and keep the next one from starting. A build left running can keep your computer busy. The **Task Manager** lists every process you run, wherever it started, so you can find these and stop them.
 
-Open it from the gauge button at the top right, beside the **Terminal Manager**'s. It opens on the right, beside whatever you were doing.
+Open **Tools**, the toolbox at the top right, and choose its **Task Manager** tab, the gauge. It opens on the right, beside whatever you were doing.
 
 - It lists only your own processes, and works the same on Linux, macOS, and Windows.
 - It reads processes only while it is open, so it costs nothing the rest of the time.

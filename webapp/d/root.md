@@ -66,6 +66,10 @@ Want to learn more? The [tutorials](/tutorials) walk through each task step by s
 - **Project Management:** Create, add, and switch between multiple isolated workspaces instantly.
 - **Git Controller:** Authenticate to commit, sync, push, pull, branch, and stash directly from the UI, featuring a built-in diff viewer.
 - **Terminal & Script Manager:** Write parameterized PowerShell scripts with auto-generated UI inputs, and execute them in live background terminals or separate OS windows.
+- **Favorite Scripts:** Keep the scripts you run most in a row at the bottom of the app, each one click away from any project.
+- **Write with AI:** Draft commit messages, code reviews, pages, and scripts with Claude, a local model through Ollama or LM Studio, or your own API key, and check every draft before it is used.
+- **Remote Connections:** Open your computer's Task Proxy from a browser anywhere, approved once and limited to what you allow.
+- **Yours to shape:** 48 themes, accessibility choices such as larger text and reduced motion, and an icon for each project.
 </webui-page-segment>
 
 <app-latest></app-latest>

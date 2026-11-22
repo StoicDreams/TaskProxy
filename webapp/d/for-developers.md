@@ -31,6 +31,7 @@ Start-TaskProxyTerminal -Name 'api' -Command "& './scripts/run-api.ps1'" -Replac
 <webui-flex gap="var(--padding)" wrap>
     <webui-link href="/tutorials/run-scripts" icon="terminal" theme="primary">Tutorial: Run scripts and answer their prompts</webui-link>
     <webui-link href="/tutorials/script-terminals" icon="layers" theme="primary">Tutorial: Open terminals from your scripts</webui-link>
+    <webui-link href="/tutorials/favorites" icon="star" theme="secondary">Tutorial: Run your favorite scripts in one click</webui-link>
 </webui-flex>
 
 </webui-page-segment>
@@ -57,11 +58,14 @@ The **Git Controller** lists every change with a side-by-side diff. Step through
 
 Your commit message is kept per project and repository until the commit succeeds, so switching tasks never loses it.
 
+With an AI provider set up, such as Claude Code or a local model in Ollama, **Write with AI** drafts the message from the files you included, and the **Review** tab reviews your changes, or the whole project, before you commit. Every draft is yours to change, and nothing is committed by itself.
+
 <webui-loop-video src="/video/loops/git-commit-ready.mp4" poster="/video/loops/git-commit-ready.webp" alt="The Git Controller, showing changed files, a commit message, and a side-by-side diff"></webui-loop-video>
 
 <webui-flex gap="var(--padding)" wrap>
     <webui-link href="/tutorials/commit-and-sync" icon="code-commit" theme="primary">Tutorial: Review, commit, and sync</webui-link>
     <webui-link href="/tutorials/branches" icon="code-branch" theme="secondary">Tutorial: Work with branches</webui-link>
+    <webui-link href="/tutorials/ai" icon="sparkles" theme="secondary">Tutorial: Write with AI</webui-link>
 </webui-flex>
 
 </webui-page-segment>
@@ -94,6 +98,12 @@ That notes file of commands works better as a page: headings, a sentence on when
 
 <webui-page-segment elevation="10">
 
-Add every repository you work on and switch between them from the **Project** dropdown. Each one keeps its own pages, variables, terminals, and commit message. A project with several repositories inside it, such as a front end and an API, shows each one in the Git Controller's **Repo** dropdown.
+Add every repository you work on and switch between them from the **Project** dropdown, a grid of tiles with each project's icon and git status. Each one keeps its own pages, variables, terminals, and commit message. A project with several repositories inside it, such as a front end and an API, shows each one in the Git Controller's **Repo** dropdown, with its CI result.
+
+Away from your desk? Turn on **Remote Connections**, and check on a build from a browser on your laptop or phone.
+
+<webui-flex gap="var(--padding)" wrap>
+    <webui-link href="/tutorials/remote-connections" icon="desktop" theme="primary">Tutorial: Use Task Proxy from another computer</webui-link>
+</webui-flex>
 
 </webui-page-segment>

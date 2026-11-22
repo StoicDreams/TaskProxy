@@ -18,10 +18,13 @@ Write an onboarding page once: what to install, how to configure it, how to star
 
 A new teammate clones the repository, adds it to Task Proxy, and follows the page from top to bottom, running each step with a click. They don't need to know PowerShell, or to copy commands out of a document.
 
+Already have docs in markdown? Import a whole folder of them as pages, nested as they are in their folders, and add run buttons where they help.
+
 <webui-loop-video src="/video/loops/page-onboarding.mp4" poster="/video/loops/page-onboarding.webp" alt="An onboarding page in Task Proxy, with steps and a run button on each script"></webui-loop-video>
 
 <webui-flex gap="var(--padding)" wrap>
     <webui-link href="/tutorials/team-pages" icon="file" theme="primary">Tutorial: Build a page for your team</webui-link>
+    <webui-link href="/tutorials/docs" icon="book-open" theme="secondary">Tutorial: Turn your docs into pages</webui-link>
 </webui-flex>
 
 </webui-page-segment>

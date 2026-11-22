@@ -49,14 +49,17 @@ Have several projects? Click **Add Multiple Projects** to add them all at once.
 
 <webui-page-segment elevation="10">
 
-- **Left navigation:** the **Project** dropdown at the top switches projects. Below it are the project's own pages, and at the bottom are four tools: **Navigation Manager**, **Docs Manager**, **Script Manager**, and **Git Controller**.
-- **Top right:** **Plugins** (the puzzle piece), **Icons & Emojis**, **Manage Variables** (the **$**), the **Terminal Manager**, the **Task Manager** (the gauge), your notifications, and **Save**. Each opens a panel on the right, beside whatever you are doing.
+- **Left navigation:** the **Project** dropdown at the top opens a grid of your projects, each with its icon and git status, to switch between them. Below it are the project's own pages, and at the bottom are four tools: **Navigation Manager**, **Docs Manager**, **Script Manager**, and **Git Controller**.
+- **Top right:** **Save**, **Feedback**, and **Tools**, the toolbox. Tools opens a panel on the right, beside whatever you are doing, with a tab for each tool: **Terminals**, **Task Manager**, **Variables**, **Alerts**, **Plugins**, **Icons & Emojis**, **Theme**, **Accessibility**, and **Account**. Its button counts running scripts and new alerts.
+- **Bottom:** your [favorite scripts](/tutorials/favorites), each a click away.
 - **Help:** every tool has a **Help** bubble in the corner. It opens a small window you can move and resize, and keep open while you work.
-- **Dashboard:** the Task Proxy logo at the top left takes you to settings, where you can add, rename, or remove projects, change your key, and check for updates.
+- **Settings:** the Task Proxy logo at the top left takes you to Settings. Its tabs add, rename, and remove projects, import markdown files as pages, change your key, and set up Remote Connections, script performance, and AI. App updates are beside them.
+
+<webui-loop-video src="/video/loops/tools-drawer.mp4" poster="/video/loops/tools-drawer.webp" alt="Tools opening on the right, moving through its Terminals, Task Manager, Variables, and Theme tabs"></webui-loop-video>
 
 Removing a project only takes it out of Task Proxy. Your files and the `.taskproxy` folder stay where they are.
 
-<webui-loop-video src="/video/loops/settings.mp4" poster="/video/loops/settings.webp" alt="The settings page, with options to add projects, rename or remove the current one, change the security key, and check for updates"></webui-loop-video>
+<webui-loop-video src="/video/loops/settings.mp4" poster="/video/loops/settings.webp" alt="Settings, with its tabs for projects, import, the security key, Remote Connections, performance, and AI, and Check for Updates beside them"></webui-loop-video>
 
 </webui-page-segment>
 

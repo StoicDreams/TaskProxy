@@ -11,9 +11,11 @@ Task Proxy is a desktop app for Windows, Mac, and Linux. You point it at a proje
 - **A Terminal Manager** that shows each script's output in a real terminal.
 - **Variables and secrets**, with environments such as dev, staging, and prod.
 - **A Git Controller** for reviewing changes, committing, syncing, and working with branches.
-- **A Docs Manager** for editing the project's markdown files with a live preview.
+- **A Docs Manager** for editing the project's markdown files with a live preview, and turning them into pages.
+- **Tools** at the top right, with the Terminals, Task Manager, Variables, Plugins, Theme, Accessibility, and Account tabs.
+- **Favorite scripts** at the bottom, and **Write with AI** wherever you write, once you set up a provider.
 
-You can add as many projects as you like and switch between them from the **Project** dropdown at the top of the navigation.
+You can add as many projects as you like and switch between them from the **Project** dropdown at the top of the navigation, which shows each project's icon and git status.
 
 <webui-loop-video src="/video/loops/git-changes.mp4" poster="/video/loops/git-changes.webp" alt="The Git Controller in Task Proxy, with a list of changed files and the changes in one of them"></webui-loop-video>
 
@@ -32,7 +34,10 @@ Everything personal stays on your computer, encrypted.
 | Pages, in `pages/` | Values you enter for project variables |
 | The project's navigation, in `Navigation.json` | Each environment's values |
 | Variable names, types, and default values, in `Variables.json` | Global variables and secrets, such as tokens |
-| | Your list of projects and app settings |
+| The project's icon, in `Project.json` | Your list of projects and app settings, such as your theme |
+| | Your favorite scripts |
+| | AI providers and their API keys |
+| | Remote Connections, and the browsers you approved |
 
 Scripts are ordinary `.ps1` files, so they live wherever you keep them in the project, and are shared like any other file.
 

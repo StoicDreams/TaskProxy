@@ -87,7 +87,7 @@
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-segment.min.js" crossorigin="anonymous" />
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-dreams-logo.min.js" crossorigin="anonymous" />
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-social-links.min.js" crossorigin="anonymous" />
-	<meta name="webui-prerender" content="070a9f5988">
+	<meta name="webui-prerender" content="ae4dc4ccfa">
 </head>
 
 <body>
@@ -125,7 +125,7 @@ Your browser can't play this video. The steps below cover the same thing.
 <p>The blue bar shows the exact command that will run, with your values in it. Turn on <strong>Full Path</strong> to see the script's full path rather than its path in the project. <strong>Clear Params</strong> empties every input.</p>
 <h2>3. Run it and watch the output</h2>
 
-<p>Click <strong>Run</strong>, then open the <strong>Terminal Manager</strong> from the pager icon at the top right.</p>
+<p>Click <strong>Run</strong>. The <strong>Terminals</strong> tab of <strong>Tools</strong> opens on the right, if it isn't already showing, with your new run selected, and the list moves to <strong>Running</strong> unless it already shows <strong>Running</strong> or <strong>All Running</strong>. The drawer stays open, so you can run more.</p>
 <p>Choose the script in the <strong>Script</strong> dropdown to see its output. Scripts run in a real terminal, so colors, progress bars, and lines that redraw look the way they do in your own terminal window. Output is kept after a script finishes, so you can come back to it later.</p>
 <h2>4. Answer a prompt</h2>
 
@@ -150,6 +150,16 @@ Your browser can't play this video. The steps below cover the same thing.
 </tbody></table>
 <p>Run a script while another is running, and it waits its turn, then runs. <strong>Remove</strong> takes a finished page script off the list, and <strong>Remove Finished Page Scripts</strong> clears them all. <strong>Select All</strong> copies the whole output.</p>
 <p>A script can start something that outlives it, such as a dev server. To open those as terminals here, rather than windows of their own, see the next tutorial, <a href="/tutorials/script-terminals">Open terminals from your scripts</a>. To find and stop processes still running, see <a href="/tutorials/task-manager">Find and stop what is still running</a>.</p>
+
+<h2>6. Keep scripts from slowing your computer</h2>
+
+<p>A big build or test run can take every core and leave the rest of your computer sluggish. Open <strong>Settings</strong> from the Task Proxy logo, and choose the <strong>Performance</strong> tab:</p>
+<ul>
+<li><strong>Priority:</strong> <strong>Low</strong> runs scripts below your other programs. <strong>Lowest</strong> gives them only the CPU time nothing else wants.</li>
+<li><strong>CPU threads:</strong> keeps scripts to some of your computer's threads. Tools that size themselves to the computer, such as cargo, start fewer jobs.</li>
+</ul>
+<p>The limits cover the scripts Task Proxy runs, from the Terminal Manager, pages, and favorites, along with everything they start. They apply to scripts started after a change, so a script already running keeps the limits it started with. Scripts opened in a separate terminal window are not limited, and macOS can only lower priority.</p>
+<p>Run the same script many times a day? Make it a <a href="/tutorials/favorites">favorite</a>, and run it in one click from any page.</p>
 
 
 <p>Continue to Open terminals from your scripts</p>

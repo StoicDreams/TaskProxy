@@ -76,6 +76,19 @@ Documentation and notes in markdown? The **Docs Manager** shows the formatted re
 
 </webui-page-segment>
 
+## Make it comfortable
+
+<webui-page-segment elevation="10">
+
+Choose from 48 themes, make text larger, and turn on reduced motion, underlined links, or a stronger focus outline. Not sure what to write in a commit message? Set up AI, and **Write with AI** drafts one from your changes for you to read and change.
+
+<webui-flex gap="var(--padding)" wrap>
+    <webui-link href="/tutorials/make-it-yours" icon="palette" theme="primary">Tutorial: Make Task Proxy yours</webui-link>
+    <webui-link href="/tutorials/ai" icon="sparkles" theme="secondary">Tutorial: Write with AI</webui-link>
+</webui-flex>
+
+</webui-page-segment>
+
 ## Getting connected
 
 <webui-page-segment elevation="10">

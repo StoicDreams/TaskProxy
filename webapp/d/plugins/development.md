@@ -70,7 +70,7 @@ A minimal manifest:
 ### Try it
 
 1. Build every plugin into `dist/<id>` with `pwsh ./scripts/build.ps1`.
-2. In Task Proxy, click the puzzle piece button, choose **Install from folder**, and pick `dist/<id>`. A plugin from a folder is marked unsigned.
+2. In Task Proxy, open **Tools**, choose its **Plugins** tab, then **Install from folder**, and pick `dist/<id>`. A plugin from a folder is marked unsigned.
 3. Turn it on for the open project, or enter its settings, and its pages appear in the menu.
 
 </webui-page-segment>

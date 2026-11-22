@@ -16,7 +16,7 @@ Each plugin adds its own pages to Task Proxy's menu, and can add details to tool
 
 <webui-page-segment elevation="10">
 
-1. Click the puzzle piece button at the top of Task Proxy, beside **Icons & Emojis**. The **Plugins** panel opens on the right.
+1. Open **Tools**, the toolbox at the top right, and choose its **Plugins** tab, the puzzle piece. It opens on the right.
 2. Under **Available**, click **Install** on the plugin you want.
 3. Read what the plugin will be able to do, and click **Install**.
 4. Open the plugin's **Settings** in the same panel and enter what it asks for, such as your Jira site and API token.
@@ -58,7 +58,7 @@ Plugins from Task Proxy's catalog are signed by Stoic Dreams, and Task Proxy che
 
 <webui-page-segment elevation="10">
 
-Plugins are WebAssembly, written in Rust with the [Task Proxy plugin kit](https://github.com/StoicDreams/TaskProxyPlugins), or any language with an [Extism](https://extism.org) plugin kit. Build one, then click the puzzle piece button in Task Proxy and choose **Install from folder** to try it.
+Plugins are WebAssembly, written in Rust with the [Task Proxy plugin kit](https://github.com/StoicDreams/TaskProxyPlugins), or any language with an [Extism](https://extism.org) plugin kit. Build one, then open the **Plugins** tab of **Tools** in Task Proxy and choose **Install from folder** to try it.
 
 [Plugin Development](/plugins/development) walks through building one, and has the plugin spec for every version.
 

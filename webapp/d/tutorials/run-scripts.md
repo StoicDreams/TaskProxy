@@ -56,7 +56,7 @@ The blue bar shows the exact command that will run, with your values in it. Turn
 
 <webui-page-segment elevation="10">
 
-Click **Run**, then open the **Terminal Manager** from the pager icon at the top right.
+Click **Run**. The **Terminals** tab of **Tools** opens on the right, if it isn't already showing, with your new run selected, and the list moves to **Running** unless it already shows **Running** or **All Running**. The drawer stays open, so you can run more.
 
 Choose the script in the **Script** dropdown to see its output. Scripts run in a real terminal, so colors, progress bars, and lines that redraw look the way they do in your own terminal window. Output is kept after a script finishes, so you can come back to it later.
 
@@ -97,6 +97,23 @@ Run a script while another is running, and it waits its turn, then runs. **Remov
 <webui-loop-video src="/video/loops/terminal-finished.mp4" poster="/video/loops/terminal-finished.webp" alt="The Terminal Manager's Finished view, showing a finished test run and its output"></webui-loop-video>
 
 A script can start something that outlives it, such as a dev server. To open those as terminals here, rather than windows of their own, see the next tutorial, [Open terminals from your scripts](/tutorials/script-terminals). To find and stop processes still running, see [Find and stop what is still running](/tutorials/task-manager).
+
+</webui-page-segment>
+
+## 6. Keep scripts from slowing your computer
+
+<webui-page-segment elevation="10">
+
+A big build or test run can take every core and leave the rest of your computer sluggish. Open **Settings** from the Task Proxy logo, and choose the **Performance** tab:
+
+- **Priority:** **Low** runs scripts below your other programs. **Lowest** gives them only the CPU time nothing else wants.
+- **CPU threads:** keeps scripts to some of your computer's threads. Tools that size themselves to the computer, such as cargo, start fewer jobs.
+
+The limits cover the scripts Task Proxy runs, from the Terminal Manager, pages, and favorites, along with everything they start. They apply to scripts started after a change, so a script already running keeps the limits it started with. Scripts opened in a separate terminal window are not limited, and macOS can only lower priority.
+
+<webui-loop-video src="/video/loops/script-performance.mp4" poster="/video/loops/script-performance.webp" alt="Settings' Performance tab, choosing a lower priority and fewer CPU threads for scripts"></webui-loop-video>
+
+Run the same script many times a day? Make it a [favorite](/tutorials/favorites), and run it in one click from any page.
 
 </webui-page-segment>
 

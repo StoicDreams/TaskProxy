@@ -14,7 +14,7 @@ The Jira plugin brings the parts of Jira you use every day into Task Proxy: your
 
 <webui-page-segment elevation="10">
 
-1. Click the puzzle piece button at the top of Task Proxy, beside **Icons & Emojis**, and install **Jira**.
+1. Open **Tools**, the toolbox at the top right, choose its **Plugins** tab, and install **Jira**.
 2. Create an API token on [Atlassian's API tokens page](https://id.atlassian.com/manage-profile/security/api-tokens).
 3. With your project open, open Jira's **Settings for this project** in the same panel, and enter your Jira site, such as `https://your-team.atlassian.net`, the email you sign in with, and the token.
 
@@ -36,7 +36,7 @@ A subtask you have finished stays in My Issues until its parent is finished too,
 - **Columns:** choose the columns from the issue, its parent, and its grandparent, such as the story a task belongs to.
 - **Saved searches:** save the searches you use often, such as your sprint's bugs, filters and sort included.
 
-Click an issue's key to open it.
+Click an issue's key to open it beside the list, in a split you can resize by dragging, which Task Proxy remembers. In a narrow window, buttons switch between the two at full height. Rows alternate shades so they are easier to follow, and coming back to My Issues or All Issues shows the list at once, and reopens the issue you had open beside it.
 
 </webui-page-segment>
 
@@ -72,7 +72,7 @@ The Comment column shows each issue's latest comment. Click it to read every com
 
 <webui-page-segment elevation="10">
 
-Your Jira notifications show in Task Proxy's alerts, behind the bell at the top. Click an issue in one to open it, and close one to mark it read. Jira's **Notifications** page lists them too.
+Your Jira notifications show in Task Proxy's alerts, on the **Alerts** tab of **Tools** at the top right. Click an issue in one to open it, and close one to mark it read. Jira's **Notifications** page lists them too.
 
 When Jira's notification bell does not answer the plugin, the notifications are what others did on issues you are assigned, reported, or watch in the last week: mentions, comments, assignments, and status changes. Those are marked read in Task Proxy only.
 
@@ -84,7 +84,7 @@ When Jira's notification bell does not answer the plugin, the notifications are 
 
 Jira shows one issue at a time, so the story or epic a task belongs to is another click away. Task Proxy shows them together. The issue comes first, then its parent, then the parent's parent, each in its own section you can open or close. Task Proxy remembers which you closed.
 
-<webui-loop-video src="/video/loops/jira/issue.mp4" poster="/video/loops/jira/issue.webp" alt="An issue with its status, people, story points, description, and comments, followed by its parent story"></webui-loop-video>
+<webui-loop-video src="/video/loops/jira/issue.mp4" poster="/video/loops/jira/issue.webp" alt="An issue opened beside My Issues, with its status, people, description, and comments, followed by its parent story"></webui-loop-video>
 
 From the issue you can:
 

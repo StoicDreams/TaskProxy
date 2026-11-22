@@ -56,6 +56,12 @@ Open the new page from the left navigation.
 4. Click **Delete** in the editor to remove a segment, and drag a segment by its edit button to move it.
 5. Click **Save**.
 
+A few shortcuts:
+
+- **Write with AI** in a segment's editor drafts it from what you describe, for you to read and change. See [Write with AI](/tutorials/ai).
+- **Import** at the top of the page brings in one of the project's markdown files, before or after what is there. To turn a whole folder of docs into pages, see [Edit your project's docs](/tutorials/docs).
+- Images and videos from the project show by their address relative to the page's file in `.taskproxy/pages`, such as `![Setup](../../docs/images/setup.png)`, as they would beside the file in your repository. Right-clicking an image offers **Copy image**.
+
 <webui-loop-video src="/video/loops/page-edit-segment.mp4" poster="/video/loops/page-edit-segment.webp" alt="A segment open for editing, with its type picked from a row of options, a Delete button, its markdown on the left, and a preview on the right"></webui-loop-video>
 
 </webui-page-segment>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV0Z2J11TB"></script>
+	<script>
+		// Pages opened on this machine or another device on the home network load Web UI from the local MyFiCDN server and skip analytics.
+		window.webuiLocal = /^(localhost|127\.0\.0\.1|\[::1\]|10(\.\d+){3}|192\.168(\.\d+){2}|172\.(1[6-9]|2\d|3[01])(\.\d+){2}|[\w-]+\.local)$/.test(location.hostname);
+		if (!webuiLocal) {
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'G-SV0Z2J11TB');
+		}
+	</script>
+	<title>Write with AI: Tutorial: about 10 minutes</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index, follow">
+	<base href="/" />
+	<script type="text/javascript">
+		navigator.serviceWorker?.register('service-worker.min.js');
+	</script>
+
+	<link rel="dns-prefetch" href="https://cdn.myfi.ws" />
+	<link rel="dns-prefetch" href="https://api.myfi.ws" />
+	<link rel="preconnect" href="https://cdn.myfi.ws">
+	<link rel="preconnect" href="https://api.myfi.ws">
+
+	<link href="Logo.svg?v=f0af75d5c9" rel="icon" type="image/svg+xml" sizes="any" />
+	<link rel="manifest" href="app.webmanifest?v=48f470bda8">
+
+	<script>
+		// Web UI loads from the local MyFiCDN server (MyFiCDN/PowerShell/RunLocal.ps1) when the site runs locally (through /webui-cdn/ on
+		// another device, which RunLocal.ps1 -Network passes on to it),
+		// so framework changes show before they are published, and from cdn.myfi.ws everywhere else.
+		window.webuiCdn = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) ? 'http://localhost:3180/' : webuiLocal ? '/webui-cdn/' : 'https://cdn.myfi.ws/';
+		document.write('<link href="' + webuiCdn + 'css/webui.min.css" rel="stylesheet" />');
+	</script>
+	<link href="css/app.min.css?v=7715725473" rel="stylesheet" />
+	<script>document.write('<script src="' + webuiCdn + 'webui/loader.min.js"></' + 'script>');</script>
+
+	<!-- Prerendered pages from webapp_post_build prerender. Release builds copy them to the site root. -->
+
+	<!--Web Worker-->
+	<script type="module" src="main.js?v=cea15cbf4f"></script>
+	<!--End Web Worker-->
+
+	<meta name="theme-color" content="#FF2E46" />
+
+	<meta name="author" content="Erik Gassler">
+	<meta name="description" content="Set up an AI provider, then draft commit messages, code reviews, pages, and scripts that you check before anything is saved.">
+
+	<meta property="og:image" content="https://www.taskproxy.com/Logo.png">
+	<meta property="og:title" content="Write with AI: Tutorial: about 10 minutes">
+	<meta property="og:url" content="https://www.taskproxy.com/tutorials/ai">
+	<meta property="og:description" content="Set up an AI provider, then draft commit messages, code reviews, pages, and scripts that you check before anything is saved.">
+
+	<meta name="twitter:title" content="Write with AI: Tutorial: about 10 minutes">
+	<meta name="twitter:url" content="https://www.taskproxy.com/tutorials/ai">
+	<meta name="twitter:site" content="@stoicdreamsllc">
+	<meta name="twitter:description" content="Set up an AI provider, then draft commit messages, code reviews, pages, and scripts that you check before anything is saved.">
+	<meta name="twitter:image" content="https://www.taskproxy.com/Logo.png">
+	<link rel="canonical" href="https://www.taskproxy.com/tutorials/ai" />
+	<link rel="modulepreload" href="https://cdn.myfi.ws/js/mdparse.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/alerts.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app-config.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/button.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/data.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/drawer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/feedback.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/flex.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/icon.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/link.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/loop-video.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/myfi-info.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/nav.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/newsletter.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/next-page.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-footer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-segment.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/quote.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-dreams-logo.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-social-links.min.js" crossorigin="anonymous" />
+	<meta name="webui-prerender" content="63b40b1150">
+</head>
+
+<body>
+	<webui-app-config src="appConfig.json"></webui-app-config>
+	<webui-app data-removeclass=".nav|open;.shared|open">
+		<div data-prerendered>
+<h2>What you'll do</h2>
+
+<ol>
+<li>Add an AI provider, such as Claude Code, Ollama, or an API key.</li>
+<li>Choose what to use AI for, and which models.</li>
+<li>Draft a commit message, review your changes, and write page parts and scripts.</li>
+</ol>
+<p>Every draft lands in an editor for you to read and change. Task Proxy never saves, commits, or runs a draft by itself.</p>
+
+<h2>1. Add a provider</h2>
+
+<p>Open <strong>Settings</strong> from the Task Proxy logo at the top left, and choose the <strong>AI</strong> tab. On <strong>Providers</strong>, click <strong>Add Provider</strong> and choose what you want to use:</p>
+<table><thead><tr><th>Provider</th><th>Good for</th></tr></thead><tbody>
+<tr><td><strong>Claude Code, with a Claude subscription</strong></td><td>Using the Claude plan you already pay for. Choose the models (Sonnet, Opus, Haiku) and whether it may look at other files in the project.</td></tr>
+<tr><td><strong>Ollama</strong> or <strong>LM Studio</strong></td><td>Free models that run on your own computer, so nothing leaves it.</td></tr>
+<tr><td><strong>OpenAI</strong>, <strong>Anthropic</strong>, or <strong>OpenRouter</strong></td><td>Paste an API key from the provider's site.</td></tr>
+<tr><td><strong>Another OpenAI-compatible server</strong> or <strong>Another command</strong></td><td>For those who know how: servers such as Groq or vLLM, or any tool you can call from PowerShell.</td></tr>
+</tbody></table>
+<p>Each choice shows the steps to set it up, with a button to open each site it needs, and a <strong>Run</strong> button for each command, which runs in the Terminal Manager so you can watch it and answer what it asks. Click <strong>Save Providers</strong> to keep your changes, and <strong>Test</strong> to check the provider answers.</p>
+<p>API keys are kept encrypted on your computer and are never shown again.</p>
+<h2>2. Choose what AI is for</h2>
+
+<p>Still on the <strong>AI</strong> tab:</p>
+<ul>
+<li><strong>Use AI For:</strong> turn on Git commit messages, code reviews, pages, scripts, or importing markdown files. Each shows its own button where it is used, and nowhere else.</li>
+<li><strong>Default Models:</strong> pick a model for everything, or one for each use, for every project or just this one. You can pick another for a single request.</li>
+<li><strong>Instructions:</strong> add your own, for every request or for one use, such as how your team writes commit messages. They add to Task Proxy's built-in instructions, never replace them, and a project can have its own.</li>
+</ul>
+<p>A useful start for commit messages:</p>
+<pre><code class="language-text">A first line summarizing the change, then one line per change, each starting with Feature: or Bug:. No other text.
+</code></pre>
+
+<h2>3. Draft a commit message</h2>
+
+<p>In the <strong>Git Controller</strong>, include the files for your next commit, then click <strong>Write with AI</strong> under <strong>Commit Message</strong>. The message is written from the changes you included, following your instructions. Read it, change what you like, and commit as usual.</p>
+<h2>4. Review your changes</h2>
+
+<p>With code reviews turned on, the Git Controller has a <strong>Review</strong> tab beside <strong>Commit</strong>.</p>
+<ol>
+<li>Choose whether to review the changes included for the next commit, or the whole project.</li>
+<li>Optionally, say what to look for this time, such as "security" or "error handling".</li>
+<li>Click <strong>Review</strong>.</li>
+</ol>
+<p>A large review is done in parts and joined into one report. It keeps going while you work on other pages or projects. The report stays until you <strong>Clear</strong> it or review the repo again. <strong>Copy</strong> it, or <strong>Save as Page</strong> to keep it in the project's navigation under <strong>Reviews</strong>.</p>
+<h2>5. Write pages and scripts</h2>
+
+<ul>
+<li><strong>Pages:</strong> while editing a part of a page, click <strong>Write with AI</strong> and say what it should say, or how to change what is there now.</li>
+<li><strong>Scripts:</strong> in the script editor, click <strong>Write with AI</strong> and describe what the script should do. Read every line before you save or run it.</li>
+<li><strong>Importing markdown:</strong> on Settings' <strong>Import</strong> tab, <strong>Suggest with AI</strong> proposes titles, subtitles, and where each file goes in the navigation. See <a href="/tutorials/docs">Edit your project's docs</a>.</li>
+</ul>
+<p>The book button beside each <strong>Write with AI</strong> opens the instructions for that use.</p>
+<h2>What is sent</h2>
+
+<p>Only what you are working on, with the instructions: the included files' changes, or the whole project for a project review; the page or script being edited; or the files being imported.</p>
+<ul>
+<li><strong>Ollama</strong> and <strong>LM Studio</strong> keep it on your computer.</li>
+<li><strong>Claude Code</strong> and the API providers send it to their servers.</li>
+<li>Task Proxy's own variables and secrets are never sent.</li>
+</ul>
+
+<p>With <strong>Look at the project</strong> on, Claude Code can read any file in the project, including a <code>.env</code> file, and what it reads is sent to Anthropic. Leave it off for a project that keeps secrets in its files. Claude Code also only works in a project you have trusted.</p>
+
+
+
+<p>Continue to Run your favorite scripts in one click</p>
+		</div>
+		<webui-drawer slot="left" class="nav elevation-20" docked="true" data-state="slot|docked" data-moveable data-dockable>
+			<webui-flex justify="center" slot="header">
+				<webui-stoic-dreams-logo title="Task Proxy Logo" text="Task" text2="Proxy"></webui-stoic-dreams-logo>
+			</webui-flex>
+			<webui-nav routes="/nav.json" data-subscribe="app-nav-routes:setNavRoutes"></webui-nav>
+		</webui-drawer>
+		<webui-drawer slot="right" class="shared elevation-20" data-stopclick data-moveable data-state="slot">
+		</webui-drawer>
+		<header slot="header">
+			<button aria-label="open navigation menu" data-toggleclass=".nav|open" class="elevation-10 pa-1 mx-1">
+				<webui-icon icon="hamburger"></webui-icon>
+			</button>
+			<h1 data-subscribe="page-title:innerHTML">Write with AI</h1>
+			<h2 data-subscribe="page-subtitle:innerHTML">Tutorial: about 10 minutes</h2>
+			<webui-flex grow></webui-flex>
+			<webui-feedback title="Provide us your feedback" data-post="https://api.myfi.ws/feedback/new" data-json-name="message">
+				<p>You can also come <a href="https://discord.gg/5X4YSDFdHD">chat with us on the Stoic Dreams discord server.</a></p>
+			</webui-feedback>
+			<webui-alerts title="View your notifications" data-title="My Alerts" data-toggleclass=".shared|open"></webui-alerts>
+			<webui-myfi-info sign-in-label="Sign In">
+				<template slot="panel-content">
+					<webui-flex column gap="0.5rem" class="account-remote">
+						<strong>Remote Connections</strong>
+						<p class="ma-0">Use Task Proxy on your computer from this browser: its projects, pages, scripts, and Git Controller.</p>
+						<!-- /remote/ is a page of its own, outside the site, so it is opened in place of the site rather than as one of its pages. -->
+						<webui-link href="/remote/" target="_top" icon="circle_desktop|backing|bordered">Connect to Your Computers</webui-link>
+					</webui-flex>
+				</template>
+			</webui-myfi-info>
+		</header>
+		<noscript>Javascript is required to view this site</noscript>
+		<webui-page-footer copyright="2016" company="Stoic Dreams">
+			<webui-next-page theme="tertiary" data-subscribe="page-next-page"></webui-next-page>
+			<webui-newsletter key="703a9b5e-0a14-4ed7-9618-ce96ca4e3e21"></webui-newsletter>
+			<webui-flex class="my-3" justify="center" wrap>
+				<webui-link href="/about" icon="circle_exclamation|backing|bordered">About Task Proxy</webui-link>
+				<webui-link href="/contact" icon="messages|fill|shade:tri">Contact Stoic Dreams</webui-link>
+				<webui-link href="/privacy" icon="shield_exclamation|backing|bordered">Privacy</webui-link>
+				<webui-link href="/terms" icon="handshake|fill|shade:tri">Terms & Conditions</webui-link>
+			</webui-flex>
+			<webui-stoic-social-links class="mb-2"></webui-stoic-social-links>
+		</webui-page-footer>
+	</webui-app>
+</body>
+
+</html>

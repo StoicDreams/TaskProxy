@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV0Z2J11TB"></script>
+	<script>
+		// Pages opened on this machine or another device on the home network load Web UI from the local MyFiCDN server and skip analytics.
+		window.webuiLocal = /^(localhost|127\.0\.0\.1|\[::1\]|10(\.\d+){3}|192\.168(\.\d+){2}|172\.(1[6-9]|2\d|3[01])(\.\d+){2}|[\w-]+\.local)$/.test(location.hostname);
+		if (!webuiLocal) {
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'G-SV0Z2J11TB');
+		}
+	</script>
+	<title>Use Task Proxy from Another Computer: Tutorial: about 5 minutes</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index, follow">
+	<base href="/" />
+	<script type="text/javascript">
+		navigator.serviceWorker?.register('service-worker.min.js');
+	</script>
+
+	<link rel="dns-prefetch" href="https://cdn.myfi.ws" />
+	<link rel="dns-prefetch" href="https://api.myfi.ws" />
+	<link rel="preconnect" href="https://cdn.myfi.ws">
+	<link rel="preconnect" href="https://api.myfi.ws">
+
+	<link href="Logo.svg?v=f0af75d5c9" rel="icon" type="image/svg+xml" sizes="any" />
+	<link rel="manifest" href="app.webmanifest?v=48f470bda8">
+
+	<script>
+		// Web UI loads from the local MyFiCDN server (MyFiCDN/PowerShell/RunLocal.ps1) when the site runs locally (through /webui-cdn/ on
+		// another device, which RunLocal.ps1 -Network passes on to it),
+		// so framework changes show before they are published, and from cdn.myfi.ws everywhere else.
+		window.webuiCdn = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) ? 'http://localhost:3180/' : webuiLocal ? '/webui-cdn/' : 'https://cdn.myfi.ws/';
+		document.write('<link href="' + webuiCdn + 'css/webui.min.css" rel="stylesheet" />');
+	</script>
+	<link href="css/app.min.css?v=7715725473" rel="stylesheet" />
+	<script>document.write('<script src="' + webuiCdn + 'webui/loader.min.js"></' + 'script>');</script>
+
+	<!-- Prerendered pages from webapp_post_build prerender. Release builds copy them to the site root. -->
+
+	<!--Web Worker-->
+	<script type="module" src="main.js?v=cea15cbf4f"></script>
+	<!--End Web Worker-->
+
+	<meta name="theme-color" content="#FF2E46" />
+
+	<meta name="author" content="Erik Gassler">
+	<meta name="description" content="Turn on Remote Connections, then open your computer's Task Proxy in a browser anywhere, approved once and limited to what you allow.">
+
+	<meta property="og:image" content="https://www.taskproxy.com/Logo.png">
+	<meta property="og:title" content="Use Task Proxy from Another Computer: Tutorial: about 5 minutes">
+	<meta property="og:url" content="https://www.taskproxy.com/tutorials/remote-connections">
+	<meta property="og:description" content="Turn on Remote Connections, then open your computer's Task Proxy in a browser anywhere, approved once and limited to what you allow.">
+
+	<meta name="twitter:title" content="Use Task Proxy from Another Computer: Tutorial: about 5 minutes">
+	<meta name="twitter:url" content="https://www.taskproxy.com/tutorials/remote-connections">
+	<meta name="twitter:site" content="@stoicdreamsllc">
+	<meta name="twitter:description" content="Turn on Remote Connections, then open your computer's Task Proxy in a browser anywhere, approved once and limited to what you allow.">
+	<meta name="twitter:image" content="https://www.taskproxy.com/Logo.png">
+	<link rel="canonical" href="https://www.taskproxy.com/tutorials/remote-connections" />
+	<link rel="modulepreload" href="https://cdn.myfi.ws/js/mdparse.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/alerts.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app-config.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/button.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/data.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/drawer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/feedback.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/flex.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/icon.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/link.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/loop-video.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/myfi-info.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/nav.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/newsletter.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/next-page.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-footer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-segment.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/quote.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-dreams-logo.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-social-links.min.js" crossorigin="anonymous" />
+	<meta name="webui-prerender" content="6d446a515e">
+</head>
+
+<body>
+	<webui-app-config src="appConfig.json"></webui-app-config>
+	<webui-app data-removeclass=".nav|open;.shared|open">
+		<div data-prerendered>
+<h2>What Remote Connections does</h2>
+
+<p><strong>Remote Connections</strong> lets you use Task Proxy on your computer from a browser somewhere else, such as a laptop or phone, at <a href="/remote/">www.taskproxy.com/remote/</a>. The browser shows your computer's own Task Proxy, running your computer's projects and scripts, so you can check on a build or a test run while you are away from your desk.</p>
+<p>The browser connects straight to your computer. Your projects, files, and secrets stay on it.</p>
+<p>You'll need a Stoic Dreams account, signed in to in both places.</p>
+
+<h2>1. Sign in on your computer</h2>
+
+<p>In Task Proxy, open <strong>Tools</strong>, the toolbox at the top right, and choose its <strong>Account</strong> tab. Click <strong>Sign In</strong>. Your browser opens StoicDreams.com: sign in there if it asks, and approve the sign-in when it shows the same code as Task Proxy.</p>
+<p>Task Proxy keeps the sign-in in your system's keychain, so you only do this once.</p>
+<h2>2. Turn on Remote Connections</h2>
+
+<ol>
+<li>Open <strong>Settings</strong> from the Task Proxy logo at the top left, and choose the <strong>Remote Connections</strong> tab.</li>
+<li>Give this computer a name you'll recognize, such as "Work desktop", and click <strong>Turn On</strong>.</li>
+<li>Choose whether to <strong>Keep this computer awake</strong>, so your browsers can reach it, or <strong>Let this computer sleep as usual</strong>. Its screen can still turn off.</li>
+</ol>
+<h2>3. Connect from a browser</h2>
+
+<ol>
+<li>On the other device, open <a href="/remote/">www.taskproxy.com/remote/</a> and sign in with the same account.</li>
+<li><strong>Your Computers</strong> lists each computer with Remote Connections on. Click <strong>Connect</strong> on yours.</li>
+<li>The first time, the browser shows a code and waits. On your computer, the browser shows under <strong>Waiting for Approval</strong>. Check its code matches the one on the browser, choose what it may do, and click <strong>Approve</strong>. If you don't recognize it, click <strong>Refuse</strong>.</li>
+</ol>
+<p>From then on, that browser connects straight away. Reloading the page connects again, and <strong>Disconnect</strong> closes the connection.</p>
+
+<p>Approve a browser only when its code matches the one it shows. A refused browser can't ask again until you choose <strong>Allow to Ask Again</strong>.</p>
+
+
+<h2>4. Choose what each browser may do</h2>
+
+<p>Each approved browser has its own level, which you can change at any time under <strong>Approved Browsers</strong>:</p>
+<table><thead><tr><th>Level</th><th>It may</th></tr></thead><tbody>
+<tr><td><strong>View</strong></td><td>Look at projects, changes, and runs</td></tr>
+<tr><td><strong>Commit</strong></td><td>Also commit, pull, push, and change branches</td></tr>
+<tr><td><strong>Work</strong></td><td>Also edit, set variables, and run trusted scripts</td></tr>
+</tbody></table>
+<p><strong>Remove Browser</strong> takes its approval away and disconnects it. <strong>Show Activity</strong> lists what each browser did, without what it sent.</p>
+<p>A browser opens the app on a page of its own, so it never moves what you see on the computer. Turning Remote Connections on or off, and changing what a browser may do, can only be done on the computer itself.</p>
+
+<h2>If it won't connect</h2>
+
+<ul>
+<li><strong>None of your computers show:</strong> check Task Proxy is open on the computer, signed in to the same account, with Remote Connections on.</li>
+<li><strong>The computer answered, but no connection could be made:</strong> some networks don't allow a direct connection. Try from the same Wi-Fi, or over a VPN.</li>
+<li><strong>Different versions:</strong> update Task Proxy on the computer, or reload the page.</li>
+<li><strong>Signing in doesn't stick:</strong> your browser may be blocking the sign-in cookie. Allow cookies for the site, then sign in again.</li>
+</ul>
+
+
+<p>Back to All Tutorials</p>
+		</div>
+		<webui-drawer slot="left" class="nav elevation-20" docked="true" data-state="slot|docked" data-moveable data-dockable>
+			<webui-flex justify="center" slot="header">
+				<webui-stoic-dreams-logo title="Task Proxy Logo" text="Task" text2="Proxy"></webui-stoic-dreams-logo>
+			</webui-flex>
+			<webui-nav routes="/nav.json" data-subscribe="app-nav-routes:setNavRoutes"></webui-nav>
+		</webui-drawer>
+		<webui-drawer slot="right" class="shared elevation-20" data-stopclick data-moveable data-state="slot">
+		</webui-drawer>
+		<header slot="header">
+			<button aria-label="open navigation menu" data-toggleclass=".nav|open" class="elevation-10 pa-1 mx-1">
+				<webui-icon icon="hamburger"></webui-icon>
+			</button>
+			<h1 data-subscribe="page-title:innerHTML">Use Task Proxy from Another Computer</h1>
+			<h2 data-subscribe="page-subtitle:innerHTML">Tutorial: about 5 minutes</h2>
+			<webui-flex grow></webui-flex>
+			<webui-feedback title="Provide us your feedback" data-post="https://api.myfi.ws/feedback/new" data-json-name="message">
+				<p>You can also come <a href="https://discord.gg/5X4YSDFdHD">chat with us on the Stoic Dreams discord server.</a></p>
+			</webui-feedback>
+			<webui-alerts title="View your notifications" data-title="My Alerts" data-toggleclass=".shared|open"></webui-alerts>
+			<webui-myfi-info sign-in-label="Sign In">
+				<template slot="panel-content">
+					<webui-flex column gap="0.5rem" class="account-remote">
+						<strong>Remote Connections</strong>
+						<p class="ma-0">Use Task Proxy on your computer from this browser: its projects, pages, scripts, and Git Controller.</p>
+						<!-- /remote/ is a page of its own, outside the site, so it is opened in place of the site rather than as one of its pages. -->
+						<webui-link href="/remote/" target="_top" icon="circle_desktop|backing|bordered">Connect to Your Computers</webui-link>
+					</webui-flex>
+				</template>
+			</webui-myfi-info>
+		</header>
+		<noscript>Javascript is required to view this site</noscript>
+		<webui-page-footer copyright="2016" company="Stoic Dreams">
+			<webui-next-page theme="tertiary" data-subscribe="page-next-page"></webui-next-page>
+			<webui-newsletter key="703a9b5e-0a14-4ed7-9618-ce96ca4e3e21"></webui-newsletter>
+			<webui-flex class="my-3" justify="center" wrap>
+				<webui-link href="/about" icon="circle_exclamation|backing|bordered">About Task Proxy</webui-link>
+				<webui-link href="/contact" icon="messages|fill|shade:tri">Contact Stoic Dreams</webui-link>
+				<webui-link href="/privacy" icon="shield_exclamation|backing|bordered">Privacy</webui-link>
+				<webui-link href="/terms" icon="handshake|fill|shade:tri">Terms & Conditions</webui-link>
+			</webui-flex>
+			<webui-stoic-social-links class="mb-2"></webui-stoic-social-links>
+		</webui-page-footer>
+	</webui-app>
+</body>
+
+</html>

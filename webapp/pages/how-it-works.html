@@ -86,7 +86,7 @@
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/quote.min.js" crossorigin="anonymous" />
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-dreams-logo.min.js" crossorigin="anonymous" />
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-social-links.min.js" crossorigin="anonymous" />
-	<meta name="webui-prerender" content="d2bda57894">
+	<meta name="webui-prerender" content="6357c5ca37">
 </head>
 
 <body>
@@ -102,9 +102,11 @@
 <li><strong>A Terminal Manager</strong> that shows each script's output in a real terminal.</li>
 <li><strong>Variables and secrets</strong>, with environments such as dev, staging, and prod.</li>
 <li><strong>A Git Controller</strong> for reviewing changes, committing, syncing, and working with branches.</li>
-<li><strong>A Docs Manager</strong> for editing the project's markdown files with a live preview.</li>
+<li><strong>A Docs Manager</strong> for editing the project's markdown files with a live preview, and turning them into pages.</li>
+<li><strong>Tools</strong> at the top right, with the Terminals, Task Manager, Variables, Plugins, Theme, Accessibility, and Account tabs.</li>
+<li><strong>Favorite scripts</strong> at the bottom, and <strong>Write with AI</strong> wherever you write, once you set up a provider.</li>
 </ul>
-<p>You can add as many projects as you like and switch between them from the <strong>Project</strong> dropdown at the top of the navigation.</p>
+<p>You can add as many projects as you like and switch between them from the <strong>Project</strong> dropdown at the top of the navigation, which shows each project's icon and git status.</p>
 <h2>What is shared, and what is not</h2>
 
 <p>When you add a project, Task Proxy creates a <code>.taskproxy</code> folder in it. Everything your team should share goes in that folder, as plain JSON and markdown, so you share it the same way you share code: commit it and push.</p>
@@ -113,7 +115,10 @@
 <tr><td>Pages, in <code>pages/</code></td><td>Values you enter for project variables</td></tr>
 <tr><td>The project's navigation, in <code>Navigation.json</code></td><td>Each environment's values</td></tr>
 <tr><td>Variable names, types, and default values, in <code>Variables.json</code></td><td>Global variables and secrets, such as tokens</td></tr>
-<tr><td></td><td>Your list of projects and app settings</td></tr>
+<tr><td>The project's icon, in <code>Project.json</code></td><td>Your list of projects and app settings, such as your theme</td></tr>
+<tr><td></td><td>Your favorite scripts</td></tr>
+<tr><td></td><td>AI providers and their API keys</td></tr>
+<tr><td></td><td>Remote Connections, and the browsers you approved</td></tr>
 </tbody></table>
 <p>Scripts are ordinary <code>.ps1</code> files, so they live wherever you keep them in the project, and are shared like any other file.</p>
 

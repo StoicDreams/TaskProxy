@@ -17,7 +17,7 @@
 			gtag('config', 'G-SV0Z2J11TB');
 		}
 	</script>
-	<title>Edit Your Project's Docs: Tutorial: about 3 minutes</title>
+	<title>Edit Your Project's Docs: Tutorial: about 5 minutes</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="robots" content="index, follow">
@@ -53,17 +53,17 @@
 	<meta name="theme-color" content="#FF2E46" />
 
 	<meta name="author" content="Erik Gassler">
-	<meta name="description" content="Edit your project's markdown docs with a live preview, then commit the change, in about three minutes.">
+	<meta name="description" content="Edit your project's markdown docs with a live preview, and turn a folder of markdown files into Task Proxy pages.">
 
 	<meta property="og:image" content="https://www.taskproxy.com/Logo.png">
-	<meta property="og:title" content="Edit Your Project's Docs: Tutorial: about 3 minutes">
+	<meta property="og:title" content="Edit Your Project's Docs: Tutorial: about 5 minutes">
 	<meta property="og:url" content="https://www.taskproxy.com/tutorials/docs">
-	<meta property="og:description" content="Edit your project's markdown docs with a live preview, then commit the change, in about three minutes.">
+	<meta property="og:description" content="Edit your project's markdown docs with a live preview, and turn a folder of markdown files into Task Proxy pages.">
 
-	<meta name="twitter:title" content="Edit Your Project's Docs: Tutorial: about 3 minutes">
+	<meta name="twitter:title" content="Edit Your Project's Docs: Tutorial: about 5 minutes">
 	<meta name="twitter:url" content="https://www.taskproxy.com/tutorials/docs">
 	<meta name="twitter:site" content="@stoicdreamsllc">
-	<meta name="twitter:description" content="Edit your project's markdown docs with a live preview, then commit the change, in about three minutes.">
+	<meta name="twitter:description" content="Edit your project's markdown docs with a live preview, and turn a folder of markdown files into Task Proxy pages.">
 	<meta name="twitter:image" content="https://www.taskproxy.com/Logo.png">
 	<link rel="canonical" href="https://www.taskproxy.com/tutorials/docs" />
 	<link rel="modulepreload" href="https://cdn.myfi.ws/js/mdparse.min.js" crossorigin="anonymous" />
@@ -86,7 +86,7 @@
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-segment.min.js" crossorigin="anonymous" />
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-dreams-logo.min.js" crossorigin="anonymous" />
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-social-links.min.js" crossorigin="anonymous" />
-	<meta name="webui-prerender" content="a814a8bd32">
+	<meta name="webui-prerender" content="41d8f8c0c5">
 </head>
 
 <body>
@@ -101,9 +101,24 @@
 <li>Edit the markdown on the right. The rendered result on the left updates as you type.</li>
 <li>Click <strong>Save</strong> to write the file, or <strong>Reset</strong> to throw away your changes and reload it.</li>
 </ol>
+<h2>Turn your docs into pages</h2>
+
+<p>Already have a <code>docs</code> folder? Task Proxy can turn its markdown files into pages, nested in the navigation the way the files are nested in their folders.</p>
+<ol>
+<li>Open <strong>Settings</strong> from the Task Proxy logo at the top left, and choose the <strong>Import</strong> tab.</li>
+<li>Pick the <strong>Folder</strong> to import, or <strong>The whole project</strong>.</li>
+<li>Under <strong>Place the pages</strong>, choose <strong>In a new folder</strong>, and give it a <strong>Folder name</strong>, or <strong>At the top of the navigation</strong>.</li>
+<li>Click <strong>Import Pages</strong>.</li>
+</ol>
+<p>Links between the files open their new pages, and images and videos the files show by relative address, such as <code>images/setup.png</code>, show on the pages too. The files themselves are only read, never changed.</p>
+<p>With AI set up, <strong>Suggest with AI</strong> proposes each page's title, description, and navigation folder before you import. Change anything you like first. See <a href="/tutorials/ai">Write with AI</a>.</p>
+<h2>Bring one file into a page</h2>
+
+<p>To add a single file to a page you already have, click <strong>Import</strong> at the top of the page, choose the <strong>Markdown file</strong>, and whether it goes <strong>Before this page's content</strong> or <strong>After this page's content</strong>. An empty page takes the file as its content.</p>
+
 <h2>Then commit it</h2>
 
-<p>Your edits are ordinary file changes, so they show up in the <strong>Git Controller</strong>, ready to review and commit. See <a href="/tutorials/commit-and-sync">Review, commit, and sync your changes</a>.</p>
+<p>Your edits, and imported pages, are ordinary file changes, so they show up in the <strong>Git Controller</strong>, ready to review and commit. See <a href="/tutorials/commit-and-sync">Review, commit, and sync your changes</a>.</p>
 <p>Docs or pages? Use docs for things people read anywhere, such as on GitHub. Use <a href="/tutorials/team-pages">Task Proxy pages</a> for steps people carry out in Task Proxy, with scripts they can run.</p>
 
 
@@ -122,7 +137,7 @@
 				<webui-icon icon="hamburger"></webui-icon>
 			</button>
 			<h1 data-subscribe="page-title:innerHTML">Edit Your Project's Docs</h1>
-			<h2 data-subscribe="page-subtitle:innerHTML">Tutorial: about 3 minutes</h2>
+			<h2 data-subscribe="page-subtitle:innerHTML">Tutorial: about 5 minutes</h2>
 			<webui-flex grow></webui-flex>
 			<webui-feedback title="Provide us your feedback" data-post="https://api.myfi.ws/feedback/new" data-json-name="message">
 				<p>You can also come <a href="https://discord.gg/5X4YSDFdHD">chat with us on the Stoic Dreams discord server.</a></p>

@@ -87,7 +87,7 @@
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-segment.min.js" crossorigin="anonymous" />
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-dreams-logo.min.js" crossorigin="anonymous" />
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-social-links.min.js" crossorigin="anonymous" />
-	<meta name="webui-prerender" content="247fffe923">
+	<meta name="webui-prerender" content="60d133d17b">
 </head>
 
 <body>
@@ -114,8 +114,9 @@ Your browser can't play this video. The steps below cover the same thing.
 <h2>1. See what changed</h2>
 
 <p>The top of the Git Controller shows where you are: the remote, the branch you're tracking, and how many commits you are ahead of or behind it. Below that, <strong>Files to Commit</strong> and <strong>Lines Changed</strong> add up what your next commit holds.</p>
-<p>Every changed file is listed on the left, marked <strong>Add</strong>, <strong>Modify</strong>, or <strong>Delete</strong>. Click a file to see its changes on the right, with the old version beside the new one. Use the up and down arrow keys to move through the list. Check <strong>Show Full File</strong> to see the whole file rather than only the changed parts.</p>
+<p>Every changed file is listed on the left, marked <strong>Add</strong>, <strong>Modify</strong>, or <strong>Delete</strong>, with its size after its folder, and how much it grew or shrank since the last commit, so a file that suddenly got large stands out. Click a file to see its changes on the right, with the old version beside the new one. Use the up and down arrow keys to move through the list. Check <strong>Show Full File</strong> to see the whole file rather than only the changed parts.</p>
 <p>Lots of files? Type part of a path in <strong>Filter files</strong> to narrow the list.</p>
+<p>A project with more than one repository has a <strong>Repo</strong> dropdown to choose between them. Each repo in it shows its changed files, the commits it is behind and ahead, and the result of CI for its last push, which keeps updating while a run is going.</p>
 <p>For markdown, HTML, and SVG files, <strong>Raw</strong> and <strong>Preview</strong> above the changes switch between the changes as written and the file drawn as it will look. The preview runs nothing from the file.</p>
 <h2>2. Choose what goes in the commit</h2>
 
@@ -130,6 +131,7 @@ Your browser can't play this video. The steps below cover the same thing.
 <h2>3. Write a message and commit</h2>
 
 <p>Type a <strong>Commit Message</strong> and click <strong>Commit</strong>.</p>
+<p>With AI set up, <strong>Write with AI</strong> under the message drafts it from the files you included, and a <strong>Review</strong> tab beside <strong>Commit</strong> reviews your changes before you commit them. See <a href="/tutorials/ai">Write with AI</a>.</p>
 <p>To check your work first, choose a script under <strong>Run Before Commit</strong>, such as your tests. It runs in the Terminal Manager each time you commit, and the commit goes ahead only if the script succeeds.</p>
 <p>Task Proxy remembers the message for each project and repository until the commit succeeds. You can switch projects, or close the app, without losing what you wrote.</p>
 <p>While a commit runs, its buttons show what it is doing: <strong>Processing Commit</strong>, or <strong>Running</strong> and the script's name, with <strong>Cancel</strong>, while a script you chose under <strong>Run Before Commit</strong> runs first. Cancelling the script, or stopping it in the Terminals panel, commits nothing.</p>

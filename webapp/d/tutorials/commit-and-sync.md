@@ -30,9 +30,11 @@ Open the **Git Controller** from the octopus icon at the bottom of the left navi
 
 The top of the Git Controller shows where you are: the remote, the branch you're tracking, and how many commits you are ahead of or behind it. Below that, **Files to Commit** and **Lines Changed** add up what your next commit holds.
 
-Every changed file is listed on the left, marked **Add**, **Modify**, or **Delete**. Click a file to see its changes on the right, with the old version beside the new one. Use the up and down arrow keys to move through the list. Check **Show Full File** to see the whole file rather than only the changed parts.
+Every changed file is listed on the left, marked **Add**, **Modify**, or **Delete**, with its size after its folder, and how much it grew or shrank since the last commit, so a file that suddenly got large stands out. Click a file to see its changes on the right, with the old version beside the new one. Use the up and down arrow keys to move through the list. Check **Show Full File** to see the whole file rather than only the changed parts.
 
 Lots of files? Type part of a path in **Filter files** to narrow the list.
+
+A project with more than one repository has a **Repo** dropdown to choose between them. Each repo in it shows its changed files, the commits it is behind and ahead, and the result of CI for its last push, which keeps updating while a run is going.
 
 For markdown, HTML, and SVG files, **Raw** and **Preview** above the changes switch between the changes as written and the file drawn as it will look. The preview runs nothing from the file.
 
@@ -62,6 +64,8 @@ To throw away your changes to one file, click its trash can. **Revert All** at t
 <webui-page-segment elevation="10">
 
 Type a **Commit Message** and click **Commit**.
+
+With AI set up, **Write with AI** under the message drafts it from the files you included, and a **Review** tab beside **Commit** reviews your changes before you commit them. See [Write with AI](/tutorials/ai).
 
 To check your work first, choose a script under **Run Before Commit**, such as your tests. It runs in the Terminal Manager each time you commit, and the commit goes ahead only if the script succeeds.
 

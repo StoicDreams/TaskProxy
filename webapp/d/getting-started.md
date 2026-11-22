@@ -27,9 +27,14 @@ With your project loaded, explore the primary management tools located in the le
 - **Docs Manager:** Quickly edit your project's `readme.md` and standard markdown documentation with a live preview.
 - **Script & Terminal Manager:** Write `.ps1` scripts, automatically generate input parameters, and execute them in live terminal views directly from the app.
 - **Git Controller:** Use the built-in Git interface to commit your work, switch branches, sync with remote repositories, and view line-by-line diffs.
-- **Variable Manager:** Click the **$** icon in the top header to define Page, Project, and Global variables for easy injection into your scripts and documentation.
-- **Task Manager:** Click the gauge in the top header to find every process you run, such as a dev server left running after its terminal closed, and stop it.
-- **Plugins:** Click the puzzle piece in the top header to add integrations such as Jira.
+- **Tools:** The toolbox at the top right opens a panel with a tab for each tool:
+    - **Variables:** define Page, Project, and Global variables for easy injection into your scripts and documentation.
+    - **Task Manager:** find every process you run, such as a dev server left running after its terminal closed, and stop it.
+    - **Plugins:** add integrations such as Jira.
+    - **Theme** and **Accessibility:** choose one of 48 themes, and set text size, motion, and more.
+    - **Account:** sign in to your Stoic Dreams account, for Remote Connections.
+- **Favorite Scripts:** Keep the scripts you run most in a row at the bottom, one click each.
+- **Write with AI:** Set up an AI provider in Settings to draft commit messages, code reviews, pages, and scripts.
 </webui-page-segment>
 
 ## 4. Learn by Doing

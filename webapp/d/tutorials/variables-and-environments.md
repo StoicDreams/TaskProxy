@@ -22,7 +22,7 @@ Scripts and pages often need values that differ from person to person, or from o
 - **Everyone can share one script.** Each person fills in their own values.
 - **Switching environments is one click.** Pick staging, and every staging value is used at once.
 
-Open **Manage Variables** from the **$** at the top right.
+Open **Tools**, the toolbox at the top right, and choose its **Variables** tab, the **$**. Its button shows how many variables the current page has.
 
 </webui-page-segment>
 
@@ -38,7 +38,7 @@ The name is saved in `.taskproxy/Variables.json`, so your teammates see it too o
 
 Each row also has buttons to copy the value to the clipboard, clear it, or delete the variable.
 
-<webui-loop-video src="/video/loops/variables-project.mp4" poster="/video/loops/variables-project.webp" alt="Manage Variables open on the Project tab, with apiBaseUrl, environment, and releaseType variables for the dev environment"></webui-loop-video>
+<webui-loop-video src="/video/loops/variables-project.mp4" poster="/video/loops/variables-project.webp" alt="The Variables tab of Tools open on the Project tab, with apiBaseUrl, environment, and releaseType variables for the dev environment"></webui-loop-video>
 
 </webui-page-segment>
 
@@ -61,7 +61,7 @@ From then on, choosing an environment swaps in all of its values at once. Anythi
 
 The **Global** tab holds values for every project, such as your personal access token. Task Proxy reads your git token from a variable named `github_pat` or `git_pat`, from the project first and then from global.
 
-<webui-loop-video src="/video/loops/variables-global.mp4" poster="/video/loops/variables-global.webp" alt="Manage Variables open on the Global tab, with deployToken and github_pat variables"></webui-loop-video>
+<webui-loop-video src="/video/loops/variables-global.mp4" poster="/video/loops/variables-global.webp" alt="The Variables tab of Tools open on the Global tab, with deployToken and github_pat variables"></webui-loop-video>
 
 </webui-page-segment>
 
@@ -94,7 +94,7 @@ When the same name is set in more than one place, Task Proxy uses the first it f
 2. **Project**, from the active environment
 3. **Global**
 
-The **Enabled** switches at the top of Manage Variables turn a whole scope off for a while. It's a quick way to test what a script does without your page or project values.
+The **Enabled** switches at the top of the Variables tab turn a whole scope off for a while. It's a quick way to test what a script does without your page or project values.
 
 </webui-page-segment>
 

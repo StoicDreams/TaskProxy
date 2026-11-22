@@ -14,7 +14,7 @@ Want to know what a plugin can reach before you start? See [what a plugin can re
 
 <webui-page-segment elevation="10">
 
-1. Click the puzzle piece button at the top right, beside **Icons & Emojis**. The **Plugins** panel opens.
+1. Open **Tools**, the toolbox at the top right, and choose its **Plugins** tab, the puzzle piece.
 2. Under **Available**, click **Install** on the plugin you want.
 3. Task Proxy lists what the plugin will be able to reach, such as the websites it talks to and the settings it reads. Read it, and click **Install**.
 
@@ -77,5 +77,5 @@ Open the other project, then the plugin's **Settings for this project**:
 </webui-page-segment>
 
 <webui-flex justify="flex-end">
-    <webui-button href="/tutorials" theme="primary" end-icon="graduation-cap">Back to All Tutorials</webui-button>
+    <webui-button href="/tutorials/ai" theme="primary" end-icon="chevrons-right">Continue to Write with AI</webui-button>
 </webui-flex>

@@ -93,6 +93,26 @@
                 "name": "Add a Plugin",
                 "icon": "puzzle-piece",
                 "url": "/tutorials/plugins"
+            },
+            {
+                "name": "Write with AI",
+                "icon": "sparkles",
+                "url": "/tutorials/ai"
+            },
+            {
+                "name": "Favorite Scripts",
+                "icon": "star",
+                "url": "/tutorials/favorites"
+            },
+            {
+                "name": "Make It Yours",
+                "icon": "palette",
+                "url": "/tutorials/make-it-yours"
+            },
+            {
+                "name": "Remote Connections",
+                "icon": "desktop",
+                "url": "/tutorials/remote-connections"
             }
         ]
     },

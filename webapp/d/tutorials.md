@@ -41,6 +41,18 @@ New to Task Proxy? Start with **Set up Task Proxy and your first project**. Each
     <webui-card name="Add a plugin" avatar="puzzle-piece" link="/tutorials/plugins">
         Install a plugin such as Jira, set it up for a project, and find its pages.
     </webui-card>
+    <webui-card name="Write with AI" avatar="sparkles" link="/tutorials/ai">
+        Set up an AI provider, then draft commit messages, code reviews, pages, and scripts you check first.
+    </webui-card>
+    <webui-card name="Run your favorite scripts in one click" avatar="star" link="/tutorials/favorites">
+        Keep the scripts you run most in a row at the bottom, with their parameters set.
+    </webui-card>
+    <webui-card name="Make Task Proxy yours" avatar="palette" link="/tutorials/make-it-yours">
+        Pick a theme, set text size and other accessibility choices, and give projects icons.
+    </webui-card>
+    <webui-card name="Use Task Proxy from another computer" avatar="desktop" link="/tutorials/remote-connections">
+        Turn on Remote Connections, and open your computer's Task Proxy from a browser anywhere.
+    </webui-card>
 </webui-cards>
 
 ## Not sure where to start?

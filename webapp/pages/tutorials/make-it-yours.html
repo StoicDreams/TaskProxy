@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV0Z2J11TB"></script>
+	<script>
+		// Pages opened on this machine or another device on the home network load Web UI from the local MyFiCDN server and skip analytics.
+		window.webuiLocal = /^(localhost|127\.0\.0\.1|\[::1\]|10(\.\d+){3}|192\.168(\.\d+){2}|172\.(1[6-9]|2\d|3[01])(\.\d+){2}|[\w-]+\.local)$/.test(location.hostname);
+		if (!webuiLocal) {
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'G-SV0Z2J11TB');
+		}
+	</script>
+	<title>Make Task Proxy Yours: Tutorial: about 5 minutes</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index, follow">
+	<base href="/" />
+	<script type="text/javascript">
+		navigator.serviceWorker?.register('service-worker.min.js');
+	</script>
+
+	<link rel="dns-prefetch" href="https://cdn.myfi.ws" />
+	<link rel="dns-prefetch" href="https://api.myfi.ws" />
+	<link rel="preconnect" href="https://cdn.myfi.ws">
+	<link rel="preconnect" href="https://api.myfi.ws">
+
+	<link href="Logo.svg?v=f0af75d5c9" rel="icon" type="image/svg+xml" sizes="any" />
+	<link rel="manifest" href="app.webmanifest?v=48f470bda8">
+
+	<script>
+		// Web UI loads from the local MyFiCDN server (MyFiCDN/PowerShell/RunLocal.ps1) when the site runs locally (through /webui-cdn/ on
+		// another device, which RunLocal.ps1 -Network passes on to it),
+		// so framework changes show before they are published, and from cdn.myfi.ws everywhere else.
+		window.webuiCdn = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) ? 'http://localhost:3180/' : webuiLocal ? '/webui-cdn/' : 'https://cdn.myfi.ws/';
+		document.write('<link href="' + webuiCdn + 'css/webui.min.css" rel="stylesheet" />');
+	</script>
+	<link href="css/app.min.css?v=7715725473" rel="stylesheet" />
+	<script>document.write('<script src="' + webuiCdn + 'webui/loader.min.js"></' + 'script>');</script>
+
+	<!-- Prerendered pages from webapp_post_build prerender. Release builds copy them to the site root. -->
+
+	<!--Web Worker-->
+	<script type="module" src="main.js?v=cea15cbf4f"></script>
+	<!--End Web Worker-->
+
+	<meta name="theme-color" content="#FF2E46" />
+
+	<meta name="author" content="Erik Gassler">
+	<meta name="description" content="Pick one of 48 themes, set text size and other accessibility choices, and give each project an icon you can spot at a glance.">
+
+	<meta property="og:image" content="https://www.taskproxy.com/Logo.png">
+	<meta property="og:title" content="Make Task Proxy Yours: Tutorial: about 5 minutes">
+	<meta property="og:url" content="https://www.taskproxy.com/tutorials/make-it-yours">
+	<meta property="og:description" content="Pick one of 48 themes, set text size and other accessibility choices, and give each project an icon you can spot at a glance.">
+
+	<meta name="twitter:title" content="Make Task Proxy Yours: Tutorial: about 5 minutes">
+	<meta name="twitter:url" content="https://www.taskproxy.com/tutorials/make-it-yours">
+	<meta name="twitter:site" content="@stoicdreamsllc">
+	<meta name="twitter:description" content="Pick one of 48 themes, set text size and other accessibility choices, and give each project an icon you can spot at a glance.">
+	<meta name="twitter:image" content="https://www.taskproxy.com/Logo.png">
+	<link rel="canonical" href="https://www.taskproxy.com/tutorials/make-it-yours" />
+	<link rel="modulepreload" href="https://cdn.myfi.ws/js/mdparse.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/alerts.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app-config.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/button.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/data.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/drawer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/feedback.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/flex.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/icon.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/link.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/loop-video.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/myfi-info.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/nav.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/newsletter.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/next-page.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-footer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-segment.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-dreams-logo.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-social-links.min.js" crossorigin="anonymous" />
+	<meta name="webui-prerender" content="744b21f372">
+</head>
+
+<body>
+	<webui-app-config src="appConfig.json"></webui-app-config>
+	<webui-app data-removeclass=".nav|open;.shared|open">
+		<div data-prerendered>
+<h2>What you'll do</h2>
+
+<ol>
+<li>Pick a theme.</li>
+<li>Set text size, motion, and other accessibility choices.</li>
+<li>Give each project an icon, and switch projects from their tiles.</li>
+</ol>
+<p>Your theme and accessibility choices are kept in Task Proxy on this computer. A project's icon is saved in the project, so your team sees it too.</p>
+
+<h2>1. Pick a theme</h2>
+
+<p>Open <strong>Tools</strong>, the toolbox at the top right, and choose its <strong>Theme</strong> tab, the palette.</p>
+<p>There are 48 themes in eight groups: <strong>Classic</strong>, <strong>Colors</strong>, <strong>Organic</strong>, <strong>Electric</strong>, <strong>Earth</strong>, <strong>Sky</strong>, <strong>Space</strong>, and <strong>Ocean</strong>, each with three light and three dark. A theme is more than its colors: each has its own heading font, a texture behind the app, a mark beside headings, and its own look for the sections of a page. Each tile shows them, so you can see a theme before you choose it.</p>
+<p>Click a tile, and the whole app changes at once.</p>
+<h2>2. Set accessibility choices</h2>
+
+<p>Choose the <strong>Accessibility</strong> tab of <strong>Tools</strong>:</p>
+<table><thead><tr><th>Choice</th><th>What it does</th></tr></thead><tbody>
+<tr><td><strong>Text size</strong></td><td>Makes text larger or smaller across the app, from 80% to 160%, the terminal's included</td></tr>
+<tr><td><strong>Reduce motion</strong></td><td>Panels, menus, and tabs change without sliding or fading. On to begin with when your system asks for less motion</td></tr>
+<tr><td><strong>Underline links</strong></td><td>Links stand out from the text around them by more than their color</td></tr>
+<tr><td><strong>Stronger focus outline</strong></td><td>What the keyboard is on gets a thicker outline that is easier to follow</td></tr>
+<tr><td><strong>Show tooltips</strong></td><td>Buttons say what they do when the pointer rests on them. On to begin with</td></tr>
+</tbody></table>
+<p>They apply straight away, and from the moment Task Proxy starts. <strong>Reset</strong> goes back to the usual settings.</p>
+<h2>3. Give your projects icons</h2>
+
+<p>A project's icon is one of its own images, such as its logo.</p>
+<ol>
+<li>Open <strong>Settings</strong> from the Task Proxy logo at the top left.</li>
+<li>Click the icon beside the current project's name, or beside a project in the <strong>Projects</strong> list.</li>
+<li>Pick one of the project's images from the grid. Each is named, so you can tell similar ones apart.</li>
+</ol>
+<p>The icon is saved in the project's <code>.taskproxy/Project.json</code>, so everyone who opens the project sees it. A project with no images can have one added, such as an SVG or PNG.</p>
+<h2>4. Switch projects from their tiles</h2>
+
+<p>The <strong>Project</strong> dropdown at the top of the left navigation opens a grid of tiles, one for each project, with its icon and git status, so you can see which projects have changes before you open one.</p>
+<p>Continue to Use Task Proxy from another computer</p>
+		</div>
+		<webui-drawer slot="left" class="nav elevation-20" docked="true" data-state="slot|docked" data-moveable data-dockable>
+			<webui-flex justify="center" slot="header">
+				<webui-stoic-dreams-logo title="Task Proxy Logo" text="Task" text2="Proxy"></webui-stoic-dreams-logo>
+			</webui-flex>
+			<webui-nav routes="/nav.json" data-subscribe="app-nav-routes:setNavRoutes"></webui-nav>
+		</webui-drawer>
+		<webui-drawer slot="right" class="shared elevation-20" data-stopclick data-moveable data-state="slot">
+		</webui-drawer>
+		<header slot="header">
+			<button aria-label="open navigation menu" data-toggleclass=".nav|open" class="elevation-10 pa-1 mx-1">
+				<webui-icon icon="hamburger"></webui-icon>
+			</button>
+			<h1 data-subscribe="page-title:innerHTML">Make Task Proxy Yours</h1>
+			<h2 data-subscribe="page-subtitle:innerHTML">Tutorial: about 5 minutes</h2>
+			<webui-flex grow></webui-flex>
+			<webui-feedback title="Provide us your feedback" data-post="https://api.myfi.ws/feedback/new" data-json-name="message">
+				<p>You can also come <a href="https://discord.gg/5X4YSDFdHD">chat with us on the Stoic Dreams discord server.</a></p>
+			</webui-feedback>
+			<webui-alerts title="View your notifications" data-title="My Alerts" data-toggleclass=".shared|open"></webui-alerts>
+			<webui-myfi-info sign-in-label="Sign In">
+				<template slot="panel-content">
+					<webui-flex column gap="0.5rem" class="account-remote">
+						<strong>Remote Connections</strong>
+						<p class="ma-0">Use Task Proxy on your computer from this browser: its projects, pages, scripts, and Git Controller.</p>
+						<!-- /remote/ is a page of its own, outside the site, so it is opened in place of the site rather than as one of its pages. -->
+						<webui-link href="/remote/" target="_top" icon="circle_desktop|backing|bordered">Connect to Your Computers</webui-link>
+					</webui-flex>
+				</template>
+			</webui-myfi-info>
+		</header>
+		<noscript>Javascript is required to view this site</noscript>
+		<webui-page-footer copyright="2016" company="Stoic Dreams">
+			<webui-next-page theme="tertiary" data-subscribe="page-next-page"></webui-next-page>
+			<webui-newsletter key="703a9b5e-0a14-4ed7-9618-ce96ca4e3e21"></webui-newsletter>
+			<webui-flex class="my-3" justify="center" wrap>
+				<webui-link href="/about" icon="circle_exclamation|backing|bordered">About Task Proxy</webui-link>
+				<webui-link href="/contact" icon="messages|fill|shade:tri">Contact Stoic Dreams</webui-link>
+				<webui-link href="/privacy" icon="shield_exclamation|backing|bordered">Privacy</webui-link>
+				<webui-link href="/terms" icon="handshake|fill|shade:tri">Terms & Conditions</webui-link>
+			</webui-flex>
+			<webui-stoic-social-links class="mb-2"></webui-stoic-social-links>
+		</webui-page-footer>
+	</webui-app>
+</body>
+
+</html>
