@@ -16,7 +16,7 @@ You'll need a Stoic Dreams account, signed in to in both places.
 
 <webui-page-segment elevation="10">
 
-In Task Proxy, open **Tools**, the toolbox at the top right, and choose its **Account** tab. Click **Sign In**. Your browser opens StoicDreams.com: sign in there if it asks, and approve the sign-in when it shows the same code as Task Proxy.
+In Task Proxy, open **Tools**, the toolbox at the top right, and choose its **Account** tab. Click **Sign in to Stoic Dreams**. Your browser opens StoicDreams.com: sign in there if it asks, and approve the sign-in when it shows the same code as Task Proxy.
 
 Task Proxy keeps the sign-in in your system's keychain, so you only do this once.
 

@@ -36,6 +36,8 @@ Lots of files? Type part of a path in **Filter files** to narrow the list.
 
 A project with more than one repository has a **Repo** dropdown to choose between them. Each repo in it shows its changed files, the commits it is behind and ahead, and the result of CI for its last push, which keeps updating while a run is going.
 
+<webui-loop-video src="/video/loops/git-repos.mp4" poster="/video/loops/git-repos.webp" alt="The Git Controller's Repo dropdown, with each repo's CI result, changed files, and commits behind and ahead"></webui-loop-video>
+
 For markdown, HTML, and SVG files, **Raw** and **Preview** above the changes switch between the changes as written and the file drawn as it will look. The preview runs nothing from the file.
 
 <webui-loop-video src="/video/loops/git-changes.mp4" poster="/video/loops/git-changes.webp" alt="The Git Controller showing four changed files, and the changes to cart.js side by side"></webui-loop-video>

@@ -56,7 +56,7 @@ The blue bar shows the exact command that will run, with your values in it. Turn
 
 <webui-page-segment elevation="10">
 
-Click **Run**. The **Terminals** tab of **Tools** opens on the right, if it isn't already showing, with your new run selected, and the list moves to **Running** unless it already shows **Running** or **All Running**. The drawer stays open, so you can run more.
+Click **Run**, then open **Tools**, the toolbox at the top right, and choose its **Terminals** tab. Scripts run from a page or a favorite open it for you, on the new run.
 
 Choose the script in the **Script** dropdown to see its output. Scripts run in a real terminal, so colors, progress bars, and lines that redraw look the way they do in your own terminal window. Output is kept after a script finishes, so you can come back to it later.
 

@@ -24,6 +24,7 @@ A favorite always runs in the project it came from, even while another project i
 1. Click the pencil at the left of the favorites row. **Favorite Scripts** opens over most of the page.
 2. Click **Add Script**, and pick a script **On this page**, or one of the project's **Script files**.
 3. Give it a **Name** and an icon: a Web UI icon or emoji, or an image from the project.
+4. Click **Done**. The new icon is in the row, ready to click.
 
 </webui-page-segment>
 
