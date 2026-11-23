@@ -23,7 +23,7 @@ Open **Tools**, the toolbox at the top right, and choose its **Task Manager** ta
 The first dropdown picks a preset:
 
 | Preset | Shows |
-|---|---|
+|:---|:---|
 | **Terminal** | What you started from a terminal, or from your editor's terminal |
 | **Orphaned** | What kept running after the terminal or editor that started it closed |
 | **Listening on a port** | Servers, and anything else waiting for connections |
@@ -76,7 +76,7 @@ To change a saved filter, choose it, edit its rules, and **Save** it again. **De
 The buttons under a process's details stop it in four ways. Rest the pointer on one to see what it does and what it leaves running.
 
 | Button | What it does |
-|---|---|
+|:---|:---|
 | **Stop** | Asks only this process to stop, as Ctrl+C would, so it can save and clean up. What it started may keep running |
 | **Stop with children** | Asks this process and everything it started to stop, the deepest first |
 | **Force close** | Ends only this process at once, with no clean up. What it started keeps running |

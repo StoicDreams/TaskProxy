@@ -25,7 +25,7 @@ The plugins Stoic Dreams publishes, and the Rust kit for writing them, are open 
 ### What you write
 
 | Piece | What it is |
-|---|---|
+|:---|:---|
 | `plugin.json` | The manifest: the plugin's id, name, version, the spec versions it supports, its permissions, and its pages. |
 | `render` | Draws one of the plugin's pages. |
 | `action` | Answers a button, link, or form the plugin drew, and returns what happens next. |
@@ -94,7 +94,7 @@ The plugin spec is versioned on its own, apart from Task Proxy and from each plu
 ### Task Proxy releases
 
 | Task Proxy | Spec versions |
-|---|---|
+|:---|:---|
 | 0.1.123 and later | 0.1.3 |
 | 0.1.122 | 0.1.2 |
 | 0.1.118 to 0.1.121 | 0.1.0, as `apiVersion: 1`. `spec` is not read. |
@@ -103,7 +103,7 @@ The plugin spec is versioned on its own, apart from Task Proxy and from each plu
 ### Plugins
 
 | Plugin | Versions | Spec versions |
-|---|---|---|
+|:---|:---|:---|
 | Jira | 0.1.3 and later | 0.1.0, with drag and drop in its column editor where Task Proxy supports 0.1.2, and description images, editable View fields, and editable branch names where it supports 0.1.3 |
 | Jira | 0.1.0 to 0.1.2 | 0.1.0, as `apiVersion: 1` |
 
@@ -183,7 +183,7 @@ A draft for the Task Manager plugin, which lists running processes, including st
 `"processes": ["list"]`, or `["list", "stop"]`.
 
 | Value | Allows |
-|---|---|
+|:---|:---|
 | `list` | The `processes` host call. |
 | `stop` | The `process.stop` and `process.kill` host actions. Needs `list` too. |
 
@@ -194,7 +194,7 @@ A manifest that asks for `processes` **MUST NOT** also ask for `hosts`. Command 
 `{"op": "processes"}` answers with `{"processes": [...], "ownPid": number}`, where `ownPid` is Task Proxy's own process. It lists only the user's own processes. Each is:
 
 | Field | Type | Meaning |
-|---|---|---|
+|:---|:---|:---|
 | `pid` | number | |
 | `parentPid` | number or `null` | |
 | `name` | string | |
@@ -253,7 +253,7 @@ Everything else is as in 0.1.2.
 ### Manifest
 
 | Field | Type | Rules |
-|---|---|---|
+|:---|:---|:---|
 | `id` | string | Required. Lowercase letters, digits, and dashes, starting with a letter, at most 64 characters. Never changes. |
 | `name` | string | Required. Not blank. |
 | `version` | string | Required. The plugin's own version, three numbers. |
@@ -269,7 +269,7 @@ Everything else is as in 0.1.2.
 ### Permissions
 
 | Permission | Rules |
-|---|---|
+|:---|:---|
 | `hosts` | Domains for HTTPS requests: `api.example.com` exactly, or `*.example.com` for its subdomains only. A pattern needs at least two labels, so `*` and `*.com` are refused. |
 | `variables` | Each `{"key", "label", "secret", "help"}`. Keys are letters, digits, `_`, and `-`, and **MUST NOT** start with `app-` or `session-`. Users enter them per project, and `secret` ones are masked and never shown again. |
 | `git` | `currentBranch` to read the current branch, and `createBranch` for the branch host action. |
@@ -279,7 +279,7 @@ Everything else is as in 0.1.2.
 Each takes one JSON value and returns `{"ok": ...}` or `{"error": "..."}`. Errors are shown to the user.
 
 | Export | Input | Result |
-|---|---|---|
+|:---|:---|:---|
 | `render` | `{"page", "params"}` | A node: the page's content. `params` is the address's query. |
 | `action` | `{"page", "pageParams", "action", "params", "form"}` | An action result. |
 | `branch_info` | `{"branch"}` | A node, or `null`. With `gitBranchInfo`. |
@@ -291,7 +291,7 @@ Each takes one JSON value and returns `{"ok": ...}` or `{"error": "..."}`. Error
 A request names its `op`. A request Task Proxy does not understand is answered with an error.
 
 | `op` | Request | Answer |
-|---|---|---|
+|:---|:---|:---|
 | `var` | `{"key"}` | A declared variable from the project's own variables, then its settings, or `null`. |
 | `storeGet` | `{"key"}` | The plugin's saved value, or `null`. |
 | `storeSet` | `{"key", "value"}` | Saves it, encrypted. `null` removes it. |
@@ -307,7 +307,7 @@ A request names its `op`. A request Task Proxy does not understand is answered w
 Every field is optional, and `{}` changes nothing.
 
 | Field | Effect |
-|---|---|
+|:---|:---|
 | `message` | `{"text", "theme"}`: a short alert. |
 | `closeDialog` | Closes the dialog the action came from. |
 | `navigate` | `{"page", "params"}`: opens one of the plugin's pages. |
@@ -321,7 +321,7 @@ Every field is optional, and `{}` changes nothing.
 Every node has a `type`. An unknown type is drawn as a placeholder. Themes are `primary`, `secondary`, `tertiary`, `info`, `success`, `warning`, and `danger`.
 
 | `type` | Fields |
-|---|---|
+|:---|:---|
 | `stack`, `row`, `toolbar` | `children` |
 | `heading` | `text`, `level` (1 to 4, default 2) |
 | `text` | `text`, `muted`, `strong` |
@@ -356,7 +356,7 @@ A **field** is `{"name", "label", "kind", "value", "options", "required", "place
 Run by Task Proxy only when the user clicks the button that names them.
 
 | `type` | Fields | Does |
-|---|---|---|
+|:---|:---|:---|
 | `git.createBranch` | `name` | Creates a branch and switches to it. Needs `git: createBranch`. |
 | `openUrl` | `url` | Opens an HTTPS address in the browser. |
 | `copy` | `text` | Copies to the clipboard. |
@@ -394,7 +394,7 @@ Everything else is as in 0.1.1.
 ### Manifest
 
 | Field | Type | Rules |
-|---|---|---|
+|:---|:---|:---|
 | `id` | string | Required. Lowercase letters, digits, and dashes, starting with a letter, at most 64 characters. Never changes. |
 | `name` | string | Required. Not blank. |
 | `version` | string | Required. The plugin's own version, three numbers. |
@@ -410,7 +410,7 @@ Everything else is as in 0.1.1.
 ### Permissions
 
 | Permission | Rules |
-|---|---|
+|:---|:---|
 | `hosts` | Domains for HTTPS requests: `api.example.com` exactly, or `*.example.com` for its subdomains only. A pattern needs at least two labels, so `*` and `*.com` are refused. |
 | `variables` | Each `{"key", "label", "secret", "help"}`. Keys are letters, digits, `_`, and `-`, and **MUST NOT** start with `app-` or `session-`. Users enter them per project, and `secret` ones are masked and never shown again. |
 | `git` | `currentBranch` to read the current branch, and `createBranch` for the branch host action. |
@@ -420,7 +420,7 @@ Everything else is as in 0.1.1.
 Each takes one JSON value and returns `{"ok": ...}` or `{"error": "..."}`. Errors are shown to the user.
 
 | Export | Input | Result |
-|---|---|---|
+|:---|:---|:---|
 | `render` | `{"page", "params"}` | A node: the page's content. `params` is the address's query. |
 | `action` | `{"page", "pageParams", "action", "params", "form"}` | An action result. |
 | `branch_info` | `{"branch"}` | A node, or `null`. With `gitBranchInfo`. |
@@ -432,7 +432,7 @@ Each takes one JSON value and returns `{"ok": ...}` or `{"error": "..."}`. Error
 A request names its `op`. A request Task Proxy does not understand is answered with an error.
 
 | `op` | Request | Answer |
-|---|---|---|
+|:---|:---|:---|
 | `var` | `{"key"}` | A declared variable from the project's own variables, then its settings, or `null`. |
 | `storeGet` | `{"key"}` | The plugin's saved value, or `null`. |
 | `storeSet` | `{"key", "value"}` | Saves it, encrypted. `null` removes it. |
@@ -448,7 +448,7 @@ A request names its `op`. A request Task Proxy does not understand is answered w
 Every field is optional, and `{}` changes nothing.
 
 | Field | Effect |
-|---|---|
+|:---|:---|
 | `message` | `{"text", "theme"}`: a short alert. |
 | `closeDialog` | Closes the dialog the action came from. |
 | `navigate` | `{"page", "params"}`: opens one of the plugin's pages. |
@@ -462,7 +462,7 @@ Every field is optional, and `{}` changes nothing.
 Every node has a `type`. An unknown type is drawn as a placeholder. Themes are `primary`, `secondary`, `tertiary`, `info`, `success`, `warning`, and `danger`.
 
 | `type` | Fields |
-|---|---|
+|:---|:---|
 | `stack`, `row`, `toolbar` | `children` |
 | `heading` | `text`, `level` (1 to 4, default 2) |
 | `text` | `text`, `muted`, `strong` |
@@ -497,7 +497,7 @@ A **field** is `{"name", "label", "kind", "value", "options", "required", "place
 Run by Task Proxy only when the user clicks the button that names them.
 
 | `type` | Fields | Does |
-|---|---|---|
+|:---|:---|:---|
 | `git.createBranch` | `name` | Creates a branch and switches to it. Needs `git: createBranch`. |
 | `openUrl` | `url` | Opens an HTTPS address in the browser. |
 | `copy` | `text` | Copies to the clipboard. |
@@ -536,7 +536,7 @@ Everything else is as in 0.1.0.
 ### Manifest
 
 | Field | Type | Rules |
-|---|---|---|
+|:---|:---|:---|
 | `id` | string | Required. Lowercase letters, digits, and dashes, starting with a letter, at most 64 characters. Never changes. |
 | `name` | string | Required. Not blank. |
 | `version` | string | Required. The plugin's own version, three numbers. |
@@ -552,7 +552,7 @@ Everything else is as in 0.1.0.
 ### Permissions
 
 | Permission | Rules |
-|---|---|
+|:---|:---|
 | `hosts` | Domains for HTTPS requests: `api.example.com` exactly, or `*.example.com` for its subdomains only. A pattern needs at least two labels, so `*` and `*.com` are refused. |
 | `variables` | Each `{"key", "label", "secret", "help"}`. Keys are letters, digits, `_`, and `-`, and **MUST NOT** start with `app-` or `session-`. Users enter them per project, and `secret` ones are masked and never shown again. |
 | `git` | `currentBranch` to read the current branch, and `createBranch` for the branch host action. |
@@ -562,7 +562,7 @@ Everything else is as in 0.1.0.
 Each takes one JSON value and returns `{"ok": ...}` or `{"error": "..."}`. Errors are shown to the user.
 
 | Export | Input | Result |
-|---|---|---|
+|:---|:---|:---|
 | `render` | `{"page", "params"}` | A node: the page's content. `params` is the address's query. |
 | `action` | `{"page", "pageParams", "action", "params", "form"}` | An action result. |
 | `branch_info` | `{"branch"}` | A node, or `null`. With `gitBranchInfo`. |
@@ -574,7 +574,7 @@ Each takes one JSON value and returns `{"ok": ...}` or `{"error": "..."}`. Error
 A request names its `op`. A request Task Proxy does not understand is answered with an error.
 
 | `op` | Request | Answer |
-|---|---|---|
+|:---|:---|:---|
 | `var` | `{"key"}` | A declared variable from the project's own variables, then its settings, or `null`. |
 | `storeGet` | `{"key"}` | The plugin's saved value, or `null`. |
 | `storeSet` | `{"key", "value"}` | Saves it, encrypted. `null` removes it. |
@@ -590,7 +590,7 @@ A request names its `op`. A request Task Proxy does not understand is answered w
 Every field is optional, and `{}` changes nothing.
 
 | Field | Effect |
-|---|---|
+|:---|:---|
 | `message` | `{"text", "theme"}`: a short alert. |
 | `closeDialog` | Closes the dialog the action came from. |
 | `navigate` | `{"page", "params"}`: opens one of the plugin's pages. |
@@ -604,7 +604,7 @@ Every field is optional, and `{}` changes nothing.
 Every node has a `type`. An unknown type is drawn as a placeholder. Themes are `primary`, `secondary`, `tertiary`, `info`, `success`, `warning`, and `danger`.
 
 | `type` | Fields |
-|---|---|
+|:---|:---|
 | `stack`, `row`, `toolbar` | `children` |
 | `heading` | `text`, `level` (1 to 4, default 2) |
 | `text` | `text`, `muted`, `strong` |
@@ -636,7 +636,7 @@ A **field** is `{"name", "label", "kind", "value", "options", "required", "place
 Run by Task Proxy only when the user clicks the button that names them.
 
 | `type` | Fields | Does |
-|---|---|---|
+|:---|:---|:---|
 | `git.createBranch` | `name` | Creates a branch and switches to it. Needs `git: createBranch`. |
 | `openUrl` | `url` | Opens an HTTPS address in the browser. |
 | `copy` | `text` | Copies to the clipboard. |
@@ -667,7 +667,7 @@ The first spec, run by Task Proxy 0.1.118 to 0.1.121 as `apiVersion: 1`, and by 
 ### Manifest
 
 | Field | Type | Rules |
-|---|---|---|
+|:---|:---|:---|
 | `id` | string | Required. Lowercase letters, digits, and dashes, starting with a letter, at most 64 characters. Never changes. |
 | `name` | string | Required. Not blank. |
 | `version` | string | Required. The plugin's own version, three numbers. |
@@ -682,7 +682,7 @@ The first spec, run by Task Proxy 0.1.118 to 0.1.121 as `apiVersion: 1`, and by 
 ### Permissions
 
 | Permission | Rules |
-|---|---|
+|:---|:---|
 | `hosts` | Domains for HTTPS requests: `api.example.com` exactly, or `*.example.com` for its subdomains only. A pattern needs at least two labels, so `*` and `*.com` are refused. |
 | `variables` | Each `{"key", "label", "secret", "help"}`. Keys are letters, digits, `_`, and `-`, and **MUST NOT** start with `app-` or `session-`. Users enter them per project, and `secret` ones are masked and never shown again. |
 | `git` | `currentBranch` to read the current branch, and `createBranch` for the branch host action. |
@@ -692,7 +692,7 @@ The first spec, run by Task Proxy 0.1.118 to 0.1.121 as `apiVersion: 1`, and by 
 Each takes one JSON value and returns `{"ok": ...}` or `{"error": "..."}`. Errors are shown to the user.
 
 | Export | Input | Result |
-|---|---|---|
+|:---|:---|:---|
 | `render` | `{"page", "params"}` | A node: the page's content. `params` is the address's query. |
 | `action` | `{"page", "pageParams", "action", "params", "form"}` | An action result. |
 | `branch_info` | `{"branch"}` | A node, or `null`. With `gitBranchInfo`. |
@@ -704,7 +704,7 @@ Each takes one JSON value and returns `{"ok": ...}` or `{"error": "..."}`. Error
 A request names its `op`. A request Task Proxy does not understand is answered with an error.
 
 | `op` | Request | Answer |
-|---|---|---|
+|:---|:---|:---|
 | `var` | `{"key"}` | A declared variable from the project's own variables, then its settings, or `null`. |
 | `storeGet` | `{"key"}` | The plugin's saved value, or `null`. |
 | `storeSet` | `{"key", "value"}` | Saves it, encrypted. `null` removes it. |
@@ -719,7 +719,7 @@ A request names its `op`. A request Task Proxy does not understand is answered w
 Every field is optional, and `{}` changes nothing.
 
 | Field | Effect |
-|---|---|
+|:---|:---|
 | `message` | `{"text", "theme"}`: a short alert. |
 | `closeDialog` | Closes the dialog the action came from. |
 | `navigate` | `{"page", "params"}`: opens one of the plugin's pages. |
@@ -733,7 +733,7 @@ Every field is optional, and `{}` changes nothing.
 Every node has a `type`. An unknown type is drawn as a placeholder. Themes are `primary`, `secondary`, `tertiary`, `info`, `success`, `warning`, and `danger`.
 
 | `type` | Fields |
-|---|---|
+|:---|:---|
 | `stack`, `row`, `toolbar` | `children` |
 | `heading` | `text`, `level` (1 to 4, default 2) |
 | `text` | `text`, `muted`, `strong` |
@@ -765,7 +765,7 @@ A **field** is `{"name", "label", "kind", "value", "options", "required", "place
 Run by Task Proxy only when the user clicks the button that names them.
 
 | `type` | Fields | Does |
-|---|---|---|
+|:---|:---|:---|
 | `git.createBranch` | `name` | Creates a branch and switches to it. Needs `git: createBranch`. |
 | `openUrl` | `url` | Opens an HTTPS address in the browser. |
 | `copy` | `text` | Copies to the clipboard. |

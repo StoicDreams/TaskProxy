@@ -84,7 +84,7 @@ When a script asks a question, for example with `Read-Host` or a "Continue? [Y/N
 The switch at the top of the Terminal Manager chooses which scripts its **Script** dropdown lists:
 
 | View | Lists |
-|---|---|
+|:---|:---|
 | **Live** | A terminal of your own. Type PowerShell in **Script Content** and click **Run** |
 | **Saved** | Every script saved in this project, ready to run from here |
 | **Page** | The scripts you ran from this project's pages |

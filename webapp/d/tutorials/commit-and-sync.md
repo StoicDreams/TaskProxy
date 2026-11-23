@@ -90,7 +90,7 @@ Turn on **Queue** to line commits up instead of starting them at once. Each queu
 The other buttons give you finer control:
 
 | Button | What it does |
-|---|---|
+|:---|:---|
 | **Fetch** | Checks the remote for new commits without changing your files |
 | **Pull** | Brings in remote commits. It stops rather than overwrite work you haven't committed |
 | **Push** | Sends your commits to the remote |

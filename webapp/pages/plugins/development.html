@@ -86,7 +86,7 @@
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-dreams-logo.min.js" crossorigin="anonymous" />
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-social-links.min.js" crossorigin="anonymous" />
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/tabs.min.js" crossorigin="anonymous" />
-	<meta name="webui-prerender" content="d37291086b">
+	<meta name="webui-prerender" content="c0b40b556c">
 </head>
 
 <body>
@@ -110,12 +110,12 @@
 <li><strong>Set up per project.</strong> A plugin shows only in projects set up for it, with its settings or, for a plugin with none, turned on there. Nothing appears in a project that was not given access.</li>
 </ul>
 <h3>What you write</h3>
-<table><thead><tr><th>Piece</th><th>What it is</th></tr></thead><tbody>
-<tr><td><code>plugin.json</code></td><td>The manifest: the plugin's id, name, version, the spec versions it supports, its permissions, and its pages.</td></tr>
-<tr><td><code>render</code></td><td>Draws one of the plugin's pages.</td></tr>
-<tr><td><code>action</code></td><td>Answers a button, link, or form the plugin drew, and returns what happens next.</td></tr>
-<tr><td><code>branch_info</code></td><td>Optional. A card for the Git Controller about the current branch.</td></tr>
-<tr><td><code>notifications</code></td><td>Optional. Notifications for Task Proxy's Alerts panel.</td></tr>
+<table><thead><tr><th style="text-align: left">Piece</th><th style="text-align: left">What it is</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>plugin.json</code></td><td style="text-align: left">The manifest: the plugin's id, name, version, the spec versions it supports, its permissions, and its pages.</td></tr>
+<tr><td style="text-align: left"><code>render</code></td><td style="text-align: left">Draws one of the plugin's pages.</td></tr>
+<tr><td style="text-align: left"><code>action</code></td><td style="text-align: left">Answers a button, link, or form the plugin drew, and returns what happens next.</td></tr>
+<tr><td style="text-align: left"><code>branch_info</code></td><td style="text-align: left">Optional. A card for the Git Controller about the current branch.</td></tr>
+<tr><td style="text-align: left"><code>notifications</code></td><td style="text-align: left">Optional. Notifications for Task Proxy's Alerts panel.</td></tr>
 </tbody></table>
 
 <p>Your First Plugin</p>
@@ -169,16 +169,16 @@ git clone https://github.com/StoicDreams/TaskProxyPlugins</p>
 <li><strong>The catalog keeps older versions</strong> of a plugin for spec lines its newest version dropped, and Task Proxy installs the newest version it can run.</li>
 </ul>
 <h3>Task Proxy releases</h3>
-<table><thead><tr><th>Task Proxy</th><th>Spec versions</th></tr></thead><tbody>
-<tr><td>0.1.123 and later</td><td>0.1.3</td></tr>
-<tr><td>0.1.122</td><td>0.1.2</td></tr>
-<tr><td>0.1.118 to 0.1.121</td><td>0.1.0, as <code>apiVersion: 1</code>. <code>spec</code> is not read.</td></tr>
-<tr><td>0.1.115 to 0.1.117</td><td>An early form of 0.1.0, as <code>apiVersion: 1</code></td></tr>
+<table><thead><tr><th style="text-align: left">Task Proxy</th><th style="text-align: left">Spec versions</th></tr></thead><tbody>
+<tr><td style="text-align: left">0.1.123 and later</td><td style="text-align: left">0.1.3</td></tr>
+<tr><td style="text-align: left">0.1.122</td><td style="text-align: left">0.1.2</td></tr>
+<tr><td style="text-align: left">0.1.118 to 0.1.121</td><td style="text-align: left">0.1.0, as <code>apiVersion: 1</code>. <code>spec</code> is not read.</td></tr>
+<tr><td style="text-align: left">0.1.115 to 0.1.117</td><td style="text-align: left">An early form of 0.1.0, as <code>apiVersion: 1</code></td></tr>
 </tbody></table>
 <h3>Plugins</h3>
-<table><thead><tr><th>Plugin</th><th>Versions</th><th>Spec versions</th></tr></thead><tbody>
-<tr><td>Jira</td><td>0.1.3 and later</td><td>0.1.0, with drag and drop in its column editor where Task Proxy supports 0.1.2, and description images, editable View fields, and editable branch names where it supports 0.1.3</td></tr>
-<tr><td>Jira</td><td>0.1.0 to 0.1.2</td><td>0.1.0, as <code>apiVersion: 1</code></td></tr>
+<table><thead><tr><th style="text-align: left">Plugin</th><th style="text-align: left">Versions</th><th style="text-align: left">Spec versions</th></tr></thead><tbody>
+<tr><td style="text-align: left">Jira</td><td style="text-align: left">0.1.3 and later</td><td style="text-align: left">0.1.0, with drag and drop in its column editor where Task Proxy supports 0.1.2, and description images, editable View fields, and editable branch names where it supports 0.1.3</td></tr>
+<tr><td style="text-align: left">Jira</td><td style="text-align: left">0.1.0 to 0.1.2</td><td style="text-align: left">0.1.0, as <code>apiVersion: 1</code></td></tr>
 </tbody></table>
 
 <p>Guidelines</p>
@@ -243,25 +243,25 @@ git clone https://github.com/StoicDreams/TaskProxyPlugins</p>
 <p>A draft for the Task Manager plugin, which lists running processes, including stuck background ones, and closes them. No Task Proxy release supports it yet, and it may change before it is released. It is everything in 0.1.3, plus the following.</p>
 <h3>The <code>processes</code> permission</h3>
 <p><code>"processes": ["list"]</code>, or <code>["list", "stop"]</code>.</p>
-<table><thead><tr><th>Value</th><th>Allows</th></tr></thead><tbody>
-<tr><td><code>list</code></td><td>The <code>processes</code> host call.</td></tr>
-<tr><td><code>stop</code></td><td>The <code>process.stop</code> and <code>process.kill</code> host actions. Needs <code>list</code> too.</td></tr>
+<table><thead><tr><th style="text-align: left">Value</th><th style="text-align: left">Allows</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>list</code></td><td style="text-align: left">The <code>processes</code> host call.</td></tr>
+<tr><td style="text-align: left"><code>stop</code></td><td style="text-align: left">The <code>process.stop</code> and <code>process.kill</code> host actions. Needs <code>list</code> too.</td></tr>
 </tbody></table>
 <p>A manifest that asks for <code>processes</code> <strong>MUST NOT</strong> also ask for <code>hosts</code>. Command lines and folders can hold secrets and private paths, so a plugin that reads them can't send anything off the machine.</p>
 <h3>The <code>processes</code> host call</h3>
 <p><code>{"op": "processes"}</code> answers with <code>{"processes": [...], "ownPid": number}</code>, where <code>ownPid</code> is Task Proxy's own process. It lists only the user's own processes. Each is:</p>
-<table><thead><tr><th>Field</th><th>Type</th><th>Meaning</th></tr></thead><tbody>
-<tr><td><code>pid</code></td><td>number</td><td></td></tr>
-<tr><td><code>parentPid</code></td><td>number or <code>null</code></td><td></td></tr>
-<tr><td><code>name</code></td><td>string</td><td></td></tr>
-<tr><td><code>command</code></td><td>string[]</td><td>The program and its arguments.</td></tr>
-<tr><td><code>cwd</code></td><td>string or <code>null</code></td><td>Its working folder, when the platform reports it.</td></tr>
-<tr><td><code>started</code></td><td>number</td><td>When it started, in milliseconds since the Unix epoch. With <code>pid</code>, it names one process, since pids are reused.</td></tr>
-<tr><td><code>cpu</code></td><td>number</td><td>Percent of one core since the last call.</td></tr>
-<tr><td><code>memory</code></td><td>number</td><td>Resident memory in bytes.</td></tr>
-<tr><td><code>ports</code></td><td>object[]</td><td>Each <code>{"port", "protocol", "address"}</code> it listens on or has bound.</td></tr>
-<tr><td><code>orphaned</code></td><td>boolean</td><td>Its parent exited, so it now belongs to init, <code>systemd --user</code>, or <code>launchd</code>.</td></tr>
-<tr><td><code>inProject</code></td><td>boolean</td><td>Its working folder is inside the open project.</td></tr>
+<table><thead><tr><th style="text-align: left">Field</th><th style="text-align: left">Type</th><th style="text-align: left">Meaning</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>pid</code></td><td style="text-align: left">number</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>parentPid</code></td><td style="text-align: left">number or <code>null</code></td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>name</code></td><td style="text-align: left">string</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>command</code></td><td style="text-align: left">string[]</td><td style="text-align: left">The program and its arguments.</td></tr>
+<tr><td style="text-align: left"><code>cwd</code></td><td style="text-align: left">string or <code>null</code></td><td style="text-align: left">Its working folder, when the platform reports it.</td></tr>
+<tr><td style="text-align: left"><code>started</code></td><td style="text-align: left">number</td><td style="text-align: left">When it started, in milliseconds since the Unix epoch. With <code>pid</code>, it names one process, since pids are reused.</td></tr>
+<tr><td style="text-align: left"><code>cpu</code></td><td style="text-align: left">number</td><td style="text-align: left">Percent of one core since the last call.</td></tr>
+<tr><td style="text-align: left"><code>memory</code></td><td style="text-align: left">number</td><td style="text-align: left">Resident memory in bytes.</td></tr>
+<tr><td style="text-align: left"><code>ports</code></td><td style="text-align: left">object[]</td><td style="text-align: left">Each <code>{"port", "protocol", "address"}</code> it listens on or has bound.</td></tr>
+<tr><td style="text-align: left"><code>orphaned</code></td><td style="text-align: left">boolean</td><td style="text-align: left">Its parent exited, so it now belongs to init, <code>systemd --user</code>, or <code>launchd</code>.</td></tr>
+<tr><td style="text-align: left"><code>inProject</code></td><td style="text-align: left">boolean</td><td style="text-align: left">Its working folder is inside the open project.</td></tr>
 </tbody></table>
 <h3>Stopping a process</h3>
 <p>The host actions <code>process.stop</code> and <code>process.kill</code> take <code>{"pid", "started", "tree"}</code>.</p>
@@ -299,79 +299,79 @@ git clone https://github.com/StoicDreams/TaskProxyPlugins</p>
 <li><strong>Its only import</strong> is <code>taskproxy_host</code> in the <code>extism:host/user</code> module.</li>
 </ul>
 <h3>Manifest</h3>
-<table><thead><tr><th>Field</th><th>Type</th><th>Rules</th></tr></thead><tbody>
-<tr><td><code>id</code></td><td>string</td><td>Required. Lowercase letters, digits, and dashes, starting with a letter, at most 64 characters. Never changes.</td></tr>
-<tr><td><code>name</code></td><td>string</td><td>Required. Not blank.</td></tr>
-<tr><td><code>version</code></td><td>string</td><td>Required. The plugin's own version, three numbers.</td></tr>
-<tr><td><code>spec</code></td><td>string[]</td><td>Required. The spec versions it supports, one per line, each the lowest patch it needs, such as <code>["0.1.0"]</code>.</td></tr>
-<tr><td><code>apiVersion</code></td><td>number</td><td><code>1</code> while it supports line 0.1, for Task Proxy 0.1.121 and earlier. Without <code>spec</code>, it means spec 0.1.0.</td></tr>
-<tr><td><code>description</code></td><td>string</td><td>A sentence or two, shown before installing.</td></tr>
-<tr><td><code>category</code></td><td>string</td><td>A slug, such as <code>issue-tracking</code>.</td></tr>
-<tr><td><code>icon</code></td><td>string</td><td>An icon name from <a href="https://cdn.myfi.ws/icons/all.json">the icon list</a>.</td></tr>
-<tr><td><code>permissions</code></td><td>object</td><td><code>hosts</code>, <code>variables</code>, and <code>git</code>, below.</td></tr>
-<tr><td><code>pages</code></td><td>object[]</td><td>Each <code>{"id", "name", "icon", "hidden"}</code>, at <code>/plugin/&lt;id&gt;/&lt;page&gt;</code>. A <code>hidden</code> page is left out of the menu.</td></tr>
-<tr><td><code>contributes</code></td><td>string[]</td><td><code>gitBranchInfo</code> for a Git Controller card, and <code>notifications</code> for the Alerts panel. Unknown values are ignored.</td></tr>
+<table><thead><tr><th style="text-align: left">Field</th><th style="text-align: left">Type</th><th style="text-align: left">Rules</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>id</code></td><td style="text-align: left">string</td><td style="text-align: left">Required. Lowercase letters, digits, and dashes, starting with a letter, at most 64 characters. Never changes.</td></tr>
+<tr><td style="text-align: left"><code>name</code></td><td style="text-align: left">string</td><td style="text-align: left">Required. Not blank.</td></tr>
+<tr><td style="text-align: left"><code>version</code></td><td style="text-align: left">string</td><td style="text-align: left">Required. The plugin's own version, three numbers.</td></tr>
+<tr><td style="text-align: left"><code>spec</code></td><td style="text-align: left">string[]</td><td style="text-align: left">Required. The spec versions it supports, one per line, each the lowest patch it needs, such as <code>["0.1.0"]</code>.</td></tr>
+<tr><td style="text-align: left"><code>apiVersion</code></td><td style="text-align: left">number</td><td style="text-align: left"><code>1</code> while it supports line 0.1, for Task Proxy 0.1.121 and earlier. Without <code>spec</code>, it means spec 0.1.0.</td></tr>
+<tr><td style="text-align: left"><code>description</code></td><td style="text-align: left">string</td><td style="text-align: left">A sentence or two, shown before installing.</td></tr>
+<tr><td style="text-align: left"><code>category</code></td><td style="text-align: left">string</td><td style="text-align: left">A slug, such as <code>issue-tracking</code>.</td></tr>
+<tr><td style="text-align: left"><code>icon</code></td><td style="text-align: left">string</td><td style="text-align: left">An icon name from <a href="https://cdn.myfi.ws/icons/all.json">the icon list</a>.</td></tr>
+<tr><td style="text-align: left"><code>permissions</code></td><td style="text-align: left">object</td><td style="text-align: left"><code>hosts</code>, <code>variables</code>, and <code>git</code>, below.</td></tr>
+<tr><td style="text-align: left"><code>pages</code></td><td style="text-align: left">object[]</td><td style="text-align: left">Each <code>{"id", "name", "icon", "hidden"}</code>, at <code>/plugin/&lt;id&gt;/&lt;page&gt;</code>. A <code>hidden</code> page is left out of the menu.</td></tr>
+<tr><td style="text-align: left"><code>contributes</code></td><td style="text-align: left">string[]</td><td style="text-align: left"><code>gitBranchInfo</code> for a Git Controller card, and <code>notifications</code> for the Alerts panel. Unknown values are ignored.</td></tr>
 </tbody></table>
 <h3>Permissions</h3>
-<table><thead><tr><th>Permission</th><th>Rules</th></tr></thead><tbody>
-<tr><td><code>hosts</code></td><td>Domains for HTTPS requests: <code>api.example.com</code> exactly, or <code>*.example.com</code> for its subdomains only. A pattern needs at least two labels, so <code>*</code> and <code>*.com</code> are refused.</td></tr>
-<tr><td><code>variables</code></td><td>Each <code>{"key", "label", "secret", "help"}</code>. Keys are letters, digits, <code>_</code>, and <code>-</code>, and <strong>MUST NOT</strong> start with <code>app-</code> or <code>session-</code>. Users enter them per project, and <code>secret</code> ones are masked and never shown again.</td></tr>
-<tr><td><code>git</code></td><td><code>currentBranch</code> to read the current branch, and <code>createBranch</code> for the branch host action.</td></tr>
+<table><thead><tr><th style="text-align: left">Permission</th><th style="text-align: left">Rules</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>hosts</code></td><td style="text-align: left">Domains for HTTPS requests: <code>api.example.com</code> exactly, or <code>*.example.com</code> for its subdomains only. A pattern needs at least two labels, so <code>*</code> and <code>*.com</code> are refused.</td></tr>
+<tr><td style="text-align: left"><code>variables</code></td><td style="text-align: left">Each <code>{"key", "label", "secret", "help"}</code>. Keys are letters, digits, <code>_</code>, and <code>-</code>, and <strong>MUST NOT</strong> start with <code>app-</code> or <code>session-</code>. Users enter them per project, and <code>secret</code> ones are masked and never shown again.</td></tr>
+<tr><td style="text-align: left"><code>git</code></td><td style="text-align: left"><code>currentBranch</code> to read the current branch, and <code>createBranch</code> for the branch host action.</td></tr>
 </tbody></table>
 <h3>Exports</h3>
 <p>Each takes one JSON value and returns <code>{"ok": ...}</code> or <code>{"error": "..."}</code>. Errors are shown to the user.</p>
-<table><thead><tr><th>Export</th><th>Input</th><th>Result</th></tr></thead><tbody>
-<tr><td><code>render</code></td><td><code>{"page", "params"}</code></td><td>A node: the page's content. <code>params</code> is the address's query.</td></tr>
-<tr><td><code>action</code></td><td><code>{"page", "pageParams", "action", "params", "form"}</code></td><td>An action result.</td></tr>
-<tr><td><code>branch_info</code></td><td><code>{"branch"}</code></td><td>A node, or <code>null</code>. With <code>gitBranchInfo</code>.</td></tr>
-<tr><td><code>notifications</code></td><td><code>{}</code></td><td>A list of <code>{"id", "title", "text", "theme", "time", "links"}</code>. With <code>notifications</code>. Polled every two minutes.</td></tr>
-<tr><td><code>notification_read</code></td><td><code>{"id"}</code></td><td>Ignored. Called when the user closes a notification.</td></tr>
+<table><thead><tr><th style="text-align: left">Export</th><th style="text-align: left">Input</th><th style="text-align: left">Result</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>render</code></td><td style="text-align: left"><code>{"page", "params"}</code></td><td style="text-align: left">A node: the page's content. <code>params</code> is the address's query.</td></tr>
+<tr><td style="text-align: left"><code>action</code></td><td style="text-align: left"><code>{"page", "pageParams", "action", "params", "form"}</code></td><td style="text-align: left">An action result.</td></tr>
+<tr><td style="text-align: left"><code>branch_info</code></td><td style="text-align: left"><code>{"branch"}</code></td><td style="text-align: left">A node, or <code>null</code>. With <code>gitBranchInfo</code>.</td></tr>
+<tr><td style="text-align: left"><code>notifications</code></td><td style="text-align: left"><code>{}</code></td><td style="text-align: left">A list of <code>{"id", "title", "text", "theme", "time", "links"}</code>. With <code>notifications</code>. Polled every two minutes.</td></tr>
+<tr><td style="text-align: left"><code>notification_read</code></td><td style="text-align: left"><code>{"id"}</code></td><td style="text-align: left">Ignored. Called when the user closes a notification.</td></tr>
 </tbody></table>
 <h3>Host calls</h3>
 <p>A request names its <code>op</code>. A request Task Proxy does not understand is answered with an error.</p>
-<table><thead><tr><th><code>op</code></th><th>Request</th><th>Answer</th></tr></thead><tbody>
-<tr><td><code>var</code></td><td><code>{"key"}</code></td><td>A declared variable from the project's own variables, then its settings, or <code>null</code>.</td></tr>
-<tr><td><code>storeGet</code></td><td><code>{"key"}</code></td><td>The plugin's saved value, or <code>null</code>.</td></tr>
-<tr><td><code>storeSet</code></td><td><code>{"key", "value"}</code></td><td>Saves it, encrypted. <code>null</code> removes it.</td></tr>
-<tr><td><code>projectFileRead</code></td><td><code>{"path"}</code></td><td>Text under <code>.taskproxy/plugins/&lt;id&gt;/</code> in the open project, or <code>null</code>.</td></tr>
-<tr><td><code>projectFileWrite</code></td><td><code>{"path", "text"}</code></td><td>Writes there, at most 1 MB. Paths can't leave that folder.</td></tr>
-<tr><td><code>currentBranch</code></td><td><code>{}</code></td><td>The branch's name, or <code>null</code>. Needs <code>git: currentBranch</code>.</td></tr>
-<tr><td><code>now</code></td><td><code>{}</code></td><td>Milliseconds since the Unix epoch.</td></tr>
-<tr><td><code>http</code></td><td><code>{"request": {"method", "url", "headers", "body", "encoding"}}</code></td><td><code>{"status", "body"}</code>. HTTPS to declared hosts only, no redirects, at most 10 MB back, and no credentials in the URL. With <code>encoding: "base64"</code>, the body is the bytes as base64, for images and other files. New in 0.1.3.</td></tr>
-<tr><td><code>hostInfo</code></td><td><code>{}</code></td><td><code>{"app", "spec", "platform"}</code>: Task Proxy's version, the spec version it runs the plugin with, and <code>linux</code>, <code>macos</code>, or <code>windows</code>.</td></tr>
+<table><thead><tr><th style="text-align: left"><code>op</code></th><th style="text-align: left">Request</th><th style="text-align: left">Answer</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>var</code></td><td style="text-align: left"><code>{"key"}</code></td><td style="text-align: left">A declared variable from the project's own variables, then its settings, or <code>null</code>.</td></tr>
+<tr><td style="text-align: left"><code>storeGet</code></td><td style="text-align: left"><code>{"key"}</code></td><td style="text-align: left">The plugin's saved value, or <code>null</code>.</td></tr>
+<tr><td style="text-align: left"><code>storeSet</code></td><td style="text-align: left"><code>{"key", "value"}</code></td><td style="text-align: left">Saves it, encrypted. <code>null</code> removes it.</td></tr>
+<tr><td style="text-align: left"><code>projectFileRead</code></td><td style="text-align: left"><code>{"path"}</code></td><td style="text-align: left">Text under <code>.taskproxy/plugins/&lt;id&gt;/</code> in the open project, or <code>null</code>.</td></tr>
+<tr><td style="text-align: left"><code>projectFileWrite</code></td><td style="text-align: left"><code>{"path", "text"}</code></td><td style="text-align: left">Writes there, at most 1 MB. Paths can't leave that folder.</td></tr>
+<tr><td style="text-align: left"><code>currentBranch</code></td><td style="text-align: left"><code>{}</code></td><td style="text-align: left">The branch's name, or <code>null</code>. Needs <code>git: currentBranch</code>.</td></tr>
+<tr><td style="text-align: left"><code>now</code></td><td style="text-align: left"><code>{}</code></td><td style="text-align: left">Milliseconds since the Unix epoch.</td></tr>
+<tr><td style="text-align: left"><code>http</code></td><td style="text-align: left"><code>{"request": {"method", "url", "headers", "body", "encoding"}}</code></td><td style="text-align: left"><code>{"status", "body"}</code>. HTTPS to declared hosts only, no redirects, at most 10 MB back, and no credentials in the URL. With <code>encoding: "base64"</code>, the body is the bytes as base64, for images and other files. New in 0.1.3.</td></tr>
+<tr><td style="text-align: left"><code>hostInfo</code></td><td style="text-align: left"><code>{}</code></td><td style="text-align: left"><code>{"app", "spec", "platform"}</code>: Task Proxy's version, the spec version it runs the plugin with, and <code>linux</code>, <code>macos</code>, or <code>windows</code>.</td></tr>
 </tbody></table>
 <h3>Action results</h3>
 <p>Every field is optional, and <code>{}</code> changes nothing.</p>
-<table><thead><tr><th>Field</th><th>Effect</th></tr></thead><tbody>
-<tr><td><code>message</code></td><td><code>{"text", "theme"}</code>: a short alert.</td></tr>
-<tr><td><code>closeDialog</code></td><td>Closes the dialog the action came from.</td></tr>
-<tr><td><code>navigate</code></td><td><code>{"page", "params"}</code>: opens one of the plugin's pages.</td></tr>
-<tr><td><code>dialog</code></td><td><code>{"title", "ui"}</code>: opens a dialog.</td></tr>
-<tr><td><code>ui</code></td><td>Replaces the page's content, or the dialog's.</td></tr>
-<tr><td><code>refresh</code></td><td>Draws the page again.</td></tr>
-<tr><td><code>options</code></td><td><code>[{"value", "label"}]</code>: choices for a <code>select</code> node or a field's <code>suggest</code>.</td></tr>
+<table><thead><tr><th style="text-align: left">Field</th><th style="text-align: left">Effect</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>message</code></td><td style="text-align: left"><code>{"text", "theme"}</code>: a short alert.</td></tr>
+<tr><td style="text-align: left"><code>closeDialog</code></td><td style="text-align: left">Closes the dialog the action came from.</td></tr>
+<tr><td style="text-align: left"><code>navigate</code></td><td style="text-align: left"><code>{"page", "params"}</code>: opens one of the plugin's pages.</td></tr>
+<tr><td style="text-align: left"><code>dialog</code></td><td style="text-align: left"><code>{"title", "ui"}</code>: opens a dialog.</td></tr>
+<tr><td style="text-align: left"><code>ui</code></td><td style="text-align: left">Replaces the page's content, or the dialog's.</td></tr>
+<tr><td style="text-align: left"><code>refresh</code></td><td style="text-align: left">Draws the page again.</td></tr>
+<tr><td style="text-align: left"><code>options</code></td><td style="text-align: left"><code>[{"value", "label"}]</code>: choices for a <code>select</code> node or a field's <code>suggest</code>.</td></tr>
 </tbody></table>
 <h3>Nodes</h3>
 <p>Every node has a <code>type</code>. An unknown type is drawn as a placeholder. Themes are <code>primary</code>, <code>secondary</code>, <code>tertiary</code>, <code>info</code>, <code>success</code>, <code>warning</code>, and <code>danger</code>.</p>
-<table><thead><tr><th><code>type</code></th><th>Fields</th></tr></thead><tbody>
-<tr><td><code>stack</code>, <code>row</code>, <code>toolbar</code></td><td><code>children</code></td></tr>
-<tr><td><code>heading</code></td><td><code>text</code>, <code>level</code> (1 to 4, default 2)</td></tr>
-<tr><td><code>text</code></td><td><code>text</code>, <code>muted</code>, <code>strong</code></td></tr>
-<tr><td><code>markdown</code></td><td><code>text</code>, sanitized, <code>images</code> (names used as <code>![alt](name)</code>, each a <code>data:image/...;base64,</code> URI, and the only images shown), and <code>toggle</code> (a switch to the raw text). The last two are new in 0.1.3.</td></tr>
-<tr><td><code>badge</code></td><td><code>text</code>, <code>theme</code></td></tr>
-<tr><td><code>link</code></td><td><code>text</code>, <code>action</code></td></tr>
-<tr><td><code>button</code></td><td><code>action</code>, <code>theme</code></td></tr>
-<tr><td><code>properties</code></td><td><code>items</code>, each <code>{"label", "value", "edit"}</code> with nodes as the value and editor. Clicking the label switches to <code>edit</code>, new in 0.1.3.</td></tr>
-<tr><td><code>table</code></td><td><code>columns</code>, titles or <code>{"label", "action", "sort"}</code>, and <code>rows</code>, each <code>{"cells", "action"}</code></td></tr>
-<tr><td><code>select</code></td><td><code>text</code>, <code>theme</code>, <code>options</code> (an action that returns the choices when clicked), <code>action</code> (run with the choice as <code>form.value</code>)</td></tr>
-<tr><td><code>clip</code></td><td><code>text</code>, <code>max</code> (30), <code>tip</code> (100), <code>action</code>, <code>always</code>, <code>muted</code></td></tr>
-<tr><td><code>section</code></td><td><code>key</code>, <code>title</code>, <code>subtitle</code>, <code>open</code>, <code>children</code>. Remembered open or closed by <code>key</code>.</td></tr>
-<tr><td><code>panel</code></td><td><code>key</code>, <code>open</code>, <code>children</code>. Shown and hidden by the <code>toggle</code> host action.</td></tr>
-<tr><td><code>form</code></td><td><code>fields</code>, <code>submit</code>, <code>cancel</code>, <code>buttons</code>, <code>children</code>, <code>inline</code> (new in 0.1.2: fields and buttons in one row)</td></tr>
-<tr><td><code>inputs</code></td><td><code>fields</code>, more of a form's fields among its <code>children</code></td></tr>
-<tr><td><code>notice</code></td><td><code>text</code>, <code>theme</code></td></tr>
-<tr><td><code>empty</code></td><td><code>text</code></td></tr>
-<tr><td><code>reorder</code></td><td><code>items</code>, each <code>{"id", "children"}</code>, and <code>action</code>. New in 0.1.2.</td></tr>
+<table><thead><tr><th style="text-align: left"><code>type</code></th><th style="text-align: left">Fields</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>stack</code>, <code>row</code>, <code>toolbar</code></td><td style="text-align: left"><code>children</code></td></tr>
+<tr><td style="text-align: left"><code>heading</code></td><td style="text-align: left"><code>text</code>, <code>level</code> (1 to 4, default 2)</td></tr>
+<tr><td style="text-align: left"><code>text</code></td><td style="text-align: left"><code>text</code>, <code>muted</code>, <code>strong</code></td></tr>
+<tr><td style="text-align: left"><code>markdown</code></td><td style="text-align: left"><code>text</code>, sanitized, <code>images</code> (names used as <code>![alt](name)</code>, each a <code>data:image/...;base64,</code> URI, and the only images shown), and <code>toggle</code> (a switch to the raw text). The last two are new in 0.1.3.</td></tr>
+<tr><td style="text-align: left"><code>badge</code></td><td style="text-align: left"><code>text</code>, <code>theme</code></td></tr>
+<tr><td style="text-align: left"><code>link</code></td><td style="text-align: left"><code>text</code>, <code>action</code></td></tr>
+<tr><td style="text-align: left"><code>button</code></td><td style="text-align: left"><code>action</code>, <code>theme</code></td></tr>
+<tr><td style="text-align: left"><code>properties</code></td><td style="text-align: left"><code>items</code>, each <code>{"label", "value", "edit"}</code> with nodes as the value and editor. Clicking the label switches to <code>edit</code>, new in 0.1.3.</td></tr>
+<tr><td style="text-align: left"><code>table</code></td><td style="text-align: left"><code>columns</code>, titles or <code>{"label", "action", "sort"}</code>, and <code>rows</code>, each <code>{"cells", "action"}</code></td></tr>
+<tr><td style="text-align: left"><code>select</code></td><td style="text-align: left"><code>text</code>, <code>theme</code>, <code>options</code> (an action that returns the choices when clicked), <code>action</code> (run with the choice as <code>form.value</code>)</td></tr>
+<tr><td style="text-align: left"><code>clip</code></td><td style="text-align: left"><code>text</code>, <code>max</code> (30), <code>tip</code> (100), <code>action</code>, <code>always</code>, <code>muted</code></td></tr>
+<tr><td style="text-align: left"><code>section</code></td><td style="text-align: left"><code>key</code>, <code>title</code>, <code>subtitle</code>, <code>open</code>, <code>children</code>. Remembered open or closed by <code>key</code>.</td></tr>
+<tr><td style="text-align: left"><code>panel</code></td><td style="text-align: left"><code>key</code>, <code>open</code>, <code>children</code>. Shown and hidden by the <code>toggle</code> host action.</td></tr>
+<tr><td style="text-align: left"><code>form</code></td><td style="text-align: left"><code>fields</code>, <code>submit</code>, <code>cancel</code>, <code>buttons</code>, <code>children</code>, <code>inline</code> (new in 0.1.2: fields and buttons in one row)</td></tr>
+<tr><td style="text-align: left"><code>inputs</code></td><td style="text-align: left"><code>fields</code>, more of a form's fields among its <code>children</code></td></tr>
+<tr><td style="text-align: left"><code>notice</code></td><td style="text-align: left"><code>text</code>, <code>theme</code></td></tr>
+<tr><td style="text-align: left"><code>empty</code></td><td style="text-align: left"><code>text</code></td></tr>
+<tr><td style="text-align: left"><code>reorder</code></td><td style="text-align: left"><code>items</code>, each <code>{"id", "children"}</code>, and <code>action</code>. New in 0.1.2.</td></tr>
 </tbody></table>
 <p>An <strong>action</strong> is <code>{"id", "label", "params", "confirm", "icon", "host"}</code>. With <code>confirm</code>, the user is asked first. As a form's <code>submit</code>, a host action takes its fields of the same name from the form, new in 0.1.3.</p>
 <p>A <strong>reorder</strong> list shows each item with a drag handle. The user drags items, or moves them with Alt+Up and Alt+Down, and Task Proxy then runs <code>action</code> with <code>form.order</code>, the ids in their new order. Older hosts show a placeholder, so check <code>hostInfo</code> and draw something else for them.</p>
@@ -383,12 +383,12 @@ git clone https://github.com/StoicDreams/TaskProxyPlugins</p>
 </ul>
 <h3>Host actions</h3>
 <p>Run by Task Proxy only when the user clicks the button that names them.</p>
-<table><thead><tr><th><code>type</code></th><th>Fields</th><th>Does</th></tr></thead><tbody>
-<tr><td><code>git.createBranch</code></td><td><code>name</code></td><td>Creates a branch and switches to it. Needs <code>git: createBranch</code>.</td></tr>
-<tr><td><code>openUrl</code></td><td><code>url</code></td><td>Opens an HTTPS address in the browser.</td></tr>
-<tr><td><code>copy</code></td><td><code>text</code></td><td>Copies to the clipboard.</td></tr>
-<tr><td><code>openSettings</code></td><td></td><td>Opens the plugin's settings.</td></tr>
-<tr><td><code>toggle</code></td><td><code>key</code></td><td>Shows or hides a <code>panel</code>.</td></tr>
+<table><thead><tr><th style="text-align: left"><code>type</code></th><th style="text-align: left">Fields</th><th style="text-align: left">Does</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>git.createBranch</code></td><td style="text-align: left"><code>name</code></td><td style="text-align: left">Creates a branch and switches to it. Needs <code>git: createBranch</code>.</td></tr>
+<tr><td style="text-align: left"><code>openUrl</code></td><td style="text-align: left"><code>url</code></td><td style="text-align: left">Opens an HTTPS address in the browser.</td></tr>
+<tr><td style="text-align: left"><code>copy</code></td><td style="text-align: left"><code>text</code></td><td style="text-align: left">Copies to the clipboard.</td></tr>
+<tr><td style="text-align: left"><code>openSettings</code></td><td style="text-align: left"></td><td style="text-align: left">Opens the plugin's settings.</td></tr>
+<tr><td style="text-align: left"><code>toggle</code></td><td style="text-align: left"><code>key</code></td><td style="text-align: left">Shows or hides a <code>panel</code>.</td></tr>
 </tbody></table>
 <h3>Catalog</h3>
 <ul>
@@ -415,79 +415,79 @@ git clone https://github.com/StoicDreams/TaskProxyPlugins</p>
 <li><strong>Its only import</strong> is <code>taskproxy_host</code> in the <code>extism:host/user</code> module.</li>
 </ul>
 <h3>Manifest</h3>
-<table><thead><tr><th>Field</th><th>Type</th><th>Rules</th></tr></thead><tbody>
-<tr><td><code>id</code></td><td>string</td><td>Required. Lowercase letters, digits, and dashes, starting with a letter, at most 64 characters. Never changes.</td></tr>
-<tr><td><code>name</code></td><td>string</td><td>Required. Not blank.</td></tr>
-<tr><td><code>version</code></td><td>string</td><td>Required. The plugin's own version, three numbers.</td></tr>
-<tr><td><code>spec</code></td><td>string[]</td><td>Required. The spec versions it supports, one per line, each the lowest patch it needs, such as <code>["0.1.0"]</code>.</td></tr>
-<tr><td><code>apiVersion</code></td><td>number</td><td><code>1</code> while it supports line 0.1, for Task Proxy 0.1.121 and earlier. Without <code>spec</code>, it means spec 0.1.0.</td></tr>
-<tr><td><code>description</code></td><td>string</td><td>A sentence or two, shown before installing.</td></tr>
-<tr><td><code>category</code></td><td>string</td><td>A slug, such as <code>issue-tracking</code>.</td></tr>
-<tr><td><code>icon</code></td><td>string</td><td>An icon name from <a href="https://cdn.myfi.ws/icons/all.json">the icon list</a>.</td></tr>
-<tr><td><code>permissions</code></td><td>object</td><td><code>hosts</code>, <code>variables</code>, and <code>git</code>, below.</td></tr>
-<tr><td><code>pages</code></td><td>object[]</td><td>Each <code>{"id", "name", "icon", "hidden"}</code>, at <code>/plugin/&lt;id&gt;/&lt;page&gt;</code>. A <code>hidden</code> page is left out of the menu.</td></tr>
-<tr><td><code>contributes</code></td><td>string[]</td><td><code>gitBranchInfo</code> for a Git Controller card, and <code>notifications</code> for the Alerts panel. Unknown values are ignored.</td></tr>
+<table><thead><tr><th style="text-align: left">Field</th><th style="text-align: left">Type</th><th style="text-align: left">Rules</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>id</code></td><td style="text-align: left">string</td><td style="text-align: left">Required. Lowercase letters, digits, and dashes, starting with a letter, at most 64 characters. Never changes.</td></tr>
+<tr><td style="text-align: left"><code>name</code></td><td style="text-align: left">string</td><td style="text-align: left">Required. Not blank.</td></tr>
+<tr><td style="text-align: left"><code>version</code></td><td style="text-align: left">string</td><td style="text-align: left">Required. The plugin's own version, three numbers.</td></tr>
+<tr><td style="text-align: left"><code>spec</code></td><td style="text-align: left">string[]</td><td style="text-align: left">Required. The spec versions it supports, one per line, each the lowest patch it needs, such as <code>["0.1.0"]</code>.</td></tr>
+<tr><td style="text-align: left"><code>apiVersion</code></td><td style="text-align: left">number</td><td style="text-align: left"><code>1</code> while it supports line 0.1, for Task Proxy 0.1.121 and earlier. Without <code>spec</code>, it means spec 0.1.0.</td></tr>
+<tr><td style="text-align: left"><code>description</code></td><td style="text-align: left">string</td><td style="text-align: left">A sentence or two, shown before installing.</td></tr>
+<tr><td style="text-align: left"><code>category</code></td><td style="text-align: left">string</td><td style="text-align: left">A slug, such as <code>issue-tracking</code>.</td></tr>
+<tr><td style="text-align: left"><code>icon</code></td><td style="text-align: left">string</td><td style="text-align: left">An icon name from <a href="https://cdn.myfi.ws/icons/all.json">the icon list</a>.</td></tr>
+<tr><td style="text-align: left"><code>permissions</code></td><td style="text-align: left">object</td><td style="text-align: left"><code>hosts</code>, <code>variables</code>, and <code>git</code>, below.</td></tr>
+<tr><td style="text-align: left"><code>pages</code></td><td style="text-align: left">object[]</td><td style="text-align: left">Each <code>{"id", "name", "icon", "hidden"}</code>, at <code>/plugin/&lt;id&gt;/&lt;page&gt;</code>. A <code>hidden</code> page is left out of the menu.</td></tr>
+<tr><td style="text-align: left"><code>contributes</code></td><td style="text-align: left">string[]</td><td style="text-align: left"><code>gitBranchInfo</code> for a Git Controller card, and <code>notifications</code> for the Alerts panel. Unknown values are ignored.</td></tr>
 </tbody></table>
 <h3>Permissions</h3>
-<table><thead><tr><th>Permission</th><th>Rules</th></tr></thead><tbody>
-<tr><td><code>hosts</code></td><td>Domains for HTTPS requests: <code>api.example.com</code> exactly, or <code>*.example.com</code> for its subdomains only. A pattern needs at least two labels, so <code>*</code> and <code>*.com</code> are refused.</td></tr>
-<tr><td><code>variables</code></td><td>Each <code>{"key", "label", "secret", "help"}</code>. Keys are letters, digits, <code>_</code>, and <code>-</code>, and <strong>MUST NOT</strong> start with <code>app-</code> or <code>session-</code>. Users enter them per project, and <code>secret</code> ones are masked and never shown again.</td></tr>
-<tr><td><code>git</code></td><td><code>currentBranch</code> to read the current branch, and <code>createBranch</code> for the branch host action.</td></tr>
+<table><thead><tr><th style="text-align: left">Permission</th><th style="text-align: left">Rules</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>hosts</code></td><td style="text-align: left">Domains for HTTPS requests: <code>api.example.com</code> exactly, or <code>*.example.com</code> for its subdomains only. A pattern needs at least two labels, so <code>*</code> and <code>*.com</code> are refused.</td></tr>
+<tr><td style="text-align: left"><code>variables</code></td><td style="text-align: left">Each <code>{"key", "label", "secret", "help"}</code>. Keys are letters, digits, <code>_</code>, and <code>-</code>, and <strong>MUST NOT</strong> start with <code>app-</code> or <code>session-</code>. Users enter them per project, and <code>secret</code> ones are masked and never shown again.</td></tr>
+<tr><td style="text-align: left"><code>git</code></td><td style="text-align: left"><code>currentBranch</code> to read the current branch, and <code>createBranch</code> for the branch host action.</td></tr>
 </tbody></table>
 <h3>Exports</h3>
 <p>Each takes one JSON value and returns <code>{"ok": ...}</code> or <code>{"error": "..."}</code>. Errors are shown to the user.</p>
-<table><thead><tr><th>Export</th><th>Input</th><th>Result</th></tr></thead><tbody>
-<tr><td><code>render</code></td><td><code>{"page", "params"}</code></td><td>A node: the page's content. <code>params</code> is the address's query.</td></tr>
-<tr><td><code>action</code></td><td><code>{"page", "pageParams", "action", "params", "form"}</code></td><td>An action result.</td></tr>
-<tr><td><code>branch_info</code></td><td><code>{"branch"}</code></td><td>A node, or <code>null</code>. With <code>gitBranchInfo</code>.</td></tr>
-<tr><td><code>notifications</code></td><td><code>{}</code></td><td>A list of <code>{"id", "title", "text", "theme", "time", "links"}</code>. With <code>notifications</code>. Polled every two minutes.</td></tr>
-<tr><td><code>notification_read</code></td><td><code>{"id"}</code></td><td>Ignored. Called when the user closes a notification.</td></tr>
+<table><thead><tr><th style="text-align: left">Export</th><th style="text-align: left">Input</th><th style="text-align: left">Result</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>render</code></td><td style="text-align: left"><code>{"page", "params"}</code></td><td style="text-align: left">A node: the page's content. <code>params</code> is the address's query.</td></tr>
+<tr><td style="text-align: left"><code>action</code></td><td style="text-align: left"><code>{"page", "pageParams", "action", "params", "form"}</code></td><td style="text-align: left">An action result.</td></tr>
+<tr><td style="text-align: left"><code>branch_info</code></td><td style="text-align: left"><code>{"branch"}</code></td><td style="text-align: left">A node, or <code>null</code>. With <code>gitBranchInfo</code>.</td></tr>
+<tr><td style="text-align: left"><code>notifications</code></td><td style="text-align: left"><code>{}</code></td><td style="text-align: left">A list of <code>{"id", "title", "text", "theme", "time", "links"}</code>. With <code>notifications</code>. Polled every two minutes.</td></tr>
+<tr><td style="text-align: left"><code>notification_read</code></td><td style="text-align: left"><code>{"id"}</code></td><td style="text-align: left">Ignored. Called when the user closes a notification.</td></tr>
 </tbody></table>
 <h3>Host calls</h3>
 <p>A request names its <code>op</code>. A request Task Proxy does not understand is answered with an error.</p>
-<table><thead><tr><th><code>op</code></th><th>Request</th><th>Answer</th></tr></thead><tbody>
-<tr><td><code>var</code></td><td><code>{"key"}</code></td><td>A declared variable from the project's own variables, then its settings, or <code>null</code>.</td></tr>
-<tr><td><code>storeGet</code></td><td><code>{"key"}</code></td><td>The plugin's saved value, or <code>null</code>.</td></tr>
-<tr><td><code>storeSet</code></td><td><code>{"key", "value"}</code></td><td>Saves it, encrypted. <code>null</code> removes it.</td></tr>
-<tr><td><code>projectFileRead</code></td><td><code>{"path"}</code></td><td>Text under <code>.taskproxy/plugins/&lt;id&gt;/</code> in the open project, or <code>null</code>.</td></tr>
-<tr><td><code>projectFileWrite</code></td><td><code>{"path", "text"}</code></td><td>Writes there, at most 1 MB. Paths can't leave that folder.</td></tr>
-<tr><td><code>currentBranch</code></td><td><code>{}</code></td><td>The branch's name, or <code>null</code>. Needs <code>git: currentBranch</code>.</td></tr>
-<tr><td><code>now</code></td><td><code>{}</code></td><td>Milliseconds since the Unix epoch.</td></tr>
-<tr><td><code>http</code></td><td><code>{"request": {"method", "url", "headers", "body"}}</code></td><td><code>{"status", "body"}</code>. HTTPS to declared hosts only, no redirects, at most 10 MB back, and no credentials in the URL.</td></tr>
-<tr><td><code>hostInfo</code></td><td><code>{}</code></td><td><code>{"app", "spec", "platform"}</code>: Task Proxy's version, the spec version it runs the plugin with, and <code>linux</code>, <code>macos</code>, or <code>windows</code>.</td></tr>
+<table><thead><tr><th style="text-align: left"><code>op</code></th><th style="text-align: left">Request</th><th style="text-align: left">Answer</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>var</code></td><td style="text-align: left"><code>{"key"}</code></td><td style="text-align: left">A declared variable from the project's own variables, then its settings, or <code>null</code>.</td></tr>
+<tr><td style="text-align: left"><code>storeGet</code></td><td style="text-align: left"><code>{"key"}</code></td><td style="text-align: left">The plugin's saved value, or <code>null</code>.</td></tr>
+<tr><td style="text-align: left"><code>storeSet</code></td><td style="text-align: left"><code>{"key", "value"}</code></td><td style="text-align: left">Saves it, encrypted. <code>null</code> removes it.</td></tr>
+<tr><td style="text-align: left"><code>projectFileRead</code></td><td style="text-align: left"><code>{"path"}</code></td><td style="text-align: left">Text under <code>.taskproxy/plugins/&lt;id&gt;/</code> in the open project, or <code>null</code>.</td></tr>
+<tr><td style="text-align: left"><code>projectFileWrite</code></td><td style="text-align: left"><code>{"path", "text"}</code></td><td style="text-align: left">Writes there, at most 1 MB. Paths can't leave that folder.</td></tr>
+<tr><td style="text-align: left"><code>currentBranch</code></td><td style="text-align: left"><code>{}</code></td><td style="text-align: left">The branch's name, or <code>null</code>. Needs <code>git: currentBranch</code>.</td></tr>
+<tr><td style="text-align: left"><code>now</code></td><td style="text-align: left"><code>{}</code></td><td style="text-align: left">Milliseconds since the Unix epoch.</td></tr>
+<tr><td style="text-align: left"><code>http</code></td><td style="text-align: left"><code>{"request": {"method", "url", "headers", "body"}}</code></td><td style="text-align: left"><code>{"status", "body"}</code>. HTTPS to declared hosts only, no redirects, at most 10 MB back, and no credentials in the URL.</td></tr>
+<tr><td style="text-align: left"><code>hostInfo</code></td><td style="text-align: left"><code>{}</code></td><td style="text-align: left"><code>{"app", "spec", "platform"}</code>: Task Proxy's version, the spec version it runs the plugin with, and <code>linux</code>, <code>macos</code>, or <code>windows</code>.</td></tr>
 </tbody></table>
 <h3>Action results</h3>
 <p>Every field is optional, and <code>{}</code> changes nothing.</p>
-<table><thead><tr><th>Field</th><th>Effect</th></tr></thead><tbody>
-<tr><td><code>message</code></td><td><code>{"text", "theme"}</code>: a short alert.</td></tr>
-<tr><td><code>closeDialog</code></td><td>Closes the dialog the action came from.</td></tr>
-<tr><td><code>navigate</code></td><td><code>{"page", "params"}</code>: opens one of the plugin's pages.</td></tr>
-<tr><td><code>dialog</code></td><td><code>{"title", "ui"}</code>: opens a dialog.</td></tr>
-<tr><td><code>ui</code></td><td>Replaces the page's content, or the dialog's.</td></tr>
-<tr><td><code>refresh</code></td><td>Draws the page again.</td></tr>
-<tr><td><code>options</code></td><td><code>[{"value", "label"}]</code>: choices for a <code>select</code> node or a field's <code>suggest</code>.</td></tr>
+<table><thead><tr><th style="text-align: left">Field</th><th style="text-align: left">Effect</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>message</code></td><td style="text-align: left"><code>{"text", "theme"}</code>: a short alert.</td></tr>
+<tr><td style="text-align: left"><code>closeDialog</code></td><td style="text-align: left">Closes the dialog the action came from.</td></tr>
+<tr><td style="text-align: left"><code>navigate</code></td><td style="text-align: left"><code>{"page", "params"}</code>: opens one of the plugin's pages.</td></tr>
+<tr><td style="text-align: left"><code>dialog</code></td><td style="text-align: left"><code>{"title", "ui"}</code>: opens a dialog.</td></tr>
+<tr><td style="text-align: left"><code>ui</code></td><td style="text-align: left">Replaces the page's content, or the dialog's.</td></tr>
+<tr><td style="text-align: left"><code>refresh</code></td><td style="text-align: left">Draws the page again.</td></tr>
+<tr><td style="text-align: left"><code>options</code></td><td style="text-align: left"><code>[{"value", "label"}]</code>: choices for a <code>select</code> node or a field's <code>suggest</code>.</td></tr>
 </tbody></table>
 <h3>Nodes</h3>
 <p>Every node has a <code>type</code>. An unknown type is drawn as a placeholder. Themes are <code>primary</code>, <code>secondary</code>, <code>tertiary</code>, <code>info</code>, <code>success</code>, <code>warning</code>, and <code>danger</code>.</p>
-<table><thead><tr><th><code>type</code></th><th>Fields</th></tr></thead><tbody>
-<tr><td><code>stack</code>, <code>row</code>, <code>toolbar</code></td><td><code>children</code></td></tr>
-<tr><td><code>heading</code></td><td><code>text</code>, <code>level</code> (1 to 4, default 2)</td></tr>
-<tr><td><code>text</code></td><td><code>text</code>, <code>muted</code>, <code>strong</code></td></tr>
-<tr><td><code>markdown</code></td><td><code>text</code>, sanitized</td></tr>
-<tr><td><code>badge</code></td><td><code>text</code>, <code>theme</code></td></tr>
-<tr><td><code>link</code></td><td><code>text</code>, <code>action</code></td></tr>
-<tr><td><code>button</code></td><td><code>action</code>, <code>theme</code></td></tr>
-<tr><td><code>properties</code></td><td><code>items</code>, each <code>{"label", "value"}</code> with a node as the value</td></tr>
-<tr><td><code>table</code></td><td><code>columns</code>, titles or <code>{"label", "action", "sort"}</code>, and <code>rows</code>, each <code>{"cells", "action"}</code></td></tr>
-<tr><td><code>select</code></td><td><code>text</code>, <code>theme</code>, <code>options</code> (an action that returns the choices when clicked), <code>action</code> (run with the choice as <code>form.value</code>)</td></tr>
-<tr><td><code>clip</code></td><td><code>text</code>, <code>max</code> (30), <code>tip</code> (100), <code>action</code>, <code>always</code>, <code>muted</code></td></tr>
-<tr><td><code>section</code></td><td><code>key</code>, <code>title</code>, <code>subtitle</code>, <code>open</code>, <code>children</code>. Remembered open or closed by <code>key</code>.</td></tr>
-<tr><td><code>panel</code></td><td><code>key</code>, <code>open</code>, <code>children</code>. Shown and hidden by the <code>toggle</code> host action.</td></tr>
-<tr><td><code>form</code></td><td><code>fields</code>, <code>submit</code>, <code>cancel</code>, <code>buttons</code>, <code>children</code>, <code>inline</code> (new in 0.1.2: fields and buttons in one row)</td></tr>
-<tr><td><code>inputs</code></td><td><code>fields</code>, more of a form's fields among its <code>children</code></td></tr>
-<tr><td><code>notice</code></td><td><code>text</code>, <code>theme</code></td></tr>
-<tr><td><code>empty</code></td><td><code>text</code></td></tr>
-<tr><td><code>reorder</code></td><td><code>items</code>, each <code>{"id", "children"}</code>, and <code>action</code>. New in 0.1.2.</td></tr>
+<table><thead><tr><th style="text-align: left"><code>type</code></th><th style="text-align: left">Fields</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>stack</code>, <code>row</code>, <code>toolbar</code></td><td style="text-align: left"><code>children</code></td></tr>
+<tr><td style="text-align: left"><code>heading</code></td><td style="text-align: left"><code>text</code>, <code>level</code> (1 to 4, default 2)</td></tr>
+<tr><td style="text-align: left"><code>text</code></td><td style="text-align: left"><code>text</code>, <code>muted</code>, <code>strong</code></td></tr>
+<tr><td style="text-align: left"><code>markdown</code></td><td style="text-align: left"><code>text</code>, sanitized</td></tr>
+<tr><td style="text-align: left"><code>badge</code></td><td style="text-align: left"><code>text</code>, <code>theme</code></td></tr>
+<tr><td style="text-align: left"><code>link</code></td><td style="text-align: left"><code>text</code>, <code>action</code></td></tr>
+<tr><td style="text-align: left"><code>button</code></td><td style="text-align: left"><code>action</code>, <code>theme</code></td></tr>
+<tr><td style="text-align: left"><code>properties</code></td><td style="text-align: left"><code>items</code>, each <code>{"label", "value"}</code> with a node as the value</td></tr>
+<tr><td style="text-align: left"><code>table</code></td><td style="text-align: left"><code>columns</code>, titles or <code>{"label", "action", "sort"}</code>, and <code>rows</code>, each <code>{"cells", "action"}</code></td></tr>
+<tr><td style="text-align: left"><code>select</code></td><td style="text-align: left"><code>text</code>, <code>theme</code>, <code>options</code> (an action that returns the choices when clicked), <code>action</code> (run with the choice as <code>form.value</code>)</td></tr>
+<tr><td style="text-align: left"><code>clip</code></td><td style="text-align: left"><code>text</code>, <code>max</code> (30), <code>tip</code> (100), <code>action</code>, <code>always</code>, <code>muted</code></td></tr>
+<tr><td style="text-align: left"><code>section</code></td><td style="text-align: left"><code>key</code>, <code>title</code>, <code>subtitle</code>, <code>open</code>, <code>children</code>. Remembered open or closed by <code>key</code>.</td></tr>
+<tr><td style="text-align: left"><code>panel</code></td><td style="text-align: left"><code>key</code>, <code>open</code>, <code>children</code>. Shown and hidden by the <code>toggle</code> host action.</td></tr>
+<tr><td style="text-align: left"><code>form</code></td><td style="text-align: left"><code>fields</code>, <code>submit</code>, <code>cancel</code>, <code>buttons</code>, <code>children</code>, <code>inline</code> (new in 0.1.2: fields and buttons in one row)</td></tr>
+<tr><td style="text-align: left"><code>inputs</code></td><td style="text-align: left"><code>fields</code>, more of a form's fields among its <code>children</code></td></tr>
+<tr><td style="text-align: left"><code>notice</code></td><td style="text-align: left"><code>text</code>, <code>theme</code></td></tr>
+<tr><td style="text-align: left"><code>empty</code></td><td style="text-align: left"><code>text</code></td></tr>
+<tr><td style="text-align: left"><code>reorder</code></td><td style="text-align: left"><code>items</code>, each <code>{"id", "children"}</code>, and <code>action</code>. New in 0.1.2.</td></tr>
 </tbody></table>
 <p>An <strong>action</strong> is <code>{"id", "label", "params", "confirm", "icon", "host"}</code>. With <code>confirm</code>, the user is asked first.</p>
 <p>A <strong>reorder</strong> list shows each item with a drag handle. The user drags items, or moves them with Alt+Up and Alt+Down, and Task Proxy then runs <code>action</code> with <code>form.order</code>, the ids in their new order. Older hosts show a placeholder, so check <code>hostInfo</code> and draw something else for them.</p>
@@ -499,12 +499,12 @@ git clone https://github.com/StoicDreams/TaskProxyPlugins</p>
 </ul>
 <h3>Host actions</h3>
 <p>Run by Task Proxy only when the user clicks the button that names them.</p>
-<table><thead><tr><th><code>type</code></th><th>Fields</th><th>Does</th></tr></thead><tbody>
-<tr><td><code>git.createBranch</code></td><td><code>name</code></td><td>Creates a branch and switches to it. Needs <code>git: createBranch</code>.</td></tr>
-<tr><td><code>openUrl</code></td><td><code>url</code></td><td>Opens an HTTPS address in the browser.</td></tr>
-<tr><td><code>copy</code></td><td><code>text</code></td><td>Copies to the clipboard.</td></tr>
-<tr><td><code>openSettings</code></td><td></td><td>Opens the plugin's settings.</td></tr>
-<tr><td><code>toggle</code></td><td><code>key</code></td><td>Shows or hides a <code>panel</code>.</td></tr>
+<table><thead><tr><th style="text-align: left"><code>type</code></th><th style="text-align: left">Fields</th><th style="text-align: left">Does</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>git.createBranch</code></td><td style="text-align: left"><code>name</code></td><td style="text-align: left">Creates a branch and switches to it. Needs <code>git: createBranch</code>.</td></tr>
+<tr><td style="text-align: left"><code>openUrl</code></td><td style="text-align: left"><code>url</code></td><td style="text-align: left">Opens an HTTPS address in the browser.</td></tr>
+<tr><td style="text-align: left"><code>copy</code></td><td style="text-align: left"><code>text</code></td><td style="text-align: left">Copies to the clipboard.</td></tr>
+<tr><td style="text-align: left"><code>openSettings</code></td><td style="text-align: left"></td><td style="text-align: left">Opens the plugin's settings.</td></tr>
+<tr><td style="text-align: left"><code>toggle</code></td><td style="text-align: left"><code>key</code></td><td style="text-align: left">Shows or hides a <code>panel</code>.</td></tr>
 </tbody></table>
 <h3>Catalog</h3>
 <ul>
@@ -532,78 +532,78 @@ git clone https://github.com/StoicDreams/TaskProxyPlugins</p>
 <li><strong>Its only import</strong> is <code>taskproxy_host</code> in the <code>extism:host/user</code> module.</li>
 </ul>
 <h3>Manifest</h3>
-<table><thead><tr><th>Field</th><th>Type</th><th>Rules</th></tr></thead><tbody>
-<tr><td><code>id</code></td><td>string</td><td>Required. Lowercase letters, digits, and dashes, starting with a letter, at most 64 characters. Never changes.</td></tr>
-<tr><td><code>name</code></td><td>string</td><td>Required. Not blank.</td></tr>
-<tr><td><code>version</code></td><td>string</td><td>Required. The plugin's own version, three numbers.</td></tr>
-<tr><td><code>spec</code></td><td>string[]</td><td>Required. The spec versions it supports, one per line, each the lowest patch it needs, such as <code>["0.1.0"]</code>.</td></tr>
-<tr><td><code>apiVersion</code></td><td>number</td><td><code>1</code> while it supports line 0.1, for Task Proxy 0.1.121 and earlier. Without <code>spec</code>, it means spec 0.1.0.</td></tr>
-<tr><td><code>description</code></td><td>string</td><td>A sentence or two, shown before installing.</td></tr>
-<tr><td><code>category</code></td><td>string</td><td>A slug, such as <code>issue-tracking</code>.</td></tr>
-<tr><td><code>icon</code></td><td>string</td><td>An icon name from <a href="https://cdn.myfi.ws/icons/all.json">the icon list</a>.</td></tr>
-<tr><td><code>permissions</code></td><td>object</td><td><code>hosts</code>, <code>variables</code>, and <code>git</code>, below.</td></tr>
-<tr><td><code>pages</code></td><td>object[]</td><td>Each <code>{"id", "name", "icon", "hidden"}</code>, at <code>/plugin/&lt;id&gt;/&lt;page&gt;</code>. A <code>hidden</code> page is left out of the menu.</td></tr>
-<tr><td><code>contributes</code></td><td>string[]</td><td><code>gitBranchInfo</code> for a Git Controller card, and <code>notifications</code> for the Alerts panel. Unknown values are ignored.</td></tr>
+<table><thead><tr><th style="text-align: left">Field</th><th style="text-align: left">Type</th><th style="text-align: left">Rules</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>id</code></td><td style="text-align: left">string</td><td style="text-align: left">Required. Lowercase letters, digits, and dashes, starting with a letter, at most 64 characters. Never changes.</td></tr>
+<tr><td style="text-align: left"><code>name</code></td><td style="text-align: left">string</td><td style="text-align: left">Required. Not blank.</td></tr>
+<tr><td style="text-align: left"><code>version</code></td><td style="text-align: left">string</td><td style="text-align: left">Required. The plugin's own version, three numbers.</td></tr>
+<tr><td style="text-align: left"><code>spec</code></td><td style="text-align: left">string[]</td><td style="text-align: left">Required. The spec versions it supports, one per line, each the lowest patch it needs, such as <code>["0.1.0"]</code>.</td></tr>
+<tr><td style="text-align: left"><code>apiVersion</code></td><td style="text-align: left">number</td><td style="text-align: left"><code>1</code> while it supports line 0.1, for Task Proxy 0.1.121 and earlier. Without <code>spec</code>, it means spec 0.1.0.</td></tr>
+<tr><td style="text-align: left"><code>description</code></td><td style="text-align: left">string</td><td style="text-align: left">A sentence or two, shown before installing.</td></tr>
+<tr><td style="text-align: left"><code>category</code></td><td style="text-align: left">string</td><td style="text-align: left">A slug, such as <code>issue-tracking</code>.</td></tr>
+<tr><td style="text-align: left"><code>icon</code></td><td style="text-align: left">string</td><td style="text-align: left">An icon name from <a href="https://cdn.myfi.ws/icons/all.json">the icon list</a>.</td></tr>
+<tr><td style="text-align: left"><code>permissions</code></td><td style="text-align: left">object</td><td style="text-align: left"><code>hosts</code>, <code>variables</code>, and <code>git</code>, below.</td></tr>
+<tr><td style="text-align: left"><code>pages</code></td><td style="text-align: left">object[]</td><td style="text-align: left">Each <code>{"id", "name", "icon", "hidden"}</code>, at <code>/plugin/&lt;id&gt;/&lt;page&gt;</code>. A <code>hidden</code> page is left out of the menu.</td></tr>
+<tr><td style="text-align: left"><code>contributes</code></td><td style="text-align: left">string[]</td><td style="text-align: left"><code>gitBranchInfo</code> for a Git Controller card, and <code>notifications</code> for the Alerts panel. Unknown values are ignored.</td></tr>
 </tbody></table>
 <h3>Permissions</h3>
-<table><thead><tr><th>Permission</th><th>Rules</th></tr></thead><tbody>
-<tr><td><code>hosts</code></td><td>Domains for HTTPS requests: <code>api.example.com</code> exactly, or <code>*.example.com</code> for its subdomains only. A pattern needs at least two labels, so <code>*</code> and <code>*.com</code> are refused.</td></tr>
-<tr><td><code>variables</code></td><td>Each <code>{"key", "label", "secret", "help"}</code>. Keys are letters, digits, <code>_</code>, and <code>-</code>, and <strong>MUST NOT</strong> start with <code>app-</code> or <code>session-</code>. Users enter them per project, and <code>secret</code> ones are masked and never shown again.</td></tr>
-<tr><td><code>git</code></td><td><code>currentBranch</code> to read the current branch, and <code>createBranch</code> for the branch host action.</td></tr>
+<table><thead><tr><th style="text-align: left">Permission</th><th style="text-align: left">Rules</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>hosts</code></td><td style="text-align: left">Domains for HTTPS requests: <code>api.example.com</code> exactly, or <code>*.example.com</code> for its subdomains only. A pattern needs at least two labels, so <code>*</code> and <code>*.com</code> are refused.</td></tr>
+<tr><td style="text-align: left"><code>variables</code></td><td style="text-align: left">Each <code>{"key", "label", "secret", "help"}</code>. Keys are letters, digits, <code>_</code>, and <code>-</code>, and <strong>MUST NOT</strong> start with <code>app-</code> or <code>session-</code>. Users enter them per project, and <code>secret</code> ones are masked and never shown again.</td></tr>
+<tr><td style="text-align: left"><code>git</code></td><td style="text-align: left"><code>currentBranch</code> to read the current branch, and <code>createBranch</code> for the branch host action.</td></tr>
 </tbody></table>
 <h3>Exports</h3>
 <p>Each takes one JSON value and returns <code>{"ok": ...}</code> or <code>{"error": "..."}</code>. Errors are shown to the user.</p>
-<table><thead><tr><th>Export</th><th>Input</th><th>Result</th></tr></thead><tbody>
-<tr><td><code>render</code></td><td><code>{"page", "params"}</code></td><td>A node: the page's content. <code>params</code> is the address's query.</td></tr>
-<tr><td><code>action</code></td><td><code>{"page", "pageParams", "action", "params", "form"}</code></td><td>An action result.</td></tr>
-<tr><td><code>branch_info</code></td><td><code>{"branch"}</code></td><td>A node, or <code>null</code>. With <code>gitBranchInfo</code>.</td></tr>
-<tr><td><code>notifications</code></td><td><code>{}</code></td><td>A list of <code>{"id", "title", "text", "theme", "time", "links"}</code>. With <code>notifications</code>. Polled every two minutes.</td></tr>
-<tr><td><code>notification_read</code></td><td><code>{"id"}</code></td><td>Ignored. Called when the user closes a notification.</td></tr>
+<table><thead><tr><th style="text-align: left">Export</th><th style="text-align: left">Input</th><th style="text-align: left">Result</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>render</code></td><td style="text-align: left"><code>{"page", "params"}</code></td><td style="text-align: left">A node: the page's content. <code>params</code> is the address's query.</td></tr>
+<tr><td style="text-align: left"><code>action</code></td><td style="text-align: left"><code>{"page", "pageParams", "action", "params", "form"}</code></td><td style="text-align: left">An action result.</td></tr>
+<tr><td style="text-align: left"><code>branch_info</code></td><td style="text-align: left"><code>{"branch"}</code></td><td style="text-align: left">A node, or <code>null</code>. With <code>gitBranchInfo</code>.</td></tr>
+<tr><td style="text-align: left"><code>notifications</code></td><td style="text-align: left"><code>{}</code></td><td style="text-align: left">A list of <code>{"id", "title", "text", "theme", "time", "links"}</code>. With <code>notifications</code>. Polled every two minutes.</td></tr>
+<tr><td style="text-align: left"><code>notification_read</code></td><td style="text-align: left"><code>{"id"}</code></td><td style="text-align: left">Ignored. Called when the user closes a notification.</td></tr>
 </tbody></table>
 <h3>Host calls</h3>
 <p>A request names its <code>op</code>. A request Task Proxy does not understand is answered with an error.</p>
-<table><thead><tr><th><code>op</code></th><th>Request</th><th>Answer</th></tr></thead><tbody>
-<tr><td><code>var</code></td><td><code>{"key"}</code></td><td>A declared variable from the project's own variables, then its settings, or <code>null</code>.</td></tr>
-<tr><td><code>storeGet</code></td><td><code>{"key"}</code></td><td>The plugin's saved value, or <code>null</code>.</td></tr>
-<tr><td><code>storeSet</code></td><td><code>{"key", "value"}</code></td><td>Saves it, encrypted. <code>null</code> removes it.</td></tr>
-<tr><td><code>projectFileRead</code></td><td><code>{"path"}</code></td><td>Text under <code>.taskproxy/plugins/&lt;id&gt;/</code> in the open project, or <code>null</code>.</td></tr>
-<tr><td><code>projectFileWrite</code></td><td><code>{"path", "text"}</code></td><td>Writes there, at most 1 MB. Paths can't leave that folder.</td></tr>
-<tr><td><code>currentBranch</code></td><td><code>{}</code></td><td>The branch's name, or <code>null</code>. Needs <code>git: currentBranch</code>.</td></tr>
-<tr><td><code>now</code></td><td><code>{}</code></td><td>Milliseconds since the Unix epoch.</td></tr>
-<tr><td><code>http</code></td><td><code>{"request": {"method", "url", "headers", "body"}}</code></td><td><code>{"status", "body"}</code>. HTTPS to declared hosts only, no redirects, at most 10 MB back, and no credentials in the URL.</td></tr>
-<tr><td><code>hostInfo</code></td><td><code>{}</code></td><td><code>{"app", "spec", "platform"}</code>: Task Proxy's version, the spec version it runs the plugin with, and <code>linux</code>, <code>macos</code>, or <code>windows</code>. New in 0.1.1.</td></tr>
+<table><thead><tr><th style="text-align: left"><code>op</code></th><th style="text-align: left">Request</th><th style="text-align: left">Answer</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>var</code></td><td style="text-align: left"><code>{"key"}</code></td><td style="text-align: left">A declared variable from the project's own variables, then its settings, or <code>null</code>.</td></tr>
+<tr><td style="text-align: left"><code>storeGet</code></td><td style="text-align: left"><code>{"key"}</code></td><td style="text-align: left">The plugin's saved value, or <code>null</code>.</td></tr>
+<tr><td style="text-align: left"><code>storeSet</code></td><td style="text-align: left"><code>{"key", "value"}</code></td><td style="text-align: left">Saves it, encrypted. <code>null</code> removes it.</td></tr>
+<tr><td style="text-align: left"><code>projectFileRead</code></td><td style="text-align: left"><code>{"path"}</code></td><td style="text-align: left">Text under <code>.taskproxy/plugins/&lt;id&gt;/</code> in the open project, or <code>null</code>.</td></tr>
+<tr><td style="text-align: left"><code>projectFileWrite</code></td><td style="text-align: left"><code>{"path", "text"}</code></td><td style="text-align: left">Writes there, at most 1 MB. Paths can't leave that folder.</td></tr>
+<tr><td style="text-align: left"><code>currentBranch</code></td><td style="text-align: left"><code>{}</code></td><td style="text-align: left">The branch's name, or <code>null</code>. Needs <code>git: currentBranch</code>.</td></tr>
+<tr><td style="text-align: left"><code>now</code></td><td style="text-align: left"><code>{}</code></td><td style="text-align: left">Milliseconds since the Unix epoch.</td></tr>
+<tr><td style="text-align: left"><code>http</code></td><td style="text-align: left"><code>{"request": {"method", "url", "headers", "body"}}</code></td><td style="text-align: left"><code>{"status", "body"}</code>. HTTPS to declared hosts only, no redirects, at most 10 MB back, and no credentials in the URL.</td></tr>
+<tr><td style="text-align: left"><code>hostInfo</code></td><td style="text-align: left"><code>{}</code></td><td style="text-align: left"><code>{"app", "spec", "platform"}</code>: Task Proxy's version, the spec version it runs the plugin with, and <code>linux</code>, <code>macos</code>, or <code>windows</code>. New in 0.1.1.</td></tr>
 </tbody></table>
 <h3>Action results</h3>
 <p>Every field is optional, and <code>{}</code> changes nothing.</p>
-<table><thead><tr><th>Field</th><th>Effect</th></tr></thead><tbody>
-<tr><td><code>message</code></td><td><code>{"text", "theme"}</code>: a short alert.</td></tr>
-<tr><td><code>closeDialog</code></td><td>Closes the dialog the action came from.</td></tr>
-<tr><td><code>navigate</code></td><td><code>{"page", "params"}</code>: opens one of the plugin's pages.</td></tr>
-<tr><td><code>dialog</code></td><td><code>{"title", "ui"}</code>: opens a dialog.</td></tr>
-<tr><td><code>ui</code></td><td>Replaces the page's content, or the dialog's.</td></tr>
-<tr><td><code>refresh</code></td><td>Draws the page again.</td></tr>
-<tr><td><code>options</code></td><td><code>[{"value", "label"}]</code>: choices for a <code>select</code> node or a field's <code>suggest</code>.</td></tr>
+<table><thead><tr><th style="text-align: left">Field</th><th style="text-align: left">Effect</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>message</code></td><td style="text-align: left"><code>{"text", "theme"}</code>: a short alert.</td></tr>
+<tr><td style="text-align: left"><code>closeDialog</code></td><td style="text-align: left">Closes the dialog the action came from.</td></tr>
+<tr><td style="text-align: left"><code>navigate</code></td><td style="text-align: left"><code>{"page", "params"}</code>: opens one of the plugin's pages.</td></tr>
+<tr><td style="text-align: left"><code>dialog</code></td><td style="text-align: left"><code>{"title", "ui"}</code>: opens a dialog.</td></tr>
+<tr><td style="text-align: left"><code>ui</code></td><td style="text-align: left">Replaces the page's content, or the dialog's.</td></tr>
+<tr><td style="text-align: left"><code>refresh</code></td><td style="text-align: left">Draws the page again.</td></tr>
+<tr><td style="text-align: left"><code>options</code></td><td style="text-align: left"><code>[{"value", "label"}]</code>: choices for a <code>select</code> node or a field's <code>suggest</code>.</td></tr>
 </tbody></table>
 <h3>Nodes</h3>
 <p>Every node has a <code>type</code>. An unknown type is drawn as a placeholder. Themes are <code>primary</code>, <code>secondary</code>, <code>tertiary</code>, <code>info</code>, <code>success</code>, <code>warning</code>, and <code>danger</code>.</p>
-<table><thead><tr><th><code>type</code></th><th>Fields</th></tr></thead><tbody>
-<tr><td><code>stack</code>, <code>row</code>, <code>toolbar</code></td><td><code>children</code></td></tr>
-<tr><td><code>heading</code></td><td><code>text</code>, <code>level</code> (1 to 4, default 2)</td></tr>
-<tr><td><code>text</code></td><td><code>text</code>, <code>muted</code>, <code>strong</code></td></tr>
-<tr><td><code>markdown</code></td><td><code>text</code>, sanitized</td></tr>
-<tr><td><code>badge</code></td><td><code>text</code>, <code>theme</code></td></tr>
-<tr><td><code>link</code></td><td><code>text</code>, <code>action</code></td></tr>
-<tr><td><code>button</code></td><td><code>action</code>, <code>theme</code></td></tr>
-<tr><td><code>properties</code></td><td><code>items</code>, each <code>{"label", "value"}</code> with a node as the value</td></tr>
-<tr><td><code>table</code></td><td><code>columns</code>, titles or <code>{"label", "action", "sort"}</code>, and <code>rows</code>, each <code>{"cells", "action"}</code></td></tr>
-<tr><td><code>select</code></td><td><code>text</code>, <code>theme</code>, <code>options</code> (an action that returns the choices when clicked), <code>action</code> (run with the choice as <code>form.value</code>)</td></tr>
-<tr><td><code>clip</code></td><td><code>text</code>, <code>max</code> (30), <code>tip</code> (100), <code>action</code>, <code>always</code>, <code>muted</code></td></tr>
-<tr><td><code>section</code></td><td><code>key</code>, <code>title</code>, <code>subtitle</code>, <code>open</code>, <code>children</code>. Remembered open or closed by <code>key</code>.</td></tr>
-<tr><td><code>panel</code></td><td><code>key</code>, <code>open</code>, <code>children</code>. Shown and hidden by the <code>toggle</code> host action.</td></tr>
-<tr><td><code>form</code></td><td><code>fields</code>, <code>submit</code>, <code>cancel</code>, <code>buttons</code>, <code>children</code></td></tr>
-<tr><td><code>inputs</code></td><td><code>fields</code>, more of a form's fields among its <code>children</code></td></tr>
-<tr><td><code>notice</code></td><td><code>text</code>, <code>theme</code></td></tr>
-<tr><td><code>empty</code></td><td><code>text</code></td></tr>
+<table><thead><tr><th style="text-align: left"><code>type</code></th><th style="text-align: left">Fields</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>stack</code>, <code>row</code>, <code>toolbar</code></td><td style="text-align: left"><code>children</code></td></tr>
+<tr><td style="text-align: left"><code>heading</code></td><td style="text-align: left"><code>text</code>, <code>level</code> (1 to 4, default 2)</td></tr>
+<tr><td style="text-align: left"><code>text</code></td><td style="text-align: left"><code>text</code>, <code>muted</code>, <code>strong</code></td></tr>
+<tr><td style="text-align: left"><code>markdown</code></td><td style="text-align: left"><code>text</code>, sanitized</td></tr>
+<tr><td style="text-align: left"><code>badge</code></td><td style="text-align: left"><code>text</code>, <code>theme</code></td></tr>
+<tr><td style="text-align: left"><code>link</code></td><td style="text-align: left"><code>text</code>, <code>action</code></td></tr>
+<tr><td style="text-align: left"><code>button</code></td><td style="text-align: left"><code>action</code>, <code>theme</code></td></tr>
+<tr><td style="text-align: left"><code>properties</code></td><td style="text-align: left"><code>items</code>, each <code>{"label", "value"}</code> with a node as the value</td></tr>
+<tr><td style="text-align: left"><code>table</code></td><td style="text-align: left"><code>columns</code>, titles or <code>{"label", "action", "sort"}</code>, and <code>rows</code>, each <code>{"cells", "action"}</code></td></tr>
+<tr><td style="text-align: left"><code>select</code></td><td style="text-align: left"><code>text</code>, <code>theme</code>, <code>options</code> (an action that returns the choices when clicked), <code>action</code> (run with the choice as <code>form.value</code>)</td></tr>
+<tr><td style="text-align: left"><code>clip</code></td><td style="text-align: left"><code>text</code>, <code>max</code> (30), <code>tip</code> (100), <code>action</code>, <code>always</code>, <code>muted</code></td></tr>
+<tr><td style="text-align: left"><code>section</code></td><td style="text-align: left"><code>key</code>, <code>title</code>, <code>subtitle</code>, <code>open</code>, <code>children</code>. Remembered open or closed by <code>key</code>.</td></tr>
+<tr><td style="text-align: left"><code>panel</code></td><td style="text-align: left"><code>key</code>, <code>open</code>, <code>children</code>. Shown and hidden by the <code>toggle</code> host action.</td></tr>
+<tr><td style="text-align: left"><code>form</code></td><td style="text-align: left"><code>fields</code>, <code>submit</code>, <code>cancel</code>, <code>buttons</code>, <code>children</code></td></tr>
+<tr><td style="text-align: left"><code>inputs</code></td><td style="text-align: left"><code>fields</code>, more of a form's fields among its <code>children</code></td></tr>
+<tr><td style="text-align: left"><code>notice</code></td><td style="text-align: left"><code>text</code>, <code>theme</code></td></tr>
+<tr><td style="text-align: left"><code>empty</code></td><td style="text-align: left"><code>text</code></td></tr>
 </tbody></table>
 <p>An <strong>action</strong> is <code>{"id", "label", "params", "confirm", "icon", "host"}</code>. With <code>confirm</code>, the user is asked first.</p>
 <p>A <strong>field</strong> is <code>{"name", "label", "kind", "value", "options", "required", "placeholder", "help", "suggest"}</code>:</p>
@@ -614,12 +614,12 @@ git clone https://github.com/StoicDreams/TaskProxyPlugins</p>
 </ul>
 <h3>Host actions</h3>
 <p>Run by Task Proxy only when the user clicks the button that names them.</p>
-<table><thead><tr><th><code>type</code></th><th>Fields</th><th>Does</th></tr></thead><tbody>
-<tr><td><code>git.createBranch</code></td><td><code>name</code></td><td>Creates a branch and switches to it. Needs <code>git: createBranch</code>.</td></tr>
-<tr><td><code>openUrl</code></td><td><code>url</code></td><td>Opens an HTTPS address in the browser.</td></tr>
-<tr><td><code>copy</code></td><td><code>text</code></td><td>Copies to the clipboard.</td></tr>
-<tr><td><code>openSettings</code></td><td></td><td>Opens the plugin's settings.</td></tr>
-<tr><td><code>toggle</code></td><td><code>key</code></td><td>Shows or hides a <code>panel</code>.</td></tr>
+<table><thead><tr><th style="text-align: left"><code>type</code></th><th style="text-align: left">Fields</th><th style="text-align: left">Does</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>git.createBranch</code></td><td style="text-align: left"><code>name</code></td><td style="text-align: left">Creates a branch and switches to it. Needs <code>git: createBranch</code>.</td></tr>
+<tr><td style="text-align: left"><code>openUrl</code></td><td style="text-align: left"><code>url</code></td><td style="text-align: left">Opens an HTTPS address in the browser.</td></tr>
+<tr><td style="text-align: left"><code>copy</code></td><td style="text-align: left"><code>text</code></td><td style="text-align: left">Copies to the clipboard.</td></tr>
+<tr><td style="text-align: left"><code>openSettings</code></td><td style="text-align: left"></td><td style="text-align: left">Opens the plugin's settings.</td></tr>
+<tr><td style="text-align: left"><code>toggle</code></td><td style="text-align: left"><code>key</code></td><td style="text-align: left">Shows or hides a <code>panel</code>.</td></tr>
 </tbody></table>
 <h3>Catalog</h3>
 <ul>
@@ -640,76 +640,76 @@ git clone https://github.com/StoicDreams/TaskProxyPlugins</p>
 <li><strong>Its only import</strong> is <code>taskproxy_host</code> in the <code>extism:host/user</code> module.</li>
 </ul>
 <h3>Manifest</h3>
-<table><thead><tr><th>Field</th><th>Type</th><th>Rules</th></tr></thead><tbody>
-<tr><td><code>id</code></td><td>string</td><td>Required. Lowercase letters, digits, and dashes, starting with a letter, at most 64 characters. Never changes.</td></tr>
-<tr><td><code>name</code></td><td>string</td><td>Required. Not blank.</td></tr>
-<tr><td><code>version</code></td><td>string</td><td>Required. The plugin's own version, three numbers.</td></tr>
-<tr><td><code>apiVersion</code></td><td>number</td><td>Required, and <code>1</code>.</td></tr>
-<tr><td><code>description</code></td><td>string</td><td>A sentence or two, shown before installing.</td></tr>
-<tr><td><code>category</code></td><td>string</td><td>A slug, such as <code>issue-tracking</code>.</td></tr>
-<tr><td><code>icon</code></td><td>string</td><td>An icon name from <a href="https://cdn.myfi.ws/icons/all.json">the icon list</a>.</td></tr>
-<tr><td><code>permissions</code></td><td>object</td><td><code>hosts</code>, <code>variables</code>, and <code>git</code>, below.</td></tr>
-<tr><td><code>pages</code></td><td>object[]</td><td>Each <code>{"id", "name", "icon", "hidden"}</code>, at <code>/plugin/&lt;id&gt;/&lt;page&gt;</code>. A <code>hidden</code> page is left out of the menu.</td></tr>
-<tr><td><code>contributes</code></td><td>string[]</td><td><code>gitBranchInfo</code> for a Git Controller card, and <code>notifications</code> for the Alerts panel. Unknown values are ignored.</td></tr>
+<table><thead><tr><th style="text-align: left">Field</th><th style="text-align: left">Type</th><th style="text-align: left">Rules</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>id</code></td><td style="text-align: left">string</td><td style="text-align: left">Required. Lowercase letters, digits, and dashes, starting with a letter, at most 64 characters. Never changes.</td></tr>
+<tr><td style="text-align: left"><code>name</code></td><td style="text-align: left">string</td><td style="text-align: left">Required. Not blank.</td></tr>
+<tr><td style="text-align: left"><code>version</code></td><td style="text-align: left">string</td><td style="text-align: left">Required. The plugin's own version, three numbers.</td></tr>
+<tr><td style="text-align: left"><code>apiVersion</code></td><td style="text-align: left">number</td><td style="text-align: left">Required, and <code>1</code>.</td></tr>
+<tr><td style="text-align: left"><code>description</code></td><td style="text-align: left">string</td><td style="text-align: left">A sentence or two, shown before installing.</td></tr>
+<tr><td style="text-align: left"><code>category</code></td><td style="text-align: left">string</td><td style="text-align: left">A slug, such as <code>issue-tracking</code>.</td></tr>
+<tr><td style="text-align: left"><code>icon</code></td><td style="text-align: left">string</td><td style="text-align: left">An icon name from <a href="https://cdn.myfi.ws/icons/all.json">the icon list</a>.</td></tr>
+<tr><td style="text-align: left"><code>permissions</code></td><td style="text-align: left">object</td><td style="text-align: left"><code>hosts</code>, <code>variables</code>, and <code>git</code>, below.</td></tr>
+<tr><td style="text-align: left"><code>pages</code></td><td style="text-align: left">object[]</td><td style="text-align: left">Each <code>{"id", "name", "icon", "hidden"}</code>, at <code>/plugin/&lt;id&gt;/&lt;page&gt;</code>. A <code>hidden</code> page is left out of the menu.</td></tr>
+<tr><td style="text-align: left"><code>contributes</code></td><td style="text-align: left">string[]</td><td style="text-align: left"><code>gitBranchInfo</code> for a Git Controller card, and <code>notifications</code> for the Alerts panel. Unknown values are ignored.</td></tr>
 </tbody></table>
 <h3>Permissions</h3>
-<table><thead><tr><th>Permission</th><th>Rules</th></tr></thead><tbody>
-<tr><td><code>hosts</code></td><td>Domains for HTTPS requests: <code>api.example.com</code> exactly, or <code>*.example.com</code> for its subdomains only. A pattern needs at least two labels, so <code>*</code> and <code>*.com</code> are refused.</td></tr>
-<tr><td><code>variables</code></td><td>Each <code>{"key", "label", "secret", "help"}</code>. Keys are letters, digits, <code>_</code>, and <code>-</code>, and <strong>MUST NOT</strong> start with <code>app-</code> or <code>session-</code>. Users enter them per project, and <code>secret</code> ones are masked and never shown again.</td></tr>
-<tr><td><code>git</code></td><td><code>currentBranch</code> to read the current branch, and <code>createBranch</code> for the branch host action.</td></tr>
+<table><thead><tr><th style="text-align: left">Permission</th><th style="text-align: left">Rules</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>hosts</code></td><td style="text-align: left">Domains for HTTPS requests: <code>api.example.com</code> exactly, or <code>*.example.com</code> for its subdomains only. A pattern needs at least two labels, so <code>*</code> and <code>*.com</code> are refused.</td></tr>
+<tr><td style="text-align: left"><code>variables</code></td><td style="text-align: left">Each <code>{"key", "label", "secret", "help"}</code>. Keys are letters, digits, <code>_</code>, and <code>-</code>, and <strong>MUST NOT</strong> start with <code>app-</code> or <code>session-</code>. Users enter them per project, and <code>secret</code> ones are masked and never shown again.</td></tr>
+<tr><td style="text-align: left"><code>git</code></td><td style="text-align: left"><code>currentBranch</code> to read the current branch, and <code>createBranch</code> for the branch host action.</td></tr>
 </tbody></table>
 <h3>Exports</h3>
 <p>Each takes one JSON value and returns <code>{"ok": ...}</code> or <code>{"error": "..."}</code>. Errors are shown to the user.</p>
-<table><thead><tr><th>Export</th><th>Input</th><th>Result</th></tr></thead><tbody>
-<tr><td><code>render</code></td><td><code>{"page", "params"}</code></td><td>A node: the page's content. <code>params</code> is the address's query.</td></tr>
-<tr><td><code>action</code></td><td><code>{"page", "pageParams", "action", "params", "form"}</code></td><td>An action result.</td></tr>
-<tr><td><code>branch_info</code></td><td><code>{"branch"}</code></td><td>A node, or <code>null</code>. With <code>gitBranchInfo</code>.</td></tr>
-<tr><td><code>notifications</code></td><td><code>{}</code></td><td>A list of <code>{"id", "title", "text", "theme", "time", "links"}</code>. With <code>notifications</code>. Polled every two minutes.</td></tr>
-<tr><td><code>notification_read</code></td><td><code>{"id"}</code></td><td>Ignored. Called when the user closes a notification.</td></tr>
+<table><thead><tr><th style="text-align: left">Export</th><th style="text-align: left">Input</th><th style="text-align: left">Result</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>render</code></td><td style="text-align: left"><code>{"page", "params"}</code></td><td style="text-align: left">A node: the page's content. <code>params</code> is the address's query.</td></tr>
+<tr><td style="text-align: left"><code>action</code></td><td style="text-align: left"><code>{"page", "pageParams", "action", "params", "form"}</code></td><td style="text-align: left">An action result.</td></tr>
+<tr><td style="text-align: left"><code>branch_info</code></td><td style="text-align: left"><code>{"branch"}</code></td><td style="text-align: left">A node, or <code>null</code>. With <code>gitBranchInfo</code>.</td></tr>
+<tr><td style="text-align: left"><code>notifications</code></td><td style="text-align: left"><code>{}</code></td><td style="text-align: left">A list of <code>{"id", "title", "text", "theme", "time", "links"}</code>. With <code>notifications</code>. Polled every two minutes.</td></tr>
+<tr><td style="text-align: left"><code>notification_read</code></td><td style="text-align: left"><code>{"id"}</code></td><td style="text-align: left">Ignored. Called when the user closes a notification.</td></tr>
 </tbody></table>
 <h3>Host calls</h3>
 <p>A request names its <code>op</code>. A request Task Proxy does not understand is answered with an error.</p>
-<table><thead><tr><th><code>op</code></th><th>Request</th><th>Answer</th></tr></thead><tbody>
-<tr><td><code>var</code></td><td><code>{"key"}</code></td><td>A declared variable from the project's own variables, then its settings, or <code>null</code>.</td></tr>
-<tr><td><code>storeGet</code></td><td><code>{"key"}</code></td><td>The plugin's saved value, or <code>null</code>.</td></tr>
-<tr><td><code>storeSet</code></td><td><code>{"key", "value"}</code></td><td>Saves it, encrypted. <code>null</code> removes it.</td></tr>
-<tr><td><code>projectFileRead</code></td><td><code>{"path"}</code></td><td>Text under <code>.taskproxy/plugins/&lt;id&gt;/</code> in the open project, or <code>null</code>.</td></tr>
-<tr><td><code>projectFileWrite</code></td><td><code>{"path", "text"}</code></td><td>Writes there, at most 1 MB. Paths can't leave that folder.</td></tr>
-<tr><td><code>currentBranch</code></td><td><code>{}</code></td><td>The branch's name, or <code>null</code>. Needs <code>git: currentBranch</code>.</td></tr>
-<tr><td><code>now</code></td><td><code>{}</code></td><td>Milliseconds since the Unix epoch.</td></tr>
-<tr><td><code>http</code></td><td><code>{"request": {"method", "url", "headers", "body"}}</code></td><td><code>{"status", "body"}</code>. HTTPS to declared hosts only, no redirects, at most 10 MB back, and no credentials in the URL.</td></tr>
+<table><thead><tr><th style="text-align: left"><code>op</code></th><th style="text-align: left">Request</th><th style="text-align: left">Answer</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>var</code></td><td style="text-align: left"><code>{"key"}</code></td><td style="text-align: left">A declared variable from the project's own variables, then its settings, or <code>null</code>.</td></tr>
+<tr><td style="text-align: left"><code>storeGet</code></td><td style="text-align: left"><code>{"key"}</code></td><td style="text-align: left">The plugin's saved value, or <code>null</code>.</td></tr>
+<tr><td style="text-align: left"><code>storeSet</code></td><td style="text-align: left"><code>{"key", "value"}</code></td><td style="text-align: left">Saves it, encrypted. <code>null</code> removes it.</td></tr>
+<tr><td style="text-align: left"><code>projectFileRead</code></td><td style="text-align: left"><code>{"path"}</code></td><td style="text-align: left">Text under <code>.taskproxy/plugins/&lt;id&gt;/</code> in the open project, or <code>null</code>.</td></tr>
+<tr><td style="text-align: left"><code>projectFileWrite</code></td><td style="text-align: left"><code>{"path", "text"}</code></td><td style="text-align: left">Writes there, at most 1 MB. Paths can't leave that folder.</td></tr>
+<tr><td style="text-align: left"><code>currentBranch</code></td><td style="text-align: left"><code>{}</code></td><td style="text-align: left">The branch's name, or <code>null</code>. Needs <code>git: currentBranch</code>.</td></tr>
+<tr><td style="text-align: left"><code>now</code></td><td style="text-align: left"><code>{}</code></td><td style="text-align: left">Milliseconds since the Unix epoch.</td></tr>
+<tr><td style="text-align: left"><code>http</code></td><td style="text-align: left"><code>{"request": {"method", "url", "headers", "body"}}</code></td><td style="text-align: left"><code>{"status", "body"}</code>. HTTPS to declared hosts only, no redirects, at most 10 MB back, and no credentials in the URL.</td></tr>
 </tbody></table>
 <h3>Action results</h3>
 <p>Every field is optional, and <code>{}</code> changes nothing.</p>
-<table><thead><tr><th>Field</th><th>Effect</th></tr></thead><tbody>
-<tr><td><code>message</code></td><td><code>{"text", "theme"}</code>: a short alert.</td></tr>
-<tr><td><code>closeDialog</code></td><td>Closes the dialog the action came from.</td></tr>
-<tr><td><code>navigate</code></td><td><code>{"page", "params"}</code>: opens one of the plugin's pages.</td></tr>
-<tr><td><code>dialog</code></td><td><code>{"title", "ui"}</code>: opens a dialog.</td></tr>
-<tr><td><code>ui</code></td><td>Replaces the page's content, or the dialog's.</td></tr>
-<tr><td><code>refresh</code></td><td>Draws the page again.</td></tr>
-<tr><td><code>options</code></td><td><code>[{"value", "label"}]</code>: choices for a <code>select</code> node or a field's <code>suggest</code>.</td></tr>
+<table><thead><tr><th style="text-align: left">Field</th><th style="text-align: left">Effect</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>message</code></td><td style="text-align: left"><code>{"text", "theme"}</code>: a short alert.</td></tr>
+<tr><td style="text-align: left"><code>closeDialog</code></td><td style="text-align: left">Closes the dialog the action came from.</td></tr>
+<tr><td style="text-align: left"><code>navigate</code></td><td style="text-align: left"><code>{"page", "params"}</code>: opens one of the plugin's pages.</td></tr>
+<tr><td style="text-align: left"><code>dialog</code></td><td style="text-align: left"><code>{"title", "ui"}</code>: opens a dialog.</td></tr>
+<tr><td style="text-align: left"><code>ui</code></td><td style="text-align: left">Replaces the page's content, or the dialog's.</td></tr>
+<tr><td style="text-align: left"><code>refresh</code></td><td style="text-align: left">Draws the page again.</td></tr>
+<tr><td style="text-align: left"><code>options</code></td><td style="text-align: left"><code>[{"value", "label"}]</code>: choices for a <code>select</code> node or a field's <code>suggest</code>.</td></tr>
 </tbody></table>
 <h3>Nodes</h3>
 <p>Every node has a <code>type</code>. An unknown type is drawn as a placeholder. Themes are <code>primary</code>, <code>secondary</code>, <code>tertiary</code>, <code>info</code>, <code>success</code>, <code>warning</code>, and <code>danger</code>.</p>
-<table><thead><tr><th><code>type</code></th><th>Fields</th></tr></thead><tbody>
-<tr><td><code>stack</code>, <code>row</code>, <code>toolbar</code></td><td><code>children</code></td></tr>
-<tr><td><code>heading</code></td><td><code>text</code>, <code>level</code> (1 to 4, default 2)</td></tr>
-<tr><td><code>text</code></td><td><code>text</code>, <code>muted</code>, <code>strong</code></td></tr>
-<tr><td><code>markdown</code></td><td><code>text</code>, sanitized</td></tr>
-<tr><td><code>badge</code></td><td><code>text</code>, <code>theme</code></td></tr>
-<tr><td><code>link</code></td><td><code>text</code>, <code>action</code></td></tr>
-<tr><td><code>button</code></td><td><code>action</code>, <code>theme</code></td></tr>
-<tr><td><code>properties</code></td><td><code>items</code>, each <code>{"label", "value"}</code> with a node as the value</td></tr>
-<tr><td><code>table</code></td><td><code>columns</code>, titles or <code>{"label", "action", "sort"}</code>, and <code>rows</code>, each <code>{"cells", "action"}</code></td></tr>
-<tr><td><code>select</code></td><td><code>text</code>, <code>theme</code>, <code>options</code> (an action that returns the choices when clicked), <code>action</code> (run with the choice as <code>form.value</code>)</td></tr>
-<tr><td><code>clip</code></td><td><code>text</code>, <code>max</code> (30), <code>tip</code> (100), <code>action</code>, <code>always</code>, <code>muted</code></td></tr>
-<tr><td><code>section</code></td><td><code>key</code>, <code>title</code>, <code>subtitle</code>, <code>open</code>, <code>children</code>. Remembered open or closed by <code>key</code>.</td></tr>
-<tr><td><code>panel</code></td><td><code>key</code>, <code>open</code>, <code>children</code>. Shown and hidden by the <code>toggle</code> host action.</td></tr>
-<tr><td><code>form</code></td><td><code>fields</code>, <code>submit</code>, <code>cancel</code>, <code>buttons</code>, <code>children</code></td></tr>
-<tr><td><code>inputs</code></td><td><code>fields</code>, more of a form's fields among its <code>children</code></td></tr>
-<tr><td><code>notice</code></td><td><code>text</code>, <code>theme</code></td></tr>
-<tr><td><code>empty</code></td><td><code>text</code></td></tr>
+<table><thead><tr><th style="text-align: left"><code>type</code></th><th style="text-align: left">Fields</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>stack</code>, <code>row</code>, <code>toolbar</code></td><td style="text-align: left"><code>children</code></td></tr>
+<tr><td style="text-align: left"><code>heading</code></td><td style="text-align: left"><code>text</code>, <code>level</code> (1 to 4, default 2)</td></tr>
+<tr><td style="text-align: left"><code>text</code></td><td style="text-align: left"><code>text</code>, <code>muted</code>, <code>strong</code></td></tr>
+<tr><td style="text-align: left"><code>markdown</code></td><td style="text-align: left"><code>text</code>, sanitized</td></tr>
+<tr><td style="text-align: left"><code>badge</code></td><td style="text-align: left"><code>text</code>, <code>theme</code></td></tr>
+<tr><td style="text-align: left"><code>link</code></td><td style="text-align: left"><code>text</code>, <code>action</code></td></tr>
+<tr><td style="text-align: left"><code>button</code></td><td style="text-align: left"><code>action</code>, <code>theme</code></td></tr>
+<tr><td style="text-align: left"><code>properties</code></td><td style="text-align: left"><code>items</code>, each <code>{"label", "value"}</code> with a node as the value</td></tr>
+<tr><td style="text-align: left"><code>table</code></td><td style="text-align: left"><code>columns</code>, titles or <code>{"label", "action", "sort"}</code>, and <code>rows</code>, each <code>{"cells", "action"}</code></td></tr>
+<tr><td style="text-align: left"><code>select</code></td><td style="text-align: left"><code>text</code>, <code>theme</code>, <code>options</code> (an action that returns the choices when clicked), <code>action</code> (run with the choice as <code>form.value</code>)</td></tr>
+<tr><td style="text-align: left"><code>clip</code></td><td style="text-align: left"><code>text</code>, <code>max</code> (30), <code>tip</code> (100), <code>action</code>, <code>always</code>, <code>muted</code></td></tr>
+<tr><td style="text-align: left"><code>section</code></td><td style="text-align: left"><code>key</code>, <code>title</code>, <code>subtitle</code>, <code>open</code>, <code>children</code>. Remembered open or closed by <code>key</code>.</td></tr>
+<tr><td style="text-align: left"><code>panel</code></td><td style="text-align: left"><code>key</code>, <code>open</code>, <code>children</code>. Shown and hidden by the <code>toggle</code> host action.</td></tr>
+<tr><td style="text-align: left"><code>form</code></td><td style="text-align: left"><code>fields</code>, <code>submit</code>, <code>cancel</code>, <code>buttons</code>, <code>children</code></td></tr>
+<tr><td style="text-align: left"><code>inputs</code></td><td style="text-align: left"><code>fields</code>, more of a form's fields among its <code>children</code></td></tr>
+<tr><td style="text-align: left"><code>notice</code></td><td style="text-align: left"><code>text</code>, <code>theme</code></td></tr>
+<tr><td style="text-align: left"><code>empty</code></td><td style="text-align: left"><code>text</code></td></tr>
 </tbody></table>
 <p>An <strong>action</strong> is <code>{"id", "label", "params", "confirm", "icon", "host"}</code>. With <code>confirm</code>, the user is asked first.</p>
 <p>A <strong>field</strong> is <code>{"name", "label", "kind", "value", "options", "required", "placeholder", "help", "suggest"}</code>:</p>
@@ -720,12 +720,12 @@ git clone https://github.com/StoicDreams/TaskProxyPlugins</p>
 </ul>
 <h3>Host actions</h3>
 <p>Run by Task Proxy only when the user clicks the button that names them.</p>
-<table><thead><tr><th><code>type</code></th><th>Fields</th><th>Does</th></tr></thead><tbody>
-<tr><td><code>git.createBranch</code></td><td><code>name</code></td><td>Creates a branch and switches to it. Needs <code>git: createBranch</code>.</td></tr>
-<tr><td><code>openUrl</code></td><td><code>url</code></td><td>Opens an HTTPS address in the browser.</td></tr>
-<tr><td><code>copy</code></td><td><code>text</code></td><td>Copies to the clipboard.</td></tr>
-<tr><td><code>openSettings</code></td><td></td><td>Opens the plugin's settings.</td></tr>
-<tr><td><code>toggle</code></td><td><code>key</code></td><td>Shows or hides a <code>panel</code>.</td></tr>
+<table><thead><tr><th style="text-align: left"><code>type</code></th><th style="text-align: left">Fields</th><th style="text-align: left">Does</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>git.createBranch</code></td><td style="text-align: left"><code>name</code></td><td style="text-align: left">Creates a branch and switches to it. Needs <code>git: createBranch</code>.</td></tr>
+<tr><td style="text-align: left"><code>openUrl</code></td><td style="text-align: left"><code>url</code></td><td style="text-align: left">Opens an HTTPS address in the browser.</td></tr>
+<tr><td style="text-align: left"><code>copy</code></td><td style="text-align: left"><code>text</code></td><td style="text-align: left">Copies to the clipboard.</td></tr>
+<tr><td style="text-align: left"><code>openSettings</code></td><td style="text-align: left"></td><td style="text-align: left">Opens the plugin's settings.</td></tr>
+<tr><td style="text-align: left"><code>toggle</code></td><td style="text-align: left"><code>key</code></td><td style="text-align: left">Shows or hides a <code>panel</code>.</td></tr>
 </tbody></table>
 <h3>Catalog</h3>
 <ul>

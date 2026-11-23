@@ -30,7 +30,7 @@ When you add a project, Task Proxy creates a `.taskproxy` folder in it. Everythi
 Everything personal stays on your computer, encrypted.
 
 | In the repository, in `.taskproxy` | On your computer, encrypted |
-|---|---|
+|:---|:---|
 | Pages, in `pages/` | Values you enter for project variables |
 | The project's navigation, in `Navigation.json` | Each environment's values |
 | Variable names, types, and default values, in `Variables.json` | Global variables and secrets, such as tokens |

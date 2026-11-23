@@ -85,7 +85,7 @@
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-segment.min.js" crossorigin="anonymous" />
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-dreams-logo.min.js" crossorigin="anonymous" />
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-social-links.min.js" crossorigin="anonymous" />
-	<meta name="webui-prerender" content="d29af34ae3">
+	<meta name="webui-prerender" content="f8be7ebf17">
 </head>
 
 <body>
@@ -97,9 +97,9 @@
 <p>Some scripts start other scripts: one that launches a dev server for each of your sites, or a build watcher beside an API. Run from a terminal, they usually open a window for each one.</p>
 <p>Run from Task Proxy, the same script can open each one as a terminal in the <strong>Terminal Manager</strong> instead. Each has its own name, output, and <strong>Stop</strong> button, and you can answer its prompts there. Run the script again, and it can stop the old ones before it starts new ones.</p>
 <p>Every script Task Proxy runs gets a <code>TaskProxy</code> PowerShell module with two commands:</p>
-<table><thead><tr><th>Command</th><th>What it does</th></tr></thead><tbody>
-<tr><td><code>Start-TaskProxyTerminal</code></td><td>Opens a terminal in the Terminal Manager that runs a command. It returns once the command has started, and the terminal keeps running after your script ends.</td></tr>
-<tr><td><code>Test-TaskProxy</code></td><td>Says whether the script was started by Task Proxy.</td></tr>
+<table><thead><tr><th style="text-align: left">Command</th><th style="text-align: left">What it does</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>Start-TaskProxyTerminal</code></td><td style="text-align: left">Opens a terminal in the Terminal Manager that runs a command. It returns once the command has started, and the terminal keeps running after your script ends.</td></tr>
+<tr><td style="text-align: left"><code>Test-TaskProxy</code></td><td style="text-align: left">Says whether the script was started by Task Proxy.</td></tr>
 </tbody></table>
 
 <h2>1. Open a terminal</h2>
@@ -108,11 +108,11 @@
 <pre><code class="language-pwsh">Start-TaskProxyTerminal -Name 'api' -Command "&amp; './scripts/run-api.ps1'"
 </code></pre>
 <p>Run the script from the <strong>Script Manager</strong> or a page, then open the <strong>Terminal Manager</strong> and choose <strong>api</strong> in the <strong>Script</strong> dropdown. The terminal opens in the same project as the script.</p>
-<table><thead><tr><th>Parameter</th><th>What it does</th></tr></thead><tbody>
-<tr><td><code>-Name</code></td><td>The terminal's name in the Terminal Manager. Required.</td></tr>
-<tr><td><code>-Command</code></td><td>The PowerShell to run, as you would pass to <code>pwsh -Command</code>. Required.</td></tr>
-<tr><td><code>-WorkingDirectory</code></td><td>The folder the command starts in. Defaults to the script's current folder.</td></tr>
-<tr><td><code>-Replace</code></td><td>Stops what is still running in a terminal of that name, and waits for it to end, before starting the command. Without it, the call fails while that terminal runs.</td></tr>
+<table><thead><tr><th style="text-align: left">Parameter</th><th style="text-align: left">What it does</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>-Name</code></td><td style="text-align: left">The terminal's name in the Terminal Manager. Required.</td></tr>
+<tr><td style="text-align: left"><code>-Command</code></td><td style="text-align: left">The PowerShell to run, as you would pass to <code>pwsh -Command</code>. Required.</td></tr>
+<tr><td style="text-align: left"><code>-WorkingDirectory</code></td><td style="text-align: left">The folder the command starts in. Defaults to the script's current folder.</td></tr>
+<tr><td style="text-align: left"><code>-Replace</code></td><td style="text-align: left">Stops what is still running in a terminal of that name, and waits for it to end, before starting the command. Without it, the call fails while that terminal runs.</td></tr>
 </tbody></table>
 
 <h2>2. Keep it working outside Task Proxy</h2>

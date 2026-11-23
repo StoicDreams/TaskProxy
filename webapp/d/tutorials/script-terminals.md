@@ -11,7 +11,7 @@ Run from Task Proxy, the same script can open each one as a terminal in the **Te
 Every script Task Proxy runs gets a `TaskProxy` PowerShell module with two commands:
 
 | Command | What it does |
-|---|---|
+|:---|:---|
 | `Start-TaskProxyTerminal` | Opens a terminal in the Terminal Manager that runs a command. It returns once the command has started, and the terminal keeps running after your script ends. |
 | `Test-TaskProxy` | Says whether the script was started by Task Proxy. |
 
@@ -30,7 +30,7 @@ Start-TaskProxyTerminal -Name 'api' -Command "& './scripts/run-api.ps1'"
 Run the script from the **Script Manager** or a page, then open the **Terminal Manager** and choose **api** in the **Script** dropdown. The terminal opens in the same project as the script.
 
 | Parameter | What it does |
-|---|---|
+|:---|:---|
 | `-Name` | The terminal's name in the Terminal Manager. Required. |
 | `-Command` | The PowerShell to run, as you would pass to `pwsh -Command`. Required. |
 | `-WorkingDirectory` | The folder the command starts in. Defaults to the script's current folder. |

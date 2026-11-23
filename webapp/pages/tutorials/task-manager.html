@@ -86,7 +86,7 @@
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-segment.min.js" crossorigin="anonymous" />
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-dreams-logo.min.js" crossorigin="anonymous" />
 	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-social-links.min.js" crossorigin="anonymous" />
-	<meta name="webui-prerender" content="d8be5cb397">
+	<meta name="webui-prerender" content="79a56d1a67">
 </head>
 
 <body>
@@ -105,15 +105,15 @@
 <h2>1. Find a process</h2>
 
 <p>The first dropdown picks a preset:</p>
-<table><thead><tr><th>Preset</th><th>Shows</th></tr></thead><tbody>
-<tr><td><strong>Terminal</strong></td><td>What you started from a terminal, or from your editor's terminal</td></tr>
-<tr><td><strong>Orphaned</strong></td><td>What kept running after the terminal or editor that started it closed</td></tr>
-<tr><td><strong>Listening on a port</strong></td><td>Servers, and anything else waiting for connections</td></tr>
-<tr><td><strong>In my projects</strong></td><td>What runs in one of your projects' folders</td></tr>
-<tr><td><strong>Started by Task Proxy</strong></td><td>Task Proxy, and the scripts it runs</td></tr>
-<tr><td><strong>Busy</strong> and <strong>Large</strong></td><td>What uses more than 5% of the CPU, or more than 500 MB of memory</td></tr>
-<tr><td><strong>Started recently</strong></td><td>What started in the last hour</td></tr>
-<tr><td><strong>All my processes</strong></td><td>Everything you run</td></tr>
+<table><thead><tr><th style="text-align: left">Preset</th><th style="text-align: left">Shows</th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong>Terminal</strong></td><td style="text-align: left">What you started from a terminal, or from your editor's terminal</td></tr>
+<tr><td style="text-align: left"><strong>Orphaned</strong></td><td style="text-align: left">What kept running after the terminal or editor that started it closed</td></tr>
+<tr><td style="text-align: left"><strong>Listening on a port</strong></td><td style="text-align: left">Servers, and anything else waiting for connections</td></tr>
+<tr><td style="text-align: left"><strong>In my projects</strong></td><td style="text-align: left">What runs in one of your projects' folders</td></tr>
+<tr><td style="text-align: left"><strong>Started by Task Proxy</strong></td><td style="text-align: left">Task Proxy, and the scripts it runs</td></tr>
+<tr><td style="text-align: left"><strong>Busy</strong> and <strong>Large</strong></td><td style="text-align: left">What uses more than 5% of the CPU, or more than 500 MB of memory</td></tr>
+<tr><td style="text-align: left"><strong>Started recently</strong></td><td style="text-align: left">What started in the last hour</td></tr>
+<tr><td style="text-align: left"><strong>All my processes</strong></td><td style="text-align: left">Everything you run</td></tr>
 </tbody></table>
 <p>To find one process, type in <strong>Search</strong>. It matches a name, a command, a folder, a PID, or a port, so typing <code>5173</code> finds whatever holds port 5173.</p>
 <p>Click a column heading to sort by it, and click it again to reverse the order. Labels beside a name, such as <strong>Terminal</strong> and <strong>Orphaned</strong>, say which presets it belongs to.</p>
@@ -133,11 +133,11 @@
 <h2>4. Stop it</h2>
 
 <p>The buttons under a process's details stop it in four ways. Rest the pointer on one to see what it does and what it leaves running.</p>
-<table><thead><tr><th>Button</th><th>What it does</th></tr></thead><tbody>
-<tr><td><strong>Stop</strong></td><td>Asks only this process to stop, as Ctrl+C would, so it can save and clean up. What it started may keep running</td></tr>
-<tr><td><strong>Stop with children</strong></td><td>Asks this process and everything it started to stop, the deepest first</td></tr>
-<tr><td><strong>Force close</strong></td><td>Ends only this process at once, with no clean up. What it started keeps running</td></tr>
-<tr><td><strong>Force close with children</strong></td><td>Ends this process and everything it started at once, the deepest first</td></tr>
+<table><thead><tr><th style="text-align: left">Button</th><th style="text-align: left">What it does</th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong>Stop</strong></td><td style="text-align: left">Asks only this process to stop, as Ctrl+C would, so it can save and clean up. What it started may keep running</td></tr>
+<tr><td style="text-align: left"><strong>Stop with children</strong></td><td style="text-align: left">Asks this process and everything it started to stop, the deepest first</td></tr>
+<tr><td style="text-align: left"><strong>Force close</strong></td><td style="text-align: left">Ends only this process at once, with no clean up. What it started keeps running</td></tr>
+<tr><td style="text-align: left"><strong>Force close with children</strong></td><td style="text-align: left">Ends this process and everything it started at once, the deepest first</td></tr>
 </tbody></table>
 <p>The number on the <strong>with children</strong> buttons counts every process under it, and those buttons show only when it started others.</p>
 <p>Try <strong>Stop</strong> first, and force close only what doesn't stop. A process stopped on its own can leave what it started running, and that shows as <strong>Orphaned</strong>.</p>

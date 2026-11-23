@@ -61,7 +61,7 @@ Approve a browser only when its code matches the one it shows. A refused browser
 Each approved browser has its own level, which you can change at any time under **Approved Browsers**:
 
 | Level | It may |
-|---|---|
+|:---|:---|
 | **View** | Look at projects, changes, and runs |
 | **Commit** | Also commit, pull, push, and change branches |
 | **Work** | Also edit, set variables, and run trusted scripts |

@@ -19,7 +19,7 @@ Every draft lands in an editor for you to read and change. Task Proxy never save
 Open **Settings** from the Task Proxy logo at the top left, and choose the **AI** tab. On **Providers**, click **Add Provider** and choose what you want to use:
 
 | Provider | Good for |
-|---|---|
+|:---|:---|
 | **Claude Code, with a Claude subscription** | Using the Claude plan you already pay for. Choose the models (Sonnet, Opus, Haiku) and whether it may look at other files in the project. |
 | **Ollama** or **LM Studio** | Free models that run on your own computer, so nothing leaves it. |
 | **OpenAI**, **Anthropic**, or **OpenRouter** | Paste an API key from the provider's site. |

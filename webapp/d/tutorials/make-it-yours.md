@@ -33,7 +33,7 @@ Click a tile, and the whole app changes at once.
 Choose the **Accessibility** tab of **Tools**:
 
 | Choice | What it does |
-|---|---|
+|:---|:---|
 | **Text size** | Makes text larger or smaller across the app, from 80% to 160%, the terminal's included |
 | **Reduce motion** | Panels, menus, and tabs change without sliding or fading. On to begin with when your system asks for less motion |
 | **Underline links** | Links stand out from the text around them by more than their color |
